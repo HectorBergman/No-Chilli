@@ -8,33 +8,10 @@ horizontalSpeed = (_keyRight - _keyLeft)*walkSpeed;
 
 verticalSpeed = verticalSpeed + playerGrav;
 
-if (onGround-- > 0) && (_keyJump) ||
-{
-	verticalSpeed = jumpSpeed;
-	onGround = 0;
-}
+playerJump(self, _keyJump)
 
-//collision
-if (place_meeting(x + horizontalSpeed, y , object_wall))
-{
-	while (abs(horizontalSpeed) > 0.1)
-	{
-		horizontalSpeed *= 0.5; //halve horizontalSpeed
-		if (!place_meeting(x + horizontalSpeed, y, object_wall)) x += horizontalSpeed
-	}
-	horizontalSpeed = 0;
-}
+//see: script playerCollision
+playerHorizontalCollision(self);
 
-x += horizontalSpeed;
-
-if (place_meeting(x, y + verticalSpeed, object_wall))
-{
-	if (verticalSpeed > 0) onGround = 10;
-	while (abs(verticalSpeed) > 0.1)
-	{
-		verticalSpeed *= 0.5; //halve verticalSpeed
-		if (!place_meeting(x, y + verticalSpeed, object_wall)) y += verticalSpeed
-	}
-	verticalSpeed = 0;
-}
-y += verticalSpeed;
+//see: script playerCollision
+playerVerticalCollision(self); //functions B)

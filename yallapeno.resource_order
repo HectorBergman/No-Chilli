@@ -21,6 +21,7 @@
     {"name":"camera","order":3,"path":"objects/camera/camera.yy",},
     {"name":"object_player","order":1,"path":"objects/object_player/object_player.yy",},
     {"name":"Room2","order":1,"path":"rooms/Room2/Room2.yy",},
+    {"name":"playerMovement","order":1,"path":"scripts/playerMovement/playerMovement.yy",},
     {"name":"wall_1","order":2,"path":"sprites/wall_1/wall_1.yy",},
   ],
 }
