@@ -5,12 +5,12 @@ function playerHorizontalCollision(_player){
 	{
 		while (abs(_player.horizontalSpeed) > 0.1)
 		{
-			_player.horizontalSpeed *= 0.5; //halve horizontalSpeed
+			_player.horizontalSpeed = _player.horizontalSpeed * 0.5; //halve horizontalSpeed
 			if (!place_meeting(x + _player.horizontalSpeed, y, object_wall)) x += _player.horizontalSpeed
 		}
 		_player.horizontalSpeed = 0;
 	}
-	_player.x += _player.horizontalSpeed;
+	_player.x = round(_player.x + _player.horizontalSpeed);
 }
 
 function playerVerticalCollision(_player){
@@ -19,10 +19,16 @@ function playerVerticalCollision(_player){
 		if (_player.verticalSpeed > 0) _player.onGround = 10;
 		while (abs(_player.verticalSpeed) > 0.1)
 		{
-			_player.verticalSpeed *= 0.5; //halve verticalSpeed
+			_player.verticalSpeed = _player.verticalSpeed * 0.5; //halve verticalSpeed
 			if (!place_meeting(x, y + _player.verticalSpeed, object_wall)) y += _player.verticalSpeed
 		}
 		_player.verticalSpeed = 0;
 	}
-	_player.y += _player.verticalSpeed;
+	_player.y = round(_player.y + _player.verticalSpeed);
+}
+
+function playerWhiteguyCollision(_player){
+	if (place_meeting(x, y + _player.verticalSpeed, object_whiteguy)){
+		playerDeath(_player);
+	}
 }

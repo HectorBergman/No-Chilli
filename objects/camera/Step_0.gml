@@ -7,5 +7,10 @@ if (follow != noone)
 }
 x += (xTo - x);
 y += (yTo - y);
+camX = round(x-(camWidth*0.5))
+camY = round(y-(camHeight*0.5))
 
-camera_set_view_pos(view_camera[0], x-(camWidth*0.5), y-(camHeight*0.5));
+camera_set_view_pos(view_camera[0], camX, camY);
+
+show_debug_message(camX);
+
