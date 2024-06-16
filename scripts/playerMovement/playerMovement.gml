@@ -45,8 +45,14 @@ function playerFall(_player){
 
 //
 function playerHorizontalMovement(_player){
-	mach = machCalculator()
-	_player.horizontalSpeed = round(move*_player.walkSpeed + mach);
+	if (_keyShift){
+		mach = machCalculator()
+		_player.horizontalSpeed = round(move*_player.walkSpeed + mach);
+	}else{
+		rightHeldTimer = 0;
+		leftHeldTimer = 0;
+		_player.horizontalSpeed = round(move*_player.walkSpeed)
+	}
 	playerSpriteLogic(_player);
 }
 

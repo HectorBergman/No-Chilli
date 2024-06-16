@@ -12,4 +12,5 @@ leftHeldTimer = 0;
 dead = 0;
 move = 0;
 lastmove = 0;
+wallTouch = 0;
 cam = view_get_camera(0);

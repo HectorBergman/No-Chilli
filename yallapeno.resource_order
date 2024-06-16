@@ -25,7 +25,8 @@
     {"name":"playerDeath","order":3,"path":"scripts/playerDeath/playerDeath.yy",},
     {"name":"playerMovement","order":1,"path":"scripts/playerMovement/playerMovement.yy",},
     {"name":"playerSpriteLogic","order":4,"path":"scripts/playerSpriteLogic/playerSpriteLogic.yy",},
+    {"name":"spr_player_stand","order":1,"path":"sprites/spr_player_stand/spr_player_stand.yy",},
+    {"name":"spr_player_walk","order":2,"path":"sprites/spr_player_walk/spr_player_walk.yy",},
     {"name":"sprite_temp_whiteguy","order":3,"path":"sprites/sprite_temp_whiteguy/sprite_temp_whiteguy.yy",},
-    {"name":"Sprite4","order":1,"path":"sprites/Sprite4/Sprite4.yy",},
   ],
 }

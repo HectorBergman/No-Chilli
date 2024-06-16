@@ -9,6 +9,9 @@ function playerHorizontalCollision(_player){
 			if (!place_meeting(x + _player.horizontalSpeed, y, object_wall)) x += _player.horizontalSpeed
 		}
 		_player.horizontalSpeed = 0;
+		_player.wallTouch = 1;
+	}else{
+		_player.wallTouch = 0;
 	}
 	_player.x = round(_player.x + _player.horizontalSpeed);
 }
