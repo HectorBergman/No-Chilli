@@ -45,7 +45,7 @@ function playerFall(_player){
 
 //
 function playerHorizontalMovement(_player){
-	if (_keyShift){
+	if (_keyShift > 0){
 		mach = machCalculator()
 		_player.horizontalSpeed = round(move*_player.walkSpeed + mach);
 	}else{

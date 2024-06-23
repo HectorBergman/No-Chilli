@@ -4,7 +4,13 @@
 _keyRight = keyboard_check(vk_right);
 _keyLeft = keyboard_check(vk_left);
 _keyJump = keyboard_check_pressed(vk_up);
-_keyShift = keyboard_check(vk_shift);
+_keyZ = keyboard_check_pressed(ord("z"))
+_keySpace = keyboard_check(vk_space)
+if (keyboard_check(vk_shift)){
+	_keyShift = 4;
+}else{
+	_keyShift--;
+}
 
 if (self.dead = 0){
 	move = (_keyRight - _keyLeft);
@@ -26,6 +32,8 @@ if (self.dead = 0){
 	playerVerticalCollision(self); //functions B)
 	
 	playerWhiteguyCollision(self);
+	
+	playerRingCollision(self);
 	
 }else{
 	

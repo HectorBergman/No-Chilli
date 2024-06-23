@@ -35,3 +35,19 @@ function playerWhiteguyCollision(_player){
 		playerDeath(_player);
 	}
 }
+
+function playerRingCollision(_player){
+	var collidedRing = collision_rectangle(self.x -200, self.y-20, self.x+200, self.y+200, object_ring, false, true);
+	if (collidedRing){
+		if (_keySpace && !collidedRing.held){
+			collidedRing.held = true;
+			collidedRing.sprite_index = spr_ringheld;
+			collidedRing.arm = instance_create_layer(x, y, "Instances", object_arm);
+			collidedRing.arm.parent = collidedRing;
+		}
+		else if (!_keySpace && collidedRing.held){
+			collidedRing.held = false;
+			collidedRing.sprite_index = spr_ring;
+		}
+	}
+}
