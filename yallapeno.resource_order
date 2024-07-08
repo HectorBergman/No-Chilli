@@ -27,6 +27,9 @@
     {"name":"playerDeath","order":3,"path":"scripts/playerDeath/playerDeath.yy",},
     {"name":"playerMovement","order":1,"path":"scripts/playerMovement/playerMovement.yy",},
     {"name":"playerSpriteLogic","order":4,"path":"scripts/playerSpriteLogic/playerSpriteLogic.yy",},
+    {"name":"playerStateDead","order":7,"path":"scripts/playerStateDead/playerStateDead.yy",},
+    {"name":"playerStateNormal","order":5,"path":"scripts/playerStateNormal/playerStateNormal.yy",},
+    {"name":"playerStateRing","order":6,"path":"scripts/playerStateRing/playerStateRing.yy",},
     {"name":"spr_player_fall","order":3,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
     {"name":"spr_player_jump","order":4,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"spr_player_stand","order":1,"path":"sprites/spr_player_stand/spr_player_stand.yy",},
@@ -34,5 +37,7 @@
     {"name":"spr_ring","order":4,"path":"sprites/spr_ring/spr_ring.yy",},
     {"name":"spr_ringheld","order":5,"path":"sprites/spr_ringheld/spr_ringheld.yy",},
     {"name":"sprite_temp_whiteguy","order":3,"path":"sprites/sprite_temp_whiteguy/sprite_temp_whiteguy.yy",},
+    {"name":"Sprite11","order":5,"path":"sprites/Sprite11/Sprite11.yy",},
+    {"name":"Sprite12","order":6,"path":"sprites/Sprite12/Sprite12.yy",},
   ],
 }

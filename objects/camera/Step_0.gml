@@ -12,5 +12,5 @@ camY = round(y-(camHeight*0.5))
 
 camera_set_view_pos(view_camera[0], camX, camY);
 
-show_debug_message(camX);
+
 

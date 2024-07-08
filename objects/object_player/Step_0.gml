@@ -12,29 +12,8 @@ if (keyboard_check(vk_shift)){
 	_keyShift--;
 }
 
-if (self.dead = 0){
-	move = (_keyRight - _keyLeft);
-	
-	if (move != 0){
-		lastmove = move;
-	}
-
-	playerHorizontalMovement(self);
-
-	playerFall(self);
-
-	playerJump(self);
-
-	//see: script playerCollision
-	playerHorizontalCollision(self);
-
-	//see: script playerCollision
-	playerVerticalCollision(self); //functions B)
-	
-	playerWhiteguyCollision(self);
-	
-	playerRingCollision(self);
-	
-}else{
-	
+switch(state){
+	case states.normal: playerStateNormal(); break;
+	case states.ring: playerStateRing(); break;
+	case states.dead: playerStateDead(); break;
 }

@@ -3,3 +3,8 @@
 
 held = false;
 arm = noone;
+
+angle = -1;
+
+
+depth = 1;

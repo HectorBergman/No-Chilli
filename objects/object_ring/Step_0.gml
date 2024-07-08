@@ -20,20 +20,24 @@ if (held){
 	if (a < 0){
 		if (b < 0){
 			//4 quadrant
-			image_angle = radtodeg(arccos(abs(b)/c)) + 270 + startangle 
+			angle = radtodeg(arccos(abs(b)/c)) + 270 + startangle 
+			image_angle = angle
 		}else{
 			//1 quadrant
-			image_angle = radtodeg(-arccos(abs(b)/c)) + 90 + startangle
+			angle = radtodeg(-arccos(abs(b)/c)) + 90 + startangle
+			image_angle = angle
 		}
 	}
 	else{
 		if (b < 0){
 			//3 quadrant
-			image_angle = radtodeg(-arccos(abs(b)/c)) + 270 + startangle
+			angle = radtodeg(-arccos(abs(b)/c)) + 270 + startangle
+			image_angle = angle;
 			//quadrant 1 and 3 math makes no sense but it works so lol
 		}else{
 			//2 quadrant
-			image_angle = radtodeg(arccos(abs(b)/c)) + 90 + startangle
+			angle = radtodeg(arccos(abs(b)/c)) + 90 + startangle
+			image_angle = angle;
 		}
 	}
 }else{

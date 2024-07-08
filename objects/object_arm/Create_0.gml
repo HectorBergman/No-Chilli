@@ -2,5 +2,22 @@
 // You can write your code in this editor
 
 parent = noone;
-
 surface = surface_create(640, 360)
+
+armColorFront = make_color_rgb(194, 0, 0);
+armColorBack = make_color_rgb(104, 0, 0);
+armColorOutline = make_color_rgb(35, 0, 0);
+
+newX = -1;
+newY = -1;
+depth = 0;
+
+shoulderXOffset = -8
+shoulderYOffset = 30
+
+
+shoulderXOffsetMirror = -3
+shoulderYOffsetMirror = 32
+
+handXOffset = -10
+handYOffset = 14

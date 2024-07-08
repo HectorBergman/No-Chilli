@@ -37,17 +37,27 @@ function playerWhiteguyCollision(_player){
 }
 
 function playerRingCollision(_player){
-	var collidedRing = collision_rectangle(self.x -200, self.y-20, self.x+200, self.y+200, object_ring, false, true);
+	var collidedRing = collision_rectangle(self.x -300, self.y-400, self.x+300, self.y+100, object_ring, false, true);
 	if (collidedRing){
 		if (_keySpace && !collidedRing.held){
+			_player.prevRing = collidedRing;
 			collidedRing.held = true;
 			collidedRing.sprite_index = spr_ringheld;
 			collidedRing.arm = instance_create_layer(x, y, "Instances", object_arm);
 			collidedRing.arm.parent = collidedRing;
+			_player.ringHeld = true;
 		}
 		else if (!_keySpace && collidedRing.held){
 			collidedRing.held = false;
 			collidedRing.sprite_index = spr_ring;
+			_player.ringHeld = false;
+		}
+	}else{
+		if (prevRing){
+			prevRing.held = false
+			prevRing.sprite_index = spr_ring;
+			_player.ringHeld = false;
+			prevRing = noone;
 		}
 	}
 }

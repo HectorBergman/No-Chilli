@@ -1,8 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerSpriteLogic(_player){
-	
-	if (_player.onGround < 0){
+	if (_player.ringHeld == true){
+		if (lastmove == 1){
+			_player.sprite_index = Sprite11;
+		}else if (lastmove == -1){
+			_player.sprite_index = Sprite12;
+		}
+	} else if (_player.onGround < 0){
 		if (_player.verticalSpeed < 0){
 			_player.sprite_index = spr_player_jump;
 		}else{
