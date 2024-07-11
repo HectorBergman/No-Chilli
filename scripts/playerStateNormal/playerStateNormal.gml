@@ -18,7 +18,7 @@ function playerStateNormal(){
 	playerVerticalCollision(self);
 	playerWhiteguyCollision(self);
 	playerRingCollision(self);
-	if (ringHeld && onGround < 0){
+	/*if (ringHeld && onGround < 0){
 		state = states.ring;
-	}
+	}*/
 }

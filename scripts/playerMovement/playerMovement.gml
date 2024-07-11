@@ -43,7 +43,7 @@ function playerFall(_player){
 	}
 }
 
-//
+
 function playerHorizontalMovement(_player){
 	if (_keyShift > 0){
 		mach = machCalculator()

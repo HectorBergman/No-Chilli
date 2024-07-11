@@ -3,6 +3,6 @@
 function playerDeath(_player){
 	//death shit here
 
-	_player.dead = 1;
+	state = states.dead;
 
 }
