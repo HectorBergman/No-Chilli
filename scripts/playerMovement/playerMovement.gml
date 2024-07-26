@@ -4,25 +4,25 @@
 
 function playerJump(_player){
 	canJump = false;
-	if (_player.onGround-- > 0) && (_keyJump) 
+	if (onGround-- > 0) && (_keyJump) 
 	{
 		canJump = true;
-	}else if ((_player.jumpsLeft > 0) && (_keyJump)){
-		_player.jumpsLeft = 1; //jank solution, don't want to have two mid-air jumps
+	}else if ((jumpsLeft > -9999) && (_keyJump)){
+		jumpsLeft = 1; //jank solution, don't want to have two mid-air jumps
 		canJump = true;		  // if you fall off platform
 		
 	}
 	if (canJump = true){
 		
-		if (_player.jumpsLeft == 2){ //bigger jump on second jump
-			_player.verticalSpeed = _player.jumpSpeed;
+		if (jumpsLeft == 2){ //bigger jump on second jump
+			verticalSpeed = jumpSpeed;
 		}else{
-			_player.verticalSpeed = _player.jumpSpeed*1.2;
+			verticalSpeed = jumpSpeed*1.2;
 		}
-		_player.jumpsLeft--;
-		_player.onGround = 0;
-	} else if (_player.onGround > 0){
-		_player.jumpsLeft = 2;
+		jumpsLeft--;
+		onGround = 0;
+	} else if (onGround > 0){
+		jumpsLeft = 2;
 	}
 }
 
@@ -31,15 +31,15 @@ function playerJump(_player){
 function playerFall(_player){
 	var mediumFall = 12; //speed where chiliman will accelerate slower
 	var maxFall = 25; //speed where chiliman will stop accelerating
-	if (_player.verticalSpeed < mediumFall){
-		_player.verticalSpeed = _player.verticalSpeed + _player.playerGrav;
+	if (verticalSpeed < mediumFall){
+		verticalSpeed = verticalSpeed + playerGrav;
 	}
-	else if (_player.verticalSpeed >= mediumFall && _player.verticalSpeed < maxFall){ //accelerate slower if verticalSpeed is more than 12
-		_player.verticalSpeed = _player.verticalSpeed + _player.playerGrav*0.5;
+	else if (verticalSpeed >= mediumFall && verticalSpeed < maxFall){ //accelerate slower if verticalSpeed is more than 12
+		verticalSpeed = verticalSpeed + playerGrav*0.5;
 		
 	}
 	else { //stop accelerating if verticalSpeed greater than 20
-		_player.verticalSpeed = _player.verticalSpeed;
+		verticalSpeed = verticalSpeed;
 	}
 }
 
@@ -47,11 +47,11 @@ function playerFall(_player){
 function playerHorizontalMovement(_player){
 	if (_keyShift > 0){
 		mach = machCalculator()
-		_player.horizontalSpeed = round(move*_player.walkSpeed + mach);
+		horizontalSpeed = round(move*walkSpeed + mach);
 	}else{
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
-		_player.horizontalSpeed = round(move*_player.walkSpeed)
+		horizontalSpeed = round(move*walkSpeed)
 	}
 	playerSpriteLogic(_player);
 }

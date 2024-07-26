@@ -1,27 +1,27 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerSpriteLogic(_player){
-	if (_player.ringHeld == true){
+	if (ringHeld == true){
 		if (lastmove == 1){
-			_player.sprite_index = Sprite11;
+			sprite_index = Sprite11;
 		}else if (lastmove == -1){
-			_player.sprite_index = Sprite12;
+			sprite_index = Sprite12;
 		}
-	} else if (_player.onGround < 0){
-		if (_player.verticalSpeed < 0){
-			_player.sprite_index = spr_player_jump;
+	} else if (onGround < 0){
+		if (verticalSpeed < 0){
+			sprite_index = spr_player_jump;
 		}else{
-			_player.sprite_index = spr_player_fall;
+			sprite_index = spr_player_fall;
 		}
 	}
-	else if (_player.horizontalSpeed == 0 || _player.wallTouch != 0){
-		_player.sprite_index = spr_player_stand;
+	else if (horizontalSpeed == 0 || wallTouch != 0){
+		sprite_index = spr_player_stand;
 	}else{
-		_player.sprite_index = spr_player_walk;
+		sprite_index = spr_player_walk;
 	}
 	if (lastmove != 0){
-		_player.image_xscale = (lastmove);
+		image_xscale = (lastmove);
 	}else{
-		_player.image_xscale = 1;
+		image_xscale = 1;
 	}
 }

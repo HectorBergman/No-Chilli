@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"playerStateRing",
   "isCompatibility":false,
   "isDnD":false,

@@ -27,5 +27,19 @@ cam = view_get_camera(0);
 depth = 0;
 
 ringHeld = false;
-prevRing = noone; //for unholding rings when outside grab area
+currentRing = noone; //for unholding rings when outside grab area
+
+
+
+handX = 0;
+handY = 0;
+shoulderX = 0;
+shoulderY = 0;
+ropeAngleVelocity = 0;
+ropeAngle = 0;
+ropeLength = 0;
+ropeAccelerationRate = -0.2;
+ropeManualAcceleration = 0.08
+ropeX = 0;
+ropeY = 0;
 

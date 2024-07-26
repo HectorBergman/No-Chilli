@@ -34,6 +34,7 @@
     {"name":"playerStateDead","order":7,"path":"scripts/playerStateDead/playerStateDead.yy",},
     {"name":"playerStateNormal","order":5,"path":"scripts/playerStateNormal/playerStateNormal.yy",},
     {"name":"playerStateRing","order":6,"path":"scripts/playerStateRing/playerStateRing.yy",},
+    {"name":"playerSwing","order":8,"path":"scripts/playerSwing/playerSwing.yy",},
     {"name":"spr_player_fall","order":3,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
     {"name":"spr_player_jump","order":4,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
     {"name":"spr_player_stand","order":1,"path":"sprites/spr_player_stand/spr_player_stand.yy",},

@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"playerSpriteLogic",
+  "%Name":"playerSwing",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerSpriteLogic",
+  "name":"playerSwing",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

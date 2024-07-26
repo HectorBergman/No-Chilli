@@ -32,7 +32,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.4.0.137",
   },
   "name":"yallapeno",
   "resources":[
@@ -55,6 +55,7 @@
     {"id":{"name":"playerStateDead","path":"scripts/playerStateDead/playerStateDead.yy",},},
     {"id":{"name":"playerStateNormal","path":"scripts/playerStateNormal/playerStateNormal.yy",},},
     {"id":{"name":"playerStateRing","path":"scripts/playerStateRing/playerStateRing.yy",},},
+    {"id":{"name":"playerSwing","path":"scripts/playerSwing/playerSwing.yy",},},
     {"id":{"name":"player","path":"sprites/player/player.yy",},},
     {"id":{"name":"spr_player_fall","path":"sprites/spr_player_fall/spr_player_fall.yy",},},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},

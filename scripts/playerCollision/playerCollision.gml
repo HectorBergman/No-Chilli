@@ -1,37 +1,33 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerHorizontalCollision(_player){
-	if (place_meeting(x + _player.horizontalSpeed, y , object_wall))
-	{
-		while (abs(_player.horizontalSpeed) > 0.1)
-		{
-			_player.horizontalSpeed = _player.horizontalSpeed * 0.5; //halve horizontalSpeed
-			if (!place_meeting(x + _player.horizontalSpeed, y, object_wall)) x += _player.horizontalSpeed
-		}
-		_player.horizontalSpeed = 0;
-		_player.wallTouch = 1;
+	if (place_meeting(x + horizontalSpeed, y , object_wall)){
+		var _hStep = sign(horizontalSpeed);
+		horizontalSpeed = 0;
+		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		walltouch = 1;
+		
+		playerCollisionWhileSwinging()
 	}else{
-		_player.wallTouch = 0;
+		walltouch = 0;
 	}
-	_player.x = round(_player.x + _player.horizontalSpeed);
+	
+	x = round(x + horizontalSpeed);
 }
 
 function playerVerticalCollision(_player){
-	if (place_meeting(x, y + _player.verticalSpeed, object_wall))
-		{
-		if (_player.verticalSpeed > 0) _player.onGround = 10;
-		while (abs(_player.verticalSpeed) > 0.1)
-		{
-			_player.verticalSpeed = _player.verticalSpeed * 0.5; //halve verticalSpeed
-			if (!place_meeting(x, y + _player.verticalSpeed, object_wall)) y += _player.verticalSpeed
-		}
-		_player.verticalSpeed = 0;
+	if (place_meeting(x, y + verticalSpeed, object_wall)){
+		if (verticalSpeed > 0) onGround = 10;
+		var _vStep = sign(verticalSpeed);
+		verticalSpeed = 0;
+		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		playerCollisionWhileSwinging()
 	}
-	_player.y = round(_player.y + _player.verticalSpeed);
+	y = round(y + verticalSpeed);
 }
 
 function playerWhiteguyCollision(_player){
-	if (place_meeting(x, y + _player.verticalSpeed, object_whiteguy)){
+	if (place_meeting(x, y + verticalSpeed, object_whiteguy)){
 		playerDeath(_player);
 	}
 }
@@ -40,24 +36,60 @@ function playerRingCollision(_player){
 	var collidedRing = collision_rectangle(self.x -300, self.y-400, self.x+300, self.y+100, object_ring, false, true);
 	if (collidedRing){
 		if (_keySpace && !collidedRing.held){
-			_player.prevRing = collidedRing;
+			currentRing = collidedRing;
 			collidedRing.held = true;
 			collidedRing.sprite_index = spr_ringheld;
 			collidedRing.arm = instance_create_layer(x, y, "Instances", object_arm);
 			collidedRing.arm.parent = collidedRing;
-			_player.ringHeld = true;
+			ringHeld = true;
+			state = states.ring;
+			playerStartSwing(collidedRing);
 		}
 		else if (!_keySpace && collidedRing.held){
 			collidedRing.held = false;
 			collidedRing.sprite_index = spr_ring;
-			_player.ringHeld = false;
+			ringHeld = false;
 		}
 	}else{
-		if (prevRing){
-			prevRing.held = false
-			prevRing.sprite_index = spr_ring;
-			_player.ringHeld = false;
-			prevRing = noone;
+		if (currentRing){
+			currentRing.held = false
+			currentRing.sprite_index = spr_ring;
+			ringHeld = false;
+			currentRing = noone;
 		}
+	}
+}
+
+function playerCollisionWhileSwinging() {
+	if(state == states.ring){
+		ropeAngle = point_direction(handX, handY, ropeX, ropeY);
+		ropeAngleVelocity = 0;
+		
+	}
+}
+
+function oldShit(){
+	/*if (place_meeting(x + horizontalSpeed, y , object_wall))
+	{
+		while (abs(horizontalSpeed) > 0.1)
+		{
+			horizontalSpeed = horizontalSpeed * 0.5; //halve horizontalSpeed
+			if (!place_meeting(x + horizontalSpeed, y, object_wall)) x += horizontalSpeed
+		}
+		horizontalSpeed = 0;
+		wallTouch = 1;
+	}else{
+		wallTouch = 0;
+	}*/
+	
+	if (place_meeting(x, y + verticalSpeed, object_wall))
+		{
+		if (verticalSpeed > 0) onGround = 10;
+		while (abs(verticalSpeed) > 0.1)
+		{
+			verticalSpeed = verticalSpeed * 0.5; //halve verticalSpeed
+			if (!place_meeting(x, y + verticalSpeed, object_wall)) y += verticalSpeed
+		}
+		verticalSpeed = 0;
 	}
 }
