@@ -11,7 +11,7 @@ if (keyboard_check(vk_shift)){
 }else{
 	_keyShift--;
 }
-
+playerSpriteLogic(self);
 switch(state){
 	case states.normal: playerStateNormal(); break;
 	case states.ring: playerStateRing(); break;

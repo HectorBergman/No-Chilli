@@ -33,7 +33,7 @@ function playerWhiteguyCollision(_player){
 }
 
 function playerRingCollision(_player){
-	var collidedRing = collision_rectangle(self.x -300, self.y-400, self.x+300, self.y+100, object_ring, false, true);
+	var collidedRing = collision_rectangle(self.x-300, self.y-300, self.x+300, self.y+300, object_ring, false, true);
 	if (collidedRing){
 		if (_keySpace && !collidedRing.held){
 			currentRing = collidedRing;
@@ -63,7 +63,7 @@ function playerRingCollision(_player){
 function playerCollisionWhileSwinging() {
 	if(state == states.ring){
 		ropeAngle = point_direction(handX, handY, ropeX, ropeY);
-		ropeAngleVelocity = 0;
+		ropeAngleVelocity = -ropeAngleVelocity*0.5;
 		
 	}
 }

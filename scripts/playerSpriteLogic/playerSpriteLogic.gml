@@ -1,6 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerSpriteLogic(_player){
+	switch(state){
+		case states.normal: normalSpriteLogic(); break;
+		case states.ring: ringSpriteLogic(); break;
+		case states.dead: deadSpriteLogic(); break;
+	}
+}
+function normalSpriteLogic(){
+	
 	if (ringHeld == true){
 		if (lastmove == 1){
 			sprite_index = Sprite11;
@@ -24,4 +32,17 @@ function playerSpriteLogic(_player){
 	}else{
 		image_xscale = 1;
 	}
+}
+
+function ringSpriteLogic(){
+
+	if (lastmove == 1){
+		sprite_index = Sprite11;
+	}else if (lastmove == -1){
+		sprite_index = Sprite12;
+	}
+	
+}
+
+function deadSpriteLogic(){
 }

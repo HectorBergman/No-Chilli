@@ -14,10 +14,10 @@ function playerJump(_player){
 	}
 	if (canJump = true){
 		
-		if (jumpsLeft == 2){ //bigger jump on second jump
+		if (jumpsLeft == 2){ //different jump on second jump
 			verticalSpeed = jumpSpeed;
 		}else{
-			verticalSpeed = jumpSpeed*1.2;
+			verticalSpeed = jumpSpeed*secondJump;
 		}
 		jumpsLeft--;
 		onGround = 0;
@@ -29,8 +29,10 @@ function playerJump(_player){
 
 
 function playerFall(_player){
-	var mediumFall = 12; //speed where chiliman will accelerate slower
-	var maxFall = 25; //speed where chiliman will stop accelerating
+
+	if keyboard_check_released(vk_up) && verticalSpeed<0{
+		verticalSpeed*=.6
+	}
 	if (verticalSpeed < mediumFall){
 		verticalSpeed = verticalSpeed + playerGrav;
 	}
@@ -53,14 +55,11 @@ function playerHorizontalMovement(_player){
 		leftHeldTimer = 0;
 		horizontalSpeed = round(move*walkSpeed)
 	}
-	playerSpriteLogic(_player);
+	
 }
 
 function machCalculator(){ //TODO: add a bool for on ground to player to know when mach can actually start
-	var mach1Start = 60;
-	var mach2Start = 400;
-	var mach1Speed = 10;
-	var mach2Speed = 4 + mach1Speed;
+
 	if (_keyRight && _keyLeft){
 	}
 	else if (_keyRight){

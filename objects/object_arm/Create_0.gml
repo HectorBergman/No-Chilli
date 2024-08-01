@@ -15,6 +15,9 @@ shoulderX = -1;
 shoulderY = -1;
 depth = 0;
 
+surfaceXOffset = -1;
+surfaceYOffset = -1;
+
 shoulderXOffset = -8
 shoulderYOffset = 30
 

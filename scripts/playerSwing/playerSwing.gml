@@ -11,13 +11,14 @@ function playerStartSwing(ring){
 	
 	handX = ring.x + 15 * cos(-degtorad(ring.angle)+125*pi/180)
 	handY = ring.y + 15 * sin(-degtorad(ring.angle)+125*pi/180)
-	show_debug_message(string_concat("ropeX: ",ropeX))
-	show_debug_message(string_concat("ropeY: ",ropeY))
+	//show_debug_message(string_concat("ropeX: ",ropeX))
+	//show_debug_message(string_concat("ropeY: ",ropeY))
 
 	ropeAngle = point_direction(handX, handY, ropeX, ropeY);
 	ropeLength = point_distance(handX, handY, ropeX, ropeY);
+	ropeAngleVelocity = 0//(sign(horizontalSpeed)*sqrt(abs(horizontalSpeed)) + ((-2*(x > handX))+1)*
+	//sign(verticalSpeed)*sqrt(abs(verticalSpeed)))/ropeLength*8;
 	
-
 	
 	
 }
@@ -28,6 +29,7 @@ function playerSwing(_player){
 	var _ropeAngleAcceleration = ropeAccelerationRate * dcos(ropeAngle);
 	_ropeAngleAcceleration += (_keyRight - _keyLeft) * ropeManualAcceleration
 	ropeAngleVelocity += _ropeAngleAcceleration;
+	
 	
 	ropeAngle += ropeAngleVelocity;
 	ropeAngleVelocity *= 0.99;  //dampening
@@ -44,7 +46,7 @@ function playerSwing(_player){
 		horizontalSpeed = ropeX - x+3;
 		verticalSpeed = ropeY - y-32;
 	}
-	
+	/*
 	show_debug_message("_______________")
 	show_debug_message(string_concat("handX: ",handX))
 	show_debug_message(string_concat("handY: ",handY))
@@ -61,6 +63,6 @@ function playerSwing(_player){
 	show_debug_message(string_concat("Y: ", y))
 	show_debug_message(string_concat("horizontalSpeed: ", horizontalSpeed))
 	show_debug_message(string_concat("verticalSpeed: ", verticalSpeed))
-
+*/
 	
 }

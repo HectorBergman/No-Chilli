@@ -3,11 +3,11 @@
 function playerStateRing(){
 	
 	playerSwing(self);
-	playerRingCollision(self);
+	//playerRingCollision(self);
 	playerHorizontalCollision(self);
 	playerVerticalCollision(self);
 	
-	if (!ringHeld){
+	if (!_keySpace){
 		state = states.normal;
 	}
 }
