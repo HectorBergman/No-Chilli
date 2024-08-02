@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"playerDeath",
+  "%Name":"objectEaten",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerDeath",
+  "name":"objectEaten",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

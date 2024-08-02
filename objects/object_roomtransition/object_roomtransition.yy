@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"object_roomtransition",
+  "%Name":"object_roomTransition",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_roomtransition",
+  "name":"object_roomTransition",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_roomtrans",
-    "path":"sprites/spr_roomtrans/spr_roomtrans.yy",
+    "name":"spr_roomTrans",
+    "path":"sprites/spr_roomTrans/spr_roomTrans.yy",
   },
   "spriteMaskId":null,
   "visible":true,

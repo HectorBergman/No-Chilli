@@ -17,3 +17,5 @@ switch(state){
 	case states.ring: playerStateRing(); break;
 	case states.dead: playerStateDead(); break;
 }
+
+

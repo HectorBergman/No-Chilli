@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"object_whiteguy",
+  "%Name":"object_whiteGuy",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_whiteguy",
+  "name":"object_whiteGuy",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite15",
-    "path":"sprites/Sprite15/Sprite15.yy",
+    "name":"sprite_whiteGuy",
+    "path":"sprites/sprite_whiteGuy/sprite_whiteGuy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

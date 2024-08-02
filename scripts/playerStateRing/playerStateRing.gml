@@ -6,6 +6,7 @@ function playerStateRing(){
 	//playerRingCollision(self);
 	playerHorizontalCollision(self);
 	playerVerticalCollision(self);
+	playerWhiteguyCollision(self);
 	
 	if (!_keySpace){
 		state = states.normal;
