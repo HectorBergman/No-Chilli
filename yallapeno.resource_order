@@ -33,6 +33,7 @@
     {"name":"playerDeath","order":3,"path":"scripts/playerDeath/playerDeath.yy",},
     {"name":"playerMovement","order":1,"path":"scripts/playerMovement/playerMovement.yy",},
     {"name":"playerSpriteLogic","order":4,"path":"scripts/playerSpriteLogic/playerSpriteLogic.yy",},
+    {"name":"playerStateDash","order":10,"path":"scripts/playerStateDash/playerStateDash.yy",},
     {"name":"playerStateDead","order":7,"path":"scripts/playerStateDead/playerStateDead.yy",},
     {"name":"playerStateNormal","order":5,"path":"scripts/playerStateNormal/playerStateNormal.yy",},
     {"name":"playerStateRing","order":6,"path":"scripts/playerStateRing/playerStateRing.yy",},

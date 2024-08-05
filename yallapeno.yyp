@@ -54,6 +54,7 @@
     {"id":{"name":"playerDeath","path":"scripts/playerDeath/playerDeath.yy",},},
     {"id":{"name":"playerMovement","path":"scripts/playerMovement/playerMovement.yy",},},
     {"id":{"name":"playerSpriteLogic","path":"scripts/playerSpriteLogic/playerSpriteLogic.yy",},},
+    {"id":{"name":"playerStateDash","path":"scripts/playerStateDash/playerStateDash.yy",},},
     {"id":{"name":"playerStateDead","path":"scripts/playerStateDead/playerStateDead.yy",},},
     {"id":{"name":"playerStateNormal","path":"scripts/playerStateNormal/playerStateNormal.yy",},},
     {"id":{"name":"playerStateRing","path":"scripts/playerStateRing/playerStateRing.yy",},},

@@ -4,6 +4,7 @@ enum states{
 	normal,
 	ring,
 	dead,
+	dash,
 }
 
 state = states.normal
@@ -16,6 +17,11 @@ mach1Start = 60; //how many ticks of shift held until mach 1 starts
 mach2Start = 400; // --||-- mach 2 starts
 mach1Speed = walkSpeed + 2;
 mach2Speed = 4 + mach1Speed;
+
+
+dashCooldown = 0;
+dash = 0;
+dashEndTime = 160;
 
 
 jumpSpeed = -10;
