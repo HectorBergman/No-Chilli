@@ -7,27 +7,28 @@ _keyJump = keyboard_check_pressed(vk_up);
 _keyZ = keyboard_check_pressed(ord("z"))
 _keySpace = keyboard_check(vk_space);
 
-dashUp = ord("W");
-dashLeft = ord("A");
-dashDown = ord("S");
-dashRight = ord("D");
+dashUpReqInput = ord("W");
+dashLeftReqInput = ord("A");
+dashDownReqInput = ord("S");
+dashRightReqInput = ord("D");
 
+inputCalculator();
 if (dashCooldown < 1){
-	if (keyboard_check(dashUp) || keyboard_check(dashLeft) || 
-	keyboard_check(dashDown) || keyboard_check(dashRight) ) {
-		if (keyboard_check(dashUp)){
+	if (dashUp || dashLeft || 
+		dashDown || dashRight ) {
+		if (dashUp){
 			verticalSpeed = -20;
 			horizontalSpeed = 0;
 		}
-		else if (keyboard_check(dashLeft)){
+		else if (dashLeft){
 			horizontalSpeed = -20;
 			verticalSpeed = 0;
 		}
-		else if (keyboard_check(dashDown)){
+		else if (dashDown){
 			verticalSpeed = 20;
 			horizontalSpeed = 0;
 		}
-		else if (keyboard_check(dashRight)){
+		else if (dashRight){
 			horizontalSpeed = 20;
 			verticalSpeed = 0;
 		}
@@ -51,6 +52,8 @@ switch(state){
 	case states.ring: playerStateRing(); break;
 	case states.dead: playerStateDead(); break;
 	case states.dash: playerStateDash(); break;
+	case states.mach: playerStateMach(); break;
+	case states.machTurn: playerStateMachTurn(); break;
 }
 
-
+inputReset();

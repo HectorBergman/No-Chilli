@@ -1,16 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateNormal(){
-	move = (_keyRight - _keyLeft);
-	
-	if (move != 0){
-		lastmove = move;
-	}
+
+	determineMove()
 	
 	//see: script playerMovement
 	playerHorizontalMovement(self);
 	playerJump(self);
 	playerFall(self);
+	machTimer();
+	startMachIfRun();
 
 
 	//see: script playerCollision

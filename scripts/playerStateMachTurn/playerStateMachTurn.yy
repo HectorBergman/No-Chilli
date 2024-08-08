@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"playerStateNormal",
+  "%Name":"playerStateMachTurn",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerStateNormal",
+  "name":"playerStateMachTurn",
   "parent":{
     "name":"states",
     "path":"folders/Scripts/states.yy",

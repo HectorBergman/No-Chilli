@@ -5,6 +5,8 @@ enum states{
 	ring,
 	dead,
 	dash,
+	mach,
+	machTurn,
 }
 
 state = states.normal
@@ -13,10 +15,19 @@ playerGrav = 0.4; //gravity
 horizontalSpeed = 0;
 verticalSpeed = 0;
 walkSpeed = 3;
+
 mach1Start = 60; //how many ticks of shift held until mach 1 starts
 mach2Start = 400; // --||-- mach 2 starts
-mach1Speed = walkSpeed + 2;
-mach2Speed = 4 + mach1Speed;
+mach1Speed = walkSpeed + 4;
+mach2Speed = 2 + mach1Speed;
+currentSpeed = 0;
+lastMoveGround = 0;
+mach = 0;
+
+turn = 0; //-1 for left, 1 for right
+turnTime = 30; //time it takes to turn
+turnTimer = 0; //the timer for turning
+airTime = 0;
 
 
 dashCooldown = 0;
@@ -35,7 +46,7 @@ rightHeldTimer = 0;
 leftHeldTimer = 0;
 dead = 0;
 move = 0;
-lastmove = 0;
+lastMove = 0;
 wallTouch = 0;
 _keyShift = 0;
 cam = view_get_camera(0);
@@ -58,3 +69,14 @@ ropeManualAcceleration = 0.09
 ropeX = 0;
 ropeY = 0;
 
+
+//controls
+moveLeft = false;
+moveRight = false;
+jump = false;
+dashLeft = false;
+dashUp = false;
+dashRight = false;
+dashDown = false;
+grab = false;
+run = false;

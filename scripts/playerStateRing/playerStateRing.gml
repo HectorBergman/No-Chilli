@@ -8,7 +8,7 @@ function playerStateRing(){
 	playerVerticalCollision(self);
 	playerWhiteguyCollision(self);
 	
-	if (!_keySpace){
+	if (!grab){
 		state = states.normal;
 	}
 }

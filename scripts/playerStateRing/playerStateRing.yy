@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"playerStateRing",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"states",
+    "path":"folders/Scripts/states.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

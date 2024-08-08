@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"playerStateNormal",
+  "%Name":"inputCalculator",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerStateNormal",
+  "name":"inputCalculator",
   "parent":{
-    "name":"states",
-    "path":"folders/Scripts/states.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -17,7 +17,9 @@ function playerHorizontalCollision(_player){
 
 function playerVerticalCollision(_player){
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
-		if (verticalSpeed > 0) onGround = 10;
+		if (verticalSpeed > 0){	
+			onGround = 10;
+		}
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
@@ -35,7 +37,7 @@ function playerWhiteguyCollision(_player){
 function playerRingCollision(_player){
 	var collidedRing = collision_rectangle(self.x-300, self.y-300, self.x+300, self.y+300, object_ring, false, true);
 	if (collidedRing){
-		if (_keySpace && !collidedRing.held){
+		if (grab && !collidedRing.held){
 			currentRing = collidedRing;
 			collidedRing.held = true;
 			collidedRing.sprite_index = spr_ringheld;
@@ -45,7 +47,7 @@ function playerRingCollision(_player){
 			state = states.ring;
 			playerStartSwing(collidedRing);
 		}
-		else if (!_keySpace && collidedRing.held){
+		else if (!grab && collidedRing.held){
 			collidedRing.held = false;
 			collidedRing.sprite_index = spr_ring;
 			ringHeld = false;

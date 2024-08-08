@@ -5,14 +5,16 @@ function playerSpriteLogic(_player){
 		case states.normal: normalSpriteLogic(); break;
 		case states.ring: ringSpriteLogic(); break;
 		case states.dead: deadSpriteLogic(); break;
+		case states.dash: dashSpriteLogic(); break;
+		case states.mach: machSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
 	
 	if (ringHeld == true){
-		if (lastmove == 1){
+		if (lastMove == 1){
 			sprite_index = Sprite11;
-		}else if (lastmove == -1){
+		}else if (lastMove == -1){
 			sprite_index = Sprite12;
 		}
 	} else if (onGround < 0){
@@ -27,8 +29,8 @@ function normalSpriteLogic(){
 	}else{
 		sprite_index = spr_player_walk;
 	}
-	if (lastmove != 0){
-		image_xscale = (lastmove);
+	if (lastMove != 0){
+		image_xscale = (lastMove);
 	}else{
 		image_xscale = 1;
 	}
@@ -36,13 +38,19 @@ function normalSpriteLogic(){
 
 function ringSpriteLogic(){
 
-	if (lastmove == 1){
+	if (lastMove == 1){
 		sprite_index = Sprite11;
-	}else if (lastmove == -1){
+	}else if (lastMove == -1){
 		sprite_index = Sprite12;
 	}
 	
 }
 
+function dashSpriteLogic(){
+}
+
+function machSpriteLogic(){
+	
+}
 function deadSpriteLogic(){
 }

@@ -27,7 +27,7 @@ function playerSwing(_player){
 	//shoulderX = currentRing.arm.shoulderX;
 	//shoulderY = currentRing.arm.shoulderY;
 	var _ropeAngleAcceleration = ropeAccelerationRate * dcos(ropeAngle);
-	_ropeAngleAcceleration += (_keyRight - _keyLeft) * ropeManualAcceleration
+	_ropeAngleAcceleration += (moveRight - moveLeft) * ropeManualAcceleration
 	ropeAngleVelocity += _ropeAngleAcceleration;
 	
 	
