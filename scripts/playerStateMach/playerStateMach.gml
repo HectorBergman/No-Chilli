@@ -8,18 +8,20 @@ function playerStateMach(){
 		//if not changing direction
 		determineMove();
 		mach = machCalculator()
+		
+			
 		//see: script playerMovement
 		machHorizontalMovement(self);
 		
 		if (airTime < 1){
-			if (place_meeting(x, y + 0.1, object_wall)){
-				onGround = 10;
-			}else{
-				onGround = 0;
-			}	
-			show_debug_message(airTime);
+			
+		
 			playerFall(self);
-		}
+		}else if (place_meeting(x, y + 0.1, object_wall)){
+				airTime = 0;
+		}else{
+				jumpsLeft = 0;
+		}	
 		playerJump(self);
 		airTime--
 

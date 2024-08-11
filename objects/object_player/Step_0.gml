@@ -42,7 +42,7 @@ if (keyboard_check(vk_shift)){
 }else{
 	_keyShift--;
 }
-playerSpriteLogic(self);
+
 
 if (dashCooldown != 0){
 	dashCooldown--
@@ -55,5 +55,6 @@ switch(state){
 	case states.mach: playerStateMach(); break;
 	case states.machTurn: playerStateMachTurn(); break;
 }
+playerSpriteLogic(self);
 
 inputReset();

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateNormalMovementVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateNormalMovementVariables",
+  "parent":{
+    "name":"initiationVariables",
+    "path":"folders/Scripts/initiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

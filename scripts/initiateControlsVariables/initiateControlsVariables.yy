@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateControlsVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateControlsVariables",
+  "parent":{
+    "name":"initiationVariables",
+    "path":"folders/Scripts/initiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

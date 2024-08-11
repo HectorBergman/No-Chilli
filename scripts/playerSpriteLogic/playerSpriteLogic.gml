@@ -7,11 +7,12 @@ function playerSpriteLogic(_player){
 		case states.dead: deadSpriteLogic(); break;
 		case states.dash: dashSpriteLogic(); break;
 		case states.mach: machSpriteLogic(); break;
+		case states.machTurn: turnSpriteLogic();
 	}
 }
 function normalSpriteLogic(){
 	
-	if (ringHeld == true){
+	if (ringHeld == true){ //TODO: delete this line lol
 		if (lastMove == 1){
 			sprite_index = Sprite11;
 		}else if (lastMove == -1){
@@ -50,7 +51,25 @@ function dashSpriteLogic(){
 }
 
 function machSpriteLogic(){
+	sprite_index = spr_player_mach1
+	if (lastMove != 0){
+		image_xscale = (lastMove);
+	}else{
+		image_xscale = 1;
+	}
 	
+}
+function turnSpriteLogic(){
+	if (turnTimer > turnTime-20){
+		sprite_index = spr_player_brake_mach1
+	}else{
+		sprite_index = spr_player_offlikeashot
+	}
+	if (lastMove != 0){
+		image_xscale = (lastMove);
+	}else{
+		image_xscale = 1;
+	}
 }
 function deadSpriteLogic(){
 }

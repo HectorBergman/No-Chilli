@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateTurnVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateTurnVariables",
+  "parent":{
+    "name":"initiationVariables",
+    "path":"folders/Scripts/initiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

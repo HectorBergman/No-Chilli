@@ -7,7 +7,7 @@ function playerJump(_player){
 	if (onGround-- > 0) && (jump) //onGround is set to 10 when colliding with ground below you
 	{
 		canJump = true;
-	}else if ((jumpsLeft > -9999) && (jump)){
+	}else if ((jumpsLeft > 0) && (jump)){ //should be 0
 		jumpsLeft = 1; //jank solution, don't want to have two mid-air jumps
 		canJump = true;		  // if you fall off platform
 		

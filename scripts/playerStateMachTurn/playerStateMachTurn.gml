@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMachTurn(){
-	show_debug_message(turnTimer);
+	
 	turnTimer--
 	if (turnTimer == 0){
 		state = states.mach
@@ -18,7 +18,12 @@ function playerStateMachTurn(){
 	}else if (turnTimer > turnTime-30){ //turning
 		horizontalSpeed = 0;
 	}else{ //running again
-		airTime = 20
+		if (!place_meeting(x, y + 0.1, object_wall)){
+			show_debug_message("hI");
+			airTime = givenAirTime; //atm 20 but doublecheck lol
+		}
+		determineMove();
+		horizontalSpeed = move*offLikeAShotSpeed;
 		state = states.mach;
 	}
 	

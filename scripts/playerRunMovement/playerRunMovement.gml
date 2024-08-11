@@ -5,15 +5,27 @@ function playerRunMovement(){
 }
 
 function machHorizontalMovement(_player){
-	
 
-	horizontalSpeed = move*mach
+	if (mach == mach1Speed){
+		if (horizontalSpeed*move > mach1Speed){
+			horizontalSpeed *= 0.97
+		}else{
+			horizontalSpeed = move*mach1Speed;
+		}
+			//essentially, if speed is above mach limit, slowly decrease it back to mach limit
+	}else if (mach == mach2Speed){
+		if (horizontalSpeed*move > mach2Speed){
+			horizontalSpeed *= 0.97
+		}else{
+			horizontalSpeed = move*mach2Speed;
+		}
+	}
 
 
 }
 
 
-function machCalculator(){ //TODO: add a bool for on ground to player to know when mach can actually start
+function machCalculator(){ 
 	
 	machTimer();
 

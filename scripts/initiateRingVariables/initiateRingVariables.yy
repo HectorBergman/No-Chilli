@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateRingVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateRingVariables",
+  "parent":{
+    "name":"initiationVariables",
+    "path":"folders/Scripts/initiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
