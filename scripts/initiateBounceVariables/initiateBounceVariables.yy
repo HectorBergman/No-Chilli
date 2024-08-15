@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateBounceVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateBounceVariables",
+  "parent":{
+    "name":"zinitiationVariables",
+    "path":"folders/Objects/zinitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

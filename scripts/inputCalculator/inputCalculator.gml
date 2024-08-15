@@ -14,6 +14,9 @@ function inputCalculator(){
 	if (_keyJump){
 		jump = true;
 	}
+	if (_keyUp){
+		up = true;
+	}
 	if (keyboard_check(dashLeftReqInput)){
 		dashLeft = true;
 	}
@@ -32,6 +35,9 @@ function inputCalculator(){
 	if (_keyShift){
 		run = true;
 	}
+	if (_keyDown){
+		down = true;
+	}
 
 }
 
@@ -45,4 +51,5 @@ function inputReset(){
 	dashDown = false;
 	grab = false;
 	run = false;
+	down = false;
 }

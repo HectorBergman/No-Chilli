@@ -7,6 +7,7 @@ enum states{
 	dash,
 	mach,
 	machTurn,
+	bounce,
 }
 
 state = states.normal
@@ -21,6 +22,8 @@ initiateDashVariables();
 
 initiateNormalJumpnFallVariables();
 
+initiateBounceVariables();
+
 //should put these in a script
 rightHeldTimer = 0;
 leftHeldTimer = 0;
@@ -31,6 +34,8 @@ wallTouch = 0;
 _keyShift = 0;
 cam = view_get_camera(0);
 depth = 0;
+
+bugtestcount = 0;
 
 initiateRingVariables()
 

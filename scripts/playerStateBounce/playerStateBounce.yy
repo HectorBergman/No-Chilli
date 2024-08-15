@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerStateBounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStateBounce",
+  "parent":{
+    "name":"states",
+    "path":"folders/Scripts/states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

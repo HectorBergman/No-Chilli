@@ -4,7 +4,7 @@ function initiateMachVariables(){
 	mach1Start = 60; //how many ticks of shift held until mach 1 starts
 	mach2Start = 400; // --||-- mach 2 starts
 	mach1Speed = walkSpeed + 3;
-	mach2Speed = 1.5 + mach1Speed;
+	mach2Speed = 2 + mach1Speed;
 	currentSpeed = 0;
 	lastMoveGround = 0;
 	mach = 0;

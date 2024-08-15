@@ -7,7 +7,8 @@ function playerSpriteLogic(_player){
 		case states.dead: deadSpriteLogic(); break;
 		case states.dash: dashSpriteLogic(); break;
 		case states.mach: machSpriteLogic(); break;
-		case states.machTurn: turnSpriteLogic();
+		case states.machTurn: turnSpriteLogic(); break;
+		case states.bounce: bounceSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
@@ -54,8 +55,9 @@ function machSpriteLogic(){
 	sprite_index = spr_player_mach1
 	if (lastMove != 0){
 		image_xscale = (lastMove);
+		
 	}else{
-		image_xscale = 1;
+		image_xscale = 1
 	}
 	
 }
@@ -72,4 +74,8 @@ function turnSpriteLogic(){
 	}
 }
 function deadSpriteLogic(){
+}
+
+function bounceSpriteLogic(){
+	sprite_index = spr_player_stand
 }

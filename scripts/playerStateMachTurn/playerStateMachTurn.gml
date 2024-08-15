@@ -13,22 +13,25 @@ function playerStateMachTurn(){
 		state = states.normal;
 	}
 	machTimer();
-	if (turnTimer > turnTime-20){ //braking
-		horizontalSpeed = horizontalSpeed*0.95;
-	}else if (turnTimer > turnTime-30){ //turning
-		horizontalSpeed = 0;
-	}else{ //running again
-		if (!place_meeting(x, y + 0.1, object_wall)){
-			show_debug_message("hI");
-			airTime = givenAirTime; //atm 20 but doublecheck lol
-		}
-		determineMove();
-		horizontalSpeed = move*offLikeAShotSpeed;
-		state = states.mach;
-	}
+	
+	turningLogic();
 	
 	playerHorizontalCollision(self);
 	playerVerticalCollision(self);
 	playerWhiteguyCollision(self);
 	playerRingCollision(self);
+}
+
+function offLikeAShotClouds(theMove){
+	for(var i = 0; i < 39; i += 1){
+		cloudsStruct =
+		{
+			//verticalSpeed : verSpeed,
+			//horizontalSpeed : horSpeed,
+			lifeTime: random_range(50, 150),
+			spriteDirection : -theMove,
+			spriteNumber : i,
+		};
+		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
+	}
 }

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function initiateTurnVariables(){
 	turn = 0; //-1 for left, 1 for right
-	turnTime = 30; //time it takes to turn
+	turnTime = 37; //time it takes to turn
 	turnTimer = 0; //the timer for turning
 	airTime = 0; //time where the player gets to be standing on air after turning.. wile coyote
 	givenAirTime = 20; //time given to be able to spend in air

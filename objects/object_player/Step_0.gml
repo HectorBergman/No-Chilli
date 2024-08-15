@@ -4,7 +4,8 @@
 _keyRight = keyboard_check(vk_right);
 _keyLeft = keyboard_check(vk_left);
 _keyJump = keyboard_check_pressed(vk_up);
-_keyZ = keyboard_check_pressed(ord("z"))
+_keyUp = keyboard_check(vk_up);
+_keyDown = keyboard_check(vk_down);
 _keySpace = keyboard_check(vk_space);
 
 dashUpReqInput = ord("W");
@@ -12,6 +13,7 @@ dashLeftReqInput = ord("A");
 dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
+bugtestcount--
 inputCalculator();
 if (dashCooldown < 1){
 	if (dashUp || dashLeft || 
@@ -32,7 +34,7 @@ if (dashCooldown < 1){
 			horizontalSpeed = 20;
 			verticalSpeed = 0;
 		}
-		dashCooldown = 200;
+		dashCooldown = dashCooldownTime;
 		state = states.dash;
 	}
 }
@@ -54,6 +56,7 @@ switch(state){
 	case states.dash: playerStateDash(); break;
 	case states.mach: playerStateMach(); break;
 	case states.machTurn: playerStateMachTurn(); break;
+	case states.bounce: playerStateBounce(); break;
 }
 playerSpriteLogic(self);
 

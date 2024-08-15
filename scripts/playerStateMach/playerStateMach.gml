@@ -14,19 +14,18 @@ function playerStateMach(){
 		machHorizontalMovement(self);
 		
 		if (airTime < 1){
-			
 		
 			playerFall(self);
-		}else if (place_meeting(x, y + 0.1, object_wall)){
+			playerJump(self);
+		}else if (place_meeting(x, y + 1, object_wall)){
 				airTime = 0;
 		}else{
 				jumpsLeft = 0;
 		}	
-		playerJump(self);
+		
 		airTime--
-
-	
-
+		
+		wallBounce();
 
 		//see: script playerCollision
 		playerHorizontalCollision(self);
@@ -51,4 +50,31 @@ function playerStateMach(){
 		state = states.machTurn;
 	}
 	
+}
+
+
+function runClouds(){
+	cloudTimer--;
+	if cloudTimer == 0{
+		cloudsStruct =
+		{
+			//verticalSpeed : verSpeed,
+			//horizontalSpeed : horSpeed,
+			lifeTime: random_range(50, 150),
+			spriteDirection : -theMove,
+			spriteNumber : i,
+		};
+		instance_create_depth(x, y, i, object_runClouds, cloudsStruct);
+	}
+	for(var i = 0; i < 39; i += 1){
+		cloudsStruct =
+		{
+			//verticalSpeed : verSpeed,
+			//horizontalSpeed : horSpeed,
+			lifeTime: random_range(50, 150),
+			spriteDirection : -theMove,
+			spriteNumber : i,
+		};
+		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
+	}
 }

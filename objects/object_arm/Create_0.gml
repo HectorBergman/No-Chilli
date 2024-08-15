@@ -19,11 +19,11 @@ surfaceXOffset = -1;
 surfaceYOffset = -1;
 
 shoulderXOffset = -8
-shoulderYOffset = 30
+shoulderYOffset = 37
 
 
 shoulderXOffsetMirror = -3
-shoulderYOffsetMirror = 32
+shoulderYOffsetMirror = 35
 
 handXOffset = -9
 handYOffset = 15

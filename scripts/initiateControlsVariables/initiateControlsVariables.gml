@@ -10,4 +10,6 @@ function initiateControlsVariables(){
 	dashDown = false;
 	grab = false;
 	run = false;
+	down = false;
+	up = false;
 }

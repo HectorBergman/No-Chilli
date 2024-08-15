@@ -97,6 +97,9 @@ function machTimer(){ //TODO: make sure you have to be onground through whole st
 function startMachIfRun(){
 	if (state != states.mach && (rightHeldTimer > mach1Start || leftHeldTimer > mach1Start)){
 		state = states.mach;
+		return true;
+	}else{
+		return false;
 	}
 }
 

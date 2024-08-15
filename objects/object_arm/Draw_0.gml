@@ -34,4 +34,4 @@ if (!(chiliman.image_xscale == -1)){
 
 surface_reset_target();
 
-draw_surface_stretched(surface, surfaceXOffset, surfaceYOffset, window_get_width()-585, window_get_height()-333)
+draw_surface_stretched(surface, surfaceXOffset, surfaceYOffset, window_get_width()-window_get_width()/3, window_get_height()-window_get_height()/3)
