@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"playerMovement",
+  "%Name":"hotsauce",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerMovement",
+  "name":"hotsauce",
   "parent":{
-    "name":"movement",
-    "path":"folders/Scripts/movement.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

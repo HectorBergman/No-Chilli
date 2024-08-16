@@ -5,11 +5,11 @@ function playerHorizontalCollision(_player){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
 		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
-		walltouch = 1;
+		wallTouch = 1;
 		
 		playerCollisionWhileSwinging()
 	}else{
-		walltouch = 0;
+		wallTouch = 0;
 	}
 	
 	x = round(x + horizontalSpeed);

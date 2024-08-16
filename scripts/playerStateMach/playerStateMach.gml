@@ -26,6 +26,7 @@ function playerStateMach(){
 		airTime--
 		
 		wallBounce();
+		checkForSlide();
 
 		//see: script playerCollision
 		playerHorizontalCollision(self);

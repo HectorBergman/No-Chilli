@@ -38,6 +38,8 @@ if (dashCooldown < 1){
 		state = states.dash;
 	}
 }
+hotsauce();
+updateSpeed();
 
 if (keyboard_check(vk_shift)){
 	_keyShift = 4;
@@ -57,6 +59,7 @@ switch(state){
 	case states.mach: playerStateMach(); break;
 	case states.machTurn: playerStateMachTurn(); break;
 	case states.bounce: playerStateBounce(); break;
+	case states.slide: playerStateSlide(); break;
 }
 playerSpriteLogic(self);
 

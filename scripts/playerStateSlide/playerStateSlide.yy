@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"playerMovement",
+  "%Name":"playerStateSlide",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerMovement",
+  "name":"playerStateSlide",
   "parent":{
-    "name":"movement",
-    "path":"folders/Scripts/movement.yy",
+    "name":"states",
+    "path":"folders/Scripts/states.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

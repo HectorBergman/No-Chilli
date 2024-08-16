@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"playerBounceMovement",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"movement",
+    "path":"folders/Scripts/movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

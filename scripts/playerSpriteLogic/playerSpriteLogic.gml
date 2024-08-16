@@ -9,6 +9,7 @@ function playerSpriteLogic(_player){
 		case states.mach: machSpriteLogic(); break;
 		case states.machTurn: turnSpriteLogic(); break;
 		case states.bounce: bounceSpriteLogic(); break;
+		case states.slide: slideSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
@@ -78,4 +79,15 @@ function deadSpriteLogic(){
 
 function bounceSpriteLogic(){
 	sprite_index = spr_player_stand
+}
+
+function slideSpriteLogic(){
+	sprite_index = spr_player_slide
+	if (lastMove != 0){
+		image_xscale = (lastMove);
+		
+	}else{
+		image_xscale = 1
+	}
+	
 }

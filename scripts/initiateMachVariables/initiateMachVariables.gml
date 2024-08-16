@@ -8,5 +8,5 @@ function initiateMachVariables(){
 	currentSpeed = 0;
 	lastMoveGround = 0;
 	mach = 0;
-	offLikeAShotSpeed = 20; //horizontal speed right after finishing turn
+
 }

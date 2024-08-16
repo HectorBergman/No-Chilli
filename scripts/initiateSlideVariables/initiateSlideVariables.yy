@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateSlideVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateSlideVariables",
+  "parent":{
+    "name":"zinitiationVariables",
+    "path":"folders/Objects/zinitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

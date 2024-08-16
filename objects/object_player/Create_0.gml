@@ -8,6 +8,7 @@ enum states{
 	mach,
 	machTurn,
 	bounce,
+	slide,
 }
 
 state = states.normal
@@ -23,6 +24,10 @@ initiateDashVariables();
 initiateNormalJumpnFallVariables();
 
 initiateBounceVariables();
+
+initiateSlideVariables();
+
+initiateHotsauceRelatedVariables();
 
 //should put these in a script
 rightHeldTimer = 0;

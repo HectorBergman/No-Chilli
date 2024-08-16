@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"playerMovement",
+  "%Name":"playerSlideMovement",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerMovement",
+  "name":"playerSlideMovement",
   "parent":{
     "name":"movement",
     "path":"folders/Scripts/movement.yy",

@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"playerMovement",
+  "%Name":"updateSpeed",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"playerMovement",
+  "name":"updateSpeed",
   "parent":{
-    "name":"movement",
-    "path":"folders/Scripts/movement.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

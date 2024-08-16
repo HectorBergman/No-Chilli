@@ -58,3 +58,9 @@ function turningLogic(){
 	
 }
 
+function checkForSlide(){
+	if (down){
+		horizontalSpeed *= 1.4;
+		state = states.slide
+	}
+}
