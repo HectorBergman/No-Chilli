@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_roomTrans",
-    "path":"sprites/spr_roomTrans/spr_roomTrans.yy",
+    "name":"spr_weakHotsauceSpin",
+    "path":"sprites/spr_weakHotsauceSpin/spr_weakHotsauceSpin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

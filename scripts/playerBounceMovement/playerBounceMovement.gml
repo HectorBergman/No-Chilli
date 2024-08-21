@@ -1,16 +1,19 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function wallBounce(){
+function initializeBounce(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall) && onGround < 5){
 		verticalSpeed = -20;
-		bounce = 1;
+		bounceNr = 1;
+		bounceTimer = bounceTime;
+		bounceSpeed = bounceOneHoriSpeed; //abs(horizontalSpeed);
+		bounceWallTouch = true;
 		state = states.bounce;
 	}
 }
 
 function bounceHorizontalMovement(){
 	
-	horizontalSpeed = round(move*bounceOneHoriSpeed)// + mach);
+	horizontalSpeed = move*bounceSpeed// + mach);
 }
 
 function bounceVerticalCollision(){
@@ -32,10 +35,15 @@ function bounceVerticalCollision(){
 }
 function bounceHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall)){
-		if (bounce == 1){
-			bounce++;
+		show_debug_message("swag");
+		if (bounceNr == 1 && bounceWallTouch == false){
+			bounceNr = 2; //todo make movement from bounced wall slower
+			bounceSpeed = 20;
+			verticalSpeed += -7;
 			
 		}
+	}else{
+		bounceWallTouch = false;
 	}
 }
 

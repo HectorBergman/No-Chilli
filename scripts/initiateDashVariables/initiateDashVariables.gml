@@ -4,5 +4,5 @@ function initiateDashVariables(){
 	dashCooldown = 0;
 	dash = 0;
 	dashEndTime = 160;
-	dashCooldownTime = 0; //debug, normal value = 200;
+	dashCooldownTime = 0 //debug, normal value = 200;
 }

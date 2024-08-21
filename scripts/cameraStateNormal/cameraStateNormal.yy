@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"cameraStateNormal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cameraStateNormal",
+  "parent":{
+    "name":"cameraStates",
+    "path":"folders/Scripts/cameraStates.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

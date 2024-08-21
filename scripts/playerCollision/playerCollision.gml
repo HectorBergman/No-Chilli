@@ -12,7 +12,7 @@ function playerHorizontalCollision(_player){
 		wallTouch = 0;
 	}
 	
-	x = round(x + horizontalSpeed);
+	x = x + horizontalSpeed;
 }
 
 function playerVerticalCollision(_player){
@@ -25,7 +25,7 @@ function playerVerticalCollision(_player){
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
 		playerCollisionWhileSwinging()
 	}
-	y = round(y + verticalSpeed);
+	y = y + verticalSpeed;
 }
 
 function playerWhiteguyCollision(_player){

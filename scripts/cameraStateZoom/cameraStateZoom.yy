@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"cameraStateZoom",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cameraStateZoom",
+  "parent":{
+    "name":"cameraStates",
+    "path":"folders/Scripts/cameraStates.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

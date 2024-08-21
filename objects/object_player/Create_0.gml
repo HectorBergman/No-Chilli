@@ -13,6 +13,8 @@ enum states{
 
 state = states.normal
 
+initiateSpriteVariables();
+
 initiateNormalMovementVariables();
 
 initiateMachVariables()

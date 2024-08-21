@@ -13,14 +13,8 @@ function playerSpriteLogic(_player){
 	}
 }
 function normalSpriteLogic(){
-	
-	if (ringHeld == true){ //TODO: delete this line lol
-		if (lastMove == 1){
-			sprite_index = Sprite11;
-		}else if (lastMove == -1){
-			sprite_index = Sprite12;
-		}
-	} else if (onGround < 0){
+	sprite_set_speed(spr_player_walk, spriteSpeed, spritespeed_framespersecond);
+	if (onGround < 0){
 		if (verticalSpeed < 0){
 			sprite_index = spr_player_jump;
 		}else{
@@ -53,6 +47,7 @@ function dashSpriteLogic(){
 }
 
 function machSpriteLogic(){
+	sprite_set_speed(spr_player_mach1, spriteSpeed, spritespeed_framespersecond);
 	sprite_index = spr_player_mach1
 	if (lastMove != 0){
 		image_xscale = (lastMove);
@@ -82,12 +77,31 @@ function bounceSpriteLogic(){
 }
 
 function slideSpriteLogic(){
-	sprite_index = spr_player_slide
-	if (lastMove != 0){
-		image_xscale = (lastMove);
+	
+	if (!slideWalking){
+		sprite_index = spr_player_slide
+		if (lastMove != 0){
+			image_xscale = (lastMove);
 		
+		}else{
+			image_xscale = 1
+		}
+	}else if (horizontalSpeed == 0){
+		sprite_index = spr_player_slide
+		if (lastSlideMove != 0){
+			image_xscale = lastSlideMove;
+		
+		}else{
+			image_xscale = 1
+		}
 	}else{
-		image_xscale = 1
+		sprite_index = spr_player_slideWalking
+		if (slideMove != 0){
+			image_xscale = (slideMove);
+		
+		}else{
+			image_xscale = 1
+		}
 	}
 	
 }

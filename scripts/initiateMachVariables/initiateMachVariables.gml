@@ -3,7 +3,7 @@
 function initiateMachVariables(){
 	mach1Start = 60; //how many ticks of shift held until mach 1 starts
 	mach2Start = 400; // --||-- mach 2 starts
-	mach1Speed = walkSpeed + 3;
+	mach1Speed = walkSpeed +3; //these dont do anything but initialize anymore. See: updateSpeed
 	mach2Speed = 2 + mach1Speed;
 	currentSpeed = 0;
 	lastMoveGround = 0;

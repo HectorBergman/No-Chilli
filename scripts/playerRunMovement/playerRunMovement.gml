@@ -7,17 +7,19 @@ function playerRunMovement(){
 function machHorizontalMovement(_player){
 
 	if (mach == mach1Speed){
-		if (horizontalSpeed*move > mach1Speed){
-			horizontalSpeed *= 0.97
-		}else{
+		if (horizontalSpeed*move > mach1Speed && onGround > 8){
+			horizontalSpeed *= 0.99
+		}else if (horizontalSpeed*move < mach1Speed){
 			horizontalSpeed = move*mach1Speed;
+		}else if onGround < -90{
+			horizontalSpeed *= 0.995;
 		}
 			//essentially, if speed is above mach limit, slowly decrease it back to mach limit
 	}else if (mach == mach2Speed){
-		if (horizontalSpeed*move > mach2Speed){
-			horizontalSpeed *= 0.97
-		}else{
-			horizontalSpeed = move*mach2Speed;
+		if (horizontalSpeed*move > mach2Speed && onGround > 8){
+			horizontalSpeed *= 0.99
+		}else if (horizontalSpeed*move < mach2Speed){
+			horizontalSpeed = move*mach1Speed;
 		}
 	}
 
@@ -60,7 +62,7 @@ function turningLogic(){
 
 function checkForSlide(){
 	if (down){
-		horizontalSpeed *= 1.4;
+		horizontalSpeed *= slideMultiplier;
 		state = states.slide
 	}
 }

@@ -9,7 +9,7 @@ function playerStateMach(){
 		determineMove();
 		mach = machCalculator()
 		
-			
+		initializeBounce();
 		//see: script playerMovement
 		machHorizontalMovement(self);
 		
@@ -25,7 +25,7 @@ function playerStateMach(){
 		
 		airTime--
 		
-		wallBounce();
+		
 		checkForSlide();
 
 		//see: script playerCollision

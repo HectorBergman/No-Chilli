@@ -9,6 +9,3 @@ function hotsauce(){
 }
 
 
-function scovilleSpeedCalculator(){
-	scovilleSpeed = sqrt(sqrt(scoville/3000)); //this sets 1,5 mill scoville at a little over 2x speed
-}

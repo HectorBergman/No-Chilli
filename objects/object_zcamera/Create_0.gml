@@ -2,16 +2,43 @@
 // You can write your code in this editor
 
 gpu_set_texfilter(false);
+//960, 540
+//640, 360
+//800, 450 (?)
 
-camWidth = 960;
-camHeight = 540;
+enum camStates{
+	normal,
+	zoomOut,
+	zoomIn,
+}
+
+camState = camStates.normal;
+
+camWidthRun = 960;
+camHeightRun = 540;
+
+camWidthNormal = 640;
+camHeightNormal = 360;
+
+camWidth = camWidthNormal;
+camHeight = camHeightNormal;
 
 windowWidth = 1920
 windowHeight = 1080
 
+zoomTimer = 40;
+zoomTimerEnd = 20;
+zoomTimerEndZoomIn = 20;
+
+widthLinearZoom = (camWidthRun-camWidthNormal)/zoomTimerEnd;
+heightLinearZoom = (camHeightRun-camHeightNormal)/zoomTimerEnd;
+
+
 view_camera[0] = camera_create_view(0, 0, camWidth, camHeight);
 
-camera_set_view_size(view_camera[0],camWidth,camHeight)
+isZoomOut = false;
+isZoomIn = true;
+
 window_set_size(windowWidth, windowHeight);
 
 

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateSpriteVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateSpriteVariables",
+  "parent":{
+    "name":"zinitiationVariables",
+    "path":"folders/Objects/zinitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -5,15 +5,42 @@ function updateSpeed(){
 	walkSpeed = baseSpeed*scovilleSpeed
 	mach1Speed = walkSpeed + 3*scovilleSpeed;
 	mach2Speed = mach1Speed + 2*scovilleSpeed;
-	if (scovilleSpeed/2 > 1){
-		playerGrav = baseGrav*scovilleSpeed/2; //TODO: also update slowfall
-		offLikeAShotSpeed = baseOLSSpeed*scovilleSpeed/2;
-		mediumFall = baseMediumFall*scovilleSpeed/2;
-		maxFall = baseMaxFall*scovilleSpeed/2;
+	offLikeAShotSpeed = baseOLSSpeed*scovilleSpeed*1.2;
+	
+		playerGrav = baseGrav*sqrt(scovilleSpeed)
+		
+		mediumFall = baseMediumFall*scovilleSpeed
+		maxFall = baseMaxFall*scovilleSpeed
+		jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)
+	
+	
+	switch(state){
+		case states.normal: 
+			scovilleSpriteSpeed(defaultSpriteSpeedWalk);
+		break;
+		case states.mach: 
+			scovilleSpriteSpeed(defaultSpriteSpeedMach1);
+		break;
+		default: 
+			scovilleSpriteSpeed(defaultSpriteSpeedWalk);
+		break;
 	}
-	if (scovilleSpeed/3 > 1){
-		jumpSpeed = baseJumpSpeed*scovilleSpeed/3;
+	if (instance_exists(object_whiteGuy)){
+		object_whiteGuy.path_speed = 5*scovilleSpeed
+		sprite_set_speed(sprite_whiteGuy, 10*sqrt(scovilleSpeed), spritespeed_framespersecond)
+		
 	}
+	//show_debug_message(string(scovilleSpeed));
+}
+
+function scovilleSpeedCalculator(){
+	scovilleSpeed = sqrt(sqrt(sqrt(scoville/3000))); //this sets 1,5 mill scoville at a little over 2x speed
+}
+
+function scovilleSpriteSpeed(usedSpriteSpeed)
+{
+		spriteSpeed = usedSpriteSpeed* scovilleSpeed
+	
 }
 
 function resetSpeed(){
@@ -24,4 +51,5 @@ function resetSpeed(){
 	offLikeAShotSpeed = baseOLSSpeed;
 	scoville = 3000;
 	scovilleSpeed = 1;
+	object_whiteGuy.path_speed = 5;
 }

@@ -51,11 +51,11 @@ function playerFall(_player){
 function playerHorizontalMovement(_player){
 	if (_keyShift > 0){
 		//mach = machCalculator()
-		horizontalSpeed = round(move*walkSpeed)// + mach);
+		horizontalSpeed = move*walkSpeed// + mach);
 	}else{
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
-		horizontalSpeed = round(move*walkSpeed)
+		horizontalSpeed = move*walkSpeed
 	}
 	
 }
@@ -117,4 +117,13 @@ function determineMove(){ //determines direction being moved in
 	}
 }
 
+function determineSlideMove(){
+	if (state == states.slide){
+		
+		slideMove = moveRight-moveLeft
+		if (slideMove != 0){
+			lastSlideMove = slideMove;
+		}
+	}
+}
 

@@ -52,4 +52,5 @@ function inputReset(){
 	grab = false;
 	run = false;
 	down = false;
+	up = false;
 }
