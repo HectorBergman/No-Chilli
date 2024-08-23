@@ -7,4 +7,5 @@ function initiateSlideVariables(){
 	slideMove = 0;
 	glideSpeed = 0;
 	lastSlideMove = 0;
+	slideDirection = 0;
 }

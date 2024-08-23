@@ -26,3 +26,7 @@ function cameraStateZoomIn(){
 	}
 
 }
+
+function cameraShouldZoomIn(){
+	return (chiliman.state == states.normal || (chiliman.state == states.slide && abs(chiliman.horizontalSpeed) < 1))
+}

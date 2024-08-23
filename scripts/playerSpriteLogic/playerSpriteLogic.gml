@@ -63,11 +63,9 @@ function turnSpriteLogic(){
 	}else{
 		sprite_index = spr_player_offlikeashot
 	}
-	if (lastMove != 0){
-		image_xscale = (lastMove);
-	}else{
-		image_xscale = 1;
-	}
+	
+	image_xscale = (-turnDirection);
+
 }
 function deadSpriteLogic(){
 }
@@ -86,22 +84,20 @@ function slideSpriteLogic(){
 		}else{
 			image_xscale = 1
 		}
-	}else if (horizontalSpeed == 0){
+	}else if (horizontalSpeed == 0 || (place_meeting(x + slideMove*0.5, y , object_wall))){
 		sprite_index = spr_player_slide
-		if (lastSlideMove != 0){
-			image_xscale = lastSlideMove;
+	
 		
-		}else{
-			image_xscale = 1
-		}
+		
+		
+			image_xscale = slideDirection
+		
 	}else{
 		sprite_index = spr_player_slideWalking
 		if (slideMove != 0){
-			image_xscale = (slideMove);
+			image_speed = (slideMove);
 		
-		}else{
-			image_xscale = 1
 		}
+		image_xscale = slideDirection
 	}
-	
 }

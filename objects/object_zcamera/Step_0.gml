@@ -13,11 +13,11 @@
 }else{
 	camAheadX = 0;
 }*/
-if (isZoomOut == false && camState != camStates.zoomOut && chiliman.state != states.normal){
+if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn()){
 	camState = camStates.zoomOut
 	isZoomOut = true;
 	isZoomIn = false;
-}else if (isZoomIn == false && camState != camStates.zoomIn && chiliman.state == states.normal){
+}else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn()){
 	camState = camStates.zoomIn
 	isZoomOut = false;
 	isZoomIn = true;
@@ -60,6 +60,8 @@ switch(camState){
 	case camStates.zoomOut: cameraStateZoomOut(); break;
 	case camStates.zoomIn: cameraStateZoomIn(); break;
 }
+
+
 
 
 

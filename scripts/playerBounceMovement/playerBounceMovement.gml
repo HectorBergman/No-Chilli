@@ -2,19 +2,58 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function initializeBounce(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall) && onGround < 5){
-		verticalSpeed = -20;
+		verticalSpeed = initialBounceVertical;
 		bounceNr = 1;
 		bounceTimer = bounceTime;
-		bounceSpeed = bounceOneHoriSpeed; //abs(horizontalSpeed);
+		bounceMaxSpeed = bounceOneMaxHorizontalSpeed; //abs(horizontalSpeed);
 		bounceWallTouch = true;
+		bouncedWall = sign(horizontalSpeed)
+		horizontalSpeed = -bouncedWall*bounceOneBounceOffWallHorizontalSpeed;
 		state = states.bounce;
+		
 	}
 }
 
-function bounceHorizontalMovement(){
-	
-	horizontalSpeed = move*bounceSpeed// + mach);
+function bounceHorizontalMovement(){ //this is shit
+	if (bounceNr == 1){
+		decideWhichWallIsBouncedOffAndActAccordingly(1)
+	}else if (bounceNr == 2){
+		decideWhichWallIsBouncedOffAndActAccordingly(2)
+	}else{
+			throw("bounceNr is not 1 or 2")
+	}
 }
+
+function decideWhichWallIsBouncedOffAndActAccordingly(numberBounce){
+	if (numberBounce == 1){
+		if (bouncedWall == 1){
+			decideSpeedWhenBouncingOffWallDependingOnDirection(0.8, 0.5)
+		}else if (bouncedWall == -1){
+			decideSpeedWhenBouncingOffWallDependingOnDirection(0.5, 0.8)
+		}else{
+			throw("Bounced wall is not -1 or 1")
+		}
+	}else{
+		if (bouncedWall == 1){
+			decideSpeedWhenBouncingOffWallDependingOnDirection(1.0, 0.4)
+		}else if (bouncedWall == -1){
+			decideSpeedWhenBouncingOffWallDependingOnDirection(0.4, 1.0)
+		}else{
+			throw("Bounced wall is not -1 or 1")
+		}
+	}
+}
+
+function decideSpeedWhenBouncingOffWallDependingOnDirection(multWhenLeft, multWhenRight){
+	if (move == 1 && horizontalSpeed < bounceMaxSpeed){
+		horizontalSpeed += move*bounceSpeedAdder*multWhenRight
+	}else if (move == -1 && horizontalSpeed > -bounceMaxSpeed){
+		horizontalSpeed += move*bounceSpeedAdder*multWhenLeft
+	}else if (move == 0){
+		horizontalSpeed *= 0.98
+	}
+}
+
 
 function bounceVerticalCollision(){
 	if ((moveLeft ^^ moveRight) && place_meeting(x, y + verticalSpeed, object_wall)){
@@ -37,9 +76,11 @@ function bounceHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall)){
 		show_debug_message("swag");
 		if (bounceNr == 1 && bounceWallTouch == false){
+			bouncedWall = sign(horizontalSpeed);
 			bounceNr = 2; //todo make movement from bounced wall slower
-			bounceSpeed = 20;
-			verticalSpeed += -7;
+			bounceMaxSpeed = bounceTwoMaxHorizontalSpeed;
+			verticalSpeed = secondBounceVertical;
+			horizontalSpeed = -bouncedWall*bounceTwoBounceOffWallHorizontalSpeed + -bouncedWall*abs(horizontalSpeed);
 			
 		}
 	}else{
@@ -49,9 +90,22 @@ function bounceHorizontalCollision(){
 
 function bounceVerticalMovement(){
 	if (down){
-		verticalSpeed += 0.8
+		verticalSpeed += 0.5
 	}else if (up){
 		verticalSpeed -= 0.1
+	}
+}
+
+function bounceFall(){
+	if (verticalSpeed < mediumFall){
+		verticalSpeed = verticalSpeed + bounceGrav;
+	}
+	else if (verticalSpeed >= mediumFall && verticalSpeed < maxFall){ //accelerate slower if verticalSpeed is more than 12
+		verticalSpeed = verticalSpeed + bounceGrav*0.5;
+		
+	}
+	else { //stop accelerating if verticalSpeed greater than 20
+		verticalSpeed = verticalSpeed;
 	}
 }
 

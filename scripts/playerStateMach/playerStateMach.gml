@@ -9,7 +9,7 @@ function playerStateMach(){
 		determineMove();
 		mach = machCalculator()
 		
-		initializeBounce();
+		
 		//see: script playerMovement
 		machHorizontalMovement(self);
 		
@@ -33,6 +33,7 @@ function playerStateMach(){
 		playerVerticalCollision(self);
 		playerWhiteguyCollision(self);
 		playerRingCollision(self);
+		initializeBounce();
 	
 		if (!(_keyShift > 0) || (!(moveLeft) && !(moveRight))){
 			rightHeldTimer = 0;
@@ -47,8 +48,7 @@ function playerStateMach(){
 		}else{
 			turn = -1
 		}
-		turnTimer = turnTime;
-		state = states.machTurn;
+		startTurn(-move);
 	}
 	
 }

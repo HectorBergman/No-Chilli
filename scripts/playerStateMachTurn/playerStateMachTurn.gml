@@ -3,11 +3,16 @@
 function playerStateMachTurn(){
 	
 	turnTimer--
-	if (turnTimer == 0){
+	if (turnTimer == 0 && (moveLeft == 1 && moveRight == 1)){
+		leftHeldTimer = 0;
+		rightHeldTimer = 0;
+		state = states.normal
+	}else if (turnTimer == 0 && !(moveLeft == 1 && moveRight == 1)){
 		state = states.mach
 
-	}else if (!run || (moveLeft == false && moveRight == false)){
+	}else if (!run || (moveLeft == false && turnDirection == -1) || moveRight == false && turnDirection == 1){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
+		
 		leftHeldTimer = 0;
 		rightHeldTimer = 0;
 		state = states.normal;
@@ -33,5 +38,15 @@ function offLikeAShotClouds(theMove){
 			spriteNumber : i,
 		};
 		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
+	}
+}
+
+function startTurn(newTurnDirection){
+	if (newTurnDirection == 1 or newTurnDirection == -1){
+		turnDirection = newTurnDirection
+		turnTimer = turnTime;
+		state = states.machTurn;
+	}else{
+		state = states.normal;
 	}
 }

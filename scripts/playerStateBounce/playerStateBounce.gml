@@ -6,14 +6,13 @@ function playerStateBounce(){
 	//show_debug_message(bugtestcount);
 	
 
-	//see: script playerMovement
-	playerFall(self);
+
+	bounceFall();
 	bounceHorizontalMovement();
 	bounceVerticalMovement();
 	
 
 
-	//see: script playerCollision
 	bounceVerticalCollision();
 	bounceHorizontalCollision();
 	playerHorizontalCollision(self);

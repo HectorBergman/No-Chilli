@@ -15,8 +15,8 @@ function slideHorizontalMovement(){
 		wallTouch = 0;
 		x = x + horizontalSpeed;
 	}
-	if (abs(horizontalSpeed) <= crawlSpeed){ //TODO: make it so if speed is low enough when exiting slide,
-											// reset machTimer and state = normal;
+	if (abs(horizontalSpeed) <= crawlSpeed && state == states.slide){ //TODO: make it so if speed is low enough when exiting slide,
+																	 // reset machTimer and state = normal;
 		slideWalking = true;
 	}
 	slideWalk();
@@ -33,7 +33,11 @@ function slideWalk(){
 	
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
-		horizontalSpeed = slideMove*crawlSpeed
+		if (onGround > 8){
+			horizontalSpeed = slideMove*crawlSpeed
+		}else{
+			horizontalSpeed = 0;
+		}
 	}
 
 }
