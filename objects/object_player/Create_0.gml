@@ -9,6 +9,7 @@ enum states{
 	machTurn,
 	bounce,
 	slide,
+	crash,
 }
 
 state = states.normal
@@ -28,6 +29,8 @@ initiateNormalJumpnFallVariables();
 initiateBounceVariables();
 
 initiateSlideVariables();
+
+initiateCrashVariables();
 
 initiateHotsauceRelatedVariables();
 

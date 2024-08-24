@@ -15,18 +15,35 @@ function cameraStateZoomOut(){
 }
 
 function cameraStateZoomIn(){
-	zoomTimer++
-	if (zoomTimer < 40){
-		camWidth -= widthLinearZoom/2;
-		camHeight -= heightLinearZoom/2;
+	if (fastZoom == false){
+		zoomTimer++
+		if (zoomTimer < 40){
+			camWidth -= widthLinearZoom/2;
+			camHeight -= heightLinearZoom/2;
+		}else{
+			camWidth -= widthLinearZoom/2;
+			camHeight -= heightLinearZoom/2;
+			camState = camStates.normal;
+		}
 	}else{
-		camWidth -= widthLinearZoom/2;
-		camHeight -= heightLinearZoom/2;
-		camState = camStates.normal;
+		zoomTimer += 2;
+		if (zoomTimer < 40){
+			camWidth -= widthLinearZoom;
+			camHeight -= heightLinearZoom;
+		}else{
+			camWidth -= widthLinearZoom;
+			camHeight -= heightLinearZoom;
+			fastZoom = false;
+			camState = camStates.normal;
+		}
 	}
-
+	
 }
 
 function cameraShouldZoomIn(){
-	return (chiliman.state == states.normal || (chiliman.state == states.slide && abs(chiliman.horizontalSpeed) < 1))
+	return (chiliman.state == states.normal || (chiliman.state == states.slide && abs(chiliman.horizontalSpeed) < 1) || chiliman.state == states.crash)
+}
+
+function cameraShouldFastZoom(){
+	return chiliman.state == states.crash;
 }

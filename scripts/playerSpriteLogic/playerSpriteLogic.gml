@@ -10,6 +10,7 @@ function playerSpriteLogic(_player){
 		case states.machTurn: turnSpriteLogic(); break;
 		case states.bounce: bounceSpriteLogic(); break;
 		case states.slide: slideSpriteLogic(); break;
+		case states.crash: crashSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
@@ -95,9 +96,16 @@ function slideSpriteLogic(){
 	}else{
 		sprite_index = spr_player_slideWalking
 		if (slideMove != 0){
-			image_speed = (slideMove);
+			sprite_set_speed(spr_player_slideWalking, 
+							abs(sprite_get_speed(spr_player_slideWalking))*(slideMove)*(slideDirection), 
+							spritespeed_framespersecond)
+			
 		
 		}
 		image_xscale = slideDirection
 	}
+}
+
+function crashSpriteLogic(){
+	sprite_index = spr_player_crash;
 }

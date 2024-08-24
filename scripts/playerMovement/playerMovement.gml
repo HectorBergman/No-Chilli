@@ -28,6 +28,13 @@ function playerJump(_player){
 	}
 }
 
+function playerCheckForOnGround(){
+	if (place_meeting(x, y + 8, object_wall)){
+		onGround = 10;
+	}else{
+		onGround--
+	}
+}
 
 
 function playerFall(_player){
@@ -82,8 +89,7 @@ function machTimer(){ //TODO: make sure you have to be onground through whole st
 			}else{
 				leftHeldTimer = rightHeldTimer++;
 				rightHeldTimer = 0;
-			}	  //  i wanted to make all this a function but pointers dont exist so it was hard
-					//   fuck this gay earth
+			}	 
 		}
 		else if (moveRight && moveLeft){	 
 		}else{ //if neither keys are pressed, both timers are 0
@@ -91,6 +97,10 @@ function machTimer(){ //TODO: make sure you have to be onground through whole st
 			rightHeldTimer = 0;
 			leftHeldTimer = 0;
 		}
+	}
+	if (wallTouch){
+		rightHeldTimer = 0;
+		leftHeldTimer = 0;
 	}
 }
 

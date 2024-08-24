@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateCrashVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateCrashVariables",
+  "parent":{
+    "name":"zinitiationVariables",
+    "path":"folders/Objects/zinitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

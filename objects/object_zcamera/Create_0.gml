@@ -33,6 +33,8 @@ zoomTimerEndZoomIn = 20;
 widthLinearZoom = (camWidthRun-camWidthNormal)/zoomTimerEnd;
 heightLinearZoom = (camHeightRun-camHeightNormal)/zoomTimerEnd;
 
+fastZoom = false;
+
 
 view_camera[0] = camera_create_view(0, 0, camWidth, camHeight);
 

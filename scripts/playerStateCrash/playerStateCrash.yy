@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerStateCrash",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStateCrash",
+  "parent":{
+    "name":"states",
+    "path":"folders/Scripts/states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

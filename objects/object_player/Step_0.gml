@@ -35,6 +35,7 @@ if (dashCooldown < 1){
 			verticalSpeed = 0;
 		}
 		dashCooldown = dashCooldownTime;
+		slideWalking = false;
 		state = states.dash;
 	}
 }
@@ -60,7 +61,11 @@ switch(state){
 	case states.machTurn: playerStateMachTurn(); break;
 	case states.bounce: playerStateBounce(); break;
 	case states.slide: playerStateSlide(); break;
+	case states.crash: playerStateCrash(); break;
 }
 playerSpriteLogic(self);
 
 inputReset();
+
+show_debug_message(leftHeldTimer)
+show_debug_message(rightHeldTimer);

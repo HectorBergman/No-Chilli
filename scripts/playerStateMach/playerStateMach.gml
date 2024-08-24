@@ -27,7 +27,9 @@ function playerStateMach(){
 		
 		
 		checkForSlide();
-
+		if (place_meeting(x + horizontalSpeed, y, object_wall)){
+			initiateCrash();
+		}
 		//see: script playerCollision
 		playerHorizontalCollision(self);
 		playerVerticalCollision(self);

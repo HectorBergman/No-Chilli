@@ -18,6 +18,9 @@ if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn()
 	isZoomOut = true;
 	isZoomIn = false;
 }else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn()){
+	if (cameraShouldFastZoom()){
+		fastZoom = true;
+	}
 	camState = camStates.zoomIn
 	isZoomOut = false;
 	isZoomIn = true;
