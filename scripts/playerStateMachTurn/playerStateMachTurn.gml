@@ -4,18 +4,13 @@ function playerStateMachTurn(){
 	
 	turnTimer--
 	if (turnTimer == 0 && (moveLeft == 1 && moveRight == 1)){
-		leftHeldTimer = 0;
-		rightHeldTimer = 0;
-		state = states.normal
-	}else if (turnTimer == 0 && !(moveLeft == 1 && moveRight == 1)){
-		state = states.mach
-
+		returnToNormalStateFromMach();
+	}else if ((turnTimer == 0 && !(moveLeft == 1 && moveRight == 1) ||
+			  (turnDirection != moveRight-moveLeft && moveRight-moveLeft != 0))){
+		enterMach(false, moveRight-moveLeft);
 	}else if (!run || (moveLeft == false && turnDirection == -1) || moveRight == false && turnDirection == 1){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
-		
-		leftHeldTimer = 0;
-		rightHeldTimer = 0;
-		state = states.normal;
+		returnToNormalStateFromMach();
 	}
 	machTimer();
 	

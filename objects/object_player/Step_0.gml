@@ -14,8 +14,12 @@ dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
 bugtestcount--
+
+show_debug_message(leftHeldTimer);
+show_debug_message(rightHeldTimer);
+
 inputCalculator();
-if (dashCooldown < 1){
+if (dashCooldown < 1 && !(state == states.crash)){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
 		if (dashUp){

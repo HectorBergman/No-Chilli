@@ -13,11 +13,11 @@
 }else{
 	camAheadX = 0;
 }*/
-if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn()){
+if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && !(chiliman.state == states.dash)){
 	camState = camStates.zoomOut
 	isZoomOut = true;
 	isZoomIn = false;
-}else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn()){
+}else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn() && !(chiliman.state == states.dash)){
 	if (cameraShouldFastZoom()){
 		fastZoom = true;
 	}

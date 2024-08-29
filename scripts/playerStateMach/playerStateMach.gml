@@ -1,9 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMach(){
+	timeInMach++
 	
-	
-	if !(onGround > 7 && ((moveRight && rightHeldTimer == 0) || (moveLeft && leftHeldTimer == 0))  ){
+	if !(onGround >= 9 && ((moveRight && rightHeldTimer == 0) || (moveLeft && leftHeldTimer == 0))  ){
 		
 		//if not changing direction
 		determineMove();
@@ -28,7 +28,11 @@ function playerStateMach(){
 		
 		checkForSlide();
 		if (place_meeting(x + horizontalSpeed, y, object_wall)){
-			initiateCrash();
+			if (timeInMach > 20){
+				initiateCrash();
+			}else{
+				returnToNormalStateFromMach();
+			}
 		}
 		//see: script playerCollision
 		playerHorizontalCollision(self);
@@ -38,9 +42,7 @@ function playerStateMach(){
 		initializeBounce();
 	
 		if (!(_keyShift > 0) || (!(moveLeft) && !(moveRight))){
-			rightHeldTimer = 0;
-			leftHeldTimer = 0;
-			state = states.normal;
+			returnToNormalStateFromMach();
 		}
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
@@ -81,3 +83,10 @@ function runClouds(){
 		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
 	}
 }
+
+function returnToNormalStateFromMach(){
+	rightHeldTimer = 0;
+	leftHeldTimer = 0;
+	state = states.normal;
+}
+	

@@ -15,23 +15,24 @@ function playerSpriteLogic(_player){
 }
 function normalSpriteLogic(){
 	sprite_set_speed(spr_player_walk, spriteSpeed, spritespeed_framespersecond);
-	if (onGround < 0){
-		if (verticalSpeed < 0){
-			sprite_index = spr_player_jump;
+	if (leftHeldTimer > 1 || rightHeldTimer > 1){
+		sprite_index = spr_player_mach1_startup
+	}
+	else{
+		if (onGround < 0){
+			if (verticalSpeed < 0){
+				sprite_index = spr_player_jump;
+			}else{
+				sprite_index = spr_player_fall;
+			}
+		}
+		else if (horizontalSpeed == 0 || wallTouch != 0){
+			sprite_index = spr_player_stand;
 		}else{
-			sprite_index = spr_player_fall;
+			sprite_index = spr_player_walk;
 		}
 	}
-	else if (horizontalSpeed == 0 || wallTouch != 0){
-		sprite_index = spr_player_stand;
-	}else{
-		sprite_index = spr_player_walk;
-	}
-	if (lastMove != 0){
-		image_xscale = (lastMove);
-	}else{
-		image_xscale = 1;
-	}
+	mirrorSpriteAccordingToDirection()
 }
 
 function ringSpriteLogic(){
@@ -49,20 +50,31 @@ function dashSpriteLogic(){
 
 function machSpriteLogic(){
 	sprite_set_speed(spr_player_mach1, spriteSpeed, spritespeed_framespersecond);
-	sprite_index = spr_player_mach1
-	if (lastMove != 0){
-		image_xscale = (lastMove);
-		
+	sprite_set_speed(spr_player_mach2, spriteSpeed, spritespeed_framespersecond);
+	if (mach == mach1Speed){
+		if (isOnGroundImmediate()){
+			sprite_index = spr_player_mach1
+		}else{
+			sprite_index = spr_player_jump_mach1
+		}
 	}else{
-		image_xscale = 1
+		sprite_index = spr_player_mach2
 	}
-	
+	mirrorSpriteAccordingToDirection()
 }
 function turnSpriteLogic(){
 	if (turnTimer > turnTime-20){
-		sprite_index = spr_player_brake_mach1
+		if (mach == mach1Speed){
+			sprite_index = spr_player_brake_mach1
+		}else{
+			sprite_index = spr_player_brake_mach2
+		}
 	}else{
-		sprite_index = spr_player_offlikeashot
+		if (mach == mach1Speed){
+			sprite_index = spr_player_offlikeashot
+		}else{
+			sprite_index = spr_player_offlikeashot_mach2
+		}
 	}
 	
 	image_xscale = (-turnDirection);
@@ -72,7 +84,20 @@ function deadSpriteLogic(){
 }
 
 function bounceSpriteLogic(){
-	sprite_index = spr_player_stand
+	if (bounceNr == 2){
+		sprite_index = spr_player_starman
+	}else{
+		if (verticalSpeed < 2){
+			sprite_index = spr_player_bounce1
+		}else{
+			sprite_index = spr_player_bounce1_fall
+		}
+	}
+	if (sign(horizontalSpeed) != 0){
+		image_xscale = sign(horizontalSpeed);
+	}else{
+		image_xscale = 1;
+	}
 }
 
 function slideSpriteLogic(){
@@ -108,4 +133,14 @@ function slideSpriteLogic(){
 
 function crashSpriteLogic(){
 	sprite_index = spr_player_crash;
+}
+
+
+function mirrorSpriteAccordingToDirection(){
+	if (lastMove != 0){
+		image_xscale = (lastMove);
+		
+	}else{
+		image_xscale = 1
+	}
 }

@@ -14,9 +14,13 @@ function playerStateBounce(){
 
 
 	bounceVerticalCollision();
-	bounceHorizontalCollision();
-	playerHorizontalCollision(self);
-	playerVerticalCollision(self);
-	playerWhiteguyCollision(self);
-	playerRingCollision(self);
+	if (state == states.bounce){ //else this will trigger when chili is supposed to be out of bounce state,
+								// leads to bouncing at the same time as turning, weird behaviour
+							   //  probably exists a more elegant solution
+		bounceHorizontalCollision();
+		playerHorizontalCollision(self);
+		playerVerticalCollision(self);
+		playerWhiteguyCollision(self);
+		playerRingCollision(self);
+	}
 }

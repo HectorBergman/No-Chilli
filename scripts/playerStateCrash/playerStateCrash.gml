@@ -5,6 +5,7 @@ function playerStateCrash(){
 		horizontalSpeed = crashSpeed;
 		verticalSpeed = crashHeight;
 	}else if (crashTimer == 0){
+		dropGips(crashDirection);
 		state = states.normal;
 	}
 	playerCheckForOnGround()
@@ -14,15 +15,31 @@ function playerStateCrash(){
 	playerFall(self);
 	playerVerticalCollision(self);
 	playerHorizontalCollision(self);
+	playerWhiteguyCollision(self);
 
 }
 
 function initiateCrash(){
 	leftHeldTimer = 0;
 	rightHeldTimer = 0;
+	crashDirection = sign(horizontalSpeed);
 	crashSpeed = -sign(horizontalSpeed)*sqrt(abs(horizontalSpeed));
 	crashHeight = -sqrt(abs(horizontalSpeed))*2;
 	crashTime = 20 + abs(floor(horizontalSpeed))*3;
 	crashTimer = crashTime;
 	state = states.crash;
+}
+
+function dropGips(theMove){
+	for(var i = 1; i <= 4; i += 1){
+		gipsStruct =
+		{
+			//verticalSpeed : verSpeed,
+			//horizontalSpeed : horSpeed,
+			spriteDirection: theMove,
+			lifeTime: random_range(500, 900),
+			spriteNumber : i,
+		};
+		instance_create_depth(x, y, -4-i, object_gips, gipsStruct);
+	}
 }

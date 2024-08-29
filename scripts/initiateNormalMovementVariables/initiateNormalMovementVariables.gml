@@ -5,7 +5,8 @@ function initiateNormalMovementVariables(){
 	verticalSpeed = 0;
 	baseSpeed = 2.5;
 	walkSpeed = baseSpeed;
-	
+	startUpSpeed = 0;
+	startUpIncrement = 0.05;
 
 	
 }

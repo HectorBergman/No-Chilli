@@ -58,7 +58,7 @@ function playerFall(_player){
 function playerHorizontalMovement(_player){
 	if (_keyShift > 0){
 		//mach = machCalculator()
-		horizontalSpeed = move*walkSpeed// + mach);
+		horizontalSpeed = move*(walkSpeed + startUpSpeed)
 	}else{
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
@@ -98,15 +98,25 @@ function machTimer(){ //TODO: make sure you have to be onground through whole st
 			leftHeldTimer = 0;
 		}
 	}
-	if (wallTouch){
+	if (wallTouch && state == states.normal){
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
 	}
 }
 
+function machStartupSpeedIncrease(){
+	//increases speed during startup
+	if ((leftHeldTimer > 0 || rightHeldTimer > 0) && state == states.normal && onGround > 8 && moveRight-moveLeft != 0){
+		startUpSpeed += startUpIncrement;
+	}else if ((leftHeldTimer > 0 || rightHeldTimer > 0) && onGround < 9){
+	}else{
+		startUpSpeed = 0;
+	}
+}
+
 function startMachIfRun(){
-	if (state != states.mach && (rightHeldTimer > mach1Start || leftHeldTimer > mach1Start)){
-		state = states.mach;
+	if (state != states.mach && (rightHeldTimer > mach1Start || leftHeldTimer > mach1Start) && (moveLeft ^^ moveRight)){
+		enterMach(true, move);
 		return true;
 	}else{
 		return false;
@@ -136,4 +146,20 @@ function determineSlideMove(){
 		}
 	}
 }
+
+function isOnGroundImmediate(){
+	if (onGround > 8){
+		return true;
+	}
+	return false;
+}
+
+
+function isOnGroundCoyote(){
+	if (onGround > 0){
+		return false;
+	}
+	return true;
+}
+
 

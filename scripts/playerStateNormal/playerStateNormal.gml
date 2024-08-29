@@ -9,6 +9,7 @@ function playerStateNormal(){
 	playerJump(self);
 	playerFall(self);
 	machTimer();
+	
 	startMachIfRun();
 
 
@@ -17,6 +18,7 @@ function playerStateNormal(){
 	playerVerticalCollision(self);
 	playerWhiteguyCollision(self);
 	playerRingCollision(self);
+	machStartupSpeedIncrease();
 	/*if (ringHeld && onGround < 0){
 		state = states.ring;
 	}*/

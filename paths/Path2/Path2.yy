@@ -5,8 +5,8 @@
   "kind":0,
   "name":"Path2",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Paths",
+    "path":"folders/Paths.yy",
   },
   "points":[
     {"speed":100.0,"x":384.0,"y":416.0,},
@@ -21,6 +21,7 @@
     {"speed":100.0,"x":2400.0,"y":448.0,},
     {"speed":100.0,"x":3456.0,"y":448.0,},
     {"speed":100.0,"x":3936.0,"y":448.0,},
+    {"speed":100.0,"x":2016.0,"y":768.0,},
   ],
   "precision":4,
   "resourceType":"GMPath",

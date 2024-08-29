@@ -4,4 +4,5 @@ function initiateCrashVariables(){
 	crashSpeed = 0;
 	crashTimer = 0;
 	crashTime = 40;
+	crashDirection = 0;
 }

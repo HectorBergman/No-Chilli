@@ -56,15 +56,24 @@ function turningLogic(){
 		determineMove();
 		horizontalSpeed = move*offLikeAShotSpeed;
 		offLikeAShotClouds(move);
-		state = states.mach;
+		enterMach(false, move);
 	}
 	
 }
 
 function checkForSlide(){
-	if (down){
+	if (down && !(place_meeting(x + horizontalSpeed*1.2, y , object_wall))){
 		horizontalSpeed *= slideMultiplier;
 		slideDirection = sign(horizontalSpeed);
 		state = states.slide
+	}
+}
+
+
+function enterMach(resetTimer, newMachDirection){
+	state = states.mach;
+	machDirection = newMachDirection
+	if (resetTimer){
+		timeInMach = 0;
 	}
 }

@@ -4,7 +4,7 @@ function updateSpeed(){
 	scovilleSpeedCalculator();
 	walkSpeed = baseSpeed*scovilleSpeed
 	mach1Speed = walkSpeed + 3*scovilleSpeed;
-	mach2Speed = mach1Speed + 2*scovilleSpeed;
+	mach2Speed = mach1Speed + 6*scovilleSpeed;
 	offLikeAShotSpeed = baseOLSSpeed*scovilleSpeed*1.2;
 	
 		playerGrav = baseGrav*sqrt(scovilleSpeed)

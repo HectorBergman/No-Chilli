@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = -2;
+depth = -30;
 collided = noone;
-with (other) path_start(Path2, 5, path_action_stop, true)
+if (active){
+	with (other) path_start(roomPath, 5, path_action_stop, true)
+}
