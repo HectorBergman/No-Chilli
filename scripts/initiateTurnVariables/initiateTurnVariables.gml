@@ -9,5 +9,7 @@ function initiateTurnVariables(){
 	turnTimerBrakeStop = 20; //time where the braking stops and the turning starts
 	baseOLSSpeed = 12;
 	offLikeAShotSpeed = baseOLSSpeed; //horizontal speed right after finishing turn
+	
+	//todo: add mach 2 OLSspeed
 	turnDirection = 0;
 }

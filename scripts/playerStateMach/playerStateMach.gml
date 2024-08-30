@@ -2,8 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMach(){
 	timeInMach++
-	
-	if !(onGround >= 9 && ((moveRight && rightHeldTimer == 0) || (moveLeft && leftHeldTimer == 0))  ){
+	//show_debug_message(moveRight-moveLeft)
+	//if you're both on the ground and turning the opposite direction to the mach direction, skip this if
+	if !(onGround >= 9 && ((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0)){
 		
 		//if not changing direction
 		determineMove();

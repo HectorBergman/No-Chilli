@@ -51,13 +51,15 @@ function dashSpriteLogic(){
 function machSpriteLogic(){
 	sprite_set_speed(spr_player_mach1, spriteSpeed, spritespeed_framespersecond);
 	sprite_set_speed(spr_player_mach2, spriteSpeed, spritespeed_framespersecond);
-	if (mach == mach1Speed){
+	if (mach > mach1Speed - 0.1 && mach < mach1Speed + 0.1){
 		if (isOnGroundImmediate()){
 			sprite_index = spr_player_mach1
 		}else{
 			sprite_index = spr_player_jump_mach1
 		}
 	}else{
+		//show_debug_message(mach)
+		//show_debug_message(mach1Speed)
 		sprite_index = spr_player_mach2
 	}
 	mirrorSpriteAccordingToDirection()

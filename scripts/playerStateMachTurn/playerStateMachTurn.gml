@@ -4,17 +4,25 @@ function playerStateMachTurn(){
 	
 	turnTimer--
 	if (turnTimer == 0 && (moveLeft == 1 && moveRight == 1)){
+		show_debug_message("swag")
 		returnToNormalStateFromMach();
 	}else if ((turnTimer == 0 && !(moveLeft == 1 && moveRight == 1) ||
 			  (turnDirection != moveRight-moveLeft && moveRight-moveLeft != 0))){
-		enterMach(false, moveRight-moveLeft);
-	}else if (!run || (moveLeft == false && turnDirection == -1) || moveRight == false && turnDirection == 1){
+		show_debug_message("jail u gay")
+		enterMach(false, -turnDirection);
+	}else if (!run){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
+		
 		returnToNormalStateFromMach();
+	}else if ((moveRight-moveLeft == -turnDirection)){
+		enterMach(false, -turnDirection)
+		return 0;
 	}
 	machTimer();
 	
-	turningLogic();
+	if !(turningLogic()){
+		return
+	}
 	
 	playerHorizontalCollision(self);
 	playerVerticalCollision(self);
@@ -44,4 +52,26 @@ function startTurn(newTurnDirection){
 	}else{
 		state = states.normal;
 	}
+}
+
+function turningLogic(){
+	if (turnTimer > turnTime-25){ //braking
+		horizontalSpeed = horizontalSpeed*0.95;
+	}else if (turnTimer > 0){ //turning
+		if (moveRight && moveLeft){
+			returnToNormalStateFromMach();
+			return false;
+		}
+		horizontalSpeed = 0;
+	}else{ //running again
+		if (!place_meeting(x, y + 0.1, object_wall)){
+			
+			airTime = givenAirTime; //atm 20 but doublecheck lol
+		}
+		determineMove();
+		horizontalSpeed = move*offLikeAShotSpeed;
+		offLikeAShotClouds(move);
+		enterMach(false, move);
+	}
+	return true
 }

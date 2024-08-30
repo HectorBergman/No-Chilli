@@ -43,23 +43,7 @@ function machCalculator(){
 	return mach;
 }
 
-function turningLogic(){
-	if (turnTimer > turnTime-20){ //braking
-		horizontalSpeed = horizontalSpeed*0.95;
-	}else if (turnTimer > 0){ //turning
-		horizontalSpeed = 0;
-	}else{ //running again
-		if (!place_meeting(x, y + 0.1, object_wall)){
-			
-			airTime = givenAirTime; //atm 20 but doublecheck lol
-		}
-		determineMove();
-		horizontalSpeed = move*offLikeAShotSpeed;
-		offLikeAShotClouds(move);
-		enterMach(false, move);
-	}
-	
-}
+
 
 function checkForSlide(){
 	if (down && !(place_meeting(x + horizontalSpeed*1.2, y , object_wall))){

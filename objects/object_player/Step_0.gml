@@ -15,9 +15,8 @@ dashRightReqInput = ord("D");
 
 bugtestcount--
 
-show_debug_message(leftHeldTimer);
-show_debug_message(rightHeldTimer);
-
+//show_debug_message("leftHeldTimer " + string(leftHeldTimer))
+//show_debug_message("rightHeldTimer " + string(rightHeldTimer))
 inputCalculator();
 if (dashCooldown < 1 && !(state == states.crash)){
 	if (dashUp || dashLeft || 
@@ -71,5 +70,3 @@ playerSpriteLogic(self);
 
 inputReset();
 
-show_debug_message(leftHeldTimer)
-show_debug_message(rightHeldTimer);

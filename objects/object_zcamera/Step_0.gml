@@ -56,8 +56,8 @@ camX = x-(camWidth*0.5)
 camY = y-(camHeight*0.5)
 
 camera_set_view_pos(view_camera[0], camX, camY);
-show_debug_message("camWidth:" + string(camWidth))
-show_debug_message("camHeight:" + string(camHeight))
+//show_debug_message("camWidth:" + string(camWidth))
+//show_debug_message("camHeight:" + string(camHeight))
 switch(camState){
 	case camStates.normal: cameraStateNormal(); break;
 	case camStates.zoomOut: cameraStateZoomOut(); break;
