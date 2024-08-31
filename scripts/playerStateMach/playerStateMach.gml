@@ -49,19 +49,20 @@ function playerStateMach(){
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
 	}else{
-	
+		determineTurnDirectionAndTurn()
 	}
 	
-	function determineTurnDirectionAndTurn(){
-		if (moveRight-leftHeldTimer < 1){
-			turn = 1;
-		}else{
-			turn = -1
-		}
-		startTurn(turn);
-	}
+	
 }
 
+function determineTurnDirectionAndTurn(){
+	if (moveRight-leftHeldTimer < 1){
+		turn = 1;
+	}else{
+		turn = -1
+	}
+	startTurn(turn);	
+}
 
 function runClouds(){
 	cloudTimer--;

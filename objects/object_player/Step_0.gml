@@ -15,8 +15,8 @@ dashRightReqInput = ord("D");
 
 bugtestcount--
 inputCalculator()
-show_debug_message(turnDirection);
-show_debug_message("move " + string(moveRight-moveLeft))
+//show_debug_message("TD" + string(turnDirection));
+//show_debug_message("move " + string(moveRight-moveLeft))
 //show_debug_message("moveRight " + string(moveRight))
 //show_debug_message("moveLeft " + string(moveLeft))
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))

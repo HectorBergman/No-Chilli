@@ -16,17 +16,15 @@ function machHorizontalMovement(_player){
 			}
 			//essentially, if speed is above mach limit, slowly decrease it back to mach limit
 		}else if (mach == mach2Speed){
-			if (abs(horizontalSpeed*move) > mach2Speed && onGround > 8){
+			if (abs(horizontalSpeed*move) > mach2Speed && onGround > -15){
 				horizontalSpeed *= 0.99
-			}else if (horizontalSpeed < mach2Speed){
+			}else if (abs(horizontalSpeed*move) < mach2Speed){
 				horizontalSpeed = move*mach2Speed;
+			}else if onGround < -90{
+				horizontalSpeed *= 0.998;
 			}
 		}
 	}else{
-		
-		show_debug_message("LOL");show_debug_message("LOL");
-		
-		determineTurnDirectionAndTurn();
 	}
 }
 

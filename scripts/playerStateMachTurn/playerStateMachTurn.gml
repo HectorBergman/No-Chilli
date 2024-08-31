@@ -4,14 +4,11 @@ function playerStateMachTurn(){
 	
 	if (!run){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
-		
+		show_debug_message("brain")
 		returnToNormalStateFromMach();
 	}
 	machTimer();
-	
-	if !(turningLogic()){
-		return
-	}
+	turningLogic();
 	
 	playerHorizontalCollision(self);
 	playerVerticalCollision(self);
@@ -45,15 +42,18 @@ function startTurn(newTurnDirection){
 
 function turningLogic(){
 	if (moveRight-moveLeft == -turnDirection){
+		show_debug_message("left brain")
 		enterMach(false, moveRight-moveLeft)
-		return false;
-	}
-	if (turnTimer > turnTime-25){ //braking
+		if (horizontalSpeed == 0){
+			horizontalSpeed = (moveRight-moveLeft);
+		}
+	}else if (turnTimer > turnTime-25){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
 	}else if (turnTimer > 0){ //turning
 		
 		horizontalSpeed = 0;
-	}else if (moveLeft-moveRight == turnDirection){ //running again
+	}else if (moveRight-moveLeft == turnDirection){ //running again
+		show_debug_message("TEST")
 		if (!place_meeting(x, y + 0.1, object_wall)){
 			
 			airTime = givenAirTime; //atm 20 but doublecheck lol
@@ -63,7 +63,9 @@ function turningLogic(){
 		offLikeAShotClouds(move);
 		enterMach(false, move);
 	}else{
+		show_debug_message("TD" + string(turnDirection));
+		show_debug_message("move " + string(moveRight-moveLeft))
+		show_debug_message("FUCK")
 		returnToNormalStateFromMach();
 	}
-	return true
 }
