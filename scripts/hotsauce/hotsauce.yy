@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"hotsauce",
   "isCompatibility":false,
   "isDnD":false,

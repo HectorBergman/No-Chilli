@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateHotsauceRelatedVariables",
   "isCompatibility":false,
   "isDnD":false,

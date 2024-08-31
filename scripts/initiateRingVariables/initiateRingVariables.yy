@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateRingVariables",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"playerStateMachTurn",
   "isCompatibility":false,
   "isDnD":false,

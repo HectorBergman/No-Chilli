@@ -14,10 +14,14 @@ dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
 bugtestcount--
-
+inputCalculator()
+show_debug_message(turnDirection);
+show_debug_message("move " + string(moveRight-moveLeft))
+//show_debug_message("moveRight " + string(moveRight))
+//show_debug_message("moveLeft " + string(moveLeft))
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
-inputCalculator();
+
 if (dashCooldown < 1 && !(state == states.crash)){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {

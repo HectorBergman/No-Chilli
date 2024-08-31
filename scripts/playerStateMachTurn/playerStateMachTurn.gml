@@ -1,22 +1,11 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMachTurn(){
 	
 	turnTimer--
-	if (turnTimer == 0 && (moveLeft == 1 && moveRight == 1)){
-		show_debug_message("swag")
-		returnToNormalStateFromMach();
-	}else if ((turnTimer == 0 && !(moveLeft == 1 && moveRight == 1) ||
-			  (turnDirection != moveRight-moveLeft && moveRight-moveLeft != 0))){
-		show_debug_message("jail u gay")
-		enterMach(false, -turnDirection);
-	}else if (!run){
+	
+	if (!run){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
 		
 		returnToNormalStateFromMach();
-	}else if ((moveRight-moveLeft == -turnDirection)){
-		enterMach(false, -turnDirection)
-		return 0;
 	}
 	machTimer();
 	
@@ -55,15 +44,16 @@ function startTurn(newTurnDirection){
 }
 
 function turningLogic(){
+	if (moveRight-moveLeft == -turnDirection){
+		enterMach(false, moveRight-moveLeft)
+		return false;
+	}
 	if (turnTimer > turnTime-25){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
 	}else if (turnTimer > 0){ //turning
-		if (moveRight && moveLeft){
-			returnToNormalStateFromMach();
-			return false;
-		}
+		
 		horizontalSpeed = 0;
-	}else{ //running again
+	}else if (moveLeft-moveRight == turnDirection){ //running again
 		if (!place_meeting(x, y + 0.1, object_wall)){
 			
 			airTime = givenAirTime; //atm 20 but doublecheck lol
@@ -72,6 +62,8 @@ function turningLogic(){
 		horizontalSpeed = move*offLikeAShotSpeed;
 		offLikeAShotClouds(move);
 		enterMach(false, move);
+	}else{
+		returnToNormalStateFromMach();
 	}
 	return true
 }

@@ -66,13 +66,13 @@ function machSpriteLogic(){
 }
 function turnSpriteLogic(){
 	if (turnTimer > turnTime-20){
-		if (mach == mach1Speed){
+		if (mach > mach1Speed - 0.1 && mach < mach1Speed + 0.1){
 			sprite_index = spr_player_brake_mach1
 		}else{
 			sprite_index = spr_player_brake_mach2
 		}
 	}else{
-		if (mach == mach1Speed){
+		if (mach > mach1Speed - 0.1 && mach < mach1Speed + 0.1){
 			sprite_index = spr_player_offlikeashot
 		}else{
 			sprite_index = spr_player_offlikeashot_mach2

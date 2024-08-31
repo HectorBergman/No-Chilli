@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cameraStateNormal",
   "isCompatibility":false,
   "isDnD":false,

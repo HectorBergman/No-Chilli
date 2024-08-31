@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateNormalJumpnFallVariables",
   "isCompatibility":false,
   "isDnD":false,

@@ -23,7 +23,10 @@ function machHorizontalMovement(_player){
 			}
 		}
 	}else{
-		startTurn(move)
+		
+		show_debug_message("LOL");show_debug_message("LOL");
+		
+		determineTurnDirectionAndTurn();
 	}
 }
 

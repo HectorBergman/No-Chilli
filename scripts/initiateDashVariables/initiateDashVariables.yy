@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateDashVariables",
   "isCompatibility":false,
   "isDnD":false,

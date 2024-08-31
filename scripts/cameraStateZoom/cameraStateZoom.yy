@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"cameraStateZoom",
   "isCompatibility":false,
   "isDnD":false,
