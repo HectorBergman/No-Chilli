@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"playerSpriteLogic",
   "isCompatibility":false,
   "isDnD":false,

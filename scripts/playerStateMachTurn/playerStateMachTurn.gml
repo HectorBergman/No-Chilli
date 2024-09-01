@@ -4,7 +4,7 @@ function playerStateMachTurn(){
 	
 	if (!run){
 		//if you stop holding shift or stop moving in any direction, go back to normal state
-		show_debug_message("brain")
+		
 		returnToNormalStateFromMach();
 	}
 	machTimer();
@@ -30,7 +30,8 @@ function offLikeAShotClouds(theMove){
 	}
 }
 
-function startTurn(newTurnDirection){
+function startTurn(newTurnDirection, half){
+	halfTurn = half;
 	if (newTurnDirection == 1 or newTurnDirection == -1){
 		turnDirection = newTurnDirection
 		turnTimer = turnTime;
@@ -42,7 +43,7 @@ function startTurn(newTurnDirection){
 
 function turningLogic(){
 	if (moveRight-moveLeft == -turnDirection){
-		show_debug_message("left brain")
+
 		enterMach(false, moveRight-moveLeft)
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);
@@ -53,19 +54,15 @@ function turningLogic(){
 		
 		horizontalSpeed = 0;
 	}else if (moveRight-moveLeft == turnDirection){ //running again
-		show_debug_message("TEST")
+
 		if (!place_meeting(x, y + 0.1, object_wall)){
 			
 			airTime = givenAirTime; //atm 20 but doublecheck lol
 		}
-		determineMove();
-		horizontalSpeed = move*offLikeAShotSpeed;
-		offLikeAShotClouds(move);
-		enterMach(false, move);
+		horizontalSpeed = turnDirection*offLikeAShotSpeed;
+		offLikeAShotClouds(turnDirection);
+		enterMach(false, turnDirection);
 	}else{
-		show_debug_message("TD" + string(turnDirection));
-		show_debug_message("move " + string(moveRight-moveLeft))
-		show_debug_message("FUCK")
 		returnToNormalStateFromMach();
 	}
 }

@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMach(){
 	timeInMach++
-	//show_debug_message(machDirection);
-	//show_debug_message(moveRight-moveLeft)
+	show_debug_message("machDirection " + string(machDirection));
+	show_debug_message("moveRight-moveLeft " + string(moveRight-moveLeft))
 	//if you're both on the ground and turning the opposite direction to the mach direction, skip this if
 	if !(onGround >= 9 && ((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0)){
 		
@@ -49,19 +49,24 @@ function playerStateMach(){
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
 	}else{
-		determineTurnDirectionAndTurn()
+		if (moveRight-moveLeft == 0){
+			determineTurnDirectionAndTurn(true);
+		}else{
+			determineTurnDirectionAndTurn(false);
+		}
+		
 	}
 	
 	
 }
 
-function determineTurnDirectionAndTurn(){
+function determineTurnDirectionAndTurn(half){
 	if (moveRight-leftHeldTimer < 1){
 		turn = 1;
 	}else{
 		turn = -1
 	}
-	startTurn(turn);	
+	startTurn(turn, half);	
 }
 
 function runClouds(){

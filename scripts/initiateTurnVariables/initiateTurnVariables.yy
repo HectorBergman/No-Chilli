@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"initiateTurnVariables",
   "isCompatibility":false,
   "isDnD":false,

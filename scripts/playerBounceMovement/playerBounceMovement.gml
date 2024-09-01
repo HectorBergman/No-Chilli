@@ -57,7 +57,20 @@ function decideSpeedWhenBouncingOffWallDependingOnDirection(multWhenLeft, multWh
 
 function bounceVerticalCollision(){
 	if (verticalSpeed > 0 && place_meeting(x, y + verticalSpeed, object_wall)){
-		startMachIfRun()
+		if (run){
+			if (moveRight-moveLeft == 0){
+				show_debug_message("normal")
+				endBounce(states.normal);
+			}else if (moveRight-moveLeft == sign(horizontalSpeed)){
+				show_debug_message("mach")
+				enterMach(true, moveRight-moveLeft)
+			}else{
+				show_debug_message("turn")
+				startTurn(moveRight-moveLeft, false)
+				return;
+			}
+			
+		}
 		if (run && state == states.mach){
 			var tempTimer = leftHeldTimer;
 			leftHeldTimer += rightHeldTimer;

@@ -139,8 +139,8 @@ function crashSpriteLogic(){
 
 
 function mirrorSpriteAccordingToDirection(){
-	if (lastMove != 0){
-		image_xscale = (lastMove);
+	if (move != 0){
+		image_xscale = (move);
 		
 	}else{
 		image_xscale = 1
