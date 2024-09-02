@@ -2,11 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMach(){
 	timeInMach++
-	//show_debug_message("machDirection " + string(machDirection));
-	//show_debug_message("moveRight-moveLeft " + string(moveRight-moveLeft))
+	
 	mach = machCalculator()
+	
 	//if you're both on the ground and turning the opposite direction to the mach direction, skip this if
-	if !(onGround >= 9 && ((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || !((moveRight-moveLeft) == sign(horizontalSpeed)))){
+	
+	if !(onGround >= 9 &&  //note to self, do not write !-ifs, they're confusing af
+	((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || 
+	!((moveRight-moveLeft) == sign(horizontalSpeed)))){
 		
 		//if not changing direction
 		determineMove();
@@ -44,7 +47,8 @@ function playerStateMach(){
 		playerRingCollision(self);
 		initializeBounce();
 	
-		if (!(_keyShift > 0) || (!(moveLeft) && !(moveRight))){
+		if ((!(_keyShift > 0) || (!(moveLeft) && !(moveRight))) && onGround >= 9){
+			
 			turn = sign(horizontalSpeed)
 			startTurn(turn, true);	
 		}
@@ -52,7 +56,7 @@ function playerStateMach(){
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
 	}else{
 		if ((!moveRight && !moveLeft) || !run){
-			show_debug_message("boob")
+			
 			determineTurnDirectionAndTurn(true);
 		}else{
 			determineTurnDirectionAndTurn(false);
@@ -63,15 +67,17 @@ function playerStateMach(){
 	
 }
 
+function determineMachLevel(){
+	
+}
+
+function machLogic(){
+}
 function determineTurnDirectionAndTurn(half){
 	if (half){
 		turn = -sign(horizontalSpeed);
 	}else{
-		if (moveRight-leftHeldTimer < 1){
-			turn = 1;
-		}else{
-			turn = -1
-		}
+		turn = -sign(horizontalSpeed);
 	}
 	startTurn(turn, half);	
 }

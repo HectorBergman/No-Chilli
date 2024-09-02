@@ -42,7 +42,7 @@ function startTurn(newTurnDirection, half){
 
 function turningLogic(){
 	if (moveRight-moveLeft == -turnDirection){
-
+		show_debug_message("pikachU")
 		enterMach(false, moveRight-moveLeft)
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);

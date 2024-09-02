@@ -99,10 +99,9 @@ function bounceSpriteLogic(){
 		}
 	}
 	if (sign(horizontalSpeed) != 0){
-		image_xscale = sign(horizontalSpeed);
-	}else{
-		image_xscale = 1;
+		lastSpeedDirection = sign(horizontalSpeed);	
 	}
+	image_xscale = lastSpeedDirection;	
 }
 
 function slideSpriteLogic(){
