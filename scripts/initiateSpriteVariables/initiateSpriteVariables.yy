@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"initiateSpriteVariables",
   "isCompatibility":false,
   "isDnD":false,

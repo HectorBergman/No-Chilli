@@ -6,5 +6,5 @@ function initiateSpriteVariables(){
 	defaultSpriteSpeedMach1 = 15;
 	currentSpriteSpeedWalk = defaultSpriteSpeedWalk;
 	currentSpriteSpeedMach1 = defaultSpriteSpeedMach1;
-	
+	lastSpeedDirection = 0;
 }

@@ -2,14 +2,15 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateMach(){
 	timeInMach++
-	show_debug_message("machDirection " + string(machDirection));
-	show_debug_message("moveRight-moveLeft " + string(moveRight-moveLeft))
+	//show_debug_message("machDirection " + string(machDirection));
+	//show_debug_message("moveRight-moveLeft " + string(moveRight-moveLeft))
+	mach = machCalculator()
 	//if you're both on the ground and turning the opposite direction to the mach direction, skip this if
-	if !(onGround >= 9 && ((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0)){
+	if !(onGround >= 9 && ((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || !((moveRight-moveLeft) == sign(horizontalSpeed)))){
 		
 		//if not changing direction
 		determineMove();
-		mach = machCalculator()
+		
 		
 		
 		//see: script playerMovement
@@ -44,12 +45,14 @@ function playerStateMach(){
 		initializeBounce();
 	
 		if (!(_keyShift > 0) || (!(moveLeft) && !(moveRight))){
-			returnToNormalStateFromMach();
+			turn = sign(horizontalSpeed)
+			startTurn(turn, true);	
 		}
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
 	}else{
-		if (moveRight-moveLeft == 0){
+		if ((!moveRight && !moveLeft) || !run){
+			show_debug_message("boob")
 			determineTurnDirectionAndTurn(true);
 		}else{
 			determineTurnDirectionAndTurn(false);
@@ -61,10 +64,14 @@ function playerStateMach(){
 }
 
 function determineTurnDirectionAndTurn(half){
-	if (moveRight-leftHeldTimer < 1){
-		turn = 1;
+	if (half){
+		turn = -sign(horizontalSpeed);
 	}else{
-		turn = -1
+		if (moveRight-leftHeldTimer < 1){
+			turn = 1;
+		}else{
+			turn = -1
+		}
 	}
 	startTurn(turn, half);	
 }

@@ -59,13 +59,10 @@ function bounceVerticalCollision(){
 	if (verticalSpeed > 0 && place_meeting(x, y + verticalSpeed, object_wall)){
 		if (run){
 			if (moveRight-moveLeft == 0){
-				show_debug_message("normal")
 				endBounce(states.normal);
 			}else if (moveRight-moveLeft == sign(horizontalSpeed)){
-				show_debug_message("mach")
 				enterMach(true, moveRight-moveLeft)
 			}else{
-				show_debug_message("turn")
 				startTurn(moveRight-moveLeft, false)
 				return;
 			}

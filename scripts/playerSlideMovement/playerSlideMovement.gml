@@ -27,6 +27,12 @@ function exitSlide(newState){
 	horizontalSpeed *= 0.875
 	slideWalking = false;
 	state = newState;
+	if (state == states.mach){
+		machDirection = sign(horizontalSpeed);
+	}else{
+		leftHeldTimer = 0;
+		rightHeldTimer = 0;
+	}
 }
 
 function slideWalk(){

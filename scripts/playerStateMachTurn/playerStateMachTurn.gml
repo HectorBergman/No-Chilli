@@ -2,12 +2,11 @@ function playerStateMachTurn(){
 	
 	turnTimer--
 	
-	if (!run){
-		//if you stop holding shift or stop moving in any direction, go back to normal state
+	if (!run && !halfTurn){
+		//if you stop holding shift and it's not a halfturn, go back to normal state
 		
 		returnToNormalStateFromMach();
 	}
-	machTimer();
 	turningLogic();
 	
 	playerHorizontalCollision(self);
@@ -48,8 +47,11 @@ function turningLogic(){
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);
 		}
-	}else if (turnTimer > turnTime-25){ //braking
+	
+	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
+	}else if (turnTimer > 0 && halfTurn == true){
+		returnToNormalStateFromMach();
 	}else if (turnTimer > 0){ //turning
 		
 		horizontalSpeed = 0;

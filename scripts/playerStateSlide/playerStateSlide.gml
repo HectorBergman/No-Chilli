@@ -4,6 +4,7 @@ function playerStateSlide(){
 	playerCheckForOnGround();
 	if (place_meeting(x, y-32, object_wall)){
 	}else if (!down && run && (moveLeft || moveRight) && slideWalking == false){
+		machDirection = -sign(horizontalSpeed);
 		exitSlide(states.mach)
 	}else if (!down){
 		exitSlide(states.normal)

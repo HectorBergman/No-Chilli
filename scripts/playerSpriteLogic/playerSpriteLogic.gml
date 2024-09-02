@@ -65,7 +65,7 @@ function machSpriteLogic(){
 	mirrorSpriteAccordingToDirection()
 }
 function turnSpriteLogic(){
-	if (turnTimer > turnTime-20){
+	if (turnTimer > turnTime-turnTimerBrakeStop){
 		if (mach > mach1Speed - 0.1 && mach < mach1Speed + 0.1){
 			sprite_index = spr_player_brake_mach1
 		}else{
@@ -79,9 +79,12 @@ function turnSpriteLogic(){
 		}
 	}
 	
-	image_xscale = (-turnDirection);
-
+	if (sign(horizontalSpeed) != 0){
+		lastSpeedDirection = sign(horizontalSpeed);	
+	}
+	image_xscale = lastSpeedDirection;	
 }
+
 function deadSpriteLogic(){
 }
 
@@ -139,8 +142,8 @@ function crashSpriteLogic(){
 
 
 function mirrorSpriteAccordingToDirection(){
-	if (move != 0){
-		image_xscale = (move);
+	if (lastMove != 0){
+		image_xscale = (lastMove);
 		
 	}else{
 		image_xscale = 1

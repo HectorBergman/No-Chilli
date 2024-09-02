@@ -31,9 +31,7 @@ function machHorizontalMovement(_player){
 
 function machCalculator(){ 
 	
-	machTimer();
-
-			 
+	machTimer();	 
 	if (rightHeldTimer >= mach1Start && rightHeldTimer < mach2Start || 
 		leftHeldTimer >= mach1Start && leftHeldTimer < mach2Start){
 		mach = mach1Speed;
