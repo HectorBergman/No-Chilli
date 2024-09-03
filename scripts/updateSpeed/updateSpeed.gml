@@ -2,16 +2,31 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function updateSpeed(){
 	scovilleSpeedCalculator();
+	//normal + mach
 	walkSpeed = baseSpeed*scovilleSpeed
 	mach1Speed = walkSpeed + 3*scovilleSpeed;
 	mach2Speed = mach1Speed + 6*scovilleSpeed;
 	offLikeAShotSpeed = baseOLSSpeed*scovilleSpeed*1.2;
 	
-		playerGrav = baseGrav*sqrt(scovilleSpeed)
-		
-		mediumFall = baseMediumFall*scovilleSpeed
-		maxFall = baseMaxFall*scovilleSpeed
-		jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)
+	//bounce horizontal + startup
+	bounceOneMaxHorizontalSpeed = baseBounceOneMaxHorizontalSpeed*scovilleSpeed;
+	bounceTwoMaxHorizontalSpeed = baseBounceTwoMaxHorizontalSpeed*scovilleSpeed;
+	bounceSpeedAdder = baseBounceSpeedAdder*scovilleSpeed;
+	startUpIncrement = baseStartUpIncrement*scovilleSpeed;
+	bounceSpeedAdder = baseBounceSpeedAdder*scovilleSpeed;
+	bounceOneBounceOffWallHorizontalSpeed = baseBounceOneBounceOffWallHorizontalSpeed*scovilleSpeed;
+	bounceTwoBounceOffWallHorizontalSpeed = baseBounceTwoBounceOffWallHorizontalSpeed*scovilleSpeed;
+	
+	//bounce vertical
+	secondBounceVertical = baseSecondBounceVertical*sqrt(scovilleSpeed);
+	initialBounceVertical = baseInitialBounceVertical*sqrt(scovilleSpeed);
+	bounceGrav = baseBounceGrav*sqrt(scovilleSpeed);
+	
+	//normal vertical
+	playerGrav = baseGrav*sqrt(scovilleSpeed)
+	mediumFall = baseMediumFall*scovilleSpeed
+	maxFall = baseMaxFall*scovilleSpeed
+	jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)
 	
 	
 	switch(state){
@@ -21,8 +36,8 @@ function updateSpeed(){
 		case states.mach: 
 			scovilleSpriteSpeed(defaultSpriteSpeedMach1);
 		break;
-		default: 
-			scovilleSpriteSpeed(defaultSpriteSpeedWalk);
+		default:
+			scovilleSpriteSpeed(defaultSpriteSpeedMach1);
 		break;
 	}
 	if (instance_exists(object_whiteGuy)){

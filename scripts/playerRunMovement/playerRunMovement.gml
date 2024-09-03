@@ -30,8 +30,24 @@ function machHorizontalMovement(_player){
 
 
 function machCalculator(){ 
-	
-	machTimer();	 
+	if (onGround >= 9){
+		if (machDirection == -1){
+			if (leftHeldTimer != 0){
+				leftHeldTimer++
+			}else{
+				leftHeldTimer = rightHeldTimer + 1;
+				rightHeldTimer = 0;
+			}
+		}else{
+			if (rightHeldTimer != 0){
+				rightHeldTimer++
+			}else{
+				rightHeldTimer = leftHeldTimer + 1;
+				leftHeldTimer = 0;
+			}
+		}
+	}
+		
 	if (rightHeldTimer >= mach1Start && rightHeldTimer < mach2Start || 
 		leftHeldTimer >= mach1Start && leftHeldTimer < mach2Start){
 		mach = mach1Speed;
