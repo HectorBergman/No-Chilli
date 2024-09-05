@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+PAUSE
 _keyRight = keyboard_check(vk_right);
 _keyLeft = keyboard_check(vk_left);
 _keyJump = keyboard_check_pressed(vk_up);
@@ -15,8 +15,8 @@ dashRightReqInput = ord("D");
 
 bugtestcount--
 inputCalculator()
-show_debug_message("TD" + string(turnDirection));
-show_debug_message("move " + string(moveRight-moveLeft))
+//show_debug_message("TD" + string(turnDirection));
+//show_debug_message("move " + string(moveRight-moveLeft))
 //show_debug_message("moveRight " + string(moveRight))
 //show_debug_message("moveLeft " + string(moveLeft))
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
@@ -73,4 +73,3 @@ switch(state){
 playerSpriteLogic(self);
 
 inputReset();
-

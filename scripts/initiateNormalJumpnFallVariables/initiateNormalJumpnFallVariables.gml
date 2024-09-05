@@ -13,5 +13,7 @@ function initiateNormalJumpnFallVariables(){
 	baseGrav = 0.4;
 	playerGrav = baseGrav; //gravity
 	
+	hasFallen = false;
+	
 	horizontalSpeed = 0;
 }

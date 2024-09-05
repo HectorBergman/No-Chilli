@@ -4,6 +4,8 @@ function hotsauce(){
 	var collidedHotsauce = instance_place(x, y , object_hotsauce)
 	if (collidedHotsauce != noone){
 		scoville += collidedHotsauce.scoville
+		scovilleSpeed += collidedHotsauce.scovilleSpeedAdder;
+		decreaseTimer = decreaseTime;
 		instance_destroy(collidedHotsauce);
 	}
 }

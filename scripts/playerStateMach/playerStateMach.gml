@@ -23,6 +23,7 @@ function playerStateMach(){
 		
 			playerFall(self);
 			playerJump(self);
+			playerVerticalCollision(self);
 		}else if (place_meeting(x, y + 1, object_wall)){
 				airTime = 0;
 		}else{
@@ -42,12 +43,12 @@ function playerStateMach(){
 		}
 		//see: script playerCollision
 		playerHorizontalCollision(self);
-		playerVerticalCollision(self);
+	
 		playerWhiteguyCollision(self);
 		playerRingCollision(self);
 		initializeBounce();
 	
-		if ((!(_keyShift > 0) || (!(moveLeft) && !(moveRight))) && onGround >= 9){
+		if ((!(_keyShift > 0) || (!(moveLeft) && !(moveRight))) && onGround >= 10){
 			
 			turn = sign(horizontalSpeed)
 			startTurn(turn, true);	

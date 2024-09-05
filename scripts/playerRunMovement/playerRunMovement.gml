@@ -61,12 +61,22 @@ function machCalculator(){
 
 
 function checkForSlide(){
-	if (down && !(place_meeting(x + horizontalSpeed*1.2, y , object_wall))){
+	if (down && onGround > 8){
 		horizontalSpeed *= slideMultiplier;
 		slideDirection = sign(horizontalSpeed);
 		state = states.slide
 	}
 }
+/*function canSlide(){
+	var cantSlide = false;
+	for (var i = 0; i < 10; i += 1){
+		cantSlide = place_meeting(x + (horizontalSpeed)*i/2, y + 32 , object_wall)
+		if (cantSlide){
+			break
+		}
+	}
+	return !cantSlide
+}*/
 
 
 function enterMach(resetTimer, newMachDirection){

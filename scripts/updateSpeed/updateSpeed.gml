@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function updateSpeed(){
+	scovilleOvertimeLowerer();
 	scovilleSpeedCalculator();
 	//normal + mach
 	walkSpeed = baseSpeed*scovilleSpeed
@@ -49,13 +50,23 @@ function updateSpeed(){
 }
 
 function scovilleSpeedCalculator(){
-	scovilleSpeed = sqrt(sqrt(sqrt(scoville/3000))); //this sets 1,5 mill scoville at a little over 2x speed
+	//scovilleSpeed = sqrt(sqrt(sqrt(scoville/3000))); //this sets 1,5 mill scoville at a little over 2x speed
 }
 
 function scovilleSpriteSpeed(usedSpriteSpeed)
 {
 		spriteSpeed = usedSpriteSpeed* scovilleSpeed
 	
+}
+
+function scovilleOvertimeLowerer(){
+	decreaseTimer--;
+	if (decreaseTimer < 1){
+		scoville -= scovilleLoweringAmount;
+		if (scoville < scovilleLowest){
+			scoville = scovilleLowest;
+		}
+	}
 }
 
 function resetSpeed(){

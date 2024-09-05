@@ -17,15 +17,21 @@ function playerHorizontalCollision(_player){
 
 function playerVerticalCollision(_player){
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
+		hasFallen = false;
 		if (verticalSpeed > 0){	
 			onGround = 10;
+
 		}
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
 		playerCollisionWhileSwinging()
+	}else{
+		hasFallen = true;
 	}
-	y = y + verticalSpeed;
+	if (onGround < 10){
+		y = y + verticalSpeed;
+	}
 }
 
 function playerWhiteguyCollision(_player){

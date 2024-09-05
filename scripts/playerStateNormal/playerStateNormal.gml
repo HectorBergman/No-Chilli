@@ -7,6 +7,7 @@ function playerStateNormal(){
 	//see: script playerMovement
 	playerHorizontalMovement(self);
 	playerJump(self);
+	playerVerticalCollision(self);
 	playerFall(self);
 	machTimer();
 	
@@ -15,7 +16,7 @@ function playerStateNormal(){
 
 	//see: script playerCollision
 	playerHorizontalCollision(self);
-	playerVerticalCollision(self);
+	
 	playerWhiteguyCollision(self);
 	playerRingCollision(self);
 	machStartupSpeedIncrease();

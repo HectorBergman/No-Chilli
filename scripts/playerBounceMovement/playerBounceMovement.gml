@@ -63,6 +63,7 @@ function bounceVerticalCollision(){
 			}else if (moveRight-moveLeft == sign(horizontalSpeed)){
 				enterMach(true, moveRight-moveLeft)
 			}else{
+				playerVerticalCollision(self)
 				startTurn(moveRight-moveLeft, false)
 				return;
 			}

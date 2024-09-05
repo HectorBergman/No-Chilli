@@ -1,12 +1,12 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"initiateNormalJumpnFallVariables",
   "isCompatibility":false,
   "isDnD":false,
   "name":"initiateNormalJumpnFallVariables",
   "parent":{
-    "name":"zinitiationVariables",
-    "path":"folders/Objects/zinitiationVariables.yy",
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

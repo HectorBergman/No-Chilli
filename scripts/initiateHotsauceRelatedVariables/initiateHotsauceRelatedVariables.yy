@@ -1,12 +1,12 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"initiateHotsauceRelatedVariables",
   "isCompatibility":false,
   "isDnD":false,
   "name":"initiateHotsauceRelatedVariables",
   "parent":{
-    "name":"zinitiationVariables",
-    "path":"folders/Objects/zinitiationVariables.yy",
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

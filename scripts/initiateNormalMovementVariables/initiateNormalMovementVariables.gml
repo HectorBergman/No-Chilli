@@ -8,6 +8,7 @@ function initiateNormalMovementVariables(){
 	startUpSpeed = 0;
 	baseStartUpIncrement = 0.05;
 	startUpIncrement = baseStartUpIncrement
+
 	
 	
 }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"initiateTurnVariables",
   "parent":{
-    "name":"zinitiationVariables",
-    "path":"folders/Objects/zinitiationVariables.yy",
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

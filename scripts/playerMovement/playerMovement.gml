@@ -105,6 +105,9 @@ function machTimer(){ //TODO: make sure you have to be onground through whole st
 }
 
 function machStartupSpeedIncrease(){
+	if (!run){
+		startUpSpeed = 0;
+	}
 	//increases speed during startup
 	if ((leftHeldTimer > 0 || rightHeldTimer > 0) && state == states.normal && onGround > 8 && moveRight-moveLeft != 0){
 		startUpSpeed += startUpIncrement;

@@ -1,12 +1,12 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"initiateControlsVariables",
   "isCompatibility":false,
   "isDnD":false,
   "name":"initiateControlsVariables",
   "parent":{
-    "name":"zinitiationVariables",
-    "path":"folders/Objects/zinitiationVariables.yy",
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

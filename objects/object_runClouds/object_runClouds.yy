@@ -6,8 +6,8 @@
   "name":"object_runClouds",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"invisible",
+    "path":"folders/Objects/invisible.yy",
   },
   "parentObjectId":null,
   "persistent":false,

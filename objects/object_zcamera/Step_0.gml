@@ -13,6 +13,8 @@
 }else{
 	camAheadX = 0;
 }*/
+
+
 if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && !(chiliman.state == states.dash)){
 	camState = camStates.zoomOut
 	isZoomOut = true;

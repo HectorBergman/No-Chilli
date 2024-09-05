@@ -30,6 +30,11 @@ function offLikeAShotClouds(theMove){
 }
 
 function startTurn(newTurnDirection, half){
+	verticalSpeed = 0;
+	if (hasFallen){
+		y = y - playerGrav;
+	}
+	
 	halfTurn = half;
 	if (newTurnDirection == 1 or newTurnDirection == -1){
 		turnDirection = newTurnDirection
@@ -42,12 +47,13 @@ function startTurn(newTurnDirection, half){
 
 function turningLogic(){
 	if (moveRight-moveLeft == -turnDirection){
-		show_debug_message("pikachU")
 		enterMach(false, moveRight-moveLeft)
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);
 		}
-	
+	}else if (halfTurn && moveRight-moveLeft == turnDirection){ //if you're halfturning (AKA stopping), and you
+															   // decide you actually wanna turn
+		halfTurn = false;
 	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
 	}else if (turnTimer > 0 && halfTurn == true){
