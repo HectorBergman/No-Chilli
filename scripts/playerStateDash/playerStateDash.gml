@@ -30,9 +30,10 @@ function dashVerticalCollision(){
 		returnToNormal();
 	}else{
 		hasFallen = true;
+		y = y + verticalSpeed;
 	}
 	
-	y = y + verticalSpeed;
+	
 	
 }
 
@@ -45,13 +46,14 @@ function dashHorizontalCollision(){
 		returnToNormal();
 	}else{
 		wallTouch = 0;
+		x = x + horizontalSpeed;
 	}
 	
-	x = x + horizontalSpeed;
+	
 }
 
 function returnToNormal(){
-	if (timeInDash > 0){
+	if (timeInDash > 0){ //if the dash was interrupted extremely early, give a pretty short cooldown
 		dashCooldown = 20;
 	}
 	timeInMach = 0;

@@ -46,6 +46,7 @@ function ringSpriteLogic(){
 }
 
 function dashSpriteLogic(){
+	sprite_index = spr_player_stand
 }
 
 function machSpriteLogic(){

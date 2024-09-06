@@ -22,7 +22,7 @@ inputCalculator()
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
 
-if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead)){
+if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !(state == states.slide)){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
 		oldHorizontalSpeed = horizontalSpeed;
