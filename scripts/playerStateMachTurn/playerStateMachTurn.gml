@@ -51,8 +51,8 @@ function turningLogic(){
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);
 		}
-	}else if (halfTurn && moveRight-moveLeft == turnDirection){ //if you're halfturning (AKA stopping), and you
-															   // decide you actually wanna turn
+	}else if (halfTurn && moveRight-moveLeft == turnDirection && run){ //if you're halfturning (AKA stopping), and you
+		show_debug_message("we do a lil trolling")	           // decide you actually wanna turn
 		halfTurn = false;
 	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;

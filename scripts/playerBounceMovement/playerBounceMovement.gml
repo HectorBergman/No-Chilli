@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function initializeBounce(){
-	if (place_meeting(x + horizontalSpeed, y, object_wall) && onGround < 5){
+	if (place_meeting(x + horizontalSpeed, y, object_wall) && onGround < 10){
 		verticalSpeed = initialBounceVertical;
 		bounceNr = 1;
 		bounceTimer = bounceTime;
@@ -64,7 +64,7 @@ function bounceVerticalCollision(){
 				enterMach(true, moveRight-moveLeft)
 			}else{
 				playerVerticalCollision(self)
-				startTurn(moveRight-moveLeft, false)
+				startTurn(moveRight-moveLeft, false, false)
 				return;
 			}
 			

@@ -13,13 +13,13 @@
 }else{
 	camAheadX = 0;
 }*/
+PAUSE
 
-
-if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && !(chiliman.state == states.dash)){
+if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && cameraShouldNotChange()){
 	camState = camStates.zoomOut
 	isZoomOut = true;
 	isZoomIn = false;
-}else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn() && !(chiliman.state == states.dash)){
+}else if (isZoomIn == false && camState != camStates.zoomIn && cameraShouldZoomIn() && cameraShouldNotChange()){
 	if (cameraShouldFastZoom()){
 		fastZoom = true;
 	}
@@ -54,6 +54,7 @@ if (follow != noone) //todo better camera, one that doesnt lag behind
 	y = follow.y+32+camAheadY;
 }
 x = clamp(x, 0+camWidth/2, room_width-camWidth/2);
+y = clamp(y, 0+camHeight/2, room_height-camHeight/2);
 camX = x-(camWidth*0.5)
 camY = y-(camHeight*0.5)
 

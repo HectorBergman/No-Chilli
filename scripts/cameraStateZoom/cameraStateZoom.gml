@@ -47,3 +47,7 @@ function cameraShouldZoomIn(){
 function cameraShouldFastZoom(){
 	return chiliman.state == states.crash;
 }
+
+function cameraShouldNotChange(){
+	return !(chiliman.state == states.dash || chiliman.state == states.dead)
+}

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"playerStateDash",
   "isCompatibility":false,
   "isDnD":false,

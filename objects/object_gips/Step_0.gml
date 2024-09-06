@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+PAUSE
 lifeTimeLeft--;
 
 verticalSpeed = verticalSpeed + 0.3;

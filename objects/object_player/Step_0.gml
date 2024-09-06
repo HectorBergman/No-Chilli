@@ -22,9 +22,10 @@ inputCalculator()
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
 
-if (dashCooldown < 1 && !(state == states.crash)){
+if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead)){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
+		oldHorizontalSpeed = horizontalSpeed;
 		if (dashUp){
 			verticalSpeed = -20;
 			horizontalSpeed = 0;
@@ -43,6 +44,8 @@ if (dashCooldown < 1 && !(state == states.crash)){
 		}
 		dashCooldown = dashCooldownTime;
 		slideWalking = false;
+		oldState = state;
+		timeInDash = timeLimitInDash
 		state = states.dash;
 	}
 }
@@ -58,6 +61,10 @@ if (keyboard_check(vk_shift)){
 
 if (dashCooldown != 0){
 	dashCooldown--
+}
+
+if (y > room_height + 200){
+	state = states.dead;
 }
 switch(state){
 	case states.normal: playerStateNormal(); break;

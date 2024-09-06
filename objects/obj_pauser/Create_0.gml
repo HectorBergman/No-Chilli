@@ -7,4 +7,3 @@ depth = -999
 
 cam = instance_find(object_zcamera, 0);
 
-

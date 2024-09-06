@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+PAUSEVARS
 gpu_set_texfilter(false);
 //960, 540
 //640, 360

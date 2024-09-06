@@ -14,4 +14,6 @@ function initiateTurnVariables(){
 	
 	//todo: add mach 2 OLSspeed
 	turnDirection = 0;
-}
+	stopRun = false;
+	
+	}

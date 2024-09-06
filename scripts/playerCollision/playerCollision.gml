@@ -25,7 +25,7 @@ function playerVerticalCollision(_player){
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
-		playerCollisionWhileSwinging()
+		playerCollisionWhileSwinging() //remnant that i cant be fucked to delete
 	}else{
 		hasFallen = true;
 	}
