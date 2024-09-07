@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function initiateTurnVariables(){
 	turn = 0; //-1 for left, 1 for right
-	turnTime = 37; //time it takes to turn
+	turnTime = 37; //time it takes to turn //37
 	turnTimer = 0; //the timer for turning
 	airTime = 0; //time where the player gets to be standing on air after turning.. wile coyote
 	givenAirTime = 20; //time given to be able to spend in air
@@ -12,8 +12,12 @@ function initiateTurnVariables(){
 	halfTurn = false; //stop after brake, return to normal state
 	
 	
+	baseTurnGrav = 1;
+	turnGrav = baseTurnGrav
+	
 	//todo: add mach 2 OLSspeed
 	turnDirection = 0;
 	stopRun = false;
+	downPressed = false;
 	
 	}

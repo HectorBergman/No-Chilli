@@ -63,7 +63,12 @@ function machSpriteLogic(){
 		//show_debug_message(mach1Speed)
 		sprite_index = spr_player_mach2
 	}
-	mirrorSpriteAccordingToDirection()
+	if (horizontalSpeed != 0){
+		image_xscale = (sign(horizontalSpeed));
+		
+	}else{
+		image_xscale = 1
+	}
 }
 function turnSpriteLogic(){
 	if (turnTimer > turnTime-turnTimerBrakeStop){

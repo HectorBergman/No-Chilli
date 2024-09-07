@@ -17,17 +17,20 @@ function updateSpeed(){
 	bounceSpeedAdder = baseBounceSpeedAdder*scovilleSpeed;
 	bounceOneBounceOffWallHorizontalSpeed = baseBounceOneBounceOffWallHorizontalSpeed*scovilleSpeed;
 	bounceTwoBounceOffWallHorizontalSpeed = baseBounceTwoBounceOffWallHorizontalSpeed*scovilleSpeed;
+	bounce2SpeedLowerLimit = baseBounce2SpeedLowerLimit*scovilleSpeed;
 	
 	//bounce vertical
 	secondBounceVertical = baseSecondBounceVertical*sqrt(scovilleSpeed);
 	initialBounceVertical = baseInitialBounceVertical*sqrt(scovilleSpeed);
 	bounceGrav = baseBounceGrav*sqrt(scovilleSpeed);
+
 	
 	//normal vertical
 	playerGrav = baseGrav*sqrt(scovilleSpeed)
 	mediumFall = baseMediumFall*scovilleSpeed
 	maxFall = baseMaxFall*scovilleSpeed
 	jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)
+	turnGrav = baseTurnGrav*sqrt(scovilleSpeed);
 	
 	
 	switch(state){

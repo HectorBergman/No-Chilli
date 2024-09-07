@@ -1,7 +1,12 @@
 function playerStateMachTurn(){
 	
 	turnTimer--
-	
+	if (down || downPressed){
+		show_debug_message("penis");
+		onGround = 0;
+		downPressed = true;
+		turnFall();
+	}
 	if (!run && !halfTurn){
 		//if you stop holding shift and it's not a halfturn, go back to normal state
 		
@@ -64,13 +69,29 @@ function turningLogic(){
 	}else if (moveRight-moveLeft == turnDirection){ //running again
 
 		if (!place_meeting(x, y + 0.1, object_wall)){
-			
-			airTime = givenAirTime; //atm 20 but doublecheck lol
+			if (!downPressed){
+				airTime = givenAirTime; //atm 20 but doublecheck lol
+			}
 		}
 		horizontalSpeed = turnDirection*offLikeAShotSpeed;
 		offLikeAShotClouds(turnDirection);
 		enterMach(false, turnDirection);
 	}else{
 		returnToNormalStateFromMach();
+	}
+}
+
+function turnFall(){
+
+	
+	if (verticalSpeed < mediumFall){
+		verticalSpeed = verticalSpeed + turnGrav;
+	}
+	else if (verticalSpeed >= mediumFall && verticalSpeed < maxFall){ //accelerate slower if verticalSpeed is more than 12
+		verticalSpeed = verticalSpeed + turnGrav*0.5;
+		
+	}
+	else { //stop accelerating if verticalSpeed greater than 20
+		verticalSpeed = verticalSpeed;
 	}
 }

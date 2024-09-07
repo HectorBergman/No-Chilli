@@ -110,6 +110,7 @@ function runClouds(){
 }
 
 function returnToNormalStateFromMach(){
+	downPressed = false;
 	rightHeldTimer = 0;
 	leftHeldTimer = 0;
 	state = states.normal;

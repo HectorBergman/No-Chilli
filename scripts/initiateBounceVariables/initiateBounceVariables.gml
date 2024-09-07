@@ -24,4 +24,7 @@ function initiateBounceVariables(){
 	baseBounceGrav = 0.3;
 	bounceGrav = baseBounceGrav;
 	
+	baseBounce2SpeedLowerLimit = 6; //the lowest speed you can travel to initiate bounce 2
+	bounce2SpeedLowerLimit = baseBounce2SpeedLowerLimit;
+	
 }

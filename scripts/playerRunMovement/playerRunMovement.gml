@@ -80,6 +80,7 @@ function checkForSlide(){
 
 
 function enterMach(resetTimer, newMachDirection){
+	downPressed = false;
 	state = states.mach;
 	machDirection = newMachDirection
 	if (resetTimer){

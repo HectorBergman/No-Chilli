@@ -85,7 +85,7 @@ function bounceVerticalCollision(){
 }
 function bounceHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall)){
-		if (bounceNr == 1 && bounceWallTouch == false){
+		if (bounceNr == 1 && bounceWallTouch == false && (moveRight-moveLeft == sign(horizontalSpeed)) && abs(horizontalSpeed) > 6){
 			bouncedWall = sign(horizontalSpeed);
 			bounceNr = 2; //todo make movement from bounced wall slower
 			bounceMaxSpeed = bounceTwoMaxHorizontalSpeed;
