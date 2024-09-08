@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 sprite_index = spriteName
+cam = instance_find(object_zcamera, 0);
+
 
 click_x = 0
 click_y = 0

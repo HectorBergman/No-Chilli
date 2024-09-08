@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"pausingLogic",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"pausingLogic",
+  "parent":{
+    "name":"menu",
+    "path":"folders/Scripts/menu.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

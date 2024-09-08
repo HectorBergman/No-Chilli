@@ -1,12 +1,29 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if (instance_exists(object_zcamera)){
+	image_xscale = cam.camWidth/640
+	image_yscale = cam.camHeight/360
+}
 click_x = mouse_x;
 click_y = mouse_y;
-if (position_meeting(mouse_x, mouse_y, id)){
+if (position_meeting(mouse_x, mouse_y, id) && toRoom != -89){
 	image_index = 1;
 	if (mouse_check_button_pressed(mb_left)){
-		room_goto(toRoom);
+		if (toRoom == rm_title){
+			global.pause = false;
+			
+			instance_destroy(instance_find(object_zcamera, 0))
+			instance_destroy(chiliman);
+			instance_destroy(instance_find(obj_pauser, 0))
+		}
+		try{
+			room_goto(toRoom);
+		}catch(_exception){
+			global.pause = false;
+		}
+		global.pause = false;
+		instance_destroy(obj_button);
+		
 	}
 }else{
 	image_index = 0;
