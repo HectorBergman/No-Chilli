@@ -3,6 +3,8 @@
 if (instance_exists(object_zcamera)){
 	image_xscale = cam.camWidth/640
 	image_yscale = cam.camHeight/360
+	//x = baseX*cam.camWidth/360
+	//y = baseY*cam.camWidth/360
 }
 click_x = mouse_x;
 click_y = mouse_y;

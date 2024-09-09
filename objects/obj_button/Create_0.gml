@@ -3,7 +3,9 @@
 
 sprite_index = spriteName
 cam = instance_find(object_zcamera, 0);
-
+baseX = x;
+baseY = y;
+depth = -9999
 
 click_x = 0
 click_y = 0

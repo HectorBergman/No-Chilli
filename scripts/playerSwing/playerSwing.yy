@@ -1,12 +1,12 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"playerSwing",
   "isCompatibility":false,
   "isDnD":false,
   "name":"playerSwing",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"oScripts",
+    "path":"folders/oScripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

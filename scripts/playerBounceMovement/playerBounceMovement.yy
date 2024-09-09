@@ -6,7 +6,7 @@
   "name":"playerBounceMovement",
   "parent":{
     "name":"movement",
-    "path":"folders/Scripts/movement.yy",
+    "path":"folders/oScripts/movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_paused",
-    "path":"sprites/spr_paused/spr_paused.yy",
+    "name":"spr_gradient",
+    "path":"sprites/spr_gradient/spr_gradient.yy",
   },
   "spriteMaskId":null,
   "visible":true,

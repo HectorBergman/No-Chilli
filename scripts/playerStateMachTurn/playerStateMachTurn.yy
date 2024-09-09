@@ -6,7 +6,7 @@
   "name":"playerStateMachTurn",
   "parent":{
     "name":"states",
-    "path":"folders/Scripts/states.yy",
+    "path":"folders/oScripts/states.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,12 +1,12 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"playerStateRing",
   "isCompatibility":false,
   "isDnD":false,
   "name":"playerStateRing",
   "parent":{
     "name":"states",
-    "path":"folders/Scripts/states.yy",
+    "path":"folders/oScripts/states.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
