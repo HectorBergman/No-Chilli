@@ -4,19 +4,29 @@
 //x = cam.x
 //y = cam.y-250*(cam.camHeight/360/2)
 layer = layer_create(-999, "pauseUI");
-x = cam.x-640*(cam.camHeight/360/2)
+x = cam.x-640*(cam.camWidth/640/2)
 y = cam.y-360*(cam.camHeight/360/2)
-image_xscale = cam.camWidth/640*2
-image_yscale = cam.camHeight/360*2
+
+
 
 if (keyboard_check_pressed(vk_escape)){
 	if (global.pause){
 		global.pause = false;
-		instance_destroy(obj_button);
-		instance_destroy(activeBorder);
-		instance_destroy(activeJalapeno)
+		destroyMenu()
+		cam.camWidth = tempWidth;
+		cam.camHeight = tempHeight
 	}else{
+		tempWidth = cam.camWidth;
+		tempHeight = cam.camHeight;
+		cam.camWidth = cam.camWidthNormal;
+		cam.camHeight = cam.camHeightNormal;
+		cam.camX = cam.x-(cam.camWidth*0.5)
+		cam.camY = cam.y-(cam.camHeight*0.5)
+		camera_set_view_size(view_camera[0],cam.camWidth,cam.camHeight)
+
+		camera_set_view_pos(view_camera[0], cam.camX, cam.camY);
 		global.pause = true;
+		createContinue();
 		createSettings();
 		createQuit();
 		summonSilly();
@@ -25,6 +35,10 @@ if (keyboard_check_pressed(vk_escape)){
 	}
 }
 
+if (global.destroy){
+	global.destroy = false;
+	destroyMenu()
+}
 if (global.pause){
 	visible=true;
 }else{

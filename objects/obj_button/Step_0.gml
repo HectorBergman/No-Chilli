@@ -13,14 +13,16 @@ if (position_meeting(mouse_x, mouse_y, id) && toRoom != -89){
 	if (mouse_check_button_pressed(mb_left)){
 		if (toRoom == rm_title){
 			global.pause = false;
-			
+			global.destroy = true;
 			instance_destroy(instance_find(object_zcamera, 0))
 			instance_destroy(chiliman);
+			destroyMenu()
 			instance_destroy(instance_find(obj_pauser, 0))
 		}
 		try{
 			room_goto(toRoom);
 		}catch(_exception){
+			destroyMenu()
 			global.pause = false;
 		}
 		global.pause = false;

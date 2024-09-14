@@ -1,18 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*if (chiliman.horizontalSpeed > camAheadLimitSpeed){
-	camAheadX = camAheadLimitSpeed - camAheadStartSpeed;
-}else if (chiliman.horizontalSpeed < -camAheadLimitSpeed){
-	camAheadX = -camAheadLimitSpeed + camAheadStartSpeed;
-}else if (-camAheadStartSpeed < chiliman.horizontalSpeed && chiliman.horizontalSpeed < camAheadStartSpeed){
-	camAheadX = 0;
-}else if (chiliman.horizontalSpeed > 0){
-	camAheadX = chiliman.horizontalSpeed - camAheadStartSpeed
-}else if (chiliman.horizontalSpeed < 0){
-	camAheadX = chiliman.horizontalSpeed + camAheadStartSpeed
-}else{
-	camAheadX = 0;
-}*/
+
 PAUSE
 
 if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && cameraShouldNotChange()){
