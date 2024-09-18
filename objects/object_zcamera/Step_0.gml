@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 PAUSE
+if (chiliman.state == states.levelcomplete){ exit;}
 
 if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && cameraShouldNotChange()){
 	camState = camStates.zoomOut

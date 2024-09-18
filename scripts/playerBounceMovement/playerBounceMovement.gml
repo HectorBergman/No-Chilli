@@ -59,7 +59,7 @@ function bounceVerticalCollision(){
 	if (verticalSpeed > 0 && place_meeting(x, y + verticalSpeed, object_wall)){
 		if (run){
 			if (moveRight-moveLeft == 0){
-				endBounce(states.normal);
+				endBounce(states.mach);
 			}else if (moveRight-moveLeft == sign(horizontalSpeed)){
 				enterMach(true, moveRight-moveLeft)
 			}else{
@@ -79,7 +79,7 @@ function bounceVerticalCollision(){
 				leftHeldTimer = 0;
 			}
 		}else{
-			endBounce(states.normal);
+			endBounce(states.mach);
 		}
 	}
 }

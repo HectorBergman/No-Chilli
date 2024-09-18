@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateLevelcompleteVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateLevelcompleteVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

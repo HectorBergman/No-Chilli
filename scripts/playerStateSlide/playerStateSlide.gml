@@ -6,6 +6,8 @@ function playerStateSlide(){
 	}else if (!down && run && (moveLeft || moveRight) && slideWalking == false){
 		machDirection = -sign(horizontalSpeed);
 		exitSlide(states.mach)
+	}else if (!down && !slideWalking){
+		exitSlide(states.mach)
 	}else if (!down){
 		exitSlide(states.normal)
 	}

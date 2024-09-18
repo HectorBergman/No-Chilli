@@ -11,6 +11,7 @@ enum states{
 	bounce,
 	slide,
 	crash,
+	levelcomplete,
 }
 
 state = states.normal
@@ -34,6 +35,8 @@ initiateSlideVariables();
 initiateCrashVariables();
 
 initiateHotsauceRelatedVariables();
+
+initiateLevelcompleteVariables();
 
 //should put these in a script
 rightHeldTimer = 0;

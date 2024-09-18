@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"saveandload",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"saveandload",
+  "parent":{
+    "name":"menu",
+    "path":"folders/oScripts/menu.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

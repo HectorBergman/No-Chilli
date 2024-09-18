@@ -77,6 +77,7 @@ switch(state){
 	case states.bounce: playerStateBounce(); break;
 	case states.slide: playerStateSlide(); break;
 	case states.crash: playerStateCrash(); break;
+	case states.levelcomplete: playerStateLevelcomplete(); break;
 }
 playerSpriteLogic(self);
 
