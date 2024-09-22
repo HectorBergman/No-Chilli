@@ -62,9 +62,14 @@ function machCalculator(){
 
 function checkForSlide(){
 	if (down && onGround > 8){
-		horizontalSpeed *= slideMultiplier;
-		slideDirection = sign(horizontalSpeed);
-		state = states.slide
+		var currentMask = mask_index;
+		mask_index = spr_player_slide
+		if !(place_meeting(x + horizontalSpeed, y, object_wall)){
+			horizontalSpeed *= slideMultiplier;
+			slideDirection = sign(horizontalSpeed);
+			state = states.slide
+		}
+		mask_index = currentMask;
 	}
 }
 /*function canSlide(){

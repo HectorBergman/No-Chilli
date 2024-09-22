@@ -10,6 +10,30 @@ if place_meeting(x, y, chiliman) && !touched{
 	}else{
 		show_debug_message(string(minutes) + " minute " + string(seconds) + " seconds");
 	}
+	var _time = variable_struct_get(global.game_data, levelname)
+	if (!is_undefined(_time)){
+		draw_text_transformed(x+16, y-50, _time, 2, 2, 0);
+	}
+	var timeString = string(minutes) + ":" + string(seconds)
+	var _prevMinutes = variable_struct_get(global.game_data, levelname + "Minutes")
+	var _prevSeconds = variable_struct_get(global.game_data, levelname + "Seconds")
+	if (!is_undefined(_prevMinutes)){
+		if (_prevMinutes < minutes){
+		
+		}else{
+			if (_prevMinutes == minutes && _prevSeconds <= seconds){
+			
+			}else{
+				saveData(levelname, timeString);
+				saveData(levelname + "Minutes", minutes)
+				saveData(levelname + "Seconds", seconds);
+			}
+		}
+	}else{
+		saveData(levelname, timeString);
+		saveData(levelname + "Minutes", minutes)
+		saveData(levelname + "Seconds", seconds);
+	}
 	touched = true;
 	timer = time;
 	image_index = 1;

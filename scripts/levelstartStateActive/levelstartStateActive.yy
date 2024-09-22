@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"levelstartStateActive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"levelstartStateActive",
+  "parent":{
+    "name":"levelstart",
+    "path":"folders/oScripts/levelstart.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

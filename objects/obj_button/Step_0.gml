@@ -8,7 +8,7 @@ if (instance_exists(object_zcamera)){
 }
 click_x = mouse_x;
 click_y = mouse_y;
-if (position_meeting(mouse_x, mouse_y, id) && toRoom != -89){
+if (position_meeting(mouse_x, mouse_y, id) && !isQuirkyRoom()){
 	image_index = 1;
 	if (mouse_check_button_pressed(mb_left)){
 		if (toRoom == rm_title){
@@ -18,6 +18,7 @@ if (position_meeting(mouse_x, mouse_y, id) && toRoom != -89){
 			instance_destroy(chiliman);
 			destroyMenu()
 			instance_destroy(instance_find(obj_pauser, 0))
+			instance_destroy(instance_find(obj_timerstart, 0));
 		}
 		try{
 			room_goto(toRoom);
@@ -29,6 +30,18 @@ if (position_meeting(mouse_x, mouse_y, id) && toRoom != -89){
 		instance_destroy(obj_button);
 		
 	}
+}else if (position_meeting(mouse_x, mouse_y, id)){
+	image_index = 1;
+	if (mouse_check_button_pressed(mb_left)){
+		if (toRoom == -10){
+			if(window_get_fullscreen()){
+				window_set_fullscreen(false)
+			}else{
+				window_set_fullscreen(true)
+			}
+		}
+	}
+	
 }else{
 	image_index = 0;
 }

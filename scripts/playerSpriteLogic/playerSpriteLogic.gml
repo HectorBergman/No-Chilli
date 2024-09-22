@@ -11,6 +11,7 @@ function playerSpriteLogic(_player){
 		case states.bounce: bounceSpriteLogic(); break;
 		case states.slide: slideSpriteLogic(); break;
 		case states.crash: crashSpriteLogic(); break;
+		case states.levelstart: levelstartSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
@@ -154,4 +155,8 @@ function mirrorSpriteAccordingToDirection(){
 	}else{
 		image_xscale = 1
 	}
+}
+
+function levelstartSpriteLogic(){
+	sprite_index = spr_player_stand
 }

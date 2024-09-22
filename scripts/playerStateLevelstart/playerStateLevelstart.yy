@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerStateLevelstart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStateLevelstart",
+  "parent":{
+    "name":"states",
+    "path":"folders/oScripts/states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

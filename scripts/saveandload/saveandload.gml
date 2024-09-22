@@ -27,6 +27,10 @@ function saveData(variableName, inputData){
 function loadAllData(){
 	if (file_exists("save.txt")){
 		var _file = file_text_open_read("save.txt");
-		file_text_close (_file);
+		var _json = file_text_read_string(_file);
+		global.game_data = json_parse(_json);
+		file_text_close(_file);
+	}else{
+		global.game_data = {}
 	}
 }

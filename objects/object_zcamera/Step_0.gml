@@ -50,6 +50,14 @@ camY = y-(camHeight*0.5)
 camera_set_view_pos(view_camera[0], camX, camY);
 //show_debug_message("camWidth:" + string(camWidth))
 //show_debug_message("camHeight:" + string(camHeight))
+if (camWidth < camWidthNormal || camHeight < camHeightNormal){
+	camWidth = camWidthNormal;
+	camHeight = camHeightNormal;
+}else if (camWidth > camWidthRun || camHeight > camHeightRun){
+	camWidth = camWidthRun;
+	camHeight = camHeightRun;
+}
+
 switch(camState){
 	case camStates.normal: cameraStateNormal(); break;
 	case camStates.zoomOut: cameraStateZoomOut(); break;

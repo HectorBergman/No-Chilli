@@ -17,7 +17,7 @@ function createSettings(){
 	var settingsStruct =
 	{
 		spriteName : spr_setti,
-		toRoom : -99,
+		toRoom : -10,
 	}
 	instance_create_layer(relativeX, relativeY, "pauseUI", obj_button, settingsStruct);
 }

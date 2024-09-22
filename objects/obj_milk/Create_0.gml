@@ -4,7 +4,7 @@ milkstruct = {
 	xscale : self.image_xscale,
 	yscale : self.image_yscale,
 }
-wall_left = instance_create_depth(x, y, 999, obj_milk_wall_left, milkstruct)
+wall_left = instance_create_depth(x, y, 999, obj_milk_wall_left, milkstruct) //999 = INVISIBLE!!!!!
 wall_right = instance_create_depth(x, y, 999, obj_milk_wall_right, milkstruct)
 milk_back = instance_create_depth(x, y, 40, obj_milk_back, milkstruct)
 depth = -10;
