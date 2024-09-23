@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_spring",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":13,
   "bbox_left":0,
   "bbox_right":4,
@@ -24,7 +24,7 @@
   ],
   "name":"spr_spring",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"cuckoo",
     "path":"folders/Sprites/cuckoo.yy",
@@ -79,8 +79,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":2,
+    "yorigin":7,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

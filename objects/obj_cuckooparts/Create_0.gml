@@ -3,9 +3,10 @@
 PAUSEVARS
 image_speed = 0;
 sprite_index = sprite
+image_index = spriteNumber;
 
-verticalSpeed += chiliman.verticalSpeed/2
-horizontalSpeed += chiliman.horizontalSpeed/2
+verticalSpeed += chiliman.verticalSpeed/4
+horizontalSpeed += chiliman.horizontalSpeed/4
 
 lifeTimeLeft = lifeTime
 
@@ -14,6 +15,7 @@ function cuckooHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
+		spin = 0;
 		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
 	}
 	
@@ -22,9 +24,7 @@ function cuckooHorizontalCollision(){
 
 function cuckooVerticalCollision(){
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
-		if (verticalSpeed > 0){	
-			onGround = 10;
-		}
+		spin = 0;
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		horizontalSpeed *= 0.95

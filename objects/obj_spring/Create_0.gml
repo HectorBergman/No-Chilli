@@ -5,14 +5,15 @@
 PAUSEVARS
 image_speed = 0;
 sprite_index = sprite
+
+horizontalSpeed += chiliman.horizontalSpeed/3
+
 enum springStates{
 	normal,
 	bounce,
 }
 state = springStates.normal;
-//verticalSpeed += chiliman.verticalSpeed
-//horizontalSpeed += chiliman.horizontalSpeed
-
+firstContact = true; //no spinning before first landing cause it starts tweakin
 
 lifeTimeLeft = lifeTime
 savedSpeed = 0;
@@ -21,8 +22,8 @@ grav = 0.3;
 function calculateTilGround(){ //calculates how many steps until the spring hits the ground again
 	
 	startVeriSpeed = verticalSpeed
-	startIterationsUntilGround = ceil((2*abs(startVeriSpeed)-grav)/2)
-	show_debug_message(startIterationsUntilGround);
+	startIterationsUntilGround = -ceil((2*(-startVeriSpeed)/(-grav))-1)
+	show_debug_message("iterations: " + string(startIterationsUntilGround));
 	iterationsUntilGround = startIterationsUntilGround;
 }
 calculateTilGround();
@@ -43,6 +44,7 @@ function springVerticalCollision(){
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
 		state = springStates.bounce
+		firstContact = false;
 	}
 	y = y + verticalSpeed;
 }
@@ -53,22 +55,27 @@ function normalState(){
 	iterationsUntilGround--
 	verticalSpeed = verticalSpeed + grav;
 	horizontalSpeed*=0.9995
-	if (iterationsUntilGround > ceil(startIterationsUntilGround/4 && iterationsUntilGround < ceil(startIterationsUntilGround/4*3))){
+	if (!firstContact){
+		image_angle = -sign(horizontalSpeed)*180/startIterationsUntilGround * (startIterationsUntilGround-iterationsUntilGround)
+	}
+	/*if (iterationsUntilGround > ceil(startIterationsUntilGround/4 && iterationsUntilGround < ceil(startIterationsUntilGround/4*3))){
 		image_angle = 90;
 	}else if (iterationsUntilGround <= ceil(startIterationsUntilGround/4)){
 		image_angle = 180;
 	}else{
 		image_angle = 0;
-	}
+	}*/
+	
 	springHorizontalCollision();
 	springVerticalCollision();
 }
 function bounceState(){
-	calculateTilGround();
 	image_index = 0;
+	image_angle = 0;
 	bounceTime--
 	if (bounceTime < 0){
 		verticalSpeed = -savedSpeed;
+		calculateTilGround();
 		state = springStates.normal
 		bounceTime = 5;
 	}

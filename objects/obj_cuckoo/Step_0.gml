@@ -11,9 +11,7 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 		gib();
 		
 		instance_destroy(pendulum);
-		show_debug_message(button.pressed);
 		button.pressed = false;
-		show_debug_message(button.pressed);
 		instance_destroy(self);
 	}
 	else if (animationTimer < -40){

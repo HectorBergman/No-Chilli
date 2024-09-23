@@ -22,4 +22,3 @@ if (image_index == 0 || image_index == 4){
 		timer = 0;
 	}
 }
-show_debug_message(image_index);
