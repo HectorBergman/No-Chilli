@@ -12,6 +12,7 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 		
 		instance_destroy(pendulum);
 		button.pressed = false;
+		
 		instance_destroy(self);
 	}
 	else if (animationTimer < -40){
@@ -19,11 +20,16 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 	}else if (animationTimer < -30){
 		image_index = 11;
 	}else if (animationTimer < -20){
-		image_index = 10;
+		image_index = 10; //could simplify this all but fuck it lol
 	}else{
 		image_index = 9;
 	}
 }else if (timer <= 0){ //timer finished
+	if (!doorLowered){
+		show_debug_message(theDoor.id);
+		theDoor.startLowering = true;
+		doorLowered = true;
+	}
 	animationTimer--
 	if (animationTimer < 0){
 		image_index = 8;

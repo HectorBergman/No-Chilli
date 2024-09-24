@@ -6,7 +6,7 @@ pendulumStruct = {
 }
 pendulum = instance_create_depth(self.x, self.y, -30, obj_cuckoo_pendulum, pendulumStruct)
 
-
+doorLowered = false;
 starttime = timer;
 
 x = chiliman.x
@@ -32,7 +32,7 @@ function gib(){
 		lifeTime : random_range(1500,2500),
 	}
 	instance_create_depth(self.x, self.y, -30, obj_cuckooremains, remainsStruct)
-	for(var i = 0; i < random_range(1,2); i += 1){
+	for(var i = 0; i < floor(random_range(1,4)); i += 1){
 		
 		remainsStruct = {
 			sprite : spr_spring,
@@ -43,16 +43,16 @@ function gib(){
 		instance_create_depth(self.x, self.y, -30, obj_spring, remainsStruct)
 	}
 	for(var i = 0; i < 6; i += 1){
-		if (random_range(0,2) <= 1){
-			remainsStruct = {
-				sprite : spr_cuckooparts,
-				spriteNumber :  i,
-				verticalSpeed : 0,
-				spin : random_range(-2, 2),
-				horizontalSpeed : random_range(-1, 1),
-				lifeTime : random_range(750,1250),
-			}
-			instance_create_depth(self.x, self.y, random_range(-35, -25), obj_cuckooparts, remainsStruct)
+		
+		remainsStruct = {
+			sprite : "spr_cuckooparts_",
+			spriteNumber :  i+1,
+			verticalSpeed : 0,
+			spin : random_range(-2, 2),
+			horizontalSpeed : random_range(-1, 1),
+			lifeTime : random_range(750,1250),
 		}
+		instance_create_depth(self.x, self.y, random_range(-35, -25), obj_cuckooparts, remainsStruct)
+		
 	}
 }

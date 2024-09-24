@@ -23,7 +23,7 @@ function calculateTilGround(){ //calculates how many steps until the spring hits
 	
 	startVeriSpeed = verticalSpeed
 	startIterationsUntilGround = -ceil((2*(-startVeriSpeed)/(-grav))-1)
-	show_debug_message("iterations: " + string(startIterationsUntilGround));
+	//show_debug_message("iterations: " + string(startIterationsUntilGround));
 	iterationsUntilGround = startIterationsUntilGround;
 }
 calculateTilGround();

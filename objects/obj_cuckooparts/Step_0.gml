@@ -3,7 +3,7 @@
 PAUSE
 lifeTimeLeft--;
 
-verticalSpeed = verticalSpeed + 0.3;
+verticalSpeed = verticalSpeed + 0.2;
 cuckooHorizontalCollision();
 cuckooVerticalCollision();
 image_angle += spin;

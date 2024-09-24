@@ -2,8 +2,8 @@
 // You can write your code in this editor
 PAUSEVARS
 image_speed = 0;
-sprite_index = sprite
-image_index = spriteNumber;
+sprite_index = asset_get_index(sprite + string(spriteNumber));
+
 
 verticalSpeed += chiliman.verticalSpeed/4
 horizontalSpeed += chiliman.horizontalSpeed/4
