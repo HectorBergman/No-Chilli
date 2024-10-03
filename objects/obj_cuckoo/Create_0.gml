@@ -21,7 +21,7 @@ function gib(){
 		sprite : spr_cuckoobody,
 		verticalSpeed : random_range(-2,-6),
 		horizontalSpeed : random_range(-5, 1),
-		lifeTime : random_range(1000,2000),
+		lifeTime : random_range(500,1000),
 			
 	}
 	instance_create_depth(self.x, self.y, -30, obj_cuckooremains, remainsStruct)
@@ -29,30 +29,31 @@ function gib(){
 		sprite : spr_cuckoohead,
 		verticalSpeed : random_range(-2,-6),
 		horizontalSpeed : random_range(-1, 5),
-		lifeTime : random_range(1500,2500),
+		lifeTime : random_range(750,1250),
 	}
 	instance_create_depth(self.x, self.y, -30, obj_cuckooremains, remainsStruct)
-	for(var i = 0; i < floor(random_range(1,4)); i += 1){
+	for(var i = 0; i < floor(random_range(1,3)); i += 1){
 		
 		remainsStruct = {
 			sprite : spr_spring,
-			verticalSpeed : random_range(0.5,-4),
-			horizontalSpeed : random_range(-3, 3),
-			lifeTime : random_range(500,1000),
+			verticalSpeed : random_range(-2,-6),
+			horizontalSpeed : random_range(-4, 4),
+			lifeTime : random_range(2500,5000),
 		}
 		instance_create_depth(self.x, self.y, -30, obj_spring, remainsStruct)
 	}
 	for(var i = 0; i < 6; i += 1){
-		
-		remainsStruct = {
-			sprite : "spr_cuckooparts_",
-			spriteNumber :  i+1,
-			verticalSpeed : 0,
-			spin : random_range(-2, 2),
-			horizontalSpeed : random_range(-1, 1),
-			lifeTime : random_range(750,1250),
+		if (random_range(0,1) > 0.3){
+			remainsStruct = {
+				sprite : "spr_cuckooparts_",
+				spriteNumber :  i+1,
+				verticalSpeed : 0,
+				spin : random_range(-2, 2),
+				horizontalSpeed : random_range(-1, 1),
+				lifeTime : random_range(325,750),
+			}
+			instance_create_depth(self.x, self.y, random_range(-35, -25), obj_cuckooparts, remainsStruct)
 		}
-		instance_create_depth(self.x, self.y, random_range(-35, -25), obj_cuckooparts, remainsStruct)
 		
 	}
 }

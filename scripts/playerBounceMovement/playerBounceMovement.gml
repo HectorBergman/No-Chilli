@@ -1,17 +1,20 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function initializeBounce(){
+function testForBounce(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall) && onGround < 10){
-		verticalSpeed = initialBounceVertical;
-		bounceNr = 1;
-		bounceTimer = bounceTime;
-		bounceMaxSpeed = bounceOneMaxHorizontalSpeed; //abs(horizontalSpeed);
-		bounceWallTouch = true;
-		bouncedWall = sign(horizontalSpeed)
-		horizontalSpeed = -bouncedWall*bounceOneBounceOffWallHorizontalSpeed;
-		state = states.bounce;
-		
+		initiateBounce();
 	}
+}
+
+function initiateBounce(){
+	verticalSpeed = initialBounceVertical;
+	bounceNr = 1;
+	bounceTimer = bounceTime;
+	bounceMaxSpeed = bounceOneMaxHorizontalSpeed; //abs(horizontalSpeed);
+	bounceWallTouch = true;
+	bouncedWall = sign(horizontalSpeed)
+	horizontalSpeed = -bouncedWall*bounceOneBounceOffWallHorizontalSpeed;
+	state = states.bounce;
 }
 
 function bounceHorizontalMovement(){ //this is shit
@@ -31,7 +34,7 @@ function decideWhichWallIsBouncedOffAndActAccordingly(numberBounce){
 		}else if (bouncedWall == -1){
 			decideSpeedWhenBouncingOffWallDependingOnDirection(0.5, 0.8)
 		}else{
-			throw("Bounced wall is not -1 or 1")
+			state = states.normal;
 		}
 	}else{
 		if (bouncedWall == 1){
@@ -39,7 +42,7 @@ function decideWhichWallIsBouncedOffAndActAccordingly(numberBounce){
 		}else if (bouncedWall == -1){
 			decideSpeedWhenBouncingOffWallDependingOnDirection(0.4, 1.0)
 		}else{
-			throw("Bounced wall is not -1 or 1")
+			state = states.normal;
 		}
 	}
 }
@@ -86,16 +89,20 @@ function bounceVerticalCollision(){
 function bounceHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y, object_wall)){
 		if (bounceNr == 1 && bounceWallTouch == false && (moveRight-moveLeft == sign(horizontalSpeed)) && abs(horizontalSpeed) > 6){
-			bouncedWall = sign(horizontalSpeed);
-			bounceNr = 2; //todo make movement from bounced wall slower
-			bounceMaxSpeed = bounceTwoMaxHorizontalSpeed;
-			verticalSpeed = secondBounceVertical;
-			horizontalSpeed = -bouncedWall*bounceTwoBounceOffWallHorizontalSpeed + -bouncedWall*abs(horizontalSpeed);
-			
+			startSecondBounce();
 		}
 	}else{
 		bounceWallTouch = false;
 	}
+}
+
+
+function startSecondBounce(){
+	bouncedWall = sign(horizontalSpeed);
+	bounceNr = 2; //todo make movement from bounced wall slower
+	bounceMaxSpeed = bounceTwoMaxHorizontalSpeed;
+	verticalSpeed = secondBounceVertical;
+	horizontalSpeed = -bouncedWall*bounceTwoBounceOffWallHorizontalSpeed + -bouncedWall*abs(horizontalSpeed);
 }
 
 function bounceVerticalMovement(){

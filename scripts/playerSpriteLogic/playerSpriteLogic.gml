@@ -11,6 +11,7 @@ function playerSpriteLogic(_player){
 		case states.bounce: bounceSpriteLogic(); break;
 		case states.slide: slideSpriteLogic(); break;
 		case states.crash: crashSpriteLogic(); break;
+		case states.dive: diveSpriteLogic(); break;
 		case states.levelstart: levelstartSpriteLogic(); break;
 	}
 }
@@ -147,6 +148,10 @@ function crashSpriteLogic(){
 	sprite_index = spr_player_crash;
 }
 
+function diveSpriteLogic(){
+	sprite_index = spr_player_dive;
+	
+}
 
 function mirrorSpriteAccordingToDirection(){
 	if (lastMove != 0){

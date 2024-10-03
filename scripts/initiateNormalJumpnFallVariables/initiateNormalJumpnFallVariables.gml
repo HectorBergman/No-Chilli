@@ -13,7 +13,7 @@ function initiateNormalJumpnFallVariables(){
 	baseGrav = 0.4;
 	playerGrav = baseGrav; //gravity
 	
-	hasFallen = false;
+	hasFallen = false; //used for turning mostly i think lol
 	
 	horizontalSpeed = 0;
 }

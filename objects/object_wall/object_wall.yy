@@ -9,8 +9,8 @@
   "name":"object_wall",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"blocks",
+    "path":"folders/Objects/blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

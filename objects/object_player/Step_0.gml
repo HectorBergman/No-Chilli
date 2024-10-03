@@ -21,8 +21,8 @@ inputCalculator()
 //show_debug_message("moveLeft " + string(moveLeft))
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
-
-
+diveTimer--
+slideTimer--
 if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !(state == states.slide)){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
@@ -53,6 +53,9 @@ if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !
 hotsauce();
 updateSpeed();
 
+touchingSalad = place_meeting(x, y+2, obj_salad);
+	
+
 if (keyboard_check(vk_shift)){
 	_keyShift = 4;
 }else{
@@ -77,6 +80,7 @@ switch(state){
 	case states.bounce: playerStateBounce(); break;
 	case states.slide: playerStateSlide(); break;
 	case states.crash: playerStateCrash(); break;
+	case states.dive: playerStateDive(); break;
 	case states.levelcomplete: playerStateLevelcomplete(); break;
 	case states.levelstart: playerStateLevelstart(); break;
 }

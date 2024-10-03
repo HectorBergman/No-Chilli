@@ -61,7 +61,7 @@ function machCalculator(){
 
 
 function checkForSlide(){
-	if (down && onGround > 8){
+	if (down && onGround > 8 && slideTimer < 1){
 		var currentMask = mask_index;
 		mask_index = spr_player_slide
 		if !(place_meeting(x + horizontalSpeed, y, object_wall)){
@@ -85,6 +85,7 @@ function checkForSlide(){
 
 
 function enterMach(resetTimer, newMachDirection){
+	diveTimer = diveTime;
 	downPressed = false;
 	state = states.mach;
 	machDirection = newMachDirection

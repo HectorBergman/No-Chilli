@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-mask_index = spr_door_hitbox
+
 
 rising = false;
 startRising = false;
@@ -13,11 +13,12 @@ lowerStart = 0;
 msPerRisingFrame = 75;
 msPerLoweringFrame = 100;
 
-show_debug_message(id);
-
-function spriteLogic(){
-	
+hitboxStruct = {
+	sprite : spr_door_hitbox,
+	parent : id,
+	push : push,
 }
+instance_create_depth(self.x, self.y, 30, obj_door_HITBOX, hitboxStruct)
 
 function rise(){
 	if (startRising){
@@ -41,7 +42,7 @@ function rise(){
 
 function lower(){
 	if (startLowering){
-		show_debug_message("DASD");
+		
 		lowerStart = get_timer()/1000
 		startLowering = false;
 		lowering = true;

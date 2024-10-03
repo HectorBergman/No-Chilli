@@ -9,8 +9,8 @@
   "name":"obj_coleslaw",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"npc",
+    "path":"folders/Objects/npc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

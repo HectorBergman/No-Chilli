@@ -1183,8 +1183,8 @@
   ],
   "name":"Room4",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"unusued",
+    "path":"folders/Rooms/unusued.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

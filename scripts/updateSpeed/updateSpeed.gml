@@ -5,8 +5,8 @@ function updateSpeed(){
 	scovilleSpeedCalculator();
 	//normal + mach
 	walkSpeed = baseSpeed*scovilleSpeed
-	mach1Speed = walkSpeed + 3*scovilleSpeed;
-	mach2Speed = mach1Speed + 6*scovilleSpeed;
+	mach1Speed = walkSpeed + mach1SpeedBonus*scovilleSpeed;
+	mach2Speed = mach1Speed + mach2SpeedBonus*scovilleSpeed;
 	offLikeAShotSpeed = baseOLSSpeed*scovilleSpeed*1.2;
 	
 	//bounce horizontal + startup
@@ -74,8 +74,8 @@ function scovilleOvertimeLowerer(){
 
 function resetSpeed(){
 	walkSpeed = baseSpeed;
-	mach1Speed = walkSpeed + 3;
-	mach2Speed = mach1Speed + 2;
+	mach1Speed = walkSpeed + mach1SpeedBonus;
+	mach2Speed = mach1Speed + mach2SpeedBonus;
 	playerGrav = baseGrav;
 	offLikeAShotSpeed = baseOLSSpeed;
 	scoville = 3000;

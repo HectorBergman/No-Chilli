@@ -46,12 +46,17 @@ function playerStateMach(){
 	
 		playerWhiteguyCollision(self);
 		playerRingCollision(self);
-		initializeBounce();
+		testForBounce();
 	
 		if ((!(_keyShift > 0) || (!(moveLeft) && !(moveRight))) && onGround >= 10){
 			
 			turn = sign(horizontalSpeed)
 			startTurn(turn, true);	
+		}else if (onGround <= 9 && down && diveTimer < 1){
+			state = states.dive
+			var totalSpeed = ((horizontalSpeed + sign(horizontalSpeed)*abs(verticalSpeed)));
+			horizontalSpeed = totalSpeed;
+			verticalSpeed = abs(totalSpeed);
 		}
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
@@ -69,7 +74,6 @@ function playerStateMach(){
 }
 
 function determineMachLevel(){
-	
 }
 
 function machLogic(){

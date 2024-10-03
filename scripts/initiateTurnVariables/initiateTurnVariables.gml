@@ -7,7 +7,7 @@ function initiateTurnVariables(){
 	airTime = 0; //time where the player gets to be standing on air after turning.. wile coyote
 	givenAirTime = 20; //time given to be able to spend in air
 	turnTimerBrakeStop = 25; //time where the braking stops and the turning starts
-	baseOLSSpeed = 12;
+	baseOLSSpeed = 7;
 	offLikeAShotSpeed = baseOLSSpeed; //horizontal speed right after finishing turn
 	halfTurn = false; //stop after brake, return to normal state
 	

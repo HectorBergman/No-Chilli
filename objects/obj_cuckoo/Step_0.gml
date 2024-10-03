@@ -26,7 +26,6 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 	}
 }else if (timer <= 0){ //timer finished
 	if (!doorLowered){
-		show_debug_message(theDoor.id);
 		theDoor.startLowering = true;
 		doorLowered = true;
 	}

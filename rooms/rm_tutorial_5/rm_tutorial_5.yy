@@ -701,8 +701,8 @@
   ],
   "name":"rm_tutorial_5",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"unusued",
+    "path":"folders/Rooms/unusued.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

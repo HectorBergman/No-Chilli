@@ -29,24 +29,34 @@ function calculateTilGround(){ //calculates how many steps until the spring hits
 calculateTilGround();
 
 function springHorizontalCollision(){
-	if (place_meeting(x + horizontalSpeed, y , object_wall)){
-		var _hStep = sign(horizontalSpeed);
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
-		horizontalSpeed = -horizontalSpeed;
+	try{
+		if (place_meeting(x + horizontalSpeed, y , object_wall)){
+			var _hStep = sign(horizontalSpeed);
+			while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+			horizontalSpeed = -horizontalSpeed;
+		}
+		x = x + horizontalSpeed;
+	}catch(error){
+		instance_destroy(self);
+		show_debug_message("gone");
 	}
-	x = x + horizontalSpeed;
 }
 
 function springVerticalCollision(){
-	if (place_meeting(x, y + verticalSpeed, object_wall)){
-		savedSpeed = verticalSpeed;
-		var _vStep = sign(verticalSpeed);
-		verticalSpeed = 0;
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
-		state = springStates.bounce
-		firstContact = false;
+	try{
+		if (place_meeting(x, y + verticalSpeed, object_wall)){
+			savedSpeed = verticalSpeed;
+			var _vStep = sign(verticalSpeed);
+			verticalSpeed = 0;
+			while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+			state = springStates.bounce
+			firstContact = false;
+		}
+		y = y + verticalSpeed;
+	}catch(error){
+		instance_destroy(self);
+		show_debug_message("gone");
 	}
-	y = y + verticalSpeed;
 }
 
 
@@ -74,10 +84,20 @@ function bounceState(){
 	image_angle = 0;
 	bounceTime--
 	if (bounceTime < 0){
-		verticalSpeed = -savedSpeed;
-		calculateTilGround();
-		state = springStates.normal
-		bounceTime = 5;
+		if (abs(savedSpeed) < 3){
+			bounceTime = 99999;
+		}else{
+			if (abs(savedSpeed) < 4){
+				horizontalSpeed = -horizontalSpeed;
+			}
+			verticalSpeed = -savedSpeed;
+			verticalSpeed *= 0.99
+			calculateTilGround();
+			state = springStates.normal
+			bounceTime = 5;
+		}
+	}else if (bounceTime > 90000){
+		lifeTimeLeft -= 7
 	}
 }
 

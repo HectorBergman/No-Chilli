@@ -11,6 +11,7 @@ enum states{
 	bounce,
 	slide,
 	crash,
+	dive,
 	levelcomplete,
 	levelstart,
 }
@@ -43,6 +44,7 @@ levelStartTime = 180;
 levelStartTimer = 0;
 
 destinationNumber = -99;
+touchingSalad = false;
 
 //should put these in a script
 rightHeldTimer = 0;

@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"Path5",
+  "closed":false,
+  "kind":0,
+  "name":"Path5",
+  "parent":{
+    "name":"realGs",
+    "path":"folders/Rooms/realGs.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":-1856.0,"y":640.0,},
+    {"speed":100.0,"x":1056.0,"y":672.0,},
+    {"speed":100.0,"x":1344.0,"y":640.0,},
+    {"speed":100.0,"x":1472.0,"y":608.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

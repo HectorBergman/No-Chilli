@@ -8,6 +8,9 @@ horizontalSpeed = 0;
 prevMouseX = mouse_x;
 prevMouseY = mouse_y;
 
+liquidTouchCounter = 0;
+surface_y = 9999;
+
 
 function relaxoHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){

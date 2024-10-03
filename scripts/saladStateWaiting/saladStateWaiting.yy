@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"saladStateWaiting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"saladStateWaiting",
+  "parent":{
+    "name":"salad",
+    "path":"folders/oScripts/salad.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

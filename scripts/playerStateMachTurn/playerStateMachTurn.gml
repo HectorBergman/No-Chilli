@@ -2,7 +2,6 @@ function playerStateMachTurn(){
 	
 	turnTimer--
 	if (down || downPressed){
-		show_debug_message("penis");
 		onGround = 0;
 		downPressed = true;
 		turnFall();
@@ -57,7 +56,7 @@ function turningLogic(){
 			horizontalSpeed = (moveRight-moveLeft);
 		}
 	}else if (halfTurn && moveRight-moveLeft == turnDirection && run){ //if you're halfturning (AKA stopping), and you
-		show_debug_message("we do a lil trolling")	           // decide you actually wanna turn
+													           	      // decide you actually wanna turn
 		halfTurn = false;
 	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
@@ -73,7 +72,7 @@ function turningLogic(){
 				airTime = givenAirTime; //atm 20 but doublecheck lol
 			}
 		}
-		horizontalSpeed = turnDirection*offLikeAShotSpeed;
+		horizontalSpeed = turnDirection*(offLikeAShotSpeed + mach);
 		offLikeAShotClouds(turnDirection);
 		enterMach(false, turnDirection);
 	}else{

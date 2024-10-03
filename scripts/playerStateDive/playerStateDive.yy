@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"playerStateDive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStateDive",
+  "parent":{
+    "name":"states",
+    "path":"folders/oScripts/states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

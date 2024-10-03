@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"saladStateAwake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"saladStateAwake",
+  "parent":{
+    "name":"salad",
+    "path":"folders/oScripts/salad.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -12,7 +12,10 @@
     "name":"button",
     "path":"folders/Objects/button.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pushable",
+    "path":"objects/obj_pushable/obj_pushable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

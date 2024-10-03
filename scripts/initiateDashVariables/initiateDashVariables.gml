@@ -4,7 +4,7 @@ function initiateDashVariables(){
 	dashCooldown = 0;
 	dash = 0;
 	dashEndTime = 160;
-	dashCooldownTime = 200 //debug, normal value = 200;
+	dashCooldownTime = 200; //debug, normal value = 200;
 	
 	//for setting things back to normal once done dashing
 	oldState = 0;
