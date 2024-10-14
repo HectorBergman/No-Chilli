@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dressing",
-    "path":"sprites/spr_dressing/spr_dressing.yy",
+    "name":"spr_dressing_1",
+    "path":"sprites/spr_dressing_1/spr_dressing_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -6,7 +6,11 @@ enum saladState{
 	wake,		//right after salad touched
 	awake,		//after woken up
 	waiting,	//if woken up but chiliman not nearby
+	dying,		//if chiliman was hit
+	dead,		//if hit the ground while dying
 }
+
+onGround = false;
 
 timer = 0;
 
@@ -16,5 +20,5 @@ horizontalSpeed = 0;
 verticalSpeed = 0;
 grav = 0.4;
 
-topSpeed = 7;
+topSpeed = 10;
 speedIncrement = topSpeed/50;

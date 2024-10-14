@@ -11,4 +11,6 @@ switch(state){
 	case saladState.sleeping: saladStateSleeping(); break;
 	case saladState.waiting: saladStateWaiting(); break;
 	case saladState.wake: saladStateWake(); break;
+	case saladState.dying: saladStateDying(); break;
+	case saladState.dead: saladStateDead(); break;
 }

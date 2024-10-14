@@ -5,8 +5,7 @@ PAUSE
 
 
 timer = get_timer()/1000 - timer_start //milliseconds
-show_debug_message(timer);
-show_debug_message(timer_start);
+
 if (image_index == 0 || image_index == 4){
 	if (timer > 100){
 		image_index++
