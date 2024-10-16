@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"brusselStateActive",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"brusselStateActive",
+  "parent":{
+    "name":"brussel",
+    "path":"folders/oScripts/salad/brussel.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

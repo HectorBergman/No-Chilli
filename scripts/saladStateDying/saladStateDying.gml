@@ -1,4 +1,4 @@
 // Script assets have changed for v2.3.0 see dasdasd
-/*		image_xscale = sign(horizontalSpeed);
-	}
+function saladStateDying(){
+	image_index = 17;
 }

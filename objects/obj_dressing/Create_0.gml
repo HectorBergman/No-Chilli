@@ -20,5 +20,13 @@ horizontalSpeed = 0;
 verticalSpeed = 0;
 grav = 0.4;
 
-topSpeed = 10;
+topSpeed = 8;
 speedIncrement = topSpeed/50;
+
+function wake(){
+	if (state = saladState.sleeping){
+		state = saladState.wake;
+		timer_start = get_timer()/1000
+		image_index = 1;
+	}
+}

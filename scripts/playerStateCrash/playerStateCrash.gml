@@ -5,7 +5,10 @@ function playerStateCrash(){
 		horizontalSpeed = crashSpeed;
 		verticalSpeed = crashHeight;
 	}else if (crashTimer == 0){
-		dropGips(crashDirection);
+		if (!specialCrash){
+			dropGips(crashDirection);
+		}
+		baseGrav = trueBaseGrav;
 		state = states.normal;
 	}
 	playerCheckForOnGround()
@@ -19,14 +22,26 @@ function playerStateCrash(){
 
 }
 
-function initiateCrash(){
+function initiateCrash(timeCrashed, parent){ // timeCrashed <= 0 for automatic crashtime
 	leftHeldTimer = 0;
 	rightHeldTimer = 0;
-	crashDirection = sign(horizontalSpeed);
-	crashSpeed = -sign(horizontalSpeed)*sqrt(abs(horizontalSpeed));
-	crashHeight = -sqrt(abs(horizontalSpeed))*2;
-	crashTime = 20 + abs(floor(horizontalSpeed))*3;
-	crashTimer = crashTime;
+	
+	if (timeCrashed <= 0){
+		crashTime = 20 + abs(floor(horizontalSpeed))*3;
+		specialCrash = false;
+		crashDirection = sign(horizontalSpeed);
+		crashSpeed = -sign(horizontalSpeed)*sqrt(abs(horizontalSpeed));
+		crashHeight = -sqrt(abs(horizontalSpeed))*2;
+	}
+	else{
+		crashTime = timeCrashed
+		baseGrav = 0.2;
+		specialCrash = true;
+		crashDirection = sign(parent.horizontalSpeed);
+		crashSpeed = parent.horizontalSpeed;
+		crashHeight = -sqrt(abs(parent.horizontalSpeed))*3;
+	}
+	crashTimer = crashTime
 	state = states.crash;
 }
 

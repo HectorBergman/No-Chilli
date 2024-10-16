@@ -10,7 +10,9 @@ function initiateNormalJumpnFallVariables(){
 	mediumFall = baseMediumFall; //speed where chiliman will accelerate slower
 	baseMaxFall = 25;
 	maxFall = baseMaxFall; //speed where chiliman will stop accelerating
-	baseGrav = 0.4;
+	
+	trueBaseGrav = 0.4
+	baseGrav = trueBaseGrav;
 	playerGrav = baseGrav; //gravity
 	
 	hasFallen = false; //used for turning mostly i think lol

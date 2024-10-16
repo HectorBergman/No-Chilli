@@ -5,8 +5,6 @@ function saladStateSleeping(){
 	show_debug_message("c.y - y: " + string(abs(chiliman.y - y)< 200))
 	show_debug_message("c.touching: " + string(chiliman.touchingSalad))*/
 	if (abs(chiliman.x - x) < 500 && abs(chiliman.y - y) < 500 && chiliman.touchingSalad){
-		state = saladState.wake
-		timer_start = get_timer()/1000
-		image_index = 1;
+		wake();
 	}
 }

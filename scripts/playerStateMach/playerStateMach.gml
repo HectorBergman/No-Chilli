@@ -36,7 +36,7 @@ function playerStateMach(){
 		checkForSlide();
 		if (place_meeting(x + horizontalSpeed, y, object_wall)){
 			if (timeInMach > 20){
-				initiateCrash();
+				initiateCrash(-99, noone);
 			}else{
 				returnToNormalStateFromMach();
 			}

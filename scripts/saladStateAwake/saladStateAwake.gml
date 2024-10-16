@@ -25,9 +25,15 @@ function saladAnimation(){
 
 function hitChili(){
 	 if (place_meeting(x, y , chiliman)){
-		 state = saladState.dying
-		 verticalSpeed = -10;
-		 horizontalSpeed *= -1;
+		var dressing_id  = id;
+		with(chiliman){
+			
+			initiateCrash(60, dressing_id);
+	
+		}
+		state = saladState.dying
+		verticalSpeed = -10;
+		horizontalSpeed *= -1;
 	 }
 }
 
@@ -48,7 +54,7 @@ function saladJump(){
 }
 
 function saladHorizontalCollision(){
-	if (onGround && findJumpable()){
+	if (onGround && findJumpable() && state = saladState.awake){
 			saladJump()
 	}
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){

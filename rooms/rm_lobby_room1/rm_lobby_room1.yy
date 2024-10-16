@@ -93,6 +93,8 @@
     {"name":"inst_72716461","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_75DBC798","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_2EAEF8E","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
+    {"name":"inst_3C8283C6","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
+    {"name":"inst_702BB743","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -197,6 +199,8 @@
         {"$GMRInstance":"","%Name":"inst_2EAEF8E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2EAEF8E","objectId":{"name":"object_roomTransition_new","path":"objects/object_roomTransition_new/object_roomTransition_new.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"object_roomTransition_new","path":"objects/object_roomTransition_new/object_roomTransition_new.yy",},"propertyId":{"name":"nextRoom","path":"objects/object_roomTransition_new/object_roomTransition_new.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_realGs_1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":384.0,},
+        {"$GMRInstance":"","%Name":"inst_3C8283C6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C8283C6","objectId":{"name":"object_ring","path":"objects/object_ring/object_ring.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":256.0,},
+        {"$GMRInstance":"","%Name":"inst_702BB743","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_702BB743","objectId":{"name":"obj_brusselball","path":"objects/obj_brusselball/obj_brusselball.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":352.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

@@ -145,7 +145,11 @@ function slideSpriteLogic(){
 }
 
 function crashSpriteLogic(){
-	sprite_index = spr_player_crash;
+	if (!specialCrash){	
+		sprite_index = spr_player_crash;
+	}else{
+		sprite_index = spr_player_hurt;
+	}
 }
 
 function diveSpriteLogic(){

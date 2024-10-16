@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"saladStateSleeping",
   "parent":{
-    "name":"salad",
-    "path":"folders/oScripts/salad.yy",
+    "name":"dressing",
+    "path":"folders/oScripts/salad/dressing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
