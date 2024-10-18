@@ -12,6 +12,7 @@ function playerSpriteLogic(_player){
 		case states.slide: slideSpriteLogic(); break;
 		case states.crash: crashSpriteLogic(); break;
 		case states.dive: diveSpriteLogic(); break;
+		case states.onball: ballSpriteLogic(); break;
 		case states.levelstart: levelstartSpriteLogic(); break;
 	}
 }
@@ -154,6 +155,11 @@ function crashSpriteLogic(){
 
 function diveSpriteLogic(){
 	sprite_index = spr_player_dive;
+	
+}
+
+function ballSpriteLogic(){
+	sprite_index = spr_player_stand_test;
 	
 }
 

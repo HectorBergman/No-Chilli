@@ -12,6 +12,7 @@ enum states{
 	slide,
 	crash,
 	dive,
+	onball,
 	levelcomplete,
 	levelstart,
 }
@@ -38,6 +39,8 @@ initiateCrashVariables();
 
 initiateHotsauceRelatedVariables();
 
+initiateBallVariables();
+
 initiateLevelcompleteVariables();
 
 levelStartTime = 180;
@@ -45,6 +48,8 @@ levelStartTimer = 0;
 
 destinationNumber = -99;
 touchingSalad = false;
+
+standingOn = noone;
 
 //should put these in a script
 rightHeldTimer = 0;

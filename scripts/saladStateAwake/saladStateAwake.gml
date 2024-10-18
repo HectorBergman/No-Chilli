@@ -26,10 +26,12 @@ function saladAnimation(){
 function hitChili(){
 	 if (place_meeting(x, y , chiliman)){
 		var dressing_id  = id;
-		with(chiliman){
+		if !(chiliman.state == states.onball || chiliman.state == states.dead){
+			with(chiliman){
 			
-			initiateCrash(60, dressing_id);
+				initiateCrash(60, dressing_id);
 	
+			}
 		}
 		state = saladState.dying
 		verticalSpeed = -10;

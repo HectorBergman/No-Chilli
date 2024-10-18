@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"initiateBallVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateBallVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -2,12 +2,23 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function brusselStateNotActive(){
 	visual.image_angle = visual.image_angle + horizontalSpeed;
-	if (place_meeting(x,y,chiliman) && kickedTimer < 0){
-		show_debug_message("hi");
-		horizontalSpeed = chiliman.horizontalSpeed*2;
-		verticalSpeed = -abs(chiliman.horizontalSpeed*0.8);
-		kickedTimer = kickedTime;
-	}
+	if ((place_meeting(x+chiliman.horizontalSpeed,y+chiliman.verticalSpeed,chiliman)) && kickedTimer < 0){
+		show_debug_message("chilimanfeet:" + string(chiliman.y + 64))
+		show_debug_message("hi:" + string(y));
+		if (chiliman.y + 60 < y && chiliman.state != states.onball){
+			state = brusselState.active
+			chiliman.state = states.onball;
+			chiliman.y -= 20
+		}else{
+			horizontalSpeed = chiliman.horizontalSpeed*2;
+			verticalSpeed = -abs(chiliman.horizontalSpeed*0.8);
+			kickedTimer = kickedTime;
+			show_debug_message("lol");
+		}
+	}//else if (place_meeting(x,y+chiliman.verticalSpeed,chiliman) && kickedTimer < 0){
+		//state = brusselState.active;
+	//}
+	
 	verticalSpeed += grav;
 	brusselHorizontalCollision()
 	brusselVerticalCollision()

@@ -3,7 +3,10 @@
 function brusselStateActive(){
 	visual.image_angle = visual.image_angle + chiliman.horizontalSpeed*2;
 	x = chiliman.x;
-	y = chiliman.y+20;
-	
+	y = chiliman.y+70;
+	if (chiliman.state != states.onball){
+		state = brusselState.notActive;
+		kickedTimer = 60;
+	}
 }
 

@@ -50,6 +50,10 @@ if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !
 		state = states.dash;
 	}
 }
+/*try{
+	show_debug_message(standingOn.id)
+}catch(e){
+}*/
 hotsauce();
 updateSpeed();
 
@@ -81,6 +85,7 @@ switch(state){
 	case states.slide: playerStateSlide(); break;
 	case states.crash: playerStateCrash(); break;
 	case states.dive: playerStateDive(); break;
+	case states.onball: playerStateBall(); break;
 	case states.levelcomplete: playerStateLevelcomplete(); break;
 	case states.levelstart: playerStateLevelstart(); break;
 }

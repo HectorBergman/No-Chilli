@@ -58,5 +58,9 @@ function returnToNormal(){
 	}
 	timeInMach = 0;
 	horizontalSpeed = oldHorizontalSpeed;
-	state = oldState;
+	if (oldState != states.onball){
+		state = oldState
+	}else{ 
+		state = states.normal;
+	}
 }

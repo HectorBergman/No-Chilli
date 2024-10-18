@@ -17,4 +17,8 @@ hStep = 0;
 visualStruct = {
 	parent: id,
 }
-visual = instance_create_depth(self.x, self.y, -30, obj_brusselVisual, visualStruct)
+visual = instance_create_depth(self.x, self.y, -30, zobj_brusselVisual, visualStruct)
+
+
+
+

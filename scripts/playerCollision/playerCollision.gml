@@ -17,6 +17,7 @@ function playerHorizontalCollision(_player){
 
 function playerVerticalCollision(_player){
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
+		standingOn = instance_place(x, y + verticalSpeed, object_wall)
 		hasFallen = false;
 		if (verticalSpeed > 0){	
 			onGround = 10;
