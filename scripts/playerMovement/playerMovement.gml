@@ -56,18 +56,31 @@ function playerFall(_player){
 
 
 function playerHorizontalMovement(_player){
-	if (_keyShift > 0){
+	if (run){
 		//mach = machCalculator()
-		horizontalSpeed = move*(walkSpeed + startUpSpeed)
+		normalHorizontalMovementLogic(walkSpeed+startUpSpeed)
+		
 	}else{
 		rightHeldTimer = 0;
 		leftHeldTimer = 0;
-		horizontalSpeed = move*walkSpeed
+		normalHorizontalMovementLogic(walkSpeed);
 	}
 	
 }
 
-
+function normalHorizontalMovementLogic(walkSpeeed){
+	if (abs(horizontalSpeed) <= walkSpeeed){
+			
+		horizontalSpeed = move*(walkSpeeed)
+			
+	}else{
+		if (sign(horizontalSpeed) == move){
+			horizontalSpeed *= 0.985;
+		}else{
+			horizontalSpeed *= 0.9
+		}
+	}
+}
 
 function machTimer(){ //TODO: make sure you have to be onground through whole start
 	if (onGround > 0){

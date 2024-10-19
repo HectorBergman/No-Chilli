@@ -36,7 +36,7 @@ function playerStateMach(){
 		checkForSlide();
 		if (place_meeting(x + horizontalSpeed, y, object_wall)){
 			if (instance_place(x + horizontalSpeed, y, object_dumbasswall)){
-				show_debug_message("HASDASDASDASDASDASDASD")
+				
 				return;
 			}
 			if (timeInMach > 20){
@@ -118,6 +118,7 @@ function runClouds(){
 }
 
 function returnToNormalStateFromMach(){
+	horizontalSpeed = 0;
 	downPressed = false;
 	rightHeldTimer = 0;
 	leftHeldTimer = 0;

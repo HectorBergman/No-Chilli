@@ -56,7 +56,6 @@ if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !
 }*/
 hotsauce();
 updateSpeed();
-
 touchingSalad = place_meeting(x, y+2, obj_salad);
 	
 

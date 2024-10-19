@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function saladStateAwake(){
-	
+	if (onGround){
+		jumpCooldown--
+	}
 	saladAnimation();
 	trackChili();
 	hitChili();
@@ -32,6 +34,17 @@ function hitChili(){
 				initiateCrash(60, dressing_id);
 	
 			}
+		}else if (chiliman.state == states.onball){
+			var ballHit = false;
+			with (chiliman){
+				ballHit = hitBall();
+			}
+			show_debug_message(ballHit);
+			if (!ballHit){
+				with(chiliman){
+					initiateCrash(60, dressing_id);
+				}
+			}
 		}
 		state = saladState.dying
 		verticalSpeed = -10;
@@ -47,17 +60,32 @@ function trackChili(){
 		
 		horizontalSpeed += sign(chiliman.x - x) * speedIncrement;
 		horizontalSpeed *= 0.98
-	
+		jumpIfChiliClose();
 	}
 	
 }
-function saladJump(){
-	verticalSpeed += -10
+
+function jumpIfChiliClose(){
+	show_debug_message("hori " + string(sign(horizontalSpeed)))
+	show_debug_message("distance " + string(sign(x - chiliman.x)))
+	if (sign(horizontalSpeed) == sign(chiliman.x - x) && abs(chiliman.x - x) < 200){
+		if (abs(x-chiliman.x < 150) && onGround){
+			saladJump(7, jumpCooldownTime*2);
+		}
+	}
+}
+
+
+function saladJump(height, cooldown){
+	if (jumpCooldown < 1){
+		verticalSpeed += -height
+		jumpCooldown = cooldown;
+	}
 }
 
 function saladHorizontalCollision(){
 	if (onGround && findJumpable() && state = saladState.awake){
-			saladJump()
+			saladJump(10, jumpCooldownTime)
 	}
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
 		//if (!place_meeting(x + horizontalSpeed, y - 32, object_wall)){

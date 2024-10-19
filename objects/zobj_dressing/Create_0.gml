@@ -13,7 +13,8 @@ enum saladState{
 onGround = false;
 
 timer = 0;
-
+jumpCooldown = 0;
+jumpCooldownTime = 10;
 state = saladState.sleeping;
 
 horizontalSpeed = 0;

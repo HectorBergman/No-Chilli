@@ -5,6 +5,7 @@ function initiateBallVariables(){
 	ballNearMaxSpeed = 7;
 	ballIncrease = 0.15;
 	ballNearMaxIncrease = 0.05;
-	ballGrav = 0.4;
+	ballGrav = 0.3;
 	ballGravFastFall = 1;
+	currentBall = noone;
 }
