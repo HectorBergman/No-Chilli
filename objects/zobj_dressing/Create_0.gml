@@ -17,6 +17,9 @@ jumpCooldown = 0;
 jumpCooldownTime = 10;
 state = saladState.sleeping;
 
+hp = 2;
+hitCooldown = 0;
+
 horizontalSpeed = 0;
 verticalSpeed = 0;
 grav = 0.4;

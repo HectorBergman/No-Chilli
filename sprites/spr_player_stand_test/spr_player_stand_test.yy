@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_player_stand_test",
   "bboxMode":2,
-  "bbox_bottom":83,
+  "bbox_bottom":103,
   "bbox_left":18,
   "bbox_right":29,
   "bbox_top":11,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":84,
+  "height":104,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"644cb16c-5bc9-4599-8f56-e32c584e93d9","blendMode":0,"displayName":"default","isLocked":false,"name":"644cb16c-5bc9-4599-8f56-e32c584e93d9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

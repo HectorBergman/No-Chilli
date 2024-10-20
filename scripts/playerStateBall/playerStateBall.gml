@@ -12,13 +12,14 @@ function playerStateBall(){
 	ballHorizontalCollision();
 	playerWhiteguyCollision(self);
 	if (grab){
-		if (run){
+		if (run && horizontalSpeed != 0 && sign(horizontalSpeed) == move){
 			leftHeldTimer = 60;
 			rightHeldTimer = 60;
 			state = states.mach;
 		}else{
 			state = states.normal;
 		}
+		verticalSpeed = verticalSpeed - 7;
 	}
 }
 
@@ -54,20 +55,20 @@ function ballHorizontalMovement(){
 
 	if (onGround > 0){
 		if (sign(horizontalSpeed) != move){
-				move *= 3;
+				speedMult = 3;
 		}
 	}else{
 		if (sign(horizontalSpeed) != move){
-			move *= 1.25
+			speedMult = 1.25
 		}else{
-			move *= 0.5
+			speedMult = 0.5
 		}
 	}
 	if (move != 0){
 		if (abs(horizontalSpeed) < ballNearMaxSpeed){
-				horizontalSpeed += move*ballIncrease
+				horizontalSpeed += move*ballIncrease*speedMult;
 			}else if (abs(horizontalSpeed) < ballMaxSpeed){
-				horizontalSpeed += move*ballNearMaxIncrease
+				horizontalSpeed += move*ballNearMaxIncrease*speedMult;
 			}else{
 				horizontalSpeed *= 0.99;
 			}
@@ -80,7 +81,7 @@ function ballHorizontalCollision(){
 		var _hStep = sign(horizontalSpeed);
 		if (abs(horizontalSpeed) > 2){
 			horizontalSpeed = -horizontalSpeed *0.4;
-			verticalSpeed -= 3;
+			verticalSpeed -= abs(horizontalSpeed)*2;
 		}else{
 			horizontalSpeed = 0;
 		}

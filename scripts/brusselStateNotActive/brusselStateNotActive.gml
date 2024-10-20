@@ -8,10 +8,10 @@ function brusselStateNotActive(){
 			state = brusselState.active
 			chiliman.state = states.onball;
 			chiliman.currentBall = id;
-			chiliman.y -= 20
+			chiliman.y -= 40
 		}else{
 			horizontalSpeed = chiliman.horizontalSpeed*2;
-			verticalSpeed = -abs(chiliman.horizontalSpeed*0.8);
+			verticalSpeed = -abs(chiliman.horizontalSpeed*0.7);
 			kickedTimer = kickedTime;
 			
 		}
@@ -46,7 +46,7 @@ function brusselVerticalCollision(){
 		}else{
 			verticalSpeed *= -0.7;
 		}
-		horizontalSpeed *= 0.95;
+		horizontalSpeed *= 0.90;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
 	}
 	

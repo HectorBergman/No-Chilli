@@ -5,29 +5,46 @@ function playerRunMovement(){
 }
 
 function machHorizontalMovement(_player){
-	if (sign(horizontalSpeed) == move){
-		if (mach == mach1Speed){
-			if (abs(horizontalSpeed*move) > mach1Speed && onGround > -15){
-				horizontalSpeed *= 0.993
-			}else if (abs(horizontalSpeed*move) < mach1Speed){
-				horizontalSpeed = move*mach1Speed;
-			}else if onGround < -90{
-				horizontalSpeed *= 0.998;
-			}
-			//essentially, if speed is above mach limit, slowly decrease it back to mach limit
-		}else if (mach == mach2Speed){
-			if (abs(horizontalSpeed*move) > mach2Speed && onGround > -15){
-				horizontalSpeed *= 0.99
-			}else if (abs(horizontalSpeed*move) < mach2Speed){
-				horizontalSpeed = move*mach2Speed;
-			}else if onGround < -90{
-				horizontalSpeed *= 0.998;
+	if (onGround > 9){
+		if (sign(horizontalSpeed) == move){
+			if (mach == mach1Speed){
+				machMovementCalculation(mach1Speed);
+			}else if (mach == mach2Speed){
+				machMovementCalculation(mach2Speed);
 			}
 		}
 	}else{
+		if (mach == mach1Speed){
+			machMovementAirCalculation(mach1Speed)
+		}else if (mach == mach2Speed){
+			machMovementAirCalculation(mach2Speed)
+		}
 	}
 }
 
+function machMovementAirCalculation(machSpeed){
+	var airMove = moveRight-moveLeft
+	if (sign(horizontalSpeed) == airMove){
+		if (abs(horizontalSpeed) < machSpeed){
+			horizontalSpeed += airMove*0.2
+		}else if (onGround < -40){
+			horizontalSpeed *= 0.998
+		}
+	}else if (-sign(horizontalSpeed) == airMove){
+		horizontalSpeed *= 0.97;
+	}
+}
+
+function machMovementCalculation(machSpeed){
+	if (abs(horizontalSpeed) > machSpeed && onGround > 5){
+		horizontalSpeed *= 0.993
+	}else if (abs(horizontalSpeed) < machSpeed){
+		horizontalSpeed = move*machSpeed;
+	}else if onGround < -90{
+		horizontalSpeed *= 0.998;
+	}
+
+}
 
 function machCalculator(){ 
 	if (onGround >= 9){

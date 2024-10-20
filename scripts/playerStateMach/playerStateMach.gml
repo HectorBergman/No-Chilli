@@ -1,5 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// This is easily the most confusing state, and likely the cause of many bugs. If I could do it
+// all over again I would change this 100%, but it's too central to all movement that changing it
+// is painful af.
 function playerStateMach(){
 	timeInMach++
 	
@@ -7,24 +8,24 @@ function playerStateMach(){
 	
 	//if you're both on the ground and turning the opposite direction to the mach direction, skip this if
 	
-	if !(onGround >= 9 &&  //note to self, do not write !-ifs, they're confusing af
+	if !(onGround >= 10 &&  //note to self, do not write !-ifs, they're confusing af
 	((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || 
 	!((moveRight-moveLeft) == sign(horizontalSpeed)))){
 		
-		//if not changing direction
+	//this basically means, if you're on the ground and attempting to turn, skip this if, else, enter the if
+	//so if you're in the air, this if will always play.
+		
+	
 		determineMove();
-		
-		
 		
 		//see: script playerMovement
 		machHorizontalMovement(self);
 		
 		if (airTime < 1){
-		
 			playerFall(self);
 			playerJump(self);
 			playerVerticalCollision(self);
-		}else if (place_meeting(x, y + 1, object_wall)){
+		}else if (place_meeting(x, y + 4, object_wall)){
 				airTime = 0;
 		}else{
 				jumpsLeft = 0;
@@ -35,12 +36,9 @@ function playerStateMach(){
 		
 		checkForSlide();
 		if (place_meeting(x + horizontalSpeed, y, object_wall)){
-			if (instance_place(x + horizontalSpeed, y, object_dumbasswall)){
-				
-				return;
-			}
+
 			if (timeInMach > 20){
-				initiateCrash(-99, noone);
+				initiateCrash(-99, noone); //these variables mean it will be a regular crash, nothing fancy
 			}else{
 				returnToNormalStateFromMach();
 			}

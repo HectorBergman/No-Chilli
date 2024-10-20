@@ -8,4 +8,5 @@ function initiateBallVariables(){
 	ballGrav = 0.3;
 	ballGravFastFall = 1;
 	currentBall = noone;
+	speedMult = 1;
 }

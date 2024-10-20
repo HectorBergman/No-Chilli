@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function saladStateAwake(){
+	hitCooldown--;
 	if (onGround){
 		jumpCooldown--
 	}
@@ -26,30 +27,41 @@ function saladAnimation(){
 }
 
 function hitChili(){
-	 if (place_meeting(x, y , chiliman)){
-		var dressing_id  = id;
-		if !(chiliman.state == states.onball || chiliman.state == states.dead){
-			with(chiliman){
-			
-				initiateCrash(60, dressing_id);
-	
-			}
-		}else if (chiliman.state == states.onball){
-			var ballHit = false;
-			with (chiliman){
-				ballHit = hitBall();
-			}
-			show_debug_message(ballHit);
-			if (!ballHit){
+	if (hitCooldown < 1){
+		if (place_meeting(x, y , chiliman)){
+			var dressing_id  = id;
+			if !(chiliman.state == states.onball || chiliman.state == states.dead){
 				with(chiliman){
+			
 					initiateCrash(60, dressing_id);
+	
+				}
+				hp = 0;
+			}else if (chiliman.state == states.onball){
+				var ballHit = false;
+				with (chiliman){
+					ballHit = hitBall();
+				}
+				show_debug_message(ballHit);
+				if (!ballHit){
+					with(chiliman){
+						initiateCrash(60, dressing_id);
+					}
+					hp = 0;
 				}
 			}
-		}
-		state = saladState.dying
-		verticalSpeed = -10;
-		horizontalSpeed *= -1;
-	 }
+			if (hp == 0){
+				state = saladState.dying
+				verticalSpeed = -10;
+				horizontalSpeed *= -1;
+			}else{
+				hp--
+				horizontalSpeed = chiliman.horizontalSpeed + (-sign(horizontalSpeed) * 5);
+				verticalSpeed = -8;
+				hitCooldown = 20;
+			}
+		 }
+	}
 }
 
 function trackChili(){
@@ -70,7 +82,7 @@ function jumpIfChiliClose(){
 	show_debug_message("distance " + string(sign(x - chiliman.x)))
 	if (sign(horizontalSpeed) == sign(chiliman.x - x) && abs(chiliman.x - x) < 200){
 		if (abs(x-chiliman.x < 150) && onGround){
-			saladJump(7, jumpCooldownTime*2);
+			saladJump(10, jumpCooldownTime*2);
 		}
 	}
 }
