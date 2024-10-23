@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"saladStateDying",
   "isCompatibility":false,
   "isDnD":false,

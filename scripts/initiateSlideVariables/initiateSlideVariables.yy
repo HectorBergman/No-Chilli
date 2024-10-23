@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateSlideVariables",
   "isCompatibility":false,
   "isDnD":false,

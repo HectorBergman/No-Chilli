@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"inputCalculator",
   "isCompatibility":false,
   "isDnD":false,

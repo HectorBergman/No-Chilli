@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"brusselStateActive",
   "isCompatibility":false,
   "isDnD":false,

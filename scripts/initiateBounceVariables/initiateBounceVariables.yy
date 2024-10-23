@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateBounceVariables",
   "isCompatibility":false,
   "isDnD":false,

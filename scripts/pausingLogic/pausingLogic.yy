@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"pausingLogic",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateNormalMovementVariables",
   "isCompatibility":false,
   "isDnD":false,

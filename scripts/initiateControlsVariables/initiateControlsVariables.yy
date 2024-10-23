@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateControlsVariables",
   "isCompatibility":false,
   "isDnD":false,

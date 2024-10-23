@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateLevelcompleteVariables",
   "isCompatibility":false,
   "isDnD":false,

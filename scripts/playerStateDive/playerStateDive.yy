@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"playerStateDive",
   "isCompatibility":false,
   "isDnD":false,

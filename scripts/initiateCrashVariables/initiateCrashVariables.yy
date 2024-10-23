@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"initiateCrashVariables",
   "isCompatibility":false,
   "isDnD":false,
