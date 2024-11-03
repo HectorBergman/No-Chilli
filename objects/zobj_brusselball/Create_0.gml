@@ -14,6 +14,8 @@ horizontalSpeed = 0;
 vStep = 0;
 hStep = 0;
 
+originalRoom = room_get_name(room);
+
 visualStruct = {
 	parent: id,
 }

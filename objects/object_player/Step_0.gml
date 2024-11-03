@@ -23,7 +23,7 @@ inputCalculator()
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
 diveTimer--
 slideTimer--
-if (dashCooldown < 1 && !(state == states.crash) && !(state == states.dead) && !(state == states.slide)){
+if (dashCooldown < 1 && !undashable()){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
 		oldHorizontalSpeed = horizontalSpeed;
@@ -87,6 +87,7 @@ switch(state){
 	case states.onball: playerStateBall(); break;
 	case states.levelcomplete: playerStateLevelcomplete(); break;
 	case states.levelstart: playerStateLevelstart(); break;
+	case states.oven: playerStateOven(); break;
 }
 playerSpriteLogic(self);
 

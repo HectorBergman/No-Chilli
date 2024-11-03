@@ -8,5 +8,8 @@ function brusselStateActive(){
 		state = brusselState.notActive;
 		kickedTimer = 60;
 	}
+	if (originalRoom != room_get_name(room)){
+		originalRoom = room_get_name(room);
+	}
 }
 

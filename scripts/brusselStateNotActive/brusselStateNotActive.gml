@@ -1,6 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function brusselStateNotActive(){
+	if (originalRoom != room_get_name(room)){
+		instance_destroy(visual);
+		instance_destroy(id);
+		exit;
+	}
 	visual.image_angle = visual.image_angle + horizontalSpeed;
 	if ((place_meeting(x+chiliman.horizontalSpeed,y+chiliman.verticalSpeed,chiliman)) && kickedTimer < 0){
 
@@ -22,6 +27,7 @@ function brusselStateNotActive(){
 	verticalSpeed += grav;
 	brusselHorizontalCollision()
 	brusselVerticalCollision()
+	
 }
 
 function brusselHorizontalCollision(){

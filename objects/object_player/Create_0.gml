@@ -15,6 +15,7 @@ enum states{
 	onball,
 	levelcomplete,
 	levelstart,
+	oven,
 }
 
 state = states.normal
@@ -47,6 +48,7 @@ levelStartTime = 180;
 levelStartTimer = 0;
 
 destinationNumber = -99;
+destinationY = 0; //offset of Y
 touchingSalad = false;
 
 standingOn = noone;
@@ -63,6 +65,8 @@ cam = view_get_camera(0);
 depth = 0;
 
 bugtestcount = 0;
+
+ovenEntered = false;
 
 initiateRingVariables()
 
