@@ -24,3 +24,4 @@ hideStruct = {
 	
 }
 roof = instance_create_depth(self.x, self.y, -100, obj_oven_wallcoll, hideStruct)
+collision = noone;

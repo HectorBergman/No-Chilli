@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_oven_wallcoll",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_ovenfamily",
+  "eventList":[],
   "managed":true,
-  "name":"obj_oven_wallcoll",
+  "name":"obj_ovenfamily",
   "overriddenProperties":[],
   "parent":{
     "name":"oveb",
     "path":"folders/Objects/blocks/oveb.yy",
   },
   "parentObjectId":{
-    "name":"obj_ovenfamily",
-    "path":"objects/obj_ovenfamily/obj_ovenfamily.yy",
+    "name":"object_wall",
+    "path":"objects/object_wall/object_wall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_oven_wallcoll",
-    "path":"sprites/spr_oven_wallcoll/spr_oven_wallcoll.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

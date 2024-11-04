@@ -13,8 +13,8 @@
     "path":"folders/Objects/blocks/oveb.yy",
   },
   "parentObjectId":{
-    "name":"object_wall",
-    "path":"objects/object_wall/object_wall.yy",
+    "name":"obj_ovenfamily",
+    "path":"objects/obj_ovenfamily/obj_ovenfamily.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

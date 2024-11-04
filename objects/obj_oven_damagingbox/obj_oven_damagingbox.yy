@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_oven_wallcoll",
+  "%Name":"obj_oven_damagingbox",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_oven_wallcoll",
+  "name":"obj_oven_damagingbox",
   "overriddenProperties":[],
   "parent":{
     "name":"oveb",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_oven_wallcoll",
-    "path":"sprites/spr_oven_wallcoll/spr_oven_wallcoll.yy",
+    "name":"spr_oven_closingDamageBox",
+    "path":"sprites/spr_oven_closingDamageBox/spr_oven_closingDamageBox.yy",
   },
   "spriteMaskId":null,
   "visible":false,

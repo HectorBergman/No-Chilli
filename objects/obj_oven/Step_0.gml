@@ -6,11 +6,15 @@ if (chiliman.ovenEntered && !closing){
 	closing = true;
 	animationTimer = animationTime;
 	instance_destroy(hide);
+	collisionStruct = {
+		parent: id,
+	}
+	collision = instance_create_depth(self.x, self.y, -100, obj_oven_damagingbox, collisionStruct)
 }else if (chiliman.ovenEntered){
 	animationTimer--;
 	if (animationTimer == 119){
 		image_index++;
-	} else if (animationTimer == 114){
+	} else if (animationTimer == 111){
 		image_index++;
 	}else if (animationTimer == 0){
 		chiliman.ovenEntered = false;
