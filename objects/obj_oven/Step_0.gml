@@ -19,5 +19,7 @@ if (chiliman.ovenEntered && !closing){
 	}else if (animationTimer == 0){
 		chiliman.ovenEntered = false;
 		chiliman.depth = 0;
+		chiliman.destinationNumber = 99;
+		room_goto(rm_ovenTest);
 	}
 }

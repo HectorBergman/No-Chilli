@@ -3,5 +3,6 @@
 if (chiliman.destinationNumber == number){
 	chiliman.x = x
 	chiliman.y = y-chiliman.destinationY
+	chiliman.destinationY = 0;
 }
 instance_destroy(self);
