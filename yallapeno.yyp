@@ -66,7 +66,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"yallapeno",
   "resources":[
@@ -100,6 +100,7 @@
     {"id":{"name":"obj_oven_wallcoll","path":"objects/obj_oven_wallcoll/obj_oven_wallcoll.yy",},},
     {"id":{"name":"obj_oven","path":"objects/obj_oven/obj_oven.yy",},},
     {"id":{"name":"obj_ovenfamily","path":"objects/obj_ovenfamily/obj_ovenfamily.yy",},},
+    {"id":{"name":"obj_ovenTemp","path":"objects/obj_ovenTemp/obj_ovenTemp.yy",},},
     {"id":{"name":"obj_pauser","path":"objects/obj_pauser/obj_pauser.yy",},},
     {"id":{"name":"obj_pushable","path":"objects/obj_pushable/obj_pushable.yy",},},
     {"id":{"name":"obj_relax","path":"objects/obj_relax/obj_relax.yy",},},
@@ -256,6 +257,7 @@
     {"id":{"name":"spr_oven_wall","path":"sprites/spr_oven_wall/spr_oven_wall.yy",},},
     {"id":{"name":"spr_oven_wallcoll","path":"sprites/spr_oven_wallcoll/spr_oven_wallcoll.yy",},},
     {"id":{"name":"spr_oven","path":"sprites/spr_oven/spr_oven.yy",},},
+    {"id":{"name":"spr_ovenTemp","path":"sprites/spr_ovenTemp/spr_ovenTemp.yy",},},
     {"id":{"name":"spr_paused","path":"sprites/spr_paused/spr_paused.yy",},},
     {"id":{"name":"spr_play","path":"sprites/spr_play/spr_play.yy",},},
     {"id":{"name":"spr_player_bounce1_fall","path":"sprites/spr_player_bounce1_fall/spr_player_bounce1_fall.yy",},},

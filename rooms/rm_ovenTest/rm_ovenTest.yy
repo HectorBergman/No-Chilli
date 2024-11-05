@@ -6,20 +6,20 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_31275C17","path":"rooms/rm_ovenTest/rm_ovenTest.yy",},
     {"name":"inst_1F881090","path":"rooms/rm_ovenTest/rm_ovenTest.yy",},
     {"name":"inst_7160133F","path":"rooms/rm_ovenTest/rm_ovenTest.yy",},
+    {"name":"inst_1DF6537F","path":"rooms/rm_ovenTest/rm_ovenTest.yy",},
+    {"name":"inst_515B1385","path":"rooms/rm_ovenTest/rm_ovenTest.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_31275C17","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_31275C17","objectId":{"name":"obj_blockspawner","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_blockspawner","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"propertyId":{"name":"object","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_heatingRod",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":13.0,"scaleY":1.0,"x":448.0,"y":1312.0,},
         {"$GMRInstance":"v1","%Name":"inst_1F881090","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F881090","objectId":{"name":"object_roomTransition_destination","path":"objects/object_roomTransition_destination/object_roomTransition_destination.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"object_roomTransition_destination","path":"objects/object_roomTransition_destination/object_roomTransition_destination.yy",},"propertyId":{"name":"number","path":"objects/object_roomTransition_destination/object_roomTransition_destination.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"99",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":1248.0,},
         {"$GMRInstance":"v1","%Name":"inst_7160133F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7160133F","objectId":{"name":"obj_fryingRail","path":"objects/obj_fryingRail/obj_fryingRail.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":14.0,"scaleY":1.0,"x":0.0,"y":1312.0,},
+        {"$GMRInstance":"v1","%Name":"inst_1DF6537F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1DF6537F","objectId":{"name":"obj_ovenTemp","path":"objects/obj_ovenTemp/obj_ovenTemp.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":9.0,"x":448.0,"y":1312.0,},
+        {"$GMRInstance":"v1","%Name":"inst_515B1385","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_515B1385","objectId":{"name":"obj_heatingRod","path":"objects/obj_heatingRod/obj_heatingRod.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":75.0,"scaleY":1.0,"x":480.0,"y":1312.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_oventemp","path":"sprites/bg_oventemp/bg_oventemp.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
