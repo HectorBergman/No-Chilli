@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function brusselStateActive(){
 	try{
-	visual.image_angle = visual.image_angle + chiliman.horizontalSpeed*2;
+		visual.image_index -= chiliman.horizontalSpeed*2/15;
 	}catch(error){
 		instance_destroy(visual);
 		instance_destroy(self);
