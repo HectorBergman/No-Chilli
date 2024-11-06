@@ -85,6 +85,7 @@ switch(state){
 	case states.crash: playerStateCrash(); break;
 	case states.dive: playerStateDive(); break;
 	case states.onball: playerStateBall(); break;
+	case states.hotass: playerStateHotass(); break;
 	case states.levelcomplete: playerStateLevelcomplete(); break;
 	case states.levelstart: playerStateLevelstart(); break;
 	case states.oven: playerStateOven(); break;

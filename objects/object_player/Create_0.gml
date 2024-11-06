@@ -13,6 +13,7 @@ enum states{
 	crash,
 	dive,
 	onball,
+	hotass,
 	levelcomplete,
 	levelstart,
 	oven,
