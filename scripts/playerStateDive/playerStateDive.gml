@@ -36,7 +36,7 @@ function diveVerticalCollision(){
 		enterMach(false, horizontalSpeed);
 		slideTimer = slideTime-20;
 		diveTimer = diveTime;
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		while(!place_meeting(x,y+_vStep, obj_trait_landable)) y += _vStep;
 	}
 
 	y = y + verticalSpeed;
