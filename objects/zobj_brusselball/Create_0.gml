@@ -19,7 +19,7 @@ originalRoom = room_get_name(room);
 visualStruct = {
 	parent: id,
 }
-visual = instance_create_depth(self.x, self.y, -30, zobj_brusselVisual, visualStruct)
+visual = instance_create_depth(self.x, self.y, -1, zobj_brusselVisual, visualStruct)
 
 
 

@@ -18,6 +18,7 @@ function playerStateDash(){
 }
 
 function dashVerticalCollision(){
+	fryingRailException();
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
 		hasFallen = false;
 		if (verticalSpeed > 0){	

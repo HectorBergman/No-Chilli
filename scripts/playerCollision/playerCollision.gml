@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerHorizontalCollision(_player){
-	if (place_meeting(x + horizontalSpeed, y , object_wall)){
+	if (checkCollision(horizontalSpeed, 0, object_wall)){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
 		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
@@ -14,9 +14,28 @@ function playerHorizontalCollision(_player){
 	
 	x = x + horizontalSpeed;
 }
+function fryingRailException(){
+	var rail = instance_place(x, y + verticalSpeed, obj_fryingRail);
+	if (rail != noone){
+		if (verticalSpeed > 0 && rail.y+16 > self.y+self.sprite_height){
+			standingOn = instance_place(x, y + verticalSpeed, object_wall)
+			hasFallen = false;
+			if (verticalSpeed > 0){	
+				onGround = 10;
+			}
+			var _vStep = sign(verticalSpeed);
+			verticalSpeed = 0;
+			while(!place_meeting(x,y+_vStep, obj_fryingRail)) y += _vStep;
+		}
+	}
+}
+function checkCollision(horizontalSpeedAdded, verticalSpeedAdded, object){
+	return place_meeting(x + horizontalSpeedAdded, y + verticalSpeedAdded, object)
+}
 
 function playerVerticalCollision(_player){
-	if (place_meeting(x, y + verticalSpeed, object_wall)){
+	fryingRailException();
+	if (checkCollision(0, verticalSpeed, object_wall)){
 		standingOn = instance_place(x, y + verticalSpeed, object_wall)
 		hasFallen = false;
 		if (verticalSpeed > 0){	

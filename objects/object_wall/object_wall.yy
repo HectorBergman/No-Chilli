@@ -11,7 +11,10 @@
     "name":"blocks",
     "path":"folders/Objects/blocks.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_trait_landable",
+    "path":"objects/obj_trait_landable/obj_trait_landable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

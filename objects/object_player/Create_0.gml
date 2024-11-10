@@ -68,6 +68,7 @@ depth = 0;
 bugtestcount = 0;
 
 ovenEntered = false;
+ovenState = 0;
 
 initiateRingVariables()
 

@@ -45,6 +45,7 @@ function brusselHorizontalCollision(){
 }
 
 function brusselVerticalCollision(){
+	fryingRailException();
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
 		var _vStep = sign(verticalSpeed);
 		if (abs(verticalSpeed) < 2){

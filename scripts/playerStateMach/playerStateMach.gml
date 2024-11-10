@@ -25,7 +25,7 @@ function playerStateMach(){
 			playerFall(self);
 			playerJump(self);
 			playerVerticalCollision(self);
-		}else if (place_meeting(x, y + 4, object_wall)){
+		}else if (place_meeting(x, y + 4, obj_trait_landable)){
 				airTime = 0;
 		}else{
 				jumpsLeft = 0;

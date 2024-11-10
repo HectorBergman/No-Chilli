@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_heatingrod_on",
   "bboxMode":2,
-  "bbox_bottom":46,
+  "bbox_bottom":48,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":17,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6013501b-549f-4b39-a430-de99a273ed87","name":"6013501b-549f-4b39-a430-de99a273ed87","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"7e01b2c3-0c1f-40f9-b256-cb7e2c588a97","name":"7e01b2c3-0c1f-40f9-b256-cb7e2c588a97","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"86c3ddbd-f520-4b08-ad5b-cb5ee6ae24c3","blendMode":0,"displayName":"default","isLocked":false,"name":"86c3ddbd-f520-4b08-ad5b-cb5ee6ae24c3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f798c2be-9d12-4727-9ea0-b62beb78db88","blendMode":0,"displayName":"default","isLocked":false,"name":"f798c2be-9d12-4727-9ea0-b62beb78db88","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_heatingrod_on",
   "nineSlice":{
@@ -88,14 +88,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6013501b-549f-4b39-a430-de99a273ed87","path":"sprites/spr_heatingrod_on/spr_heatingrod_on.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"9c15aa66-0f7c-4df3-932f-54c3aa2855cc","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7e01b2c3-0c1f-40f9-b256-cb7e2c588a97","path":"sprites/spr_heatingrod_on/spr_heatingrod_on.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"068b1f8a-38a2-4f03-b0df-88d844998af3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":16,
+    "yorigin":19,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -25,7 +25,8 @@ function diveHorizontalCollision(){
 }
 
 function diveVerticalCollision(){
-	if (place_meeting(x, y + verticalSpeed, object_wall)){
+	fryingRailException();
+	if (place_meeting(x, y + verticalSpeed, obj_trait_landable)){
 		if (verticalSpeed > 0){	
 			onGround = 10;
 

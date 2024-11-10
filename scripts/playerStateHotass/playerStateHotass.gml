@@ -22,6 +22,9 @@ function hotassVerticalCollision(){
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+	}else if (place_meeting(x, y + verticalSpeed, obj_trait_landable)){
+		onGround = true;
+		verticalSpeed = 0;
 	}else{
 		onGround = false;
 	}

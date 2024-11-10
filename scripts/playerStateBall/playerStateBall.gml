@@ -92,6 +92,7 @@ function ballHorizontalCollision(){
 }
 
 function ballVerticalCollision(){
+	fryingRailException();
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
 		if (verticalSpeed > 0){	
 			onGround = 10;

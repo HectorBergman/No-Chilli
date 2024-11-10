@@ -3,5 +3,6 @@
 PAUSE
 if (place_meeting(x, y, chiliman)){
 	chiliman.ovenEntered = true;
+	chiliman.ovenState = chiliman.state;
 	chiliman.state = states.oven
 }

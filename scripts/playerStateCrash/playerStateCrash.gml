@@ -51,9 +51,9 @@ function dropGips(theMove){
 		{
 			//verticalSpeed : verSpeed,
 			//horizontalSpeed : horSpeed,
+			spriteName: "spr_gips_" + string(i),
 			spriteDirection: theMove,
 			lifeTime: random_range(500, 900),
-			spriteNumber : i,
 		};
 		instance_create_depth(x, y, -4-i, object_gips, gipsStruct);
 	}

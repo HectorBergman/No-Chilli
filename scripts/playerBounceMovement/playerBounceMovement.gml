@@ -59,7 +59,7 @@ function decideSpeedWhenBouncingOffWallDependingOnDirection(multWhenLeft, multWh
 
 
 function bounceVerticalCollision(){
-	if (verticalSpeed > 0 && place_meeting(x, y + verticalSpeed, object_wall)){
+	if (verticalSpeed > 0 && place_meeting(x, y + verticalSpeed, obj_trait_landable)){
 		if (run){
 			if (moveRight-moveLeft == 0){
 				endBounce(states.mach);

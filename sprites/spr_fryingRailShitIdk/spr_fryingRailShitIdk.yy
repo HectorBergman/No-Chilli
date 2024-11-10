@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_fryingRailShitIdk",
   "bboxMode":2,
-  "bbox_bottom":15,
+  "bbox_bottom":31,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":14,
