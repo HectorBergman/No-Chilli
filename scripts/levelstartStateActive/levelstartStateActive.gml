@@ -4,7 +4,7 @@ function levelstartStateActive(){
 	room_goto(to);
 	chiliman.diveTimer = 200;
 	chiliman.destinationNumber = destinationNumber;
-	chiliman.rightHeldTimer = 999;
+	chiliman.rightHeldTimer = 60;
 	chiliman.levelStartTimer = chiliman.levelStartTime;
 	chiliman.state = states.levelstart
 	chiliman.horizontalSpeed = 0;

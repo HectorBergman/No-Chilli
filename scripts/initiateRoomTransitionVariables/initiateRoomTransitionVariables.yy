@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"initiateRoomTransitionVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateRoomTransitionVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

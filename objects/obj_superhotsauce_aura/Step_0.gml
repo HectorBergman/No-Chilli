@@ -6,13 +6,14 @@ if (!instance_exists(parent)){
 }
 if (!fading){
 	timer--
-	if (sign(timer) == 1){
-		image_alpha = (intervall - timer)/intervall + 0.2;
+	var coolThing = ((intervall - sign(timer)*timer)/intervall) + 0.2
+	if (coolThing < 0.2){
+		image_alpha = 0.2
 	}else{
-		image_alpha = (intervall + timer)/intervall + 0.2;
+		image_alpha = coolThing;
 	}
 
-	if (timer == -intervall){
+	if (timer == -intervall-10){
 		timer = intervall;
 	}
 }else{

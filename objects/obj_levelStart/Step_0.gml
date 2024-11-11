@@ -3,7 +3,7 @@
 if (place_meeting(x, y, chiliman)){
 	levelstartstate = levelstartstates.active;
 	chiliman.destinationY = 0;
-	
+	resetSpeed();
 }
 
 switch(levelstartstate){

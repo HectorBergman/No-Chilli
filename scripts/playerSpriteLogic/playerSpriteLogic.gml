@@ -173,5 +173,9 @@ function mirrorSpriteAccordingToDirection(){
 }
 
 function levelstartSpriteLogic(){
-	sprite_index = spr_player_stand
+	if (run){
+		sprite_index = spr_player_offlikeashot;
+	}else{
+		sprite_index = spr_player_stand
+	}
 }

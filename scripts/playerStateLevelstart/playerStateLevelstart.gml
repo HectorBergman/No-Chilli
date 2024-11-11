@@ -5,8 +5,9 @@ function playerStateLevelstart(){
 	
 	if (levelStartTimer < 0){
 		if (run && abs(moveRight-moveLeft) == 1){
-			horizontalSpeed = (moveRight-moveLeft)*offLikeAShotSpeed*1.2
 			state = states.mach;
+			horizontalSpeed = offLikeAShotSpeed*1.2 + mach
+			offLikeAShotClouds(1);
 		}else{
 			leftHeldTimer = 0;
 			rightHeldTimer = 0;

@@ -13,8 +13,10 @@ dashLeftReqInput = ord("A");
 dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
+goTextLinger--
 bugtestcount--
 inputCalculator()
+
 //show_debug_message("TD" + string(turnDirection));
 //show_debug_message("move " + string(moveRight-moveLeft))
 //show_debug_message("moveRight " + string(moveRight))
@@ -89,6 +91,7 @@ switch(state){
 	case states.levelcomplete: playerStateLevelcomplete(); break;
 	case states.levelstart: playerStateLevelstart(); break;
 	case states.oven: playerStateOven(); break;
+	case states.roomtransition: playerStateRoomTransition(); break;
 }
 playerSpriteLogic(self);
 

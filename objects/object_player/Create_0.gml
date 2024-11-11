@@ -17,6 +17,7 @@ enum states{
 	levelcomplete,
 	levelstart,
 	oven,
+	roomtransition,
 }
 
 state = states.normal
@@ -45,8 +46,12 @@ initiateBallVariables();
 
 initiateLevelcompleteVariables();
 
+initiateRoomTransitionVariables();
+
 levelStartTime = 180;
-levelStartTimer = 0;
+levelStartTimer = -1;
+goTextLinger = 0;
+goTextLingerTime = 30;
 
 destinationNumber = -99;
 destinationY = 0; //offset of Y

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"playerStateRoomTransition",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playerStateRoomTransition",
+  "parent":{
+    "name":"states",
+    "path":"folders/oScripts/states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -3,6 +3,7 @@
 PAUSE
 
 if (chiliman.ovenEntered && !closing){
+	depth = -99
 	closing = true;
 	animationTimer = animationTime;
 	instance_destroy(hide);

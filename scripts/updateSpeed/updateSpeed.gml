@@ -73,12 +73,6 @@ function scovilleOvertimeLowerer(){
 }
 
 function resetSpeed(){
-	walkSpeed = baseSpeed;
-	mach1Speed = walkSpeed + mach1SpeedBonus;
-	mach2Speed = mach1Speed + mach2SpeedBonus;
-	playerGrav = baseGrav;
-	offLikeAShotSpeed = baseOLSSpeed;
 	scoville = 3000;
 	scovilleSpeed = 1;
-	object_whiteGuy.path_speed = 5;
 }
