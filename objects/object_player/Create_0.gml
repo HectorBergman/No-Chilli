@@ -48,7 +48,7 @@ initiateLevelcompleteVariables();
 
 initiateRoomTransitionVariables();
 
-levelStartTime = 180;
+levelStartTime = 60;
 levelStartTimer = -1;
 goTextLinger = 0;
 goTextLingerTime = 30;

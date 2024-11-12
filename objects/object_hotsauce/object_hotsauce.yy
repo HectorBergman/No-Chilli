@@ -27,8 +27,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"scoville","filters":[],"listItems":[],"multiselect":false,"name":"scoville","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"7500","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"scovilleSpeedAdder","filters":[],"listItems":[],"multiselect":false,"name":"scovilleSpeedAdder","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.005","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"scoville","filters":[],"listItems":[],"multiselect":false,"name":"scoville","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1500","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"scovilleSpeedAdder","filters":[],"listItems":[],"multiselect":false,"name":"scovilleSpeedAdder","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.001","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

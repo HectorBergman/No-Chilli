@@ -12,6 +12,13 @@ if (place_meeting(x, y, chiliman) && !pressed){
 	doorInstance.startRising = true;
 
 	
-}else if (!pressed){
+}else if (place_meeting(x, y, chiliman) && pressed && !cuckoo.doorLowered){
+	cuckoo.animationTimer = cuckoo.animationTime;
+	cuckoo.timer = doorTime;
+}
+
+
+
+if (!pressed){
 	image_index = 0;
 }

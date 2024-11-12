@@ -7,7 +7,7 @@ if (levelStartTimer > 120){
 }else if (levelStartTimer > 60){
 	_string = "Ready?";
 }else if (levelStartTimer > 0){
-	_string = "1";
+	_string = "Ready?";
 }
 if (levelStartTimer > 0){
 	draw_text_transformed(window_get_width()/2, window_get_height()/2, _string, 8, 8, 0);

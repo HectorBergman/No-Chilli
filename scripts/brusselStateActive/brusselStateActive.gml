@@ -16,7 +16,7 @@ function brusselStateActive(){
 	}
 	x = chiliman.x;
 	y = chiliman.y+80;
-	if (!(chiliman.state == states.onball)){
+	if (!(chiliman.state == states.onball || chiliman.state == states.roomtransition)){
 		state = brusselState.notActive;
 		kickedTimer = 60;
 	}
