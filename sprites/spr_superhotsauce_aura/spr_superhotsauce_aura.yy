@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"hotsauceSprites",
-    "path":"folders/Sprites/hotsauceSprites.yy",
+    "path":"folders/Sprites/interactable/hotsauceSprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

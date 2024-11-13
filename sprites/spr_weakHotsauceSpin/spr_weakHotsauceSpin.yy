@@ -55,7 +55,7 @@
   "origin":0,
   "parent":{
     "name":"hotsauceSprites",
-    "path":"folders/Sprites/hotsauceSprites.yy",
+    "path":"folders/Sprites/interactable/hotsauceSprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

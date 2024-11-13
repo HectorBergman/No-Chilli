@@ -2,7 +2,4 @@
 // You can write your code in this editor
 PAUSEVARS
 timer = 0;
-animationTime = 6*9;
-sintimer = 0;
-timeadd = 0.01
-originalY = y;
+drip = noone;

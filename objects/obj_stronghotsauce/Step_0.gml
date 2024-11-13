@@ -13,4 +13,6 @@ if timer < 0{
 
 
 
-	
+
+sintimer += timeadd
+y = originalY + sin(sintimer)*6

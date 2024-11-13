@@ -23,6 +23,6 @@ if (chiliman.ovenEntered && !closing){
 		chiliman.destinationY = chiliman.sprite_height
 		chiliman.destinationNumber = 99;
 		chiliman.state = chiliman.ovenState
-		room_goto(rm_ovenTest);
+		room_goto(rm_oven_1);
 	}
 }

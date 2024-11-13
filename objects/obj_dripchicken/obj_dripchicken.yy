@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_steamgeneratorlater",
+  "%Name":"obj_dripchicken",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_steamgeneratorlater",
+  "name":"obj_dripchicken",
   "overriddenProperties":[],
   "parent":{
-    "name":"steam",
-    "path":"folders/Objects/invisible/steam.yy",
+    "name":"interactable",
+    "path":"folders/Objects/interactable.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,13 +26,14 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"steamOdds","filters":[],"listItems":[],"multiselect":false,"name":"steamOdds","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.85","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_dripchicken",
+    "path":"sprites/spr_dripchicken/spr_dripchicken.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
