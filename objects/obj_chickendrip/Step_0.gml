@@ -4,4 +4,5 @@ PAUSE
 switch(state){
 	case dripstates.spawning: spawningState(); break;
 	case dripstates.falling: fallingState(); break;
+	case dripstates.splashing: splashingState(); break;
 }

@@ -88,6 +88,7 @@
     {"name":"obj_salad","order":2,"path":"objects/obj_salad/obj_salad.yy",},
     {"name":"obj_scoringLogic","order":9,"path":"objects/obj_scoringLogic/obj_scoringLogic.yy",},
     {"name":"obj_spring","order":4,"path":"objects/obj_spring/obj_spring.yy",},
+    {"name":"obj_steam_interactable","order":5,"path":"objects/obj_steam_interactable/obj_steam_interactable.yy",},
     {"name":"obj_steamgenerator","order":1,"path":"objects/obj_steamgenerator/obj_steamgenerator.yy",},
     {"name":"obj_steamgeneratorlater","order":2,"path":"objects/obj_steamgeneratorlater/obj_steamgeneratorlater.yy",},
     {"name":"obj_stronghotsauce","order":2,"path":"objects/obj_stronghotsauce/obj_stronghotsauce.yy",},

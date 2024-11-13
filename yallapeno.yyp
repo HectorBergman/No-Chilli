@@ -113,6 +113,7 @@
     {"id":{"name":"obj_salad","path":"objects/obj_salad/obj_salad.yy",},},
     {"id":{"name":"obj_scoringLogic","path":"objects/obj_scoringLogic/obj_scoringLogic.yy",},},
     {"id":{"name":"obj_spring","path":"objects/obj_spring/obj_spring.yy",},},
+    {"id":{"name":"obj_steam_interactable","path":"objects/obj_steam_interactable/obj_steam_interactable.yy",},},
     {"id":{"name":"obj_steam","path":"objects/obj_steam/obj_steam.yy",},},
     {"id":{"name":"obj_steamgenerator","path":"objects/obj_steamgenerator/obj_steamgenerator.yy",},},
     {"id":{"name":"obj_steamgeneratorlater","path":"objects/obj_steamgeneratorlater/obj_steamgeneratorlater.yy",},},

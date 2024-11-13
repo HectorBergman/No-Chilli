@@ -2,9 +2,9 @@
 // You can write your code in this editor
 PAUSE
 timer++
-if timer mod 600 == 0 {
+if timer mod 300 == 0 {
 	dripStruct = {
 		parent: id,
 	}
-	drip = instance_create_depth(self.x+32, self.y+24, 10, obj_chickendrip, dripStruct)
+	drip = instance_create_depth(self.x+32+random_range(-8,5), self.y+27, 10, obj_chickendrip, dripStruct)
 }
