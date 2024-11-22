@@ -28,7 +28,7 @@ function createQuit(){
 	var quitStruct =
 	{
 		spriteName : spr_quit_pause,
-		toRoom : 0,
+		toRoom : rm_title,
 	}
 	instance_create_layer(relativeX, relativeY, "pauseUI", obj_button, quitStruct);
 }

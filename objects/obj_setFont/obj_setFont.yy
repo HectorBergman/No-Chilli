@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_windowcorrecter",
+  "%Name":"obj_setFont",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_windowcorrecter",
+  "name":"obj_setFont",
   "overriddenProperties":[],
   "parent":{
     "name":"startup",

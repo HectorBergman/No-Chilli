@@ -86,7 +86,6 @@
     {"name":"chiliman","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_4FA4578","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_31849961","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
-    {"name":"inst_113ED98A","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_564506A9","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_5BBAD08A","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_5FFDD7BA","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
@@ -196,7 +195,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"object_roomTransition","path":"objects/object_roomTransition/object_roomTransition.yy",},"propertyId":{"name":"nextX","path":"objects/object_roomTransition/object_roomTransition.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3200",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":480.0,"y":416.0,},
         {"$GMRInstance":"v1","%Name":"inst_31849961","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_31849961","objectId":{"name":"z_obj_stateresetter","path":"objects/z_obj_stateresetter/z_obj_stateresetter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":128.0,},
-        {"$GMRInstance":"v1","%Name":"inst_113ED98A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_113ED98A","objectId":{"name":"obj_dataLoader","path":"objects/obj_dataLoader/obj_dataLoader.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":96.0,},
         {"$GMRInstance":"v1","%Name":"inst_564506A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_564506A9","objectId":{"name":"obj_levelStart","path":"objects/obj_levelStart/obj_levelStart.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_levelStart","path":"objects/obj_levelStart/obj_levelStart.yy",},"propertyId":{"name":"to","path":"objects/obj_levelStart/obj_levelStart.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_secondtut_1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_levelStart","path":"objects/obj_levelStart/obj_levelStart.yy",},"propertyId":{"name":"levelname","path":"objects/obj_levelStart/obj_levelStart.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"newTutorial",},
