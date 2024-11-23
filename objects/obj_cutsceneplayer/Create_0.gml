@@ -5,10 +5,11 @@ nextFrameTime = 3*seconds;
 framesSeen = 1;
 defaultTime = 3;
 previousFrame = 0;
+lastFrameSeen = 56;
 
-function nextFrameInSeconds(time, nextFrameAdd){
-	//in time seconds, go to current frame + nextFrameAdd number frame
-	nextFrameNumber += nextFrameAdd
+function nextFrameInSeconds(time, nextFrame){
+	//in time seconds, go to nextFrame number frame
+	nextFrameNumber = nextFrame
 	nextFrameTime += time*seconds
 }
 
@@ -18,5 +19,8 @@ function checkIfNextFrame(){
 function goNextFrame(){
 	previousFrame = image_index;
 	image_index = nextFrameNumber;
+	if (framesSeen == lastFrameSeen){
+		room_goto(rm_title)
+	}
 	framesSeen++;
 }
