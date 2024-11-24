@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"initiateTextVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateTextVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
