@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"steam",
-    "path":"sprites/steam/steam.yy",
+    "name":"spr_steam_hitbox",
+    "path":"sprites/spr_steam_hitbox/spr_steam_hitbox.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

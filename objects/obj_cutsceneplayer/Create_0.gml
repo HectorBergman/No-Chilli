@@ -15,6 +15,7 @@ chiliTextFast = scribble_typist();
 chiliTextFast.in(1, 0);
 littlechiliText = scribble_typist();
 littlechiliText.in(0.5, 0);
+cloudsSummoned = false;
 
 
 
@@ -54,13 +55,13 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 		var line = scribble("[scale,5][$eec39a][shake]NEED. CHILI.").outline($000023)
 		line.draw(10, 10, whiteGuyText);
 	}else if framesSeen == 7{
-		var line = scribble("[scale,4][$ad0000][shake]NOOOOOOOOO![/shake] I JUST BOUGHT THOSE!").outline($000023).wrap(1000)
+		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOO![/wave] I JUST BOUGHT THOSE!").outline($000023).wrap(1000)
 		line.draw(10, 10, chiliText);
 	} else if framesSeen >= 8 && framesSeen <= 20{
-		var line = scribble("[scale,4][$ad0000][shake]NOOOOOOOOOOOOO![/shake] SHE HADN'T PUT ME IN THE WILL YET!").outline($000023).wrap(1000)
+		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOOOOOO![/wave] SHE HADN'T PUT ME IN THE WILL YET!").outline($000023).wrap(1000)
 		line.draw(10, 10, chiliText);
 	}else if framesSeen >= 21 && framesSeen <= 35{
-		var line = scribble("[scale,4][$ad0000][shake]NOOOOOOOOOOOOOOO![/shake] I JUST CUT THEIR HAIR! WHAT A WASTE OF MONEY!").outline($000023).wrap(1000)
+		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOOOOOOOO![/wave] I JUST CUT THEIR HAIR! WHAT A WASTE OF MONEY!").outline($000023).wrap(1000)
 		line.draw(10, 10, chiliText);
 	}else if framesSeen == 36{
 		var line = scribble("[scale,5][$eec39a][shake]NEED. HOTTER. CHILI.").outline($000023)

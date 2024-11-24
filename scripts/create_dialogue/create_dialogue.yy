@@ -6,7 +6,7 @@
   "name":"create_dialogue",
   "parent":{
     "name":"FC_DialogueSystem",
-    "path":"folders/Scripts/FC_DialogueSystem.yy",
+    "path":"folders/FC_dialogueScripts/FC_DialogueSystem.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

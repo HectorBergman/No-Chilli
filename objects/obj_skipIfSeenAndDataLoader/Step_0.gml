@@ -7,7 +7,10 @@ if (startingTimer < 0 && holdTimer < 0){
 	timer--
 }
 if (timer == 0 && holdTimer <= -10){
-	holdTimer = timerLength*4
+	holdTimer = timerLength*2
+}
+if (timer < 0){
+	tipText.out(6, 999);
 }
 
 if keyboard_check(vk_space) && skippable {

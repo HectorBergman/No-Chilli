@@ -3,21 +3,15 @@
 if (verticalSpeed > -verticalSpeedCap){
 	verticalSpeed -= 0.05;
 }
-if (place_meeting(x,y, chiliman)){
-	if sign(chiliman.verticalSpeed) == 1{
-		chiliman.verticalSpeed *= 0.95
-		chiliman.verticalSpeed += verticalSpeed*0.1
-		if abs(chiliman.verticalSpeed) < 1{
-			chiliman.verticalSpeed = 0
-		}
-	}else if chiliman.verticalSpeed == 0{
-		chiliman.verticalSpeed += chiliman.playerGrav
-		chiliman.verticalSpeed += verticalSpeed
-	}else{
-		if chiliman.verticalSpeed > verticalSpeed{
-			chiliman.verticalSpeed = verticalSpeed*0.97
-		}else if chiliman.verticalSpeed < verticalSpeed{
-		}
+//maybe make this part of chiliman code instead?
+//OR make this one entity that draws several fake oens.... yeah...
+if (place_meeting(x,y, chiliman)){ //its PLUS cause the verticalSpeed from the steam is already negative!!!
+	if chiliman.verticalSpeed > 5{
+		chiliman.verticalSpeed += verticalSpeed*0.2
+		chiliman.verticalSpeed -= chiliman.playerGrav+0.1
+	}else if chiliman.verticalSpeed >= -20{
+		chiliman.verticalSpeed += verticalSpeed*0.05
+		chiliman.verticalSpeed -= chiliman.playerGrav+0.1
 	}
 }
-y = y +verticalSpeed
+y = y + verticalSpeed

@@ -10,7 +10,8 @@ draw_rectangle_color(ropeX-1, ropeY-1, ropeX+1, ropeY+1, c_blue, c_blue, c_blue,
 
 //debug numbers
 
-draw_text(x, y, string(horizontalSpeed)); //display horizontal speed
+draw_text(x-20, y, string(horizontalSpeed)); //display horizontal speed
+draw_text(x+20, y, string(verticalSpeed));
 
 //draw_rectangle_color(x-1, y-1, x+1, y+1, c_green, c_green, c_green, c_green, false);
 //draw a green rectangle at players true X and Y

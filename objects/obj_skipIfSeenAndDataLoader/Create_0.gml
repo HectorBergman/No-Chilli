@@ -1,11 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 loadAllData();
-timerLength = 60;
+timerLength = 180;
 timer = timerLength;
-startingTimer = timerLength*5;
+startingTimer = timerLength*2;
 holdTimer = -10;
 skippable = false;
+tipText = scribble_typist();
+tipText.in(6, 999);
+
 if (variable_instance_exists(global.game_data, "cutscene1Seen")){
 	skippable = true;
 }

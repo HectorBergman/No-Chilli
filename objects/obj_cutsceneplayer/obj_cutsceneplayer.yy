@@ -11,8 +11,8 @@
   "name":"obj_cutsceneplayer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"cutscene",
+    "path":"folders/Objects/cutscene.yy",
   },
   "parentObjectId":null,
   "persistent":false,

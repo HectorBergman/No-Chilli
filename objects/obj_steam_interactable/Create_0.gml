@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
-image_index = frame;
-depth = -10
+depth = -99
 verticalSpeed = -0.1 + random(0.3)
 verticalSpeedCap = 5
 image_xscale = 2
