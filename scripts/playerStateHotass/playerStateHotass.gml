@@ -3,7 +3,7 @@
 function playerStateHotass(){
 	determineMove()
 	playerFall(self)
-	hotassHorizontalMovementLogic(5)
+	hotassHorizontalMovementLogic(hotassMax)
 	hotassVerticalCollision()
 	playerHorizontalCollision(self)
 	
@@ -34,13 +34,13 @@ function hotassVerticalCollision(){
 function hotassHorizontalMovementLogic(walkSpeeed){
 	if (abs(horizontalSpeed) <= walkSpeeed){
 			
-		horizontalSpeed = move*(walkSpeeed)
+		horizontalSpeed += move*(walkSpeeed)/50
 			
 	}else{
 		if (sign(horizontalSpeed) == move){
 			horizontalSpeed *= 0.995;
 		}else{
-			horizontalSpeed *= 0.9
+			horizontalSpeed *= 0.9;
 		}
 	}
 }

@@ -5,6 +5,7 @@ timer = 100;
 verticalSpeed = 0;
 splashTimer = 100;
 maxSpeed = 3;
+
 enum dripstates{
 	spawning,
 	falling,
@@ -13,6 +14,10 @@ enum dripstates{
 state = dripstates.spawning
 
 function spawningState(){
+	if special{
+		image_index = 2;
+		state = dripstates.falling
+	}
 	timer--
 	if timer > 50{
 		image_index = 0

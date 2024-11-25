@@ -18,4 +18,6 @@ function initiateNormalJumpnFallVariables(){
 	hasFallen = false; //used for turning mostly i think lol
 	
 	horizontalSpeed = 0;
+	
+	hotassMax = 0;
 }

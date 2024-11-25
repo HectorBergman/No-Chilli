@@ -6,6 +6,7 @@ timer = intervall;
 
 heatStruct = {
 	parent: id,
+	image_angle: image_angle,
 	intervall: intervall,
 	
 }
@@ -16,6 +17,7 @@ actuallyheatStruct = { //ok so the one above is heatingrodON but i made it way b
 					   //i could just replace everything quickly so this is now called actuallyheat
 	parent: heat,
 	intervall: intervall,
+	image_angle: image_angle,
 	
 }
 actuallyheat = instance_create_depth(self.x, self.y, -5, obj_heatingRod_heat, actuallyheatStruct)
