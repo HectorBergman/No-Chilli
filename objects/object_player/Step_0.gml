@@ -7,6 +7,7 @@ _keyJump = keyboard_check_pressed(vk_up);
 _keyUp = keyboard_check(vk_up);
 _keyDown = keyboard_check(vk_down);
 _keySpace = keyboard_check(vk_space);
+_r = keyboard_check_pressed(ord("R"));
 
 dashUpReqInput = ord("W");
 dashLeftReqInput = ord("A");
@@ -51,6 +52,18 @@ if (dashCooldown < 1 && !undashable()){
 		timeInDash = timeLimitInDash
 		state = states.dash;
 	}
+}
+if (reset && inLevel){
+	resetSpeed()
+	state = states.levelstart
+	chiliman.diveTimer = 200;
+	chiliman.rightHeldTimer = 60;
+	chiliman.levelStartTimer = chiliman.levelStartTime;
+	chiliman.state = states.levelstart
+	chiliman.horizontalSpeed = 0;
+	chiliman.verticalSpeed = 0;
+	layer_create(-999, "pauseUI");
+	initiateRoomTransition(chiliman.state, 0, startingRoom ,noone)
 }
 /*try{
 	show_debug_message(standingOn.id)

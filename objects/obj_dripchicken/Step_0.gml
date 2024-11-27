@@ -2,7 +2,7 @@
 // You can write your code in this editor
 PAUSE
 timer++
-if timer mod 300 == 0 {
+if timer mod 210 == 0 {
 	dripStruct = {
 		parent: id,
 		special: false,

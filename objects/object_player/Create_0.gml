@@ -22,6 +22,9 @@ enum states{
 
 state = states.normal
 
+startingRoom = rm_lobby_room1;
+_r = false;
+
 initiateSpriteVariables();
 
 initiateNormalMovementVariables();
@@ -48,6 +51,7 @@ initiateLevelcompleteVariables();
 
 initiateRoomTransitionVariables();
 
+inLevel = false;
 levelStartTime = 60;
 levelStartTimer = -1;
 goTextLinger = 0;

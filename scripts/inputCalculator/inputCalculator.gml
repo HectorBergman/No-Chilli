@@ -38,6 +38,9 @@ function inputCalculator(){
 	if (_keyDown){
 		down = true;
 	}
+	if (_r){
+		reset = true;
+	}
 
 }
 
@@ -53,4 +56,5 @@ function inputReset(){
 	run = false;
 	down = false;
 	up = false;
+	reset = false;
 }

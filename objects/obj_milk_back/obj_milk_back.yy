@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"milk",
-    "path":"folders/Objects/milk.yy",
+    "path":"folders/Objects/interactable/milk.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -8,7 +8,7 @@ if (sign(timer) == 1){
 	image_alpha = (intervall + timer)/intervall;
 }
 
-on = image_alpha > 0.5
+on = image_alpha > 0.3
 
 if (timer == -intervall){
 	timer = intervall;

@@ -1,9 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (place_meeting(x, y, chiliman)){
+if (place_meeting(x, y, chiliman) && levelstartstate != levelstartstates.inactive){
 	levelstartstate = levelstartstates.active;
 	chiliman.destinationY = 0;
 	resetSpeed();
+	chiliman.inLevel = true;
 }
 
 switch(levelstartstate){

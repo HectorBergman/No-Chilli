@@ -12,4 +12,5 @@ function initiateControlsVariables(){
 	run = false;
 	down = false;
 	up = false;
+	reset = false;
 }

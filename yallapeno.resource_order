@@ -20,7 +20,7 @@
     {"name":"invisible","order":16,"path":"folders/Objects/invisible.yy",},
     {"name":"steam","order":14,"path":"folders/Objects/invisible/steam.yy",},
     {"name":"menu","order":6,"path":"folders/Objects/menu.yy",},
-    {"name":"milk","order":7,"path":"folders/Objects/milk.yy",},
+    {"name":"milk","order":7,"path":"folders/Objects/interactable/milk.yy",},
     {"name":"npc","order":14,"path":"folders/Objects/npc.yy",},
     {"name":"oScripts","order":4,"path":"folders/oScripts.yy",},
     {"name":"cameraStates","order":21,"path":"folders/oScripts/cameraStates.yy",},

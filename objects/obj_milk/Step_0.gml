@@ -2,7 +2,7 @@
 // You can write your code in this editor
 timer--;
 if place_meeting(x, y, chiliman) && !touched{
-	
+	chiliman.inLevel = false;
 	var minutes = floor(global.speedrun_timer / 60)
 	var seconds = global.speedrun_timer mod 60
 	if (minutes != 1){

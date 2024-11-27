@@ -4,7 +4,7 @@ PAUSE
 if (place_meeting(x, y, chiliman)){
 	var roomTransID = id;
 	with(chiliman){
-		initiateRoomTransition(chiliman.state, roomTransID)
+		initiateRoomTransition(chiliman.state, roomTransID.destinationNumber, roomTransID.nextRoom, roomTransID)
 	}
 	instance_destroy(id);
 }
