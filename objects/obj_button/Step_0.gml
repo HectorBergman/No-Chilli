@@ -16,6 +16,7 @@ if (position_meeting(mouse_x, mouse_y, id) && !isQuirkyRoom()){
 			global.destroy = true;
 			instance_destroy(instance_find(object_zcamera, 0))
 			instance_destroy(chiliman);
+			instance_destroy(instance_find(obj_speedometer, 0))
 			destroyMenu()
 			instance_destroy(instance_find(obj_pauser, 0))
 			instance_destroy(instance_find(obj_timerstart, 0));
