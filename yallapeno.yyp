@@ -25,7 +25,6 @@
     {"$GMFolder":"","%Name":"button","folderPath":"folders/Objects/button.yy","name":"button","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"cutscene","folderPath":"folders/Objects/cutscene.yy","name":"cutscene","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"startup","folderPath":"folders/Objects/cutscene/startup.yy","name":"startup","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"UI_elements","folderPath":"folders/Objects/UI_elements.yy","name":"UI_elements","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"interactable","folderPath":"folders/Objects/interactable.yy","name":"interactable","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"hotsauces","folderPath":"folders/Objects/interactable/hotsauces.yy","name":"hotsauces","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"milk","folderPath":"folders/Objects/interactable/milk.yy","name":"milk","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -33,6 +32,7 @@
     {"$GMFolder":"","%Name":"steam","folderPath":"folders/Objects/invisible/steam.yy","name":"steam","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu","folderPath":"folders/Objects/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"npc","folderPath":"folders/Objects/npc.yy","name":"npc","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"UI_elements","folderPath":"folders/Objects/UI_elements.yy","name":"UI_elements","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"oScripts","folderPath":"folders/oScripts.yy","name":"oScripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"cameraStates","folderPath":"folders/oScripts/cameraStates.yy","name":"cameraStates","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"levelstart","folderPath":"folders/oScripts/levelstart.yy","name":"levelstart","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -95,7 +95,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.6.0.157",
   },
   "name":"yallapeno",
   "resources":[

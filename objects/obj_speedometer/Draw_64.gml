@@ -6,4 +6,6 @@ var _string = "[scale,3.4][$eee7e7]x " + string_format(chiliman.scovilleSpeed, 1
 var line = scribble(_string).outline($000023);
 line.draw(50, 850);
 var _angle = -(75-power(abs(chiliman.horizontalSpeed*2), 0.9))
-draw_sprite_ext(spr_speedometerNeedle, 0, -30, 1075, 3, 3, _angle, c_white, 1);
+
+
+draw_sprite_ext(spr_speedometerNeedle, 0, -30, 1075, 3, 3, needleAngle(chiliman.horizontalSpeed), c_white, 1);
