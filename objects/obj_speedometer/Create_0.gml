@@ -5,6 +5,7 @@ image_yscale = 3;
 x = 0
 y = 0
 function needleAngle(_x){
+	//lagrange formula
 	var l0= ((1/40000*power(_x,4)+(-3/1600)*power(_x,3)+7/160*power(_x,2)+(-3/8)*_x+1));
 	var l1= ((-1/13125*power(_x,4)+(2/375)*power(_x,3)+(-8/75)*power(_x,2)+(64/105)*_x));
 	var l2= ((1/15000*power(_x,4)+(-13/3000)*power(_x,3)+(11/150)*power(_x,2)+(-4/15)*_x));

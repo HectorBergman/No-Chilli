@@ -8,4 +8,4 @@ line.draw(50, 850);
 var _angle = -(75-power(abs(chiliman.horizontalSpeed*2), 0.9))
 
 
-draw_sprite_ext(spr_speedometerNeedle, 0, -30, 1075, 3, 3, needleAngle(chiliman.horizontalSpeed), c_white, 1);
+draw_sprite_ext(spr_speedometerNeedle, 0, -30, 1075, 3, 3, needleAngle(abs(chiliman.horizontalSpeed)), c_white, 1);
