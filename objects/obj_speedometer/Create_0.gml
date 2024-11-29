@@ -25,6 +25,8 @@ function approachCorrectAngle(currentAngle, desiredAngle){
 		currentAngle = desiredAngle;
 	}else{
 		currentAngle += sign(abs(currentAngle)-abs(desiredAngle))*angleJump
+		//instead of the needle immediately jumping to the desired angle, 
+		//it will increment the angle until it's close enough.
 	}
 	return currentAngle
 }
@@ -35,7 +37,9 @@ function getNewAngle(){
 	
 	var returnAngle = previousAngle
 	if (abs(chiliman.horizontalSpeed) != 0){
-		returnAngle += sin (0.1 * timer) + sin(pi*0.05 * timer)*0.8
+		returnAngle += sin (0.1 * timer) + sin(pi*0.05 * timer)*0.8 
+		//this is apparently aperiodic, and we use it as noise to make the speedometer
+		//appear to be more realistic, and not stay static on a single value, but sway a little
 	}
 	
 	return returnAngle
