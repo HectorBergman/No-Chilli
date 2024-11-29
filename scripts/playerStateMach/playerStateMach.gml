@@ -107,7 +107,7 @@ function runClouds(){
 		{
 			//verticalSpeed : verSpeed,
 			//horizontalSpeed : horSpeed,
-			lifeTime: random_range(50, 150),
+			lifeTime: random_range(20, 70),
 			
 			spriteNumber : random_range(0,5),
 		};

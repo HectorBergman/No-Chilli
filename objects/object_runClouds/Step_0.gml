@@ -7,7 +7,7 @@ elapsed_time += 1;
 
 // Calculate logarithmic growth
 scale = scale_base * log2(elapsed_time + 1); // Add 1 to avoid log(0)
-scale += 0.001
+
 
 if (!place_meeting(x, y, object_wall)) {
     // Only move horizontally if there's no collision
@@ -23,7 +23,7 @@ y += lengthdir_y(spd, irandom_range(90, 75)); // Always moves upward
 //scale += scaleGrowth; // Increase the scale
 //y -= (scale - previous_scale)*3; // Compensate for the growth in scale
 
-spd *= 0.995
+spd = max(0, spd - 0.05);
 
 
 
