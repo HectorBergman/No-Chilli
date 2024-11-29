@@ -9,8 +9,8 @@
   "name":"object_OLSClouds",
   "overriddenProperties":[],
   "parent":{
-    "name":"invisible",
-    "path":"folders/Objects/invisible.yy",
+    "name":"steam",
+    "path":"folders/Objects/invisible/steam.yy",
   },
   "parentObjectId":null,
   "persistent":false,

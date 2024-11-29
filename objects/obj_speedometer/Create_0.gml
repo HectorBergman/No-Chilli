@@ -6,7 +6,7 @@ image_yscale = 3;
 x = 0
 y = 0
 previousAngle = -75;
-angleJump = 1;
+angleJump = 2;
 function needleAngle(_x){
 	//lagrange formula/revealed to me in a dream
 	//_x is abs of horizontalSpeed
@@ -21,13 +21,17 @@ function needleAngle(_x){
 }
 
 function approachCorrectAngle(currentAngle, desiredAngle){
-	if ((abs(currentAngle)-abs(desiredAngle)) < angleJump){
+	
+	
+	if ((abs(currentAngle)-abs(desiredAngle)) < angleJump && (abs(desiredAngle)-abs(currentAngle)) < angleJump ){
 		currentAngle = desiredAngle;
 	}else{
 		currentAngle += sign(abs(currentAngle)-abs(desiredAngle))*angleJump
 		//instead of the needle immediately jumping to the desired angle, 
 		//it will increment the angle until it's close enough.
 	}
+	show_debug_message(desiredAngle)
+	show_debug_message(currentAngle)
 	return currentAngle
 }
 
@@ -37,7 +41,7 @@ function getNewAngle(){
 	
 	var returnAngle = previousAngle
 	if (abs(chiliman.horizontalSpeed) != 0){
-		returnAngle += sin (0.1 * timer) + sin(pi*0.05 * timer)*0.8 
+		returnAngle += sin (0.1 * timer) + sin(pi*0.05 * timer)*0.4 *sqrt(abs(chiliman.horizontalSpeed))
 		//this is apparently aperiodic, and we use it as noise to make the speedometer
 		//appear to be more realistic, and not stay static on a single value, but sway a little
 	}

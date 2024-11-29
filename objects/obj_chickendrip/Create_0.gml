@@ -65,5 +65,5 @@ function spawnFakeSteam(){
 			parent: id,
 			frame : random_range(0,5)
 	}
-	instance_create_depth(x - 32 + random_range(-32,32), y, 10, obj_steam_noninteractable, steamStruct)
+	instance_create_depth(x - 16 + random_range(-32,32), y, 10, obj_steam_noninteractable, steamStruct)
 }

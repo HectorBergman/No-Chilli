@@ -11,7 +11,7 @@ function playerStateMach(){
 	if !(onGround >= 10 &&  //note to self, do not write !-ifs, they're confusing af
 	((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || 
 	!((moveRight-moveLeft) == sign(horizontalSpeed)))){
-		
+		runClouds();
 	//this basically means, if you're on the ground and attempting to turn, skip this if, else, enter the if
 	//so if you're in the air, this if will always play.
 		
@@ -90,28 +90,28 @@ function determineTurnDirectionAndTurn(half){
 }
 
 function runClouds(){
-	cloudTimer--;
-	if cloudTimer == 0{
-		cloudsStruct =
-		{
-			//verticalSpeed : verSpeed,
-			//horizontalSpeed : horSpeed,
-			lifeTime: random_range(50, 150),
-			spriteDirection : -theMove,
-			spriteNumber : i,
-		};
-		instance_create_depth(x, y, i, object_runClouds, cloudsStruct);
+	cloudTimer++;
+	if abs(horizontalSpeed) >= 10{
+		var cloudOccurenceRate = cloudTimer % 1 == 0
+	}else if abs(horizontalSpeed) >= 9{
+		var cloudOccurenceRate = cloudTimer % 2 == 0
+	}else if abs(horizontalSpeed) >= 8{
+		var cloudOccurenceRate = cloudTimer % 3 == 0
+	}else if abs(horizontalSpeed) >= 7{
+		var cloudOccurenceRate = cloudTimer % 5 == 0
+	}else{
+		var cloudOccurenceRate = false;
 	}
-	for(var i = 0; i < 39; i += 1){
+	if cloudOccurenceRate && onGround == 10{
 		cloudsStruct =
 		{
 			//verticalSpeed : verSpeed,
 			//horizontalSpeed : horSpeed,
 			lifeTime: random_range(50, 150),
-			spriteDirection : -theMove,
-			spriteNumber : i,
+			
+			spriteNumber : random_range(0,5),
 		};
-		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
+		instance_create_depth(x, y+76, 70, object_runClouds, cloudsStruct);
 	}
 }
 
@@ -123,3 +123,6 @@ function returnToNormalStateFromMach(){
 	state = states.normal;
 }
 	
+function run(){
+
+}

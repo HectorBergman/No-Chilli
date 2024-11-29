@@ -29,7 +29,7 @@ function offLikeAShotClouds(theMove){
 			spriteDirection : -theMove,
 			spriteNumber : i,
 		};
-		instance_create_depth(x, y, i, object_OLSClouds, cloudsStruct);
+		instance_create_depth(x, y+32, i, object_OLSClouds, cloudsStruct);
 	}
 }
 

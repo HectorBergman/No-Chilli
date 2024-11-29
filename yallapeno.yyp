@@ -95,7 +95,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"yallapeno",
   "resources":[
@@ -188,6 +188,7 @@
     {"id":{"name":"Path4","path":"paths/Path4/Path4.yy",},},
     {"id":{"name":"Path5","path":"paths/Path5/Path5.yy",},},
     {"id":{"name":"menu_score","path":"rooms/menu_score/menu_score.yy",},},
+    {"id":{"name":"rm_autobahn","path":"rooms/rm_autobahn/rm_autobahn.yy",},},
     {"id":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
     {"id":{"name":"rm_lobby_room1","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},},
     {"id":{"name":"rm_lvl1_room1","path":"rooms/rm_lvl1_room1/rm_lvl1_room1.yy",},},
@@ -507,6 +508,7 @@
     {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},},
     {"id":{"name":"Sprite12","path":"sprites/Sprite12/Sprite12.yy",},},
     {"id":{"name":"Sprite13","path":"sprites/Sprite13/Sprite13.yy",},},
+    {"id":{"name":"steam_1","path":"sprites/steam_1/steam_1.yy",},},
     {"id":{"name":"steam","path":"sprites/steam/steam.yy",},},
     {"id":{"name":"wall_1","path":"sprites/wall_1/wall_1.yy",},},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},},
@@ -536,6 +538,7 @@
     {"roomId":{"name":"rm_oven_1","path":"rooms/rm_oven_1/rm_oven_1.yy",},},
     {"roomId":{"name":"rm_oven_2","path":"rooms/rm_oven_2/rm_oven_2.yy",},},
     {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
+    {"roomId":{"name":"rm_autobahn","path":"rooms/rm_autobahn/rm_autobahn.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

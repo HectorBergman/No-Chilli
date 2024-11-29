@@ -18,4 +18,5 @@ function initiateMachVariables(){
 	slideTimer = 0;
 	slideTime = 15;
 
+	cloudTimer = 0;
 }
