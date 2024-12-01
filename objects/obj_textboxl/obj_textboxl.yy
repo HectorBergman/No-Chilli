@@ -9,8 +9,8 @@
   "name":"obj_textboxl",
   "overriddenProperties":[],
   "parent":{
-    "name":"menu",
-    "path":"folders/Objects/menu.yy",
+    "name":"UI_elements",
+    "path":"folders/Objects/UI_elements.yy",
   },
   "parentObjectId":null,
   "persistent":false,

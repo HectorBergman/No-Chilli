@@ -1,13 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_jalapeno",
+  "%Name":"obj_victoryborder",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_jalapeno",
+  "name":"obj_victoryborder",
   "overriddenProperties":[],
   "parent":{
     "name":"menu",
@@ -27,15 +25,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"_depth","filters":[],"listItems":[],"multiselect":false,"name":"_depth","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-22","varType":1,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_jalapeno",
-    "path":"sprites/spr_jalapeno/spr_jalapeno.yy",
+    "name":"spr_border_1",
+    "path":"sprites/spr_border_1/spr_border_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
