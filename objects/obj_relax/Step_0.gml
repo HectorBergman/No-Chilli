@@ -21,11 +21,10 @@ if (place_meeting(x, y, obj_relaxWater))
 }
 
 if instance_position(mouse_x, mouse_y, self){
-	var newHSpeed = sign(mouseHorizontalSpeed)*sqrt(abs(mouseHorizontalSpeed))*1.5;
-	var newVSpeed = sign(mouseVerticalSpeed)*sqrt(abs(mouseVerticalSpeed))*1.2;
+	var newHSpeed = sign(mouseHorizontalSpeed)*sqrt(abs(mouseHorizontalSpeed))*2;
+	var newVSpeed = sign(mouseVerticalSpeed)*sqrt(abs(mouseVerticalSpeed))*1.8;
 	horizontalSpeed = newHSpeed;
 	verticalSpeed = newVSpeed
-	liquidTouchCounter = 0;
 }
 
 relaxoHorizontalCollision();
