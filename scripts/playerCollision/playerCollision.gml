@@ -45,7 +45,8 @@ function playerVerticalCollision(_player){
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
-		playerCollisionWhileSwinging() //remnant that i cant be fucked to delete
+		playerCollisionWhileSwinging() //this is bad programming but i dont want to change it cause its
+										// kind of annoying + my code, my rules B)
 	}else{
 		hasFallen = true;
 	}
@@ -63,27 +64,15 @@ function playerWhiteguyCollision(_player){
 function playerRingCollision(_player){
 	var collidedRing = collision_rectangle(self.x-300, self.y-300, self.x+300, self.y+300, object_ring, false, true);
 	if (collidedRing){
-		if (grab && !collidedRing.held){
+		if (grab && state != states.ring){
+			ringState = state;
 			currentRing = collidedRing;
 			collidedRing.held = true;
 			collidedRing.sprite_index = spr_ringheld;
 			collidedRing.arm = instance_create_layer(x, y, "Instances", object_arm);
 			collidedRing.arm.parent = collidedRing;
-			ringHeld = true;
 			state = states.ring;
 			playerStartSwing(collidedRing);
-		}
-		else if (!grab && collidedRing.held){
-			collidedRing.held = false;
-			collidedRing.sprite_index = spr_ring;
-			ringHeld = false;
-		}
-	}else{
-		if (currentRing){
-			currentRing.held = false
-			currentRing.sprite_index = spr_ring;
-			ringHeld = false;
-			currentRing = noone;
 		}
 	}
 }

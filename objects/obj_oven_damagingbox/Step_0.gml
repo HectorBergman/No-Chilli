@@ -7,7 +7,6 @@ if (!ds_list_empty(list)){
 
 	var destroy = ds_list_find_value(list, 0);
 	var destroyparent = object_get_parent(destroy.object_index)
-	show_debug_message(destroyparent);
 	if (destroyparent == object_wall){
 		objectEaten(destroy);
 		instance_destroy(destroy);

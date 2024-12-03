@@ -30,8 +30,6 @@ function approachCorrectAngle(currentAngle, desiredAngle){
 		//instead of the needle immediately jumping to the desired angle, 
 		//it will increment the angle until it's close enough.
 	}
-	show_debug_message(desiredAngle)
-	show_debug_message(currentAngle)
 	return currentAngle
 }
 

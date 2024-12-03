@@ -45,7 +45,6 @@ function playerStateMach(){
 		}
 		//see: script playerCollision
 		playerHorizontalCollision(self);
-	
 		playerWhiteguyCollision(self);
 		playerRingCollision(self);
 		testForBounce();
@@ -123,6 +122,3 @@ function returnToNormalStateFromMach(){
 	state = states.normal;
 }
 	
-function run(){
-
-}

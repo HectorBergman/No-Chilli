@@ -9,6 +9,13 @@ function playerStateRing(){
 	playerWhiteguyCollision(self);
 	
 	if (!grab){
-		state = states.normal;
+		state = ringState;
+		currentRing.held = false; //entering rings wont work if
+		currentRing.sprite_index = spr_ring;
+		currentRing.image_angle = 0;
+
+		currentRing = noone;
 	}
+
+
 }

@@ -9,7 +9,10 @@ function playerStateNormal(){
 	playerJump(self);
 	playerVerticalCollision(self);
 	playerFall(self);
-	machTimer();
+	if (run){
+		machTimer();
+	}
+	
 	
 	startMachIfRun();
 

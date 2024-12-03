@@ -46,7 +46,7 @@ function playerSwing(_player){
 		horizontalSpeed = ropeX - x+3;
 		verticalSpeed = ropeY - y-32;
 	}
-	/*
+
 	show_debug_message("_______________")
 	show_debug_message(string_concat("handX: ",handX))
 	show_debug_message(string_concat("handY: ",handY))
@@ -63,6 +63,6 @@ function playerSwing(_player){
 	show_debug_message(string_concat("Y: ", y))
 	show_debug_message(string_concat("horizontalSpeed: ", horizontalSpeed))
 	show_debug_message(string_concat("verticalSpeed: ", verticalSpeed))
-*/
+
 	
 }

@@ -18,6 +18,8 @@ function brusselStateActive(){
 	y = chiliman.y+80;
 	if (!(chiliman.state == states.onball || chiliman.state == states.roomtransition)){
 		state = brusselState.notActive;
+		horizontalSpeed = chiliman.horizontalSpeed;
+		verticalSpeed = chiliman.verticalSpeed;
 		kickedTimer = 60;
 	}
 	if (originalRoom != room_get_name(room)){

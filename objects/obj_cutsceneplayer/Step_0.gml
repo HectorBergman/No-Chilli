@@ -1,6 +1,5 @@
 timer++
-show_debug_message(timer)
-show_debug_message(framesSeen)
+
 frameLogic();
 if framesSeen == 56 && !cloudsSummoned{
 	for(var i = 0; i < 21; i += 1){
