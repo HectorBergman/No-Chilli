@@ -22,8 +22,14 @@ shoulderXOffset = -8
 shoulderYOffset = 30
 
 
-shoulderXOffsetMirror = -3
-shoulderYOffsetMirror = 32
+shoulderXOffsetBehind = -3
+shoulderYOffsetBehind = 32
+
+shoulderXOffsetMirror = 4;
+shoulderYOffsetMirror = 30;
+
+shoulderXOffsetBehindMirror = 0;
+shoulderYOffsetBehindMirror = 32;
 
 handXOffset = -9
 handYOffset = 15

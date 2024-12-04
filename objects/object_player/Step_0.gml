@@ -15,8 +15,7 @@ dashLeftReqInput = ord("A");
 dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
-goTextLinger--
-bugtestcount--
+
 inputCalculator()
 
 //show_debug_message("TD" + string(turnDirection));
@@ -25,8 +24,14 @@ inputCalculator()
 //show_debug_message("moveLeft " + string(moveLeft))
 //show_debug_message("leftHeldTimer " + string(leftHeldTimer))
 //show_debug_message("rightHeldTimer " + string(rightHeldTimer))
+goTextLinger--
+bugtestcount--
 diveTimer--
 slideTimer--
+ringCooldown--
+if (dashCooldown != 0){
+	dashCooldown--
+}
 if (dashCooldown < 1 && !undashable()){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
@@ -82,9 +87,7 @@ if (keyboard_check(vk_shift)){
 }
 
 
-if (dashCooldown != 0){
-	dashCooldown--
-}
+
 
 if (y > room_height + 200){
 	state = states.dead;

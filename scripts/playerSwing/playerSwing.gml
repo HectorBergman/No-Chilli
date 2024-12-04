@@ -47,38 +47,40 @@ function playerSwing(_player){
 		horizontalSpeed = ropeX - x+3;
 		verticalSpeed = ropeY - y-32;
 	}
-
-	show_debug_message("_______________")
-	show_debug_message(string_concat("handX: ",handX))
-	show_debug_message(string_concat("handY: ",handY))
-	show_debug_message(string_concat("shoulderX: ",shoulderX))
-	show_debug_message(string_concat("shoulderY: ",shoulderY))
-	show_debug_message(string_concat("ropeAngleVelocity: ",ropeAngleVelocity))
-	show_debug_message(string_concat("ropeAngle: ",ropeAngle))
-	show_debug_message(string_concat("ropeLength: ",ropeLength))
-	show_debug_message(string_concat("ropeAccelerationRate: ",ropeAccelerationRate))
-	show_debug_message(string_concat("ropeManualAcceleration: ",ropeManualAcceleration))
-	show_debug_message(string_concat("ropeX: ",ropeX))
-	show_debug_message(string_concat("ropeY: ",ropeY))
-	show_debug_message(string_concat("X: ", x))
-	show_debug_message(string_concat("Y: ", y))
-	show_debug_message(string_concat("horizontalSpeed: ", horizontalSpeed))
-	show_debug_message(string_concat("verticalSpeed: ", verticalSpeed))
-
+	if(abs(horizontalSpeed) > 30 || abs(verticalSpeed) > 30){
+		show_debug_message("_______________")
+		show_debug_message(string_concat("handX: ",handX))
+		show_debug_message(string_concat("handY: ",handY))
+		show_debug_message(string_concat("shoulderX: ",shoulderX))
+		show_debug_message(string_concat("shoulderY: ",shoulderY))
+		show_debug_message(string_concat("ropeAngleVelocity: ",ropeAngleVelocity))
+		show_debug_message(string_concat("ropeAngle: ",ropeAngle))
+		show_debug_message(string_concat("ropeLength: ",ropeLength))
+		show_debug_message(string_concat("ropeAccelerationRate: ",ropeAccelerationRate))
+		show_debug_message(string_concat("ropeManualAcceleration: ",ropeManualAcceleration))
+		show_debug_message(string_concat("ropeX: ",ropeX))
+		show_debug_message(string_concat("ropeY: ",ropeY))
+		show_debug_message(string_concat("X: ", x))
+		show_debug_message(string_concat("Y: ", y))
+		show_debug_message(string_concat("horizontalSpeed: ", horizontalSpeed))
+		show_debug_message(string_concat("verticalSpeed: ", verticalSpeed))
+	}
 	
 }
 
 function swingCollision(){
 	if (checkCollision(horizontalSpeed, verticalSpeed, object_wall)){
-		var _vStep = sign(verticalSpeed);
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
-		verticalSpeed = 0;
-		horizontalSpeed = 0;
-		playerCollisionWhileSwinging() //this is bad programming but i dont want to change it cause its
-										// kind of annoying + my code, my rules B)
+		
+		if (abs(horizontalSpeed) > 4 || abs(verticalSpeed) > 4){
+			initiateCrash(-99, noone);
+			ringCooldown = 30;
+		}else{
+			initiateCrash(10, chiliman);
+			ringCooldown = 30;
+		}
+	}else{
+	
+		x = x + horizontalSpeed;
+		y = y + verticalSpeed;
 	}
-	
-	x = x + horizontalSpeed;
-	y = y + verticalSpeed;
-	
 }

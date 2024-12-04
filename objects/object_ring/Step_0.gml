@@ -6,7 +6,7 @@ armX = -8
 armY = 32
 
 
-if (held){
+if (held && chiliman.state == states.ring){
 	//offsetting the angle since on the sprite the hand is turned 45 deg
 	var startangle = -45;
 
@@ -41,6 +41,7 @@ if (held){
 		}
 	}
 }else{
+	held = false;
 	instance_destroy(arm);
 }
 

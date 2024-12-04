@@ -64,7 +64,7 @@ function playerWhiteguyCollision(_player){
 function playerRingCollision(_player){
 	var collidedRing = collision_rectangle(self.x-300, self.y-300, self.x+300, self.y+300, object_ring, false, true);
 	if (collidedRing){
-		if (grab && state != states.ring){
+		if (grab && state != states.ring && ringCooldown <= 0 && onGround < 10){
 			ringState = state;
 			currentRing = collidedRing;
 			collidedRing.held = true;

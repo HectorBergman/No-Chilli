@@ -19,18 +19,30 @@ surface_set_target(surface)
 
 
 draw_clear_alpha(0,0)
-show_debug_message("moveright: " + string(chiliman.moveRight))
-show_debug_message("moveleft: " + string(chiliman.moveLeft))
-if (chiliman.moveRight-chiliman.moveLeft == 1){
-	shoulderX = chiliman.x+shoulderXOffset
-	shoulderY = chiliman.y+shoulderYOffset
-	draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
-	draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorFront, armColorFront);
+if (chiliman.image_xscale == 1){
+	if (chiliman.lastMove == 1){
+		shoulderX = chiliman.x+shoulderXOffset
+		shoulderY = chiliman.y+shoulderYOffset
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorFront, armColorFront);
+	}else{
+		shoulderX = chiliman.x+shoulderXOffsetBehind
+		shoulderY = chiliman.y+shoulderYOffsetBehind
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorBack, armColorBack);
+	}
 }else{
-	shoulderX = chiliman.x+shoulderXOffsetMirror
-	shoulderY = chiliman.y+shoulderYOffsetMirror
-	draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
-	draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorBack, armColorBack);
+	if (chiliman.lastMove == 1){
+		shoulderX = chiliman.x+shoulderXOffsetMirror
+		shoulderY = chiliman.y+shoulderYOffsetMirror
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorFront, armColorFront);
+	}else{
+		shoulderX = chiliman.x+shoulderXOffsetBehindMirror
+		shoulderY = chiliman.y+shoulderYOffsetBehindMirror
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 3, armColorOutline, armColorOutline);
+		draw_line_width_color((shoulderX-surfaceXOffset)/2, (shoulderY-surfaceYOffset)/2, (newX-surfaceXOffset)/2, (newY-surfaceYOffset)/2, 1, armColorBack, armColorBack);
+	}
 }
 
 surface_reset_target();

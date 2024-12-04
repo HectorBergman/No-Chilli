@@ -140,16 +140,24 @@ function startMachIfRun(){
 }
 
 function determineMove(){ //determines direction being moved in
-	if !(state == states.mach && onGround < 8){
-		move = (moveRight - moveLeft);
-	}
+	if (state != states.ring){
+		if !(state == states.mach && onGround < 8){
+			move = (moveRight - moveLeft);
+		}
 
 	
-	if (move != 0){
-		lastMove = move;
-	}
-	if (onGround < 5){
-		lastMoveGround = move
+		if (move != 0){
+			lastMove = move;
+		}
+		if (onGround < 5){
+			lastMoveGround = move
+		}
+	}else{
+		if (moveRight-moveLeft == 1){
+			lastMove = 1;
+		}else if (moveRight-moveLeft == -1){
+			lastMove = -1;
+		}
 	}
 }
 

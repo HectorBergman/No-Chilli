@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if (chiliman.moveRight-chiliman.moveLeft == 1){
+if (chiliman.state != states.ring){
+	instance_destroy(self)
+}
+if (chiliman.lastMove == 1){
 	depth = -1;
 }else{
 	depth = 1;

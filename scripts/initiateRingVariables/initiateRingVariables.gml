@@ -14,6 +14,6 @@ function initiateRingVariables(){
 	ropeManualAcceleration = 0.09
 	ropeX = 0;
 	ropeY = 0;
-	
+	ringCooldown = 0;
 	ringState = states.normal //return to previous state when exiting ring state
 }
