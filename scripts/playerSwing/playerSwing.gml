@@ -26,6 +26,7 @@ function playerStartSwing(ring){
 function playerSwing(_player){	
 	//shoulderX = currentRing.arm.shoulderX;
 	//shoulderY = currentRing.arm.shoulderY;
+	
 	var _ropeAngleAcceleration = ropeAccelerationRate * dcos(ropeAngle);
 	_ropeAngleAcceleration += (moveRight - moveLeft) * ropeManualAcceleration
 	ropeAngleVelocity += _ropeAngleAcceleration;
@@ -64,5 +65,20 @@ function playerSwing(_player){
 	show_debug_message(string_concat("horizontalSpeed: ", horizontalSpeed))
 	show_debug_message(string_concat("verticalSpeed: ", verticalSpeed))
 
+	
+}
+
+function swingCollision(){
+	if (checkCollision(horizontalSpeed, verticalSpeed, object_wall)){
+		var _vStep = sign(verticalSpeed);
+		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		verticalSpeed = 0;
+		horizontalSpeed = 0;
+		playerCollisionWhileSwinging() //this is bad programming but i dont want to change it cause its
+										// kind of annoying + my code, my rules B)
+	}
+	
+	x = x + horizontalSpeed;
+	y = y + verticalSpeed;
 	
 }

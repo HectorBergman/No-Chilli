@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
+inputReset();
 _keyRight = keyboard_check(vk_right);
 _keyLeft = keyboard_check(vk_left);
 _keyJump = keyboard_check_pressed(vk_up);
@@ -108,4 +109,4 @@ switch(state){
 }
 playerSpriteLogic(self);
 
-inputReset();
+

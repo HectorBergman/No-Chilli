@@ -3,9 +3,8 @@
 function playerStateRing(){
 	
 	playerSwing(self);
-	//playerRingCollision(self);
-	playerHorizontalCollision(self);
-	playerVerticalCollision(self);
+
+	swingCollision();
 	playerWhiteguyCollision(self);
 	
 	if (!grab){

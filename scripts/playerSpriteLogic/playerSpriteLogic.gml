@@ -40,9 +40,9 @@ function normalSpriteLogic(){
 
 function ringSpriteLogic(){
 
-	if (lastMove == 1){
+	if (moveRight-moveLeft == 1){
 		sprite_index = Sprite11;
-	}else if (lastMove == -1){
+	}else if (moveRight-moveLeft == -1){
 		sprite_index = Sprite12;
 	}
 	
