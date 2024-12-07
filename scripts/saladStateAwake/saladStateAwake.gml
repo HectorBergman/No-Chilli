@@ -30,7 +30,7 @@ function hitChili(){
 	if (hitCooldown < 1){
 		if (place_meeting(x, y , chiliman)){
 			var dressing_id  = id;
-			if !(chiliman.state == states.onball || chiliman.state == states.dead){
+			if !(chiliman.state == states.onball || chiliman.state == states.dead || chiliman.state == states.roomtransition || chiliman.state == states.levelcomplete){
 				with(chiliman){
 			
 					initiateCrash(60, dressing_id);

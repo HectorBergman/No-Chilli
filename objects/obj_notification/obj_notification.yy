@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"object_ring",
+  "%Name":"obj_notification",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_ring",
+  "name":"obj_notification",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"UI_elements",
+    "path":"folders/Objects/UI_elements.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ring",
-    "path":"sprites/spr_ring/spr_ring.yy",
+    "name":"spr_notification",
+    "path":"sprites/spr_notification/spr_notification.yy",
   },
   "spriteMaskId":null,
   "visible":true,

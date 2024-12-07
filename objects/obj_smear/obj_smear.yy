@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"cutscene",
-    "path":"folders/Objects/cutscene.yy",
+    "path":"folders/Objects/UI_elements/cutscene.yy",
   },
   "parentObjectId":null,
   "persistent":false,

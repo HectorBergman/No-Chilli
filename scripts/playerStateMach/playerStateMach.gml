@@ -101,7 +101,7 @@ function runClouds(){
 	}else{
 		var cloudOccurenceRate = false;
 	}
-	if cloudOccurenceRate && onGround == 10{
+	if cloudOccurenceRate && onGround == 10 && place_meeting(x, y+2, object_wall){
 		cloudsStruct =
 		{
 			//verticalSpeed : verSpeed,
