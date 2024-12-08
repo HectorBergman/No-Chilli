@@ -174,7 +174,6 @@
     {"id":{"name":"object_ring","path":"objects/object_ring/object_ring.yy",},},
     {"id":{"name":"object_roomTransition_destination","path":"objects/object_roomTransition_destination/object_roomTransition_destination.yy",},},
     {"id":{"name":"object_roomTransition_new","path":"objects/object_roomTransition_new/object_roomTransition_new.yy",},},
-    {"id":{"name":"object_roomTransition","path":"objects/object_roomTransition/object_roomTransition.yy",},},
     {"id":{"name":"object_runClouds","path":"objects/object_runClouds/object_runClouds.yy",},},
     {"id":{"name":"object_superhotsauce","path":"objects/object_superhotsauce/object_superhotsauce.yy",},},
     {"id":{"name":"object_wall","path":"objects/object_wall/object_wall.yy",},},
@@ -212,6 +211,7 @@
     {"id":{"name":"rm_tutorial_4","path":"rooms/rm_tutorial_4/rm_tutorial_4.yy",},},
     {"id":{"name":"rm_tutorial_5","path":"rooms/rm_tutorial_5/rm_tutorial_5.yy",},},
     {"id":{"name":"rm_tutorial_6","path":"rooms/rm_tutorial_6/rm_tutorial_6.yy",},},
+    {"id":{"name":"Room24","path":"rooms/Room24/Room24.yy",},},
     {"id":{"name":"Room4","path":"rooms/Room4/Room4.yy",},},
     {"id":{"name":"__scribble_class_element","path":"scripts/__scribble_class_element/__scribble_class_element.yy",},},
     {"id":{"name":"__scribble_class_event","path":"scripts/__scribble_class_event/__scribble_class_event.yy",},},
@@ -545,6 +545,7 @@
     {"roomId":{"name":"rm_oven_2","path":"rooms/rm_oven_2/rm_oven_2.yy",},},
     {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
     {"roomId":{"name":"rm_autobahn","path":"rooms/rm_autobahn/rm_autobahn.yy",},},
+    {"roomId":{"name":"Room24","path":"rooms/Room24/Room24.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

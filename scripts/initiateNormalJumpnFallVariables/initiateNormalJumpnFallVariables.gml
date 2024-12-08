@@ -11,7 +11,7 @@ function initiateNormalJumpnFallVariables(){
 	baseMaxFall = 25;
 	maxFall = baseMaxFall; //speed where chiliman will stop accelerating
 	
-	trueBaseGrav = 0.4
+	trueBaseGrav = 0.1
 	baseGrav = trueBaseGrav;
 	playerGrav = baseGrav; //gravity
 	
