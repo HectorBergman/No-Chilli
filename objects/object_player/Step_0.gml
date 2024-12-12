@@ -89,8 +89,8 @@ if (keyboard_check(vk_shift)){
 
 
 
-if (y > room_height + 200){
-	state = states.dead;
+if (y > room_height + 200 && state != states.dead){
+	playerDeath()
 }
 switch(state){
 	case states.normal: playerStateNormal(); break;

@@ -51,6 +51,8 @@ initiateLevelcompleteVariables();
 
 initiateRoomTransitionVariables();
 
+initiateDeathVariables();
+
 inLevel = false;
 levelStartTime = 60;
 levelStartTimer = -1;
