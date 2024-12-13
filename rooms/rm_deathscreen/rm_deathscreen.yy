@@ -7,13 +7,30 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_98FB2A","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},
+    {"name":"inst_E0138B5","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},
+    {"name":"inst_7A1B7EE5","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},
+    {"name":"inst_65018AB8","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_E0138B5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_E0138B5","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"toRoom","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-70",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"spriteName","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_quit_pause",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":32.0,"y":736.0,},
+        {"$GMRInstance":"v1","%Name":"inst_7A1B7EE5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7A1B7EE5","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"toRoom","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-71",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"spriteName","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_mainmenu",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":32.0,"y":512.0,},
+        {"$GMRInstance":"v1","%Name":"inst_65018AB8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65018AB8","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"toRoom","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-72",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"spriteName","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_tryagain",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":32.0,"y":288.0,},
+      ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_98FB2A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_98FB2A","objectId":{"name":"obj_deathScreen","path":"objects/obj_deathScreen/obj_deathScreen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_deathscreen",
   "parent":{

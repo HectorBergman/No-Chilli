@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this edito
 PAUSE
+draw_text(60,60,"HIIIIIIIIIIIII")
 var _string = 0;
 if (levelStartTimer > 120){
 	_string = "Ready?";

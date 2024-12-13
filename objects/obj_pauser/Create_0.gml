@@ -6,6 +6,8 @@ global.destroy = false;
 tempWidth = 0
 tempHeight = 0;
 
+global.pausable = true;
+
 depth = -21
 activeBorder = noone;
 activeJalapeno = noone;

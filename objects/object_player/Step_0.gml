@@ -60,16 +60,7 @@ if (dashCooldown < 1 && !undashable()){
 	}
 }
 if (reset && inLevel){
-	resetSpeed()
-	state = states.levelstart
-	chiliman.diveTimer = 200;
-	chiliman.rightHeldTimer = 60;
-	chiliman.levelStartTimer = chiliman.levelStartTime;
-	chiliman.state = states.levelstart
-	chiliman.horizontalSpeed = 0;
-	chiliman.verticalSpeed = 0;
-	layer_create(-999, "pauseUI");
-	initiateRoomTransition(chiliman.state, 0, startingRoom ,noone)
+	resetLevel();
 }
 /*try{
 	show_debug_message(standingOn.id)

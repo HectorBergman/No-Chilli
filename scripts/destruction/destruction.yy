@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"destruction",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"destruction",
+  "parent":{
+    "name":"oScripts",
+    "path":"folders/oScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

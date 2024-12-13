@@ -64,8 +64,3 @@ function summonRepeatingJalapeno(){
 	global.activeJalapeno = instance_create_layer(relativeX, relativeY, "pauseUI", obj_jalapeno, borderStruct);
 }
 
-function destroyMenu(){
-	instance_destroy(obj_button);
-	instance_destroy(global.activeBorder);
-	instance_destroy(global.activeJalapeno)
-}

@@ -3,6 +3,8 @@
 function playerStateDead(){
 	deadTimer--
 	if deadTimer == 0{
+		resetEverything(false, false);
+		global.pausable = false;
 		room_goto(rm_deathscreen);
 	}
 	show_debug_message(deadTimer);
