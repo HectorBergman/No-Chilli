@@ -1,9 +1,9 @@
 timer = 0
 seconds = 60
 nextFrameNumber = 1;
-nextFrameTime = 3*seconds;
+nextFrameTime = 9*seconds;
 framesSeen = 1;
-defaultTime = 3;
+defaultTime = 5;
 previousFrame = 0;
 lastFrameSeen = 56;
 lol = false

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"initiateDeathVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateDeathVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

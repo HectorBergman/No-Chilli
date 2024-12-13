@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gameover",
+    "path":"sprites/spr_gameover/spr_gameover.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

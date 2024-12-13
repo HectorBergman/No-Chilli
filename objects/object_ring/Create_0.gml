@@ -5,6 +5,6 @@ held = false;
 arm = noone;
 
 angle = -1;
-
+summonNotification()
 
 depth = -1;
