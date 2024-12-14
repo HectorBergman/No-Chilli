@@ -96,7 +96,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"yallapeno",
   "resources":[
@@ -123,6 +123,7 @@
     {"id":{"name":"obj_heatingRod_heat","path":"objects/obj_heatingRod_heat/obj_heatingRod_heat.yy",},},
     {"id":{"name":"obj_heatingRodON","path":"objects/obj_heatingRodON/obj_heatingRodON.yy",},},
     {"id":{"name":"obj_jalapeno","path":"objects/obj_jalapeno/obj_jalapeno.yy",},},
+    {"id":{"name":"obj_lasagna_feeble","path":"objects/obj_lasagna_feeble/obj_lasagna_feeble.yy",},},
     {"id":{"name":"obj_lasagna","path":"objects/obj_lasagna/obj_lasagna.yy",},},
     {"id":{"name":"obj_levelcomplete","path":"objects/obj_levelcomplete/obj_levelcomplete.yy",},},
     {"id":{"name":"obj_levelStart","path":"objects/obj_levelStart/obj_levelStart.yy",},},
@@ -203,6 +204,7 @@
     {"id":{"name":"rm_playcutscene","path":"rooms/rm_playcutscene/rm_playcutscene.yy",},},
     {"id":{"name":"rm_realGs_1","path":"rooms/rm_realGs_1/rm_realGs_1.yy",},},
     {"id":{"name":"rm_realGs_2","path":"rooms/rm_realGs_2/rm_realGs_2.yy",},},
+    {"id":{"name":"rm_realGs_3","path":"rooms/rm_realGs_3/rm_realGs_3.yy",},},
     {"id":{"name":"rm_secondtut_1","path":"rooms/rm_secondtut_1/rm_secondtut_1.yy",},},
     {"id":{"name":"rm_secondtut_2","path":"rooms/rm_secondtut_2/rm_secondtut_2.yy",},},
     {"id":{"name":"rm_secondtut_3","path":"rooms/rm_secondtut_3/rm_secondtut_3.yy",},},
@@ -446,6 +448,7 @@
     {"id":{"name":"spr_heatingrod_on","path":"sprites/spr_heatingrod_on/spr_heatingrod_on.yy",},},
     {"id":{"name":"spr_introcutscene_1","path":"sprites/spr_introcutscene_1/spr_introcutscene_1.yy",},},
     {"id":{"name":"spr_jalapeno","path":"sprites/spr_jalapeno/spr_jalapeno.yy",},},
+    {"id":{"name":"spr_lasagna_feeble","path":"sprites/spr_lasagna_feeble/spr_lasagna_feeble.yy",},},
     {"id":{"name":"spr_lasagna","path":"sprites/spr_lasagna/spr_lasagna.yy",},},
     {"id":{"name":"spr_mainmenu","path":"sprites/spr_mainmenu/spr_mainmenu.yy",},},
     {"id":{"name":"spr_milk_1","path":"sprites/spr_milk_1/spr_milk_1.yy",},},
@@ -555,6 +558,7 @@
     {"roomId":{"name":"rm_autobahn","path":"rooms/rm_autobahn/rm_autobahn.yy",},},
     {"roomId":{"name":"Room24","path":"rooms/Room24/Room24.yy",},},
     {"roomId":{"name":"rm_deathscreen","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},},
+    {"roomId":{"name":"rm_realGs_3","path":"rooms/rm_realGs_3/rm_realGs_3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
