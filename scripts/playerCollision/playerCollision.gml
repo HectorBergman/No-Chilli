@@ -29,12 +29,32 @@ function fryingRailException(){
 		}
 	}
 }
+function lasagnaFeebleException(){
+	var rail = instance_place(x, y + verticalSpeed, obj_lasagna_feeble);
+	if (rail != noone){
+		if (verticalSpeed > 0 && rail.y+16 > self.y+self.sprite_height){
+			standingOn = instance_place(x, y + verticalSpeed, object_wall)
+			hasFallen = false;
+			if (verticalSpeed > 0){	
+				onGround = 10;
+			}
+			var _vStep = sign(verticalSpeed);
+			verticalSpeed = 0;
+			while(!place_meeting(x,y+_vStep, obj_lasagna_feeble)) y += _vStep;
+		}
+	}
+}
+
+function allExceptions(){
+	fryingRailException();
+	lasagnaFeebleException();
+}
 function checkCollision(horizontalSpeedAdded, verticalSpeedAdded, object){
 	return place_meeting(x + horizontalSpeedAdded, y + verticalSpeedAdded, object)
 }
 
 function playerVerticalCollision(_player){
-	fryingRailException();
+	allExceptions();
 	if (checkCollision(0, verticalSpeed, object_wall)){
 		standingOn = instance_place(x, y + verticalSpeed, object_wall)
 		hasFallen = false;

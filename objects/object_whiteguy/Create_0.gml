@@ -19,6 +19,9 @@ done = false;
 
 collided = noone;
 
+//approachSpeed *scoville
+truSpeed = 0;
+
 function facingLogic(){
 	if (sign(ratioX) != 0){
 		image_xscale = sign(ratioX)

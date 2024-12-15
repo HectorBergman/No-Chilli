@@ -13,8 +13,8 @@
     "path":"folders/Objects/blocks.yy",
   },
   "parentObjectId":{
-    "name":"object_wall",
-    "path":"objects/object_wall/object_wall.yy",
+    "name":"obj_trait_landable",
+    "path":"objects/obj_trait_landable/obj_trait_landable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

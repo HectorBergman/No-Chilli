@@ -8,7 +8,7 @@ if (collided != noone){ //&& collided != chiliman && collided.object_index != ob
 	collided = noone;
 }
 show_debug_message(done);
-approachSpeed = approachSpeed*chiliman.scovilleSpeed
+truSpeed = approachSpeed*chiliman.scovilleSpeed
 if ((x != targetX || y != targetY) && !done){
 	show_debug_message("targetX: " + string(targetX) + " x: " + string(x))
 	show_debug_message("targetY: " + string(targetY) + " y: " + string(y))
@@ -21,15 +21,15 @@ if ((x != targetX || y != targetY) && !done){
 		ratioX = 1
 		ratioY = 1
 	}
-	if (abs(distanceX) < approachSpeed*ratioX){
+	if (abs(distanceX) < truSpeed*ratioX){
 		x = targetX
 	}else{
-		x = x + approachSpeed*ratioX
+		x = x + truSpeed*ratioX
 	}
-	if (abs(distanceY) < approachSpeed*ratioY){
+	if (abs(distanceY) < truSpeed*ratioY){
 		y = targetY
 	}else{
-		y = y + approachSpeed*ratioY
+		y = y + truSpeed*ratioY
 	}
 	show_debug_message(ratioY);
 }else{
