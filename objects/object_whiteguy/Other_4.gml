@@ -5,9 +5,6 @@
 PAUSEVARS
 depth = -30;
 collided = noone;
-if (active){
-	with (other) path_start(roomPath, 5, path_action_stop, true)
-}
 approachPoints = array_create(instance_number(aobj_whiteguyPoint), noone)
 function findAllApproachPoints(){
 	for (var i = 0; i < instance_number(aobj_whiteguyPoint); ++i;)
@@ -22,3 +19,6 @@ function sortByOrder(instance1, instance2){
 findAllApproachPoints();
 array_sort(approachPoints, sortByOrder)
 
+approachSpeed = approachPoints[0].approachSpeed
+targetX = approachPoints[approachPointIndex].x
+targetY = approachPoints[approachPointIndex].y

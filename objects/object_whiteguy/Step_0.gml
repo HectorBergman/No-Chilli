@@ -7,3 +7,41 @@ if (collided != noone){ //&& collided != chiliman && collided.object_index != ob
 	instance_destroy(collided);
 	collided = noone;
 }
+show_debug_message(done);
+approachSpeed = approachSpeed*chiliman.scovilleSpeed
+if ((x != targetX || y != targetY) && !done){
+	show_debug_message("targetX: " + string(targetX) + " x: " + string(x))
+	show_debug_message("targetY: " + string(targetY) + " y: " + string(y))
+	distanceX = targetX - x
+	distanceY = targetY - y
+	if (!(distanceX == 0) || !(distanceY == 0)){ //me no likey division by 0
+		ratioX = distanceX/(abs(distanceX)+abs(distanceY))
+		ratioY = distanceY/(abs(distanceX)+abs(distanceY))
+	}else{
+		ratioX = 1
+		ratioY = 1
+	}
+	if (abs(distanceX) < approachSpeed*ratioX){
+		x = targetX
+	}else{
+		x = x + approachSpeed*ratioX
+	}
+	if (abs(distanceY) < approachSpeed*ratioY){
+		y = targetY
+	}else{
+		y = y + approachSpeed*ratioY
+	}
+	show_debug_message(ratioY);
+}else{
+	if (approachPointIndex+1 < array_length(approachPoints)){
+		show_debug_message(approachPointIndex+1)
+		show_debug_message(array_length(approachPoints))
+		approachPointIndex++
+		targetX = approachPoints[approachPointIndex].x
+		targetY = approachPoints[approachPointIndex].y
+		approachSpeed = approachPoints[approachPointIndex].approachSpeed
+		
+	}else{
+		done = true;
+	}
+}
