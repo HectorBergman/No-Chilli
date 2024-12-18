@@ -31,6 +31,15 @@ function offLikeAShotClouds(theMove){
 		};
 		instance_create_depth(x, y+32, i, object_OLSClouds, cloudsStruct);
 	}
+	if (leftHeldTimer > mach2Start-1){
+		var soundVariant = irandom(2)+1
+		var soundString = "snd_OLS_strong" + string(soundVariant);
+		audio_play_sound(asset_get_index(soundString), 1, false);
+	}else{
+		var soundVariant = irandom(3)+1
+		var soundString = "snd_OLS" + string(soundVariant);
+		audio_play_sound(asset_get_index(soundString), 1, false);
+	}
 }
 
 function startTurn(newTurnDirection, half){
@@ -50,6 +59,17 @@ function startTurn(newTurnDirection, half){
 }
 
 function turningLogic(){
+	if (turnTimer == turnTime-1){
+		var soundVariant = irandom(2)+1
+		var soundString = "snd_brake" + string(soundVariant);
+		show_debug_message(soundString);
+		brakeSoundIndex = audio_play_sound(asset_get_index(soundString), 1, false);
+	}
+	if (turnTimer == turnTime-turnTimerBrakeStop){
+		audio_stop_sound(snd_brake1) 
+		audio_stop_sound(snd_brake2) 
+		audio_stop_sound(snd_brake3) 
+	}
 	if (moveRight-moveLeft == -turnDirection){
 		enterMach(false, moveRight-moveLeft)
 		if (horizontalSpeed == 0){
@@ -60,6 +80,7 @@ function turningLogic(){
 		halfTurn = false;
 	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
 		horizontalSpeed = horizontalSpeed*0.95;
+		
 	}else if (turnTimer > 0 && halfTurn == true){
 		returnToNormalStateFromMach();
 	}else if (turnTimer > 0){ //turning

@@ -53,6 +53,8 @@ initiateRoomTransitionVariables();
 
 initiateDeathVariables();
 
+initiateSoundVariables();
+
 inLevel = false;
 levelStartTime = 60;
 levelStartTimer = -1;

@@ -37,5 +37,5 @@
     "path":"sprites/spr_whiteGuy_approachPoint/spr_whiteGuy_approachPoint.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -1,0 +1,3 @@
+function initiateSoundVariables(){
+	brakeSoundIndex = noone;
+}
