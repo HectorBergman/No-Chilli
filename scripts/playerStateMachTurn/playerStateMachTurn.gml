@@ -32,13 +32,9 @@ function offLikeAShotClouds(theMove){
 		instance_create_depth(x, y+32, i, object_OLSClouds, cloudsStruct);
 	}
 	if (leftHeldTimer > mach2Start-1){
-		var soundVariant = irandom(2)+1
-		var soundString = "snd_OLS_strong" + string(soundVariant);
-		audio_play_sound(asset_get_index(soundString), 1, false);
+		playOneOfSeveral("snd_OLS_strong", 3)
 	}else{
-		var soundVariant = irandom(3)+1
-		var soundString = "snd_OLS" + string(soundVariant);
-		audio_play_sound(asset_get_index(soundString), 1, false);
+		playOneOfSeveral("snd_OLS", 4)
 	}
 }
 
@@ -60,10 +56,7 @@ function startTurn(newTurnDirection, half){
 
 function turningLogic(){
 	if (turnTimer == turnTime-1){
-		var soundVariant = irandom(2)+1
-		var soundString = "snd_brake" + string(soundVariant);
-		show_debug_message(soundString);
-		brakeSoundIndex = audio_play_sound(asset_get_index(soundString), 1, false);
+		playOneOfSeveral("snd_brake", 3)
 	}
 	if (turnTimer == turnTime-turnTimerBrakeStop){
 		audio_stop_sound(snd_brake1) 

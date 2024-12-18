@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_OLS_strong1",
+  "%Name":"snd_hotass",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.621451,
-  "name":"snd_OLS_strong1",
+  "duration":1.511134,
+  "name":"snd_hotass",
   "parent":{
-    "name":"OLS",
-    "path":"folders/Sounds/OLS.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_OLS_strong1.ogg",
+  "soundFile":"snd_hotass.ogg",
   "type":0,
-  "volume":0.7,
+  "volume":0.5,
 }

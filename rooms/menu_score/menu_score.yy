@@ -25,6 +25,7 @@
     {"name":"inst_128C4FD8","path":"rooms/menu_score/menu_score.yy",},
     {"name":"inst_1A08870E","path":"rooms/menu_score/menu_score.yy",},
     {"name":"inst_20A49A41","path":"rooms/menu_score/menu_score.yy",},
+    {"name":"inst_228F7086","path":"rooms/menu_score/menu_score.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -78,6 +79,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_jalapeno","path":"objects/obj_jalapeno/obj_jalapeno.yy",},"propertyId":{"name":"_depth","path":"objects/obj_jalapeno/obj_jalapeno.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"99",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_20A49A41","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_20A49A41","objectId":{"name":"obj_levelcomplete","path":"objects/obj_levelcomplete/obj_levelcomplete.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":832.0,"y":-160.0,},
+        {"$GMRInstance":"v1","%Name":"inst_228F7086","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_228F7086","objectId":{"name":"obj_musicstopper","path":"objects/obj_musicstopper/obj_musicstopper.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":3.0,"x":32.0,"y":-96.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":490,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_23DA9C0C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_23DA9C0C","objectId":{"name":"obj_relaxWater","path":"objects/obj_relaxWater/obj_relaxWater.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":60.0,"scaleY":1.0,"x":0.0,"y":928.0,},

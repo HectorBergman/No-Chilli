@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"playOneOfSeveral",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"playOneOfSeveral",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

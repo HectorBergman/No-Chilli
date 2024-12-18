@@ -17,6 +17,10 @@ dashRightReqInput = ord("D");
 
 
 inputCalculator()
+if (state != states.crash){
+	audio_stop_sound(crashLoop);
+	crashLoop = noone;
+}
 
 //show_debug_message("TD" + string(turnDirection));
 //show_debug_message("move " + string(moveRight-moveLeft))

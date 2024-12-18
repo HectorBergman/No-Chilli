@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"Object82",
-  "eventList":[],
+  "%Name":"obj_musicstopper",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Object82",
+  "name":"obj_musicstopper",
   "overriddenProperties":[],
   "parent":{
     "name":"menu",

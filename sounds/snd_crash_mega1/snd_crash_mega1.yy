@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_OLS_strong1",
+  "%Name":"snd_crash_mega1",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.621451,
-  "name":"snd_OLS_strong1",
+  "duration":3.258229,
+  "name":"snd_crash_mega1",
   "parent":{
-    "name":"OLS",
-    "path":"folders/Sounds/OLS.yy",
+    "name":"crash",
+    "path":"folders/Sounds/crash.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_OLS_strong1.ogg",
+  "soundFile":"snd_crash_mega1.ogg",
   "type":0,
   "volume":0.7,
 }

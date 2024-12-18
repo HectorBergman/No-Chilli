@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_brake1.ogg",
   "type":0,
-  "volume":0.61,
+  "volume":0.4,
 }

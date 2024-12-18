@@ -18,7 +18,9 @@ if (keyboard_check_pressed(vk_escape) && global.pausable){
 		destroyMenu()
 		cam.camWidth = tempWidth;
 		cam.camHeight = tempHeight
+		audio_resume_all();
 	}else{
+		audio_pause_all();
 		tempWidth = cam.camWidth;
 		tempHeight = cam.camHeight;
 		cam.camWidth = cam.camWidthNormal;
