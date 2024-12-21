@@ -14,7 +14,11 @@ function playerStateMach(){
 		runClouds();
 	//this basically means, if you're on the ground and attempting to turn, skip this if, else, enter the if
 	//so if you're in the air, this if will always play.
-		
+		if (!audio_is_playing(snd_trainRun) && onGround > 9){
+			audio_play_sound(snd_trainRun,1 ,1, 0.5, 0, 1.5)
+		}else if (audio_is_playing(snd_trainRun) && onGround < 10){
+			audio_stop_sound(snd_trainRun)
+		}
 	
 		determineMove();
 		

@@ -1,14 +1,17 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateNormal(){
-
+	walkSoundBufferTimer--
 	determineMove()
-	if (onGround > 9 && (moveLeft xor moveRight)){
+	if (onGround > 9 && (moveLeft xor moveRight) && horizontalSpeed != 0){ //TODO: add buffer for switching directions
+		walkSoundBufferTimer = walkSoundBufferTime
 		if (!audio_is_playing(snd_walk)){
 			audio_play_sound(snd_walk, 1, true);
 		}
 	}else {
-		audio_stop_sound(snd_walk);
+		if (walkSoundBufferTimer < 1){
+			audio_stop_sound(snd_walk);
+		}
 	}
 	//see: script playerMovement
 	playerHorizontalMovement(self);

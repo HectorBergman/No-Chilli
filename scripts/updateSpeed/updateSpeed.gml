@@ -32,6 +32,7 @@ function updateSpeed(){
 	jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)
 	turnGrav = baseTurnGrav*sqrt(scovilleSpeed);
 	
+	audio_sound_pitch(snd_walk, sqrt(scovilleSpeed));
 	
 	switch(state){
 		case states.normal: 
