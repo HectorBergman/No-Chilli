@@ -2,13 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateCrash(){
 	if (crashTimer-- == crashTime-1){
+		horizontalSpeed = crashSpeed;
+		verticalSpeed = crashHeight;
 		if (!specialCrash){
 			if (crashLoop == noone){
 				crashLoop = audio_play_sound(snd_dizzy, 1, true)
 			}
 	
-			horizontalSpeed = crashSpeed;
-			verticalSpeed = crashHeight;
+			
 			if (crashTimer > 65){
 				audio_play_sound(snd_crash_mega1, 1, false);
 			}else if (crashTimer > 48){
@@ -51,8 +52,8 @@ function initiateCrash(timeCrashed, parent){ // timeCrashed <= 0 for automatic c
 		baseGrav = 0.2;
 		specialCrash = true;
 		crashDirection = sign(parent.horizontalSpeed);
-		crashSpeed = -parent.horizontalSpeed;
-		crashHeight = -sqrt(abs(parent.horizontalSpeed))*3;
+		crashSpeed = parent.horizontalSpeed;
+		crashHeight = -sqrt(abs(crashSpeed))*3;
 	}
 	show_debug_message(crashTime);
 	show_debug_message(crashDirection);
