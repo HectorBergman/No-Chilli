@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v1","%Name":"thrownDirection","filters":[],"listItems":[],"multiselect":false,"name":"thrownDirection","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"yAxis","filters":[],"listItems":[],"multiselect":false,"name":"yAxis","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v1","%Name":"flyingSpeed","filters":[],"listItems":[],"multiselect":false,"name":"flyingSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"parent","filters":[],"listItems":[],"multiselect":false,"name":"parent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -12,7 +12,10 @@
     "name":"npc",
     "path":"folders/Objects/npc.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"object_wall",
+    "path":"objects/object_wall/object_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"discoPuke",
-    "path":"sprites/discoPuke/discoPuke.yy",
+    "name":"spr_lasagnaMimic",
+    "path":"sprites/spr_lasagnaMimic/spr_lasagnaMimic.yy",
   },
   "spriteMaskId":null,
   "visible":true,

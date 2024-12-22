@@ -12,4 +12,10 @@ hurtboxStruct = {
 	parent: id
 }
 hurtBox = instance_create_depth(x, y, 0, obj_aspargusSpear_hurtbox, hurtboxStruct)
+timer_start = 0;
+timer = 0;
+if !(parent == noone){
+	image_index = 1;
+	timer_start = get_timer()/1000
+}
 	
