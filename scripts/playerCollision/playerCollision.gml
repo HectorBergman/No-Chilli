@@ -30,9 +30,9 @@ function fryingRailException(){
 	}
 }
 function lasagnaFeebleException(){
-	var rail = instance_place(x, y + verticalSpeed, obj_lasagna_feeble);
-	if (rail != noone){
-		if (verticalSpeed > 0 && rail.y+16 > self.y+self.sprite_height){
+	var lasagna = instance_place(x, y + verticalSpeed, obj_lasagna_feeble);
+	if (lasagna != noone){
+		if (verticalSpeed > 0 && lasagna.y+16 > self.y+self.sprite_height){
 			standingOn = instance_place(x, y + verticalSpeed, object_wall)
 			hasFallen = false;
 			if (verticalSpeed > 0){	
@@ -44,10 +44,31 @@ function lasagnaFeebleException(){
 		}
 	}
 }
+function asparagusException(){
+	var asparagus = instance_place(x, y + verticalSpeed, obj_aspargusSpear);
+	if (asparagus != noone){
+		if (verticalSpeed > 0 && asparagus.y+16 > self.y+self.sprite_height){
+			standingOn = instance_place(x, y + verticalSpeed, object_wall)
+			hasFallen = false;
+			if (verticalSpeed > 0){	
+				onGround = 10;
+			}
+			var _vStep = sign(verticalSpeed);
+			verticalSpeed = 0;
+			var ridingSpearOffset = asparagus.flyingSpeed*asparagus.thrownDirection*!asparagus.yAxis;
+			if (!checkCollision(horizontalSpeed + ridingSpearOffset, 0, object_wall)){
+				x = x + ridingSpearOffset
+			}
+			while(!place_meeting(x,y+_vStep, obj_aspargusSpear)) y += _vStep;
+			
+		}
+	}
+}
 
 function allExceptions(){
 	fryingRailException();
 	lasagnaFeebleException();
+	asparagusException()
 }
 function checkCollision(horizontalSpeedAdded, verticalSpeedAdded, object){
 	return place_meeting(x + horizontalSpeedAdded, y + verticalSpeedAdded, object)

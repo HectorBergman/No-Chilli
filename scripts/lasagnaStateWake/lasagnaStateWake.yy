@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"saladStateDying",
+  "%Name":"lasagnaStateWake",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"saladStateDying",
+  "name":"lasagnaStateWake",
   "parent":{
-    "name":"dressing",
-    "path":"folders/oScripts/npc/salad/dressing.yy",
+    "name":"hiddenLasagna",
+    "path":"folders/oScripts/npc/hiddenLasagna.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

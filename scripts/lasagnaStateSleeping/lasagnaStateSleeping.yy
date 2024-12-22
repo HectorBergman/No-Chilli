@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"lasagnaStateSleeping",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lasagnaStateSleeping",
+  "parent":{
+    "name":"hiddenLasagna",
+    "path":"folders/oScripts/npc/hiddenLasagna.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

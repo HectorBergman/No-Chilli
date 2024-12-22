@@ -6,7 +6,7 @@
   "name":"brusselStateActive",
   "parent":{
     "name":"brussel",
-    "path":"folders/oScripts/salad/brussel.yy",
+    "path":"folders/oScripts/npc/salad/brussel.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

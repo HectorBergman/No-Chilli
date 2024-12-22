@@ -6,7 +6,7 @@
   "name":"saladStateAwake",
   "parent":{
     "name":"dressing",
-    "path":"folders/oScripts/salad/dressing.yy",
+    "path":"folders/oScripts/npc/salad/dressing.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
