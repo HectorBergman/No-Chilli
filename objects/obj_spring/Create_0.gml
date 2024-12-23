@@ -32,7 +32,7 @@ function springHorizontalCollision(){
 	try{
 		if (place_meeting(x + horizontalSpeed, y , object_wall)){
 			var _hStep = sign(horizontalSpeed);
-			while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+			stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 			horizontalSpeed = -horizontalSpeed;
 		}
 		x = x + horizontalSpeed;
@@ -48,7 +48,7 @@ function springVerticalCollision(){
 			savedSpeed = verticalSpeed;
 			var _vStep = sign(verticalSpeed);
 			verticalSpeed = 0;
-			while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+			stepCollisionWhileWithFailCon(object_wall, _vStep, false);
 			state = springStates.bounce
 			firstContact = false;
 		}

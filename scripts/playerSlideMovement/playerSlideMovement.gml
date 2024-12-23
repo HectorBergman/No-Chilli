@@ -5,7 +5,7 @@ function slideHorizontalMovement(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 		if (!(abs(horizontalSpeed) <= crawlSpeed)){
 			wallTouch = 1;
 			exitSlide(states.normal)

@@ -25,6 +25,14 @@ state = states.normal
 startingRoom = rm_lobby_room1;
 _r = false;
 
+//when starting writing this, i included a while statement in the
+//collision that i later regretted. this is to ensure the while statement
+//gives up after a while
+global.whileFail = 0;
+global.whileFailLimit = 1000;
+global.preWhileCoord = [0,0];
+
+
 initiateSpriteVariables();
 
 initiateNormalMovementVariables();

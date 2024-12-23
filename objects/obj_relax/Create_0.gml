@@ -15,14 +15,14 @@ surface_y = 9999;
 function relaxoHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
 		var _hStep = sign(horizontalSpeed);
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 		horizontalSpeed = -_hStep*((abs(horizontalSpeed)))/2;
 	}
 }
 function relaxoVerticalCollision(){
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
 		var _vStep = sign(verticalSpeed);
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		stepCollisionWhileWithFailCon(object_wall, _vStep, false)
 		verticalSpeed = -_vStep*(sqrt(abs(verticalSpeed)));
 	}
 }

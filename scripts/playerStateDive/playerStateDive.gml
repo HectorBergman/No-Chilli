@@ -12,7 +12,7 @@ function playerStateDive(){
 function diveHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
 		var _hStep = sign(horizontalSpeed);
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 		initiateBounce();
 		startSecondBounce();
 		horizontalSpeed = -horizontalSpeed;
@@ -36,7 +36,7 @@ function diveVerticalCollision(){
 		enterMach(false, horizontalSpeed);
 		slideTimer = slideTime-20;
 		diveTimer = diveTime;
-		while(!place_meeting(x,y+_vStep, obj_trait_landable)) y += _vStep;
+		stepCollisionWhileWithFailCon(obj_trait_landable, _vStep, false)
 	}
 
 	y = y + verticalSpeed;

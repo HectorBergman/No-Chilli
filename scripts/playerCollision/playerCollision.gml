@@ -1,10 +1,30 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+//for collision to ensure collision ends up connecting.
+//Object: type of object attempting to connect with (ex: object_wall)
+//Step: which direction to step in, -1 for up or left, 1 for right or down
+//Horizontal (bool): true for left/right, false for down/up
+function stepCollisionWhileWithFailCon(object, step, horizontal){
+	global.preWhileCoord = [x,y];
+		while(!place_meeting(x+step*horizontal,y+step*!horizontal,object)){
+			x += step*horizontal;
+			y += step*!horizontal
+			global.whileFail++
+			if (global.whileFail == global.whileFailLimit){
+				x = global.preWhileCoord[0]
+				y = global.preWhileCoord[1]
+				global.whileFail = 0
+				break;
+			}
+		}
+}
 function playerHorizontalCollision(_player){
 	if (checkCollision(horizontalSpeed, 0, object_wall)){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		preWhileCoord = x;
+		stepCollisionWhileWithFailCon(object_wall, _hStep, 1);
 		wallTouch = 1;
 		
 		playerCollisionWhileSwinging()
@@ -25,7 +45,7 @@ function fryingRailException(){
 			}
 			var _vStep = sign(verticalSpeed);
 			verticalSpeed = 0;
-			while(!place_meeting(x,y+_vStep, obj_fryingRail)) y += _vStep;
+			stepCollisionWhileWithFailCon(obj_fryingRail, _vStep, false)
 		}
 	}
 }
@@ -40,13 +60,13 @@ function lasagnaFeebleException(){
 			}
 			var _vStep = sign(verticalSpeed);
 			verticalSpeed = 0;
-			while(!place_meeting(x,y+_vStep, obj_lasagna_feeble)) y += _vStep;
+			stepCollisionWhileWithFailCon(obj_lasagna_feeble, _vStep, false)
 		}
 	}
 }
 function asparagusException(){
 	var asparagus = instance_place(x, y + verticalSpeed, obj_aspargusSpear);
-	if (asparagus != noone){
+	if (asparagus != noone && !(asparagus.image_index == 2 || asparagus.image_index == 1)){
 		if (verticalSpeed > 0 && asparagus.y+16 > self.y+self.sprite_height){
 			standingOn = instance_place(x, y + verticalSpeed, object_wall)
 			hasFallen = false;
@@ -59,7 +79,7 @@ function asparagusException(){
 			if (!checkCollision(horizontalSpeed + ridingSpearOffset, 0, object_wall)){
 				x = x + ridingSpearOffset
 			}
-			while(!place_meeting(x,y+_vStep, obj_aspargusSpear)) y += _vStep;
+			stepCollisionWhileWithFailCon(obj_aspargusSpear, _vStep, false)
 			
 		}
 	}
@@ -85,7 +105,7 @@ function playerVerticalCollision(_player){
 		}
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		stepCollisionWhileWithFailCon(object_wall, _vStep, false)
 		playerCollisionWhileSwinging() //this is bad programming but i dont want to change it cause its
 										// kind of annoying + my code, my rules B)
 	}else{

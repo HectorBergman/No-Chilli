@@ -16,7 +16,7 @@ function cuckooHorizontalCollision(){
 		var _hStep = sign(horizontalSpeed);
 		horizontalSpeed = 0;
 		spin = 0;
-		while(!place_meeting(x+_hStep,y,object_wall)) x += _hStep;
+		stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 	}
 	
 	x = x + horizontalSpeed;
@@ -28,7 +28,7 @@ function cuckooVerticalCollision(){
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
 		horizontalSpeed *= 0.95
-		while(!place_meeting(x,y+_vStep, object_wall)) y += _vStep;
+		stepCollisionWhileWithFailCon(object_wall, _vStep, false)
 	}
 	y = y + verticalSpeed;
 }

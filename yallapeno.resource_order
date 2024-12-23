@@ -480,7 +480,6 @@
     {"name":"sprite_whiteGuy","order":7,"path":"sprites/sprite_whiteGuy/sprite_whiteGuy.yy",},
     {"name":"Sprite11","order":5,"path":"sprites/Sprite11/Sprite11.yy",},
     {"name":"Sprite12","order":6,"path":"sprites/Sprite12/Sprite12.yy",},
-    {"name":"Sprite13","order":15,"path":"sprites/Sprite13/Sprite13.yy",},
     {"name":"steam_1","order":28,"path":"sprites/steam_1/steam_1.yy",},
     {"name":"steam","order":24,"path":"sprites/steam/steam.yy",},
   ],
