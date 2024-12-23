@@ -15,7 +15,7 @@ hurtBox = instance_create_depth(x, y, 0, obj_aspargusSpear_hurtbox, hurtboxStruc
 timer_start = 0;
 timer = 0;
 if !(parent == noone){
-	image_index = 1;
+	image_index = 2;
 	timer_start = get_timer()/1000
 }
 	

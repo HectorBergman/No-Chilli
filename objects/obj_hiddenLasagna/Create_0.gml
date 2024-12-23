@@ -1,3 +1,7 @@
+timer = 0
+spearTimer = 10;
+spearInterval = 10;
+state = hiddenLasagnaState.wake
 if (sign(image_xscale) == -1){
 	x = x + 32*sign(image_xscale)
 }
@@ -19,5 +23,6 @@ function wake(){
 spearStruct = {
 	parent: id,
 	thrownDirection: sign(image_xscale),
+	firstSpear: true,
 }
 firstSpear = instance_create_depth(x-10, y+25, 0, obj_aspargusSpear, spearStruct)

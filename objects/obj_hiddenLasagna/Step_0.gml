@@ -1,4 +1,4 @@
-state = hiddenLasagnaState.wake
+
 switch(state){
 	case hiddenLasagnaState.awake: lasagnaStateAwake(); break;
 	case hiddenLasagnaState.sleeping: lasagnaStateSleeping(); break;
