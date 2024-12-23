@@ -1,6 +1,6 @@
 timer = 0
-spearTimer = 10;
-spearInterval = 10;
+spearTimer = 100;
+spearInterval = 100;
 state = hiddenLasagnaState.wake
 if (sign(image_xscale) == -1){
 	x = x + 32*sign(image_xscale)
