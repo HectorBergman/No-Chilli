@@ -68,11 +68,13 @@ function trackChili(){
 	if (abs(chiliman.x - x) > 600 || abs(chiliman.y - y) > 600){
 		state = saladState.waiting;
 		horizontalSpeed = 0;
+	}else if (sign(horizontalSpeed) != sign(chiliman.x-x) && abs(horizontalSpeed) > 1){
+		horizontalSpeed *= 0.7
 	}else if (abs(horizontalSpeed) < topSpeed){
 		
-		horizontalSpeed += sign(chiliman.x - x) * speedIncrement;
+		horizontalSpeed += sign(chiliman.x - x) * speedIncrement*sqrt(abs(chiliman.x-x))/10;
 		horizontalSpeed *= 0.98
-		jumpIfChiliClose();
+		jumpIfChiliClose(); //more like jump if chili jump
 	}
 	
 }
@@ -81,7 +83,7 @@ function jumpIfChiliClose(){
 	show_debug_message("hori " + string(sign(horizontalSpeed)))
 	show_debug_message("distance " + string(sign(x - chiliman.x)))
 	if (sign(horizontalSpeed) == sign(chiliman.x - x) && abs(chiliman.x - x) < 200){
-		if (abs(x-chiliman.x < 150) && onGround){
+		if (abs(y-chiliman.y) > 100 && chiliman.y < y && onGround){
 			saladJump(10, jumpCooldownTime*2);
 		}
 	}

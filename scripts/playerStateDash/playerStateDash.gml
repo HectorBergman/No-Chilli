@@ -59,6 +59,17 @@ function returnToNormal(){
 	}
 	timeInMach = 0;
 	horizontalSpeed = oldHorizontalSpeed;
+	if (oldState == states.mach){
+		if (moveRight - moveLeft != 0){
+			machDirection = moveRight-moveLeft
+			var lol = leftHeldTimer + rightHeldTimer
+			leftHeldTimer = lol
+			rightHeldTimer = lol;
+			if (sign(machDirection) != sign(horizontalSpeed)){
+				horizontalSpeed *= -1;
+			}
+		}
+	}
 	if (oldState != states.onball){
 		state = oldState
 	}else{ 

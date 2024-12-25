@@ -1,5 +1,6 @@
 //yAxis true for up or down, false for left or right
 //thrownDirection 1 or -1, -1 for left or up, 1 for down or right
+surf = -1
 
 image_xscale = thrownDirection
 image_angle = -yAxis*90

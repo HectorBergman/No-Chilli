@@ -2,6 +2,11 @@
 // all over again I would change this 100%, but it's too central to all movement that changing it
 // is painful af.
 function playerStateMach(){
+	if (machDirection == 1){
+		show_debug_message("hej");
+	}else{
+		show_debug_message("ASHDJHASDHASHDHASDD");
+	}
 	timeInMach++
 	
 	mach = machCalculator()
@@ -11,9 +16,10 @@ function playerStateMach(){
 	if !(onGround >= 10 &&  //note to self, do not write !-ifs, they're confusing af
 	((moveRight-moveLeft == -machDirection) || moveRight-moveLeft == 0 || 
 	!((moveRight-moveLeft) == sign(horizontalSpeed)))){
+		//this basically means, if you're on the ground and attempting to turn, skip this if, else, enter the if
+		//so if you're in the air, this if will always play.
 		runClouds();
-	//this basically means, if you're on the ground and attempting to turn, skip this if, else, enter the if
-	//so if you're in the air, this if will always play.
+
 		if (!audio_is_playing(snd_trainRun) && onGround > 9){
 			audio_play_sound(snd_trainRun,1 ,1, 0.5, 0, 1.5)
 		}else if (audio_is_playing(snd_trainRun) && onGround < 10){

@@ -7,17 +7,17 @@
 //Horizontal (bool): true for left/right, false for down/up
 function stepCollisionWhileWithFailCon(object, step, horizontal){
 	global.preWhileCoord = [x,y];
-		while(!place_meeting(x+step*horizontal,y+step*!horizontal,object)){
-			x += step*horizontal;
-			y += step*!horizontal
-			global.whileFail++
-			if (global.whileFail == global.whileFailLimit){
-				x = global.preWhileCoord[0]
-				y = global.preWhileCoord[1]
-				global.whileFail = 0
-				break;
-			}
+	while(!place_meeting(x+step*horizontal,y+step*!horizontal,object)){
+		x += step*horizontal;
+		y += step*!horizontal
+		global.whileFail++
+		if (global.whileFail == global.whileFailLimit){
+			x = global.preWhileCoord[0]
+			y = global.preWhileCoord[1]
+			global.whileFail = 0
+			break;
 		}
+	}
 }
 function playerHorizontalCollision(_player){
 	if (checkCollision(horizontalSpeed, 0, object_wall)){
