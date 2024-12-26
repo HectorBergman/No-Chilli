@@ -1,12 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
-collided = instance_place(x, y, object_wall);
-if (collided != noone){ //&& collided != chiliman && collided.object_index != object_debris) {
-	objectEaten(collided);
-	instance_destroy(collided);
-	collided = noone;
-}
+
+facingLogic();
 show_debug_message(done);
 truSpeed = approachSpeed*chiliman.scovilleSpeed
 if ((x != targetX || y != targetY) && !done){
@@ -31,7 +27,7 @@ if ((x != targetX || y != targetY) && !done){
 	}else{
 		y = y + truSpeed*ratioY
 	}
-	show_debug_message(ratioY);
+	show_debug_message(ratioX);
 }else{
 	if (approachPointIndex+1 < array_length(approachPoints)){
 		show_debug_message(approachPointIndex+1)

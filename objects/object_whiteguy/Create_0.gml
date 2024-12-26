@@ -22,9 +22,16 @@ collided = noone;
 //approachSpeed *scoville
 truSpeed = 0;
 
+collisionStruct = {
+	parent: id,
+}
+collision = instance_create_depth(self.x, self.y, -1, object_whiteGuy_collision, collisionStruct)
+
+
+
 function facingLogic(){
 	if (sign(ratioX) != 0){
-		image_xscale = sign(ratioX)
+		image_xscale = sign(ratioX)*abs(image_xscale)
 	}
 
 	if (abs(ratioX)+0.1 >= abs(ratioY)){ //slight bias towards facing the x-direction
