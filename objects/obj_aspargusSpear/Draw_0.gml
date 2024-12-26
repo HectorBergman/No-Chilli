@@ -1,13 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+draw_rectangle_color(
+    bbox_left, bbox_top, bbox_right, bbox_bottom, c_red, c_red, c_red, c_red, false
+);
 if (parent != noone){
 	
-	surf = surface_create(960, 540);
+	surf = surface_create(10000, 540);
 	surface_set_target(surf);
-	draw_sprite(spr_aspargusSpear, 0, x-parent.x, y-parent.y);
 	
-	surface_reset_target();
-	draw_surface(surf, parent.x, parent.y);
+	if (sign(parent.image_xscale) == 1){
+		draw_sprite(spr_aspargusSpear, 0, x-parent.x, y-parent.y);
+		surface_reset_target();
+		draw_surface(surf, parent.x, parent.y);
+	}else{
+		draw_sprite_ext(spr_aspargusSpear, 0, x-parent.x+10000, y-parent.y, -1, -1, 0, c_white, 1);
+		surface_reset_target();
+		draw_surface(surf, parent.x-10000, parent.y);
+	}
 	surface_free(surf);
 	
 }else{

@@ -2,11 +2,7 @@
 // all over again I would change this 100%, but it's too central to all movement that changing it
 // is painful af.
 function playerStateMach(){
-	if (machDirection == 1){
-		show_debug_message("hej");
-	}else{
-		show_debug_message("ASHDJHASDHASHDHASDD");
-	}
+
 	timeInMach++
 	
 	mach = machCalculator()

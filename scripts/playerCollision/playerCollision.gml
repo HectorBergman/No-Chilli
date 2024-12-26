@@ -67,10 +67,13 @@ function lasagnaFeebleException(){
 function asparagusException(){
 	var asparagus = instance_place(x, y + verticalSpeed, obj_aspargusSpear);
 	if (asparagus != noone && !(asparagus.image_index == 2 || asparagus.image_index == 1)){
+
 		if (verticalSpeed > 0 && asparagus.y+16 > self.y+self.sprite_height){
+
 			standingOn = instance_place(x, y + verticalSpeed, object_wall)
 			hasFallen = false;
 			if (verticalSpeed > 0){	
+
 				onGround = 10;
 			}
 			var _vStep = sign(verticalSpeed);
@@ -79,6 +82,7 @@ function asparagusException(){
 			if (!checkCollision(horizontalSpeed + ridingSpearOffset, 0, object_wall)){
 				x = x + ridingSpearOffset
 			}
+
 			stepCollisionWhileWithFailCon(obj_aspargusSpear, _vStep, false)
 			
 		}

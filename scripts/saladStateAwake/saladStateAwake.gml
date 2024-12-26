@@ -113,6 +113,19 @@ function saladHorizontalCollision(){
 	
 	x = x + horizontalSpeed;
 }
+function saladLasagnaFeebleException(){
+	var lasagna = instance_place(x, y + verticalSpeed, obj_lasagna_feeble);
+	if (lasagna != noone){
+		if (verticalSpeed > 0 && lasagna.y+16 > self.y+self.sprite_height){
+			if (verticalSpeed > 0){	
+				onGround = true;
+			}
+			var _vStep = sign(verticalSpeed);
+			verticalSpeed = 0;
+			stepCollisionWhileWithFailCon(obj_lasagna_feeble, _vStep, false)
+		}
+	}
+}
 
 
 function findJumpable(){
@@ -126,6 +139,7 @@ function findJumpable(){
 	return jumpable;
 }
 function saladVerticalCollision(){
+	saladLasagnaFeebleException()
 	if (place_meeting(x, y + verticalSpeed, object_wall)){
 		if (state == saladState.dying){
 			state = saladState.dead;
