@@ -3,7 +3,7 @@
 
 PAUSE
 collided = instance_place(x, y, object_wall);
-if (collided != noone){ //&& collided != chiliman && collided.object_index != object_debris) {
+if (collided != noone && object_get_parent(collided.object_index) != obj_ovenfamily){ //&& collided != chiliman && collided.object_index != object_debris) {
 	objectEaten(collided);
 	instance_destroy(collided);
 	collided = noone;
