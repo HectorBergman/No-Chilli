@@ -2,8 +2,8 @@ if (parent != noone && !instance_exists(parent)){
 	parent = noone;
 }
 
-if (abs(x) > room_width+500 || abs(y) > room_height+500){
-	//500 is arbitrary, i just want them gone a bit after leaving the room
+if (abs(x) > room_width+3000 || abs(y) > room_height+1000){
+	//3000 and 1000 is arbitrary, i just want them gone a bit after leaving the room
 	instance_destroy()
 }
 

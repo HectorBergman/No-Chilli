@@ -1,7 +1,12 @@
 timer = 0
 spearTimer = spearInterval;
 
-state = hiddenLasagnaState.sleeping
+if (awakenMyMasters){
+	state = hiddenLasagnaState.awake
+	image_index = 6;
+}else{
+	state = hiddenLasagnaState.sleeping
+}
 if (sign(image_xscale) == -1){
 	x = x + 32*sign(image_xscale)
 }

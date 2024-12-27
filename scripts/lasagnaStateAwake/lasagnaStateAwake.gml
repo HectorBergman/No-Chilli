@@ -10,5 +10,4 @@ function lasagnaStateAwake(){
 		firstSpear = instance_create_depth(x-10, y+25, 0, obj_aspargusSpear, spearStruct)
 		spearTimer = spearInterval;
 	}
-	show_debug_message(spearTimer);
 }

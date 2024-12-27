@@ -121,7 +121,7 @@ function playerVerticalCollision(_player){
 }
 
 function playerWhiteguyCollision(_player){
-	if (place_meeting(x, y + verticalSpeed, object_whiteGuy)){
+	if (place_meeting(x, y + verticalSpeed, object_whiteGuy_collision)){
 		playerDeath();
 	}
 }

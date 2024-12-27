@@ -8,3 +8,5 @@ image_xscale = 2
 image_yscale = 2;
 
 image_alpha = random(0.3)+0.6
+
+lifeTime = 0;

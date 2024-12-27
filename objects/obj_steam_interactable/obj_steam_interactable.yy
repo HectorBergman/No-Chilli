@@ -9,8 +9,8 @@
   "name":"obj_steam_interactable",
   "overriddenProperties":[],
   "parent":{
-    "name":"interactable",
-    "path":"folders/Objects/interactable.yy",
+    "name":"steam",
+    "path":"folders/Objects/invisible/steam.yy",
   },
   "parentObjectId":null,
   "persistent":false,

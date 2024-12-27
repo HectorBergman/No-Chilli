@@ -32,6 +32,8 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"spearInterval","filters":[],"listItems":[],"multiselect":false,"name":"spearInterval","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"flyingSpeed","filters":[],"listItems":[],"multiselect":false,"name":"flyingSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"awakenMyMasters","filters":[],"listItems":[],"multiselect":false,"name":"awakenMyMasters","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"awakenFrameSpeed","filters":[],"listItems":[],"multiselect":false,"name":"awakenFrameSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"100","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
