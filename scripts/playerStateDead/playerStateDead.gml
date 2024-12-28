@@ -7,5 +7,5 @@ function playerStateDead(){
 		global.pausable = false;
 		room_goto(rm_deathscreen);
 	}
-	show_debug_message(deadTimer);
+	//show_debug_message(deadTimer);
 }

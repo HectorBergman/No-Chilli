@@ -39,9 +39,9 @@ function facingLogic(){
 	
 	}else{
 		if (sign(ratioY) == 1){
-			image_angle = 90*-image_xscale
+			image_angle = -90*sign(image_xscale);
 		}else{
-			image_angle = -90*-image_xscale
+			image_angle = 90*sign(image_xscale);
 		}
 	}
 }

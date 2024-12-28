@@ -15,6 +15,13 @@ if (collided != noone){
 	instance_destroy(collided);
 	collided = noone;
 }
+
+collided = instance_place(x,y, obj_trait_landable);
+if (collided != noone){
+	objectEaten(collided);
+	instance_destroy(collided);
+	collided = noone;
+}
 image_xscale = parent.image_xscale;
 image_angle = parent.image_angle;
 x = parent.x

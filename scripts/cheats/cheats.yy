@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"cheats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"cheats",
+  "parent":{
+    "name":"oScripts",
+    "path":"folders/oScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

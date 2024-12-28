@@ -15,6 +15,7 @@ dashLeftReqInput = ord("A");
 dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
+cheats();
 
 inputCalculator()
 stopAudios();
@@ -101,6 +102,7 @@ switch(state){
 	case states.levelstart: playerStateLevelstart(); break;
 	case states.oven: playerStateOven(); break;
 	case states.roomtransition: playerStateRoomTransition(); break;
+	case states.hax: playerStateHax(); break;
 }
 playerSpriteLogic(self);
 

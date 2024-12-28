@@ -3,6 +3,7 @@
 
 PAUSE
 if (chiliman.state == states.levelcomplete){ exit;}
+if (chiliman.state == states.hax){ camState = camStates.hax;}
 
 if (isZoomOut == false && camState != camStates.zoomOut && !cameraShouldZoomIn() && cameraShouldNotChange()){
 	camState = camStates.zoomOut
@@ -62,6 +63,7 @@ switch(camState){
 	case camStates.normal: cameraStateNormal(); break;
 	case camStates.zoomOut: cameraStateZoomOut(); break;
 	case camStates.zoomIn: cameraStateZoomIn(); break;
+	case camStates.hax: camWidth = 1920; camHeight = 1080; break;
 }
 
 

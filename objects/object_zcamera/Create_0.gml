@@ -10,6 +10,7 @@ enum camStates{
 	normal,
 	zoomOut,
 	zoomIn,
+	hax,
 }
 
 camState = camStates.normal;

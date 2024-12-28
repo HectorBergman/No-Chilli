@@ -4,10 +4,7 @@ surf = -1
 
 image_xscale = thrownDirection
 image_angle = -yAxis*90
-show_debug_message(thrownDirection)
-show_debug_message(yAxis)
-show_debug_message(yAxis*90*thrownDirection)
-show_debug_message(image_angle);
+
 horizontalSpeed = flyingSpeed*thrownDirection;
 hurtboxStruct = {
 	parent: id

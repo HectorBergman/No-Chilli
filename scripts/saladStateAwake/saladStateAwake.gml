@@ -80,8 +80,8 @@ function trackChili(){
 }
 
 function jumpIfChiliClose(){
-	show_debug_message("hori " + string(sign(horizontalSpeed)))
-	show_debug_message("distance " + string(sign(x - chiliman.x)))
+	/*show_debug_message("hori " + string(sign(horizontalSpeed)))
+	show_debug_message("distance " + string(sign(x - chiliman.x)))*/
 	if (sign(horizontalSpeed) == sign(chiliman.x - x) && abs(chiliman.x - x) < 200){
 		if (abs(y-chiliman.y) > 100 && chiliman.y < y && onGround){
 			saladJump(10, jumpCooldownTime*2);

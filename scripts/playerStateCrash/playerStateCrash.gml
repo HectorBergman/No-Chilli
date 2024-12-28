@@ -39,7 +39,7 @@ function playerStateCrash(){
 function initiateCrash(timeCrashed, parent){ // timeCrashed <= 0 for automatic crashtime
 	leftHeldTimer = 0;
 	rightHeldTimer = 0;
-	show_debug_message("hi");
+
 	if (timeCrashed <= 0){
 		crashTime = 20 + abs(floor(horizontalSpeed))*3;
 		specialCrash = false;
@@ -55,10 +55,7 @@ function initiateCrash(timeCrashed, parent){ // timeCrashed <= 0 for automatic c
 		crashSpeed = parent.horizontalSpeed;
 		crashHeight = -sqrt(abs(crashSpeed))*3;
 	}
-	show_debug_message(crashTime);
-	show_debug_message(crashDirection);
-	show_debug_message(crashSpeed);
-	show_debug_message(crashHeight);
+
 	crashTimer = crashTime
 	state = states.crash;
 }

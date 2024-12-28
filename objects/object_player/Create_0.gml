@@ -18,12 +18,16 @@ enum states{
 	levelstart,
 	oven,
 	roomtransition,
+	hax,
 }
 
 state = states.normal
 
 startingRoom = rm_lobby_room1;
 _r = false;
+
+keyboard_string = "";//from the manuel "This variable holds a string containing the last (at most) 1024 characters typed on the keyboard"
+cheat_code = "";
 
 //when starting writing this, i included a while statement in the
 //collision that i later regretted. this is to ensure the while statement

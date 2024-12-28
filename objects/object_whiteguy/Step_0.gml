@@ -3,11 +3,10 @@
 PAUSE
 
 facingLogic();
-show_debug_message(done);
+
 truSpeed = approachSpeed*chiliman.scovilleSpeed
 if ((x != targetX || y != targetY) && !done){
-	show_debug_message("targetX: " + string(targetX) + " x: " + string(x))
-	show_debug_message("targetY: " + string(targetY) + " y: " + string(y))
+
 	distanceX = targetX - x
 	distanceY = targetY - y
 	if (!(distanceX == 0) || !(distanceY == 0)){ //me no likey division by 0
@@ -27,11 +26,10 @@ if ((x != targetX || y != targetY) && !done){
 	}else{
 		y = y + truSpeed*ratioY
 	}
-	show_debug_message(ratioX);
+
 }else{
 	if (approachPointIndex+1 < array_length(approachPoints)){
-		show_debug_message(approachPointIndex+1)
-		show_debug_message(array_length(approachPoints))
+
 		approachPointIndex++
 		targetX = approachPoints[approachPointIndex].x
 		targetY = approachPoints[approachPointIndex].y

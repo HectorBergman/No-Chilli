@@ -79,5 +79,6 @@ function returnToNormal(){
 
 function undashable(){
 	return state == states.crash || state == states.dead || state == states.slide || state = states.oven
-	|| state == states.levelcomplete || state == states.levelstart || state == states.roomtransition
+	|| state == states.levelcomplete || state == states.levelstart || state == states.roomtransition ||
+	state == states.hax
 }
