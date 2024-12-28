@@ -11,6 +11,7 @@ function cheats(){
 	    case "haaax":
 	        state = states.hax
 			show_debug_message("HAAAAAAAAAAAAAX!")
+			keyboard_string = "";
 	    break;
 
 	   default: break;

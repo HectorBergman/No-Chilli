@@ -1,15 +1,29 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 PAUSE
-collided = instance_place(x, y, object_wall);
-if (collided != noone && object_get_parent(collided.object_index) != obj_ovenfamily){ //&& collided != chiliman && collided.object_index != object_debris) {
-	objectEaten(collided);
-	instance_destroy(collided);
-	collided = noone;
+
+
+var _list = ds_list_create();
+var _num = instance_place_list(x, y, obj_trait_eatable, _list, false);
+show_debug_message("new")
+if _num > 0
+{
+    for (var i = 0; i < _num; ++i;)
+    {
+		if (!object_is_ancestor(_list[| i].object_index, obj_ovenfamily)){
+			show_debug_message(string(object_get_name(_list[| i].object_index)))
+			show_debug_message(_list[| i].id)
+			objectEaten(_list[| i]);
+			instance_destroy(_list[| i]);
+		}
+    }
 }
 
-collided = instance_place(x,y, obj_aspargusSpear);
+ds_list_destroy(_list);
+
+
+
+/*collided = instance_place(x,y, obj_aspargusSpear);
 if (collided != noone){
 	objectEaten(collided);
 	instance_destroy(collided);
@@ -21,7 +35,7 @@ if (collided != noone){
 	objectEaten(collided);
 	instance_destroy(collided);
 	collided = noone;
-}
+}*/
 image_xscale = parent.image_xscale;
 image_angle = parent.image_angle;
 x = parent.x

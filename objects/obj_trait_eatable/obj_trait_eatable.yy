@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_trait_landable",
+  "%Name":"obj_trait_eatable",
   "eventList":[],
   "managed":true,
-  "name":"obj_trait_landable",
+  "name":"obj_trait_eatable",
   "overriddenProperties":[],
   "parent":{
     "name":"traits",
     "path":"folders/Objects/traits.yy",
   },
-  "parentObjectId":{
-    "name":"obj_trait_eatable",
-    "path":"objects/obj_trait_eatable/obj_trait_eatable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
