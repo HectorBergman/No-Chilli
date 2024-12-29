@@ -8,6 +8,8 @@ if (prev_timer != noone) && (prev_timer != self){
 global.speedrun_timer = 0;
 
 
+
+
 function unCountable(){
 	return chiliman.state == states.levelstart || chiliman.state == states.roomtransition
 }

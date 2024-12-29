@@ -9,5 +9,7 @@ function completeFall(){
 	if (completeFallTimer > 0){
 		playerFall(self);
 		playerVerticalCollision(self);
+	}else{
+		object_set_visible(object_player, false);
 	}
 }

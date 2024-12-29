@@ -90,6 +90,7 @@ _keyShift = 0;
 cam = view_get_camera(0);
 depth = 0;
 
+topSpeed = 0;
 bugtestcount = 0;
 
 ovenEntered = false;

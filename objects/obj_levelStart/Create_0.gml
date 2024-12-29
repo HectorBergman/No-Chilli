@@ -6,3 +6,4 @@ enum levelstartstates{
 	active,
 }
 levelstartstate = levelstartstates.normal
+

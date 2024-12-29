@@ -106,4 +106,8 @@ switch(state){
 }
 playerSpriteLogic(self);
 
+if (abs(horizontalSpeed) > topSpeed){
+	topSpeed = abs(horizontalSpeed);
+}
+
 

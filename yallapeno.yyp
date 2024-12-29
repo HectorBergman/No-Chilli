@@ -188,6 +188,7 @@
     {"id":{"name":"object_OLSClouds_cutscene","path":"objects/object_OLSClouds_cutscene/object_OLSClouds_cutscene.yy",},},
     {"id":{"name":"object_OLSClouds","path":"objects/object_OLSClouds/object_OLSClouds.yy",},},
     {"id":{"name":"object_player","path":"objects/object_player/object_player.yy",},},
+    {"id":{"name":"object_quirkycam","path":"objects/object_quirkycam/object_quirkycam.yy",},},
     {"id":{"name":"object_ring","path":"objects/object_ring/object_ring.yy",},},
     {"id":{"name":"object_roomTransition_destination","path":"objects/object_roomTransition_destination/object_roomTransition_destination.yy",},},
     {"id":{"name":"object_roomTransition_new","path":"objects/object_roomTransition_new/object_roomTransition_new.yy",},},
@@ -218,6 +219,7 @@
     {"id":{"name":"rm_oven_2","path":"rooms/rm_oven_2/rm_oven_2.yy",},},
     {"id":{"name":"rm_oven_3","path":"rooms/rm_oven_3/rm_oven_3.yy",},},
     {"id":{"name":"rm_playcutscene","path":"rooms/rm_playcutscene/rm_playcutscene.yy",},},
+    {"id":{"name":"rm_quickie","path":"rooms/rm_quickie/rm_quickie.yy",},},
     {"id":{"name":"rm_realGs_1","path":"rooms/rm_realGs_1/rm_realGs_1.yy",},},
     {"id":{"name":"rm_realGs_1p5","path":"rooms/rm_realGs_1p5/rm_realGs_1p5.yy",},},
     {"id":{"name":"rm_realGs_1p6","path":"rooms/rm_realGs_1p6/rm_realGs_1p6.yy",},},
@@ -627,6 +629,7 @@
     {"roomId":{"name":"rm_realGs_5","path":"rooms/rm_realGs_5/rm_realGs_5.yy",},},
     {"roomId":{"name":"rm_realGs_6","path":"rooms/rm_realGs_6/rm_realGs_6.yy",},},
     {"roomId":{"name":"rm_realGs_7","path":"rooms/rm_realGs_7/rm_realGs_7.yy",},},
+    {"roomId":{"name":"rm_quickie","path":"rooms/rm_quickie/rm_quickie.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
