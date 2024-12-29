@@ -12,7 +12,7 @@ if (place_meeting(x,y,chiliman)){
 		var _parent = parent;
 		with(chiliman){
 			initiateCrash(40, _parent);
-			horizontalSpeed *= 1.2;
+			crashSpeed *= 0.7;
 		}
 	}
 }

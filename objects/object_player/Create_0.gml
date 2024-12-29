@@ -91,7 +91,10 @@ cam = view_get_camera(0);
 depth = 0;
 
 topSpeed = 0;
+crashCount = 0;
+
 bugtestcount = 0;
+
 
 ovenEntered = false;
 ovenState = 0;

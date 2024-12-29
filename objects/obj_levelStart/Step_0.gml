@@ -7,6 +7,7 @@ if (place_meeting(x, y, chiliman) && levelstartstate != levelstartstates.inactiv
 	chiliman.inLevel = true;
 	global.currentLevel = levelname;
 	chiliman.topSpeed = 0;
+	chiliman.crashCount = 0;
 }
 
 switch(levelstartstate){

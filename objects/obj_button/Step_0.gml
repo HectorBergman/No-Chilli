@@ -29,6 +29,12 @@ if (position_meeting(mouse_x, mouse_y, id) && !isQuirkyRoom()){
 			global.pausable = true;
 			resetLevel();
 			exit;
+		}else if toRoom == -73{
+			resetEverything(false, false)
+			instance_destroy(obj_button);
+			toRoom = rm_lobby_room1
+			global.pausable = true;
+			chiliman.state = states.normal;
 		}
 		if (toRoom == rm_title){
 			resetEverything()

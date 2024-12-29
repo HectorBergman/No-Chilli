@@ -1,7 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
 
-downShift = 180;
+
+downShift = 180; // to make space for lvl title
 
 function timeReformatter(secondsTotal){
 	//give us mins and secs instead of a secondsTotal
@@ -51,7 +50,7 @@ levelname =  global.currentLevel;
 afterDoneTimer = 0;
 afterDoneIncrement = 0;
 afterDoneSpacing = 60;
-afterDoneBuffer = 180;
+afterDoneBuffer = 120;
 
 //saves the time
 function saveTime(minutes, seconds){

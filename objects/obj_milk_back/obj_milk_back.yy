@@ -11,7 +11,10 @@
     "name":"milk",
     "path":"folders/Objects/interactable/milk.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"object_wall",
+    "path":"objects/object_wall/object_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

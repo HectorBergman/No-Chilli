@@ -1,8 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
+
+
 var levelNameString = "[scale,12][$eee7e7]" + levelname;
 var levelline = scribble(levelNameString).outline($000023);
-levelline.draw(48,48)
+levelline.draw(36,48)
 
 var _string = "[scale,9][$eee7e7]Time: " + string_format(displayedMinutes, 2, 0) + ":" + string_format(displayedSeconds, 2, 2);
 var line = scribble(_string).outline($000023);
@@ -27,7 +27,7 @@ if (afterDoneIncrement > 1){
 	speedLine.draw(60, 372+downShift);
 }
 if (afterDoneIncrement > 2){
-	speedString = "[scale,6][$eee7e7]Top Speed: " + string(global.topSpeed);
-	speedLine = scribble(speedString).outline($000023);
-	speedLine.draw(60, 480+downShift);
+	var crashString = "[scale,6][$eee7e7]Crashes: " + string(global.crashCount);
+	var crashLine = scribble(crashString).outline($000023);
+	crashLine.draw(60, 480+downShift);
 }

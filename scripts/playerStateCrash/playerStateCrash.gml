@@ -37,6 +37,7 @@ function playerStateCrash(){
 }
 
 function initiateCrash(timeCrashed, parent){ // timeCrashed <= 0 for automatic crashtime
+	crashCount++;
 	leftHeldTimer = 0;
 	rightHeldTimer = 0;
 

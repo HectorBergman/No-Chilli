@@ -5,14 +5,13 @@ PAUSE
 
 var _list = ds_list_create();
 var _num = instance_place_list(x, y, obj_trait_eatable, _list, false);
-show_debug_message("new")
+
 if _num > 0
 {
     for (var i = 0; i < _num; ++i;)
     {
 		if (!object_is_ancestor(_list[| i].object_index, obj_ovenfamily)){
-			show_debug_message(string(object_get_name(_list[| i].object_index)))
-			show_debug_message(_list[| i].id)
+
 			objectEaten(_list[| i]);
 			instance_destroy(_list[| i]);
 		}

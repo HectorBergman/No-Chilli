@@ -6,11 +6,15 @@ if (!ds_list_empty(list)){
 	
 
 	var destroy = ds_list_find_value(list, 0);
-	var destroyparent = object_get_parent(destroy.object_index)
-	if (destroyparent == object_wall){
-		objectEaten(destroy);
-		instance_destroy(destroy);
+	try{
+		var destroyparent = object_get_parent(destroy.object_index)
+	
+		if (destroyparent == object_wall){
+			objectEaten(destroy);
+			instance_destroy(destroy);
+		}
 	}
 	ds_list_delete(list, 0);
+		
 }
 	
