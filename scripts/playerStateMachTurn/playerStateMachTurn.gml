@@ -63,12 +63,12 @@ function turningLogic(){
 		audio_stop_sound(snd_brake2) 
 		audio_stop_sound(snd_brake3) 
 	}
-	if (moveRight-moveLeft == -turnDirection){
+	if (moveRight-moveLeft == -turnDirection && run){
 		enterMach(false, moveRight-moveLeft)
 		if (horizontalSpeed == 0){
 			horizontalSpeed = (moveRight-moveLeft);
 		}
-	}else if (halfTurn && moveRight-moveLeft == turnDirection && run){ //if you're halfturning (AKA stopping), and you
+	}else if (halfTurn && moveRight-moveLeft == turnDirection && run && !turnDisabled){ //if you're halfturning (AKA stopping), and you
 													           	      // decide you actually wanna turn
 		halfTurn = false;
 	}else if (turnTimer > turnTime-turnTimerBrakeStop){ //braking
@@ -80,7 +80,9 @@ function turningLogic(){
 		
 		horizontalSpeed = 0;
 	}else if (moveRight-moveLeft == turnDirection){ //running again
-
+		show_debug_message("____________")
+		show_debug_message(moveRight-moveLeft)
+		show_debug_message(turnDirection)
 		if (!place_meeting(x, y + 0.1, object_wall)){
 			if (!downPressed){
 				airTime = givenAirTime; //atm 20 but doublecheck lol

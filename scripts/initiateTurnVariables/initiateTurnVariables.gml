@@ -10,7 +10,8 @@ function initiateTurnVariables(){
 	baseOLSSpeed = 7;
 	offLikeAShotSpeed = baseOLSSpeed; //horizontal speed right after finishing turn
 	halfTurn = false; //stop after brake, return to normal state
-	
+	dropShiftTurn = false; //brake by dropping shift. im doing this because
+	//past me is a MORON!!!
 	
 	baseTurnGrav = 1;
 	turnGrav = baseTurnGrav

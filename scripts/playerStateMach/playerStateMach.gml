@@ -57,7 +57,7 @@ function playerStateMach(){
 	
 		if ((!(_keyShift > 0) || (!(moveLeft) && !(moveRight))) && onGround >= 10){
 			
-			turn = sign(horizontalSpeed)
+			turn = -sign(horizontalSpeed)
 			startTurn(turn, true);	
 		}else if (onGround <= 9 && down && diveTimer < 1 && !diveDisabled){
 			state = states.dive
@@ -68,16 +68,13 @@ function playerStateMach(){
 		//show_debug_message("rightHeldTimer: " + string(rightHeldTimer));
 		//show_debug_message("leftHeldTimer: " + string(leftHeldTimer));
 	}else{
-		if ((!moveRight && !moveLeft) || !run){
-			
-			determineTurnDirectionAndTurn(true);
+		if (run){
+			dropShiftTurn = false;
 		}else{
-			determineTurnDirectionAndTurn(false);
+			dropShiftTurn = true;
 		}
-		
+		determineTurnDirectionAndTurn(true);
 	}
-	
-	
 }
 
 function determineMachLevel(){
