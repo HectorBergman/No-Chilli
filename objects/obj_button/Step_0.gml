@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 cam = instance_find(object_zcamera, 0);
-if (instance_exists(object_zcamera)){
+if (instance_exists(object_zcamera) && room != menu_score){
 	image_xscale = cam.camWidth/640
 	image_yscale = cam.camHeight/360
 	//x = baseX*cam.camWidth/360

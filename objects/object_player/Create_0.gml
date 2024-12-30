@@ -67,6 +67,11 @@ initiateDeathVariables();
 
 initiateSoundVariables();
 
+dashDisabled = false;
+turnDisabled = false;
+diveDisabled = false;
+wallBounceDisabled = false;
+
 inLevel = false;
 levelStartTime = 60;
 levelStartTimer = -1;

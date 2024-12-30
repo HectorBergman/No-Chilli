@@ -13,7 +13,9 @@ if (keyboard_check(vk_space)){ //skip everything if spacebar
 
 if (!is_undefined(_prevMinutes)){
 	if (displayedSecondsTotal < _prevMinutes*60+_prevSeconds){
-		newRecordText = "[scale,3][$eece5d]New Record!"
+		newRecordText = "[wave][scale,3][$eece5d]New Record!"
+	
+		
 		//TODO: add sound fx
 	}
 }
@@ -25,13 +27,21 @@ displayedSeconds = displayedMinutesAndSeconds[1];
 if (afterDoneIncrement == 4 && afterDoneTimer == 240){
 	show_debug_message("hi")
 	buttonStruct = {
-		toRoom: -73,
+		toRoom: -73, // to lobby
 		spriteName: spr_quit,
-		image_xscale: 1,
-		image_yscale: 1,
+		image_xscale: 3,
+		image_yscale: 3,
 		
 	}
-	instance_create_depth(0, 0, -99, obj_button, buttonStruct)
+	instance_create_depth(3*50+960, 3*50+35*6, -99, obj_button, buttonStruct)
+	buttonStruct = {
+		toRoom: -71, //to title
+		spriteName: spr_quit,
+		image_xscale: 3,
+		image_yscale: 3,
+		
+	}
+	instance_create_depth(3*50+960, 3*50+35*6+60*3+30*3, -99, obj_button, buttonStruct)
 }
 
 if (countdownDone){

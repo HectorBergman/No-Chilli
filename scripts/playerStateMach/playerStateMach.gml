@@ -59,7 +59,7 @@ function playerStateMach(){
 			
 			turn = sign(horizontalSpeed)
 			startTurn(turn, true);	
-		}else if (onGround <= 9 && down && diveTimer < 1){
+		}else if (onGround <= 9 && down && diveTimer < 1 && !diveDisabled){
 			state = states.dive
 			var totalSpeed = ((horizontalSpeed + sign(horizontalSpeed)*abs(verticalSpeed)));
 			horizontalSpeed = totalSpeed;
@@ -89,9 +89,13 @@ function determineTurnDirectionAndTurn(half){
 	if (half){
 		turn = -sign(horizontalSpeed);
 	}else{
-		turn = -sign(horizontalSpeed);
+		turn = -sign(horizontalSpeed);//this is stupid
 	}
-	startTurn(turn, half);	
+	if (half || !turnDisabled){
+		startTurn(turn, half);
+	}else{
+		startTurn(turn, true);
+	}
 }
 
 function runClouds(){

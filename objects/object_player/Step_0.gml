@@ -34,7 +34,7 @@ ringCooldown--
 if (dashCooldown != 0){
 	dashCooldown--
 }
-if (dashCooldown < 1 && !undashable()){
+if (dashCooldown < 1 && !undashable() && !dashDisabled){
 	if (dashUp || dashLeft || 
 		dashDown || dashRight ) {
 		oldHorizontalSpeed = horizontalSpeed;
