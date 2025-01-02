@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"button",
-    "path":"folders/Objects/button.yy",
+    "path":"folders/Objects/interactable/button.yy",
   },
   "parentObjectId":null,
   "persistent":false,
