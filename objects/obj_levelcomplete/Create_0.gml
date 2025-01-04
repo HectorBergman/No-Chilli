@@ -74,4 +74,4 @@ function saveTime(minutes, seconds){
 	}
 }
 
-//saveTime(levelMinutes, levelSeconds);
+saveTime(levelMinutes, levelSeconds);

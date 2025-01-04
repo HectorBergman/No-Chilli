@@ -7,14 +7,14 @@ if (instance_exists(parent)){
 		var x_offset = 0;
 		var y_offset = 0;
 		if (notifInfo.angle == 0){
-			y_offset = 25
+			y_offset = -offset
 		}else if(notifInfo.angle == 90){
-			x_offset = -25
+			x_offset = -offset
 		}else if(notifInfo.angle == 180){
-			y_offset = 25
+			y_offset = offset
 		}else if(notifInfo.angle == 270){
-			x_offset = 25
+			x_offset = offset
 		}
-		draw_sprite_ext(parent.sprite_index, 0 , notifInfo.x+x_offset, notifInfo.y+y_offset, image_xscale, image_yscale, 0 ,c_white, 1)
+		draw_sprite_ext(parent.sprite_index, 0 , notifInfo.x+image_xscale*x_offset, notifInfo.y+image_yscale*y_offset, image_xscale, image_yscale, 0 ,c_white, 1)
 	}
 }

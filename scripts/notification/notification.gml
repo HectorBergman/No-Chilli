@@ -106,6 +106,7 @@ function summonNotification(){
 }
 
 function getNotificationCoords(target){
+	var padding = 50;
 	var camX = camera_get_view_x(view_camera[0]);
 	var camY = camera_get_view_y(view_camera[0]);
 
@@ -114,6 +115,19 @@ function getNotificationCoords(target){
 	
 	var clamped_x = clamp(target.x, camX, camX + camera_get_view_width(camera_get_active()))
 	var clamped_y = clamp(target.y, camY, camY + camera_get_view_height(camera_get_active()))
+	
+	if (target.x < camX + padding) {
+		clamped_x = camX + padding;
+	} else if (target.x > camX + camera_get_view_width(view_camera[0]) - padding) {
+		clamped_x = camX + camera_get_view_width(view_camera[0]) - padding;
+	}
+
+	if (target.y < camY + padding) {
+		clamped_y = camY + padding;
+	} else if (target.y > camY + camera_get_view_height(view_camera[0]) - padding) {
+		clamped_y = camY + camera_get_view_height(view_camera[0]) - padding;
+	}
+
 	
 	return { x: clamped_x, y: clamped_y };
 }

@@ -13,4 +13,6 @@ function initiateDashVariables(){
 	//if dash only lasts x frames, give dash back, no cooldown
 	timeInDash = 0;
 	timeLimitInDash = 3;
+	
+	dashSpeed = 16;
 }

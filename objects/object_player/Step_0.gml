@@ -39,19 +39,19 @@ if (dashCooldown < 1 && !undashable() && !dashDisabled){
 		dashDown || dashRight ) {
 		oldHorizontalSpeed = horizontalSpeed;
 		if (dashUp){
-			verticalSpeed = -20;
+			verticalSpeed = -dashSpeed;
 			horizontalSpeed = 0;
 		}
 		else if (dashLeft){
-			horizontalSpeed = -20;
+			horizontalSpeed = -dashSpeed;
 			verticalSpeed = 0;
 		}
 		else if (dashDown){
-			verticalSpeed = 20;
+			verticalSpeed = dashSpeed;
 			horizontalSpeed = 0;
 		}
 		else if (dashRight){
-			horizontalSpeed = 20;
+			horizontalSpeed = dashSpeed;
 			verticalSpeed = 0;
 		}
 		dashCooldown = dashCooldownTime;

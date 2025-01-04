@@ -217,6 +217,8 @@
     {"id":{"name":"rm_3tutorial_3","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},},
     {"id":{"name":"rm_3tutorial_4","path":"rooms/rm_3tutorial_4/rm_3tutorial_4.yy",},},
     {"id":{"name":"rm_3tutorial_5","path":"rooms/rm_3tutorial_5/rm_3tutorial_5.yy",},},
+    {"id":{"name":"rm_3tutorial_6","path":"rooms/rm_3tutorial_6/rm_3tutorial_6.yy",},},
+    {"id":{"name":"rm_3tutorial_7","path":"rooms/rm_3tutorial_7/rm_3tutorial_7.yy",},},
     {"id":{"name":"rm_3tutorial_templ","path":"rooms/rm_3tutorial_templ/rm_3tutorial_templ.yy",},},
     {"id":{"name":"rm_autobahn","path":"rooms/rm_autobahn/rm_autobahn.yy",},},
     {"id":{"name":"rm_deathscreen","path":"rooms/rm_deathscreen/rm_deathscreen.yy",},},
@@ -645,6 +647,8 @@
     {"roomId":{"name":"rm_3tutorial_3","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},},
     {"roomId":{"name":"rm_3tutorial_4","path":"rooms/rm_3tutorial_4/rm_3tutorial_4.yy",},},
     {"roomId":{"name":"rm_3tutorial_5","path":"rooms/rm_3tutorial_5/rm_3tutorial_5.yy",},},
+    {"roomId":{"name":"rm_3tutorial_6","path":"rooms/rm_3tutorial_6/rm_3tutorial_6.yy",},},
+    {"roomId":{"name":"rm_3tutorial_7","path":"rooms/rm_3tutorial_7/rm_3tutorial_7.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
