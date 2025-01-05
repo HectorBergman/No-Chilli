@@ -1,4 +1,6 @@
 
+afterDoneTimerFinish = 300;
+afterDoneIncrementFinish = 5;
 
 downShift = 180; // to make space for lvl title
 
@@ -36,6 +38,17 @@ function countDownTime(){
 		countdownDone = true;
 	}
 }
+
+function getMedal(){
+	 for (var i = 0; i < 4; ++i;){
+		 show_debug_message(global.medalRequirements[i][0]);
+		 show_debug_message(levelSecondsTotal);
+		 if (global.medalRequirements[i][0] >= levelSecondsTotal){
+			 return i;
+		 }
+	 }
+}
+medal = getMedal();
 
 
 _prevMinutes = variable_struct_get(global.game_data, global.currentLevel + "Minutes")

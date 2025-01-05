@@ -34,3 +34,12 @@ if (afterDoneIncrement > 2){
 	var crashLine = scribble(crashString).outline($000023);
 	crashLine.draw(60, 480+downShift);
 }
+
+if (afterDoneIncrement > 3){
+	if (medal < 4){
+		var sprite = asset_get_index("spr_" + global.medalRequirements[medal][1]);
+		draw_sprite_ext(sprite, 0, 690, 222+downShift, 6, 6, 0, c_white, 1)
+	}else{
+		//play womp womp sfx
+	}
+}

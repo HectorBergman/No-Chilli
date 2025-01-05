@@ -178,4 +178,7 @@ function levelstartSpriteLogic(){
 	}else{
 		sprite_index = spr_player_stand
 	}
+	if (moveRight-moveLeft != 0){
+		image_xscale = -(moveRight-moveLeft)
+	}
 }

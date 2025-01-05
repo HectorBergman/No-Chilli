@@ -8,6 +8,7 @@ if (place_meeting(x, y, chiliman) && levelstartstate != levelstartstates.inactiv
 	global.currentLevel = levelname;
 	chiliman.topSpeed = 0;
 	chiliman.crashCount = 0;
+	global.medalRequirements = [[platinumRequirement, "platinum"], [goldRequirement, "gold"], [silverRequirement, "silver"], [bronzeRequirement, "bronze"]];
 }
 
 switch(levelstartstate){

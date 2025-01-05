@@ -33,7 +33,9 @@ function diveVerticalCollision(){
 		}
 		var _vStep = sign(verticalSpeed);
 		verticalSpeed = 0;
-		enterMach(false, horizontalSpeed);
+		enterMach(false, sign(horizontalSpeed));
+		var _dir = sign(horizontalSpeed);
+		horizontalSpeed = clamp((abs(horizontalSpeed)-2)*0.95, 0, 9999)*_dir;
 		slideTimer = slideTime-20;
 		diveTimer = diveTime;
 		stepCollisionWhileWithFailCon(obj_trait_landable, _vStep, false)

@@ -2,9 +2,9 @@
 //checks if time being counted down gets lower than the previous record, and then displays
 //new record text by changing an empty string that is already being drawn
 if (keyboard_check(vk_space)){ //skip everything if spacebar
-	afterDoneTimer = 240
+	afterDoneTimer = afterDoneTimerFinish;
 	afterDoneBuffer = 120
-	afterDoneIncrement = 4;
+	afterDoneIncrement = afterDoneIncrementFinish;
 	countdownDone = true;
 	displayedSecondsTotal = levelSecondsTotal
 	displayedMinutes = levelMinutes
@@ -24,7 +24,7 @@ displayedMinutesAndSeconds = timeReformatter(displayedSecondsTotal);
 displayedMinutes = displayedMinutesAndSeconds[0];
 displayedSeconds = displayedMinutesAndSeconds[1];
 
-if (afterDoneIncrement == 4 && afterDoneTimer == 240){
+if (afterDoneIncrement == afterDoneIncrementFinish && afterDoneTimer == afterDoneTimerFinish){
 	show_debug_message("hi")
 	buttonStruct = {
 		toRoom: -73, // to lobby
