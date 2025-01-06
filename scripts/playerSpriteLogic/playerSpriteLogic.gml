@@ -118,19 +118,11 @@ function slideSpriteLogic(){
 	
 	if (!slideWalking){
 		sprite_index = spr_player_slide
-		if (lastMove != 0){
-			image_xscale = (lastMove);
+		image_xscale = sign(horizontalSpeed);
 		
-		}else{
-			image_xscale = 1
-		}
 	}else if (horizontalSpeed == 0 || (place_meeting(x + slideMove*0.5, y , object_wall))){
 		sprite_index = spr_player_slide
-	
-		
-		
-		
-			image_xscale = slideDirection
+		image_xscale = slideDirection
 		
 	}else{
 		sprite_index = spr_player_slideWalking
