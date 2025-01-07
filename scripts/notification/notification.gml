@@ -1,14 +1,34 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function createNotification(target, scalex, scaley, distance_x = 99999, distance_y = 99999){
+function createNotification(target, scalex, scaley, offset = 0, distance_x = 99999, distance_y = 99999){
 	var outsideCoords = getNotificationCoords(target)
 	isDrawn = (isNotInViewExtended(target) 
 	&& point_distance(target.x, 0, outsideCoords.x, 0) < distance_x) 
 	&& point_distance(0, target.y, 0, outsideCoords.y)
-	if (isDrawn){
-		draw_sprite_ext(spr_notification, 0, outsideCoords.x, outsideCoords.y, scalex, scaley, getNotificationAngle(target, outsideCoords.x, outsideCoords.y), c_white, 1)
+	var angle = getNotificationAngle(target, outsideCoords.x, outsideCoords.y, 64)
+	
+	var cornerSnap = snapToCorner([outsideCoords.x, outsideCoords.y], 64, target, 32, scalex, scaley);
+	var offsets = determineTruOffset(offset, angle);
+	
+	var x_offset = offsets[0];
+	var y_offset = offsets[1];
+	var _x = 0;
+	var _y = 0;
+	if (cornerSnap[0] != -1){
+		_x = cornerSnap[0]//+scalex*x_offset
+		_y = cornerSnap[1]//+scaley*y_offset
+	}else{
+		_x = outsideCoords.x
+		_y = outsideCoords.y
 	}
-	return {x: outsideCoords.x, y: outsideCoords.y, angle: getNotificationAngle(target, outsideCoords.x, outsideCoords.y), wasDrawn: isDrawn}
+
+	if (isDrawn){
+		draw_sprite_ext(spr_notification, 0, _x, _y, scalex, scaley, angle, c_white, 1)
+	}
+	//all this sucks VV
+	
+	//all this sucks ^^ 
+	return {x: _x, y: _y, angle: angle, wasDrawn: isDrawn}
 }
 
 function isInView(){
@@ -33,7 +53,68 @@ function isInView(){
 	}
 }
 
+function snapToCorner(coords, padding, target, snapPadding, scalex, scaley){//, x_offset, y_offset){
 
+	var view_x = camera_get_view_x(view_camera[0]);
+    var view_y = camera_get_view_y(view_camera[0]);
+	var view_width = camera_get_view_width(view_camera[0]);
+    var view_height = camera_get_view_height(view_camera[0]);
+	var _x = coords[0];
+	var _y = coords[1];
+
+	var notifCoords = getNotificationCoords(target);
+	var notifX = _x - camera_get_view_x(view_camera[0])
+	var notifY = _y - camera_get_view_y(view_camera[0])
+
+	// Corner coordinates
+	var top_left_x = 0;
+	var top_left_y = 0;
+
+	var top_right_x = view_width;
+	var top_right_y = 0;
+
+	var bottom_left_x = 0;
+	var bottom_left_y = view_height;
+
+	var bottom_right_x = view_width;
+	var bottom_right_y = view_height;
+
+	// Get distances to each corner
+	var dist_top_left = point_distance(notifX, notifY, 0, 0);
+	var dist_top_right = point_distance(notifX, notifY, view_width, 0);
+	var dist_bottom_left = point_distance(notifX, notifY, 0, view_height);
+	var dist_bottom_right = point_distance(notifX, notifY, view_width, view_height);
+
+	
+	var min_dist = min(dist_top_left, dist_top_right, dist_bottom_left, dist_bottom_right);
+	show_debug_message("notifX: " + string(notifX) + "notifY: " + string(notifY));
+	if (min_dist == dist_top_left) {
+		if (notifX <= padding) {
+			if (notifY <= padding) {
+				return [view_x + snapPadding*scalex, view_y + snapPadding*scaley]
+			}
+		}
+	} else if (min_dist == dist_top_right) {
+		if (notifX >= view_width - padding) {
+			if (notifY <= padding) {
+				return [view_x - snapPadding*scalex + view_width, view_y + snapPadding*scaley]
+			}
+		}
+	} else if (min_dist == dist_bottom_left) {
+		if (notifX <= padding) {
+			if (notifY >= view_height - padding) {
+				return [view_x + snapPadding*scalex, view_y - snapPadding*scaley + view_height]
+			}
+		}
+	} else if (min_dist == dist_bottom_right) {
+		if (notifX >= view_width - padding) {
+			if (notifY >= view_height - padding) {
+				return [view_x - snapPadding*scalex + view_width, view_y - snapPadding*scaley + view_height]
+			}
+		}
+	}
+	return [-1, -1];
+}
 
 function isNotInViewExtended(target) {
     // Get view boundaries
@@ -60,7 +141,7 @@ function isNotInViewExtended(target) {
 /// @function getNotificationAngle()
 /// @return 0 if furthest below the screen, 90 if furthest to the left, 180 if furthest above, 270 if furthest to the right. Returns -1 if inside the screen.
 
-function getNotificationAngle(target, x, y) {
+function getNotificationAngle(target, notifX, notifY, cornerPadding = 32) {
     // Get view boundaries
     var view_x = camera_get_view_x(view_camera[0]);
     var view_y = camera_get_view_y(view_camera[0]);
@@ -77,7 +158,7 @@ function getNotificationAngle(target, x, y) {
     if (dist_below <= 0 && dist_left <= 0 && dist_above <= 0 && dist_right <= 0) {
         return -1;
     }
-	var corner = isNotificationInCorner(target, x, y);
+	var corner = isNotificationInCorner(target, notifX, notifY, cornerPadding);
 	if corner == -1{
 	    // Find the direction with the maximum distance
 	    var max_dist = max(dist_below, dist_left, dist_above, dist_right);
@@ -135,8 +216,8 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 	show_debug_message(x);
 	show_debug_message(y);
 	var notifCoords = getNotificationCoords(target);
-	var notifX = xCoord
-	var notifY = yCoord
+	var notifX = xCoord - camera_get_view_x(view_camera[0])
+	var notifY = yCoord - camera_get_view_y(view_camera[0])
 	
 	var view_width = camera_get_view_width(view_camera[0]);
 	var view_height = camera_get_view_height(view_camera[0]);
@@ -162,13 +243,13 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 
 	
 	var min_dist = min(dist_top_left, dist_top_right, dist_bottom_left, dist_bottom_right);
-
+	show_debug_message("notifX: " + string(notifX) + "notifY: " + string(notifY));
 	if (min_dist == dist_top_left) {
 		show_debug_message("top left 1/3");
 		if (notifX <= padding) {
 			show_debug_message("top left 2/3");
 			if (notifY <= padding) {
-				return 45;
+				return 225;
 				show_debug_message("top left 3/3");
 			}
 		}
@@ -177,7 +258,7 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 		if (notifX >= view_width - padding) {
 			show_debug_message("top right 2/3");
 			if (notifY <= padding) {
-				return 315;
+				return 135;
 				show_debug_message("top right 3/3");
 			}
 		}
@@ -186,7 +267,7 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 		if (notifX <= padding) {
 			show_debug_message("bottom left 2/3");
 			if (notifY >= view_height - padding) {
-				return 135;
+				return 315;
 				show_debug_message("bottom left 3/3");
 			}
 		}
@@ -195,7 +276,7 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 		if (notifX >= view_width - padding) {
 			show_debug_message("bottom right 2/3");
 			if (notifY >= view_height - padding) {
-				return 225;
+				return 45;
 				show_debug_message("bottom right 3/3");
 			}
 		}
