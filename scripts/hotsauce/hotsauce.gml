@@ -3,6 +3,8 @@
 function hotsauce(){
 	var collidedHotsauce = instance_place(x, y , object_hotsauce)
 	if (collidedHotsauce != noone){
+		audio_play_sound(snd_pickupSauce_2, 0, 0, 1, 0, calculatePickupPitch());
+		lastPickupTimer += 15;
 		scoville += collidedHotsauce.scoville
 		scovilleSpeed += collidedHotsauce.scovilleSpeedAdder;
 		decreaseTimer = decreaseTime;
@@ -10,4 +12,6 @@ function hotsauce(){
 	}
 }
 
-
+function calculatePickupPitch(){
+	return (1 + lastPickupTimer/150);
+}

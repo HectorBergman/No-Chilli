@@ -9,3 +9,5 @@ auraStruct = {
 	
 }
 aura = instance_create_depth(self.x, self.y, 10, obj_superhotsauce_aura, auraStruct)
+
+state = hotsauceStates.uncollected;

@@ -71,7 +71,10 @@ if (reset && inLevel){
 hotsauce();
 updateSpeed();
 touchingSalad = place_meeting(x, y+2, obj_salad);
-	
+if lastPickupTimer != 0{
+	lastPickupTimer -= max(1, floor(sqrt(lastPickupTimer/20))+0.35)
+	lastPickupTimer = max(lastPickupTimer, 0);
+}
 
 if (keyboard_check(vk_shift)){
 	_keyShift = 4;

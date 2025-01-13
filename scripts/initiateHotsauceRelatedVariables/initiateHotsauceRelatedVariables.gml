@@ -7,4 +7,5 @@ function initiateHotsauceRelatedVariables(){
 	decreaseTime = 200;
 	decreaseTimer = decreaseTime;
 	scovilleLoweringAmount = 30;
+	lastPickupTimer = 0; //this is for increasing the pitch of picking up a hotsauce, if timer is 0, normal pitch
 }
