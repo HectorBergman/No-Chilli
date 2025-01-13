@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
-timer += timeadd
-y = originalY + sin(timer)*4
+
+
+switch(state){
+	case hotsauceStates.uncollected: uncollectedLogic_super(); break;
+	case hotsauceStates.collected: break;
+}

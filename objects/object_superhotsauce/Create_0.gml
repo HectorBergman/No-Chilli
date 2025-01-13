@@ -11,3 +11,8 @@ auraStruct = {
 aura = instance_create_depth(self.x, self.y, 10, obj_superhotsauce_aura, auraStruct)
 
 state = hotsauceStates.uncollected;
+
+function uncollectedLogic_super(){
+	timer += timeadd
+	y = originalY + sin(timer)*4
+}
