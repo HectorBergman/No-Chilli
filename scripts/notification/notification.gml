@@ -87,7 +87,7 @@ function snapToCorner(coords, padding, target, snapPadding, scalex, scaley){//, 
 
 	
 	var min_dist = min(dist_top_left, dist_top_right, dist_bottom_left, dist_bottom_right);
-	show_debug_message("notifX: " + string(notifX) + "notifY: " + string(notifY));
+
 	if (min_dist == dist_top_left) {
 		if (notifX <= padding) {
 			if (notifY <= padding) {
