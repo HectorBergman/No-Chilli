@@ -6,3 +6,4 @@ if (instance_find(obj_deathScreen, 0) || instance_find(obj_relax, 0)){
 }else{
 	drawThis = true;
 }
+lowerPulse();

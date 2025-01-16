@@ -7,6 +7,8 @@ x = 0
 y = 0
 previousAngle = -75;
 angleJump = 2;
+
+pulse = 1;
 function needleAngle(_x){
 	//lagrange formula/revealed to me in a dream
 	//_x is abs of horizontalSpeed
@@ -45,4 +47,18 @@ function getNewAngle(){
 	}
 	
 	return returnAngle
+}
+
+function lowerPulse(){
+	if pulse != 1{
+		if pulse > 1.02{
+			if pulse > 1.1{
+				pulse *= 0.96
+			}else{
+				pulse *= 0.99
+			}
+		}else{
+			pulse = 1;
+		}
+	}
 }

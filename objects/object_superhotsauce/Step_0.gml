@@ -5,5 +5,5 @@ PAUSE
 
 switch(state){
 	case hotsauceStates.uncollected: uncollectedLogic_super(); break;
-	case hotsauceStates.collected: break;
+	case hotsauceStates.collected: hotsauceCollectedLogic(); break;
 }

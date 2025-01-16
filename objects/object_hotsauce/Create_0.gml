@@ -9,8 +9,10 @@ enum hotsauceStates{
 }
 state = hotsauceStates.uncollected;
 uiCoord = [];
-goalCoord = [30, 300]
+goalCoord = [100, 850]
 collectionScale = 2;
+sound = snd_pickupSauce_2
 
+pulseSize = 0.2
 cam = instance_find(object_zcamera, 0);
 camScale = 2.5 - 0.0015625*cam.camWidth

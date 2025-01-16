@@ -390,6 +390,8 @@
     {"name":"snd_OLS4","order":4,"path":"sounds/snd_OLS4/snd_OLS4.yy",},
     {"name":"snd_pickupSauce_1","order":1,"path":"sounds/snd_pickupSauce_1/snd_pickupSauce_1.yy",},
     {"name":"snd_pickupSauce_2","order":2,"path":"sounds/snd_pickupSauce_2/snd_pickupSauce_2.yy",},
+    {"name":"snd_pickupSauce_strong","order":3,"path":"sounds/snd_pickupSauce_strong/snd_pickupSauce_strong.yy",},
+    {"name":"snd_pickupSauce_super","order":4,"path":"sounds/snd_pickupSauce_super/snd_pickupSauce_super.yy",},
     {"name":"snd_select","order":1,"path":"sounds/snd_select/snd_select.yy",},
     {"name":"snd_trainRun","order":13,"path":"sounds/snd_trainRun/snd_trainRun.yy",},
     {"name":"snd_voice1","order":2,"path":"sounds/snd_voice1/snd_voice1.yy",},

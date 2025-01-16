@@ -467,6 +467,8 @@
     {"id":{"name":"snd_OLS4","path":"sounds/snd_OLS4/snd_OLS4.yy",},},
     {"id":{"name":"snd_pickupSauce_1","path":"sounds/snd_pickupSauce_1/snd_pickupSauce_1.yy",},},
     {"id":{"name":"snd_pickupSauce_2","path":"sounds/snd_pickupSauce_2/snd_pickupSauce_2.yy",},},
+    {"id":{"name":"snd_pickupSauce_strong","path":"sounds/snd_pickupSauce_strong/snd_pickupSauce_strong.yy",},},
+    {"id":{"name":"snd_pickupSauce_super","path":"sounds/snd_pickupSauce_super/snd_pickupSauce_super.yy",},},
     {"id":{"name":"snd_pickupSauce","path":"sounds/snd_pickupSauce/snd_pickupSauce.yy",},},
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},},
     {"id":{"name":"snd_trainRun","path":"sounds/snd_trainRun/snd_trainRun.yy",},},

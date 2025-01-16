@@ -26,3 +26,11 @@ function uncollectedLogic_strong(){
 	sintimer += timeadd
 	y = originalY + sin(sintimer)*6
 }
+sound = snd_pickupSauce_strong
+pulseSize = 0.8
+uiCoord = [];
+goalCoord = [100, 825]
+collectionScale = 2;
+
+cam = instance_find(object_zcamera, 0);
+camScale = 2.5 - 0.0015625*cam.camWidth

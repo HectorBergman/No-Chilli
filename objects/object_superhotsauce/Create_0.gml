@@ -16,3 +16,11 @@ function uncollectedLogic_super(){
 	timer += timeadd
 	y = originalY + sin(timer)*4
 }
+sound = snd_pickupSauce_super
+pulseSize = 2;
+uiCoord = [];
+goalCoord = [100, 800]
+collectionScale = 2;
+
+cam = instance_find(object_zcamera, 0);
+camScale = 2.5 - 0.0015625*cam.camWidth

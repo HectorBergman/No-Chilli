@@ -20,6 +20,7 @@ cheats();
 inputCalculator()
 stopAudios();
 
+
 //show_debug_message("TD" + string(turnDirection));
 //show_debug_message("move " + string(moveRight-moveLeft))
 //show_debug_message("moveRight " + string(moveRight))
