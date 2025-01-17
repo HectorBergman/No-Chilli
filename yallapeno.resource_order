@@ -399,6 +399,7 @@
     {"name":"snd_walk","order":10,"path":"sounds/snd_walk/snd_walk.yy",},
     {"name":"Sound6","order":2,"path":"sounds/Sound6/Sound6.yy",},
     {"name":"bg_oventemp","order":2,"path":"sprites/bg_oventemp/bg_oventemp.yy",},
+    {"name":"bg_realGs","order":3,"path":"sprites/bg_realGs/bg_realGs.yy",},
     {"name":"bg_temp","order":1,"path":"sprites/bg_temp/bg_temp.yy",},
     {"name":"discoPuke","order":8,"path":"sprites/discoPuke/discoPuke.yy",},
     {"name":"hitbox_brusselball","order":1,"path":"sprites/hitbox_brusselball/hitbox_brusselball.yy",},
