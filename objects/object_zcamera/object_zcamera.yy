@@ -10,8 +10,8 @@
   "name":"object_zcamera",
   "overriddenProperties":[],
   "parent":{
-    "name":"invisible",
-    "path":"folders/Objects/invisible.yy",
+    "name":"cams",
+    "path":"folders/Objects/invisible/cams.yy",
   },
   "parentObjectId":null,
   "persistent":true,

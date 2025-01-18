@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"object_quirkycam",
+  "%Name":"object_bgcam",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"object_quirkycam",
+  "name":"object_bgcam",
   "overriddenProperties":[],
   "parent":{
     "name":"cams",
     "path":"folders/Objects/invisible/cams.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -36,5 +35,5 @@
     "path":"sprites/discoPuke/discoPuke.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
