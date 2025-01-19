@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bg",
+  "%Name":"zobj_bg_object",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bg",
+  "name":"zobj_bg_object",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -27,17 +26,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"scrollSpeed","filters":[],"listItems":[],"multiselect":false,"name":"scrollSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"bgImage","filters":[],"listItems":[],"multiselect":false,"name":"bgImage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"bg_purpletemp","path":"sprites/bg_purpletemp/bg_purpletemp.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"bg_purpletemp","varType":5,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sprite_temp_whiteGuy",
-    "path":"sprites/sprite_temp_whiteGuy/sprite_temp_whiteGuy.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
