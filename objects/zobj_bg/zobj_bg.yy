@@ -11,8 +11,8 @@
   "name":"zobj_bg",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"bg objects",
+    "path":"folders/Objects/bg objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

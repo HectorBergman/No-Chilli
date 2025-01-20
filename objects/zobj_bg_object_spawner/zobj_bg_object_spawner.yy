@@ -8,8 +8,8 @@
   "name":"zobj_bg_object_spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"bg objects",
+    "path":"folders/Objects/bg objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -26,7 +26,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"frequency","filters":[],"listItems":[],"multiselect":false,"name":"frequency","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"frequency","filters":[],"listItems":[],"multiselect":false,"name":"frequency","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.02","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

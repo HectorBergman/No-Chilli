@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"zobj_bg_object",
+  "%Name":"zobj_bg_object_grayscale",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"zobj_bg_object",
+  "name":"zobj_bg_object_grayscale",
   "overriddenProperties":[],
   "parent":{
     "name":"bg objects",

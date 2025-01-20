@@ -1,5 +1,5 @@
 sprite_index = bgImage
-depth = 120
+depth = 999
 image_xscale = 0.5;
 image_yscale = image_xscale
 
