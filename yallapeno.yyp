@@ -19,10 +19,10 @@
     {"$GMFolder":"","%Name":"Notes","folderPath":"folders/Notes.yy","name":"Notes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ainitiationVariables","folderPath":"folders/Objects/ainitiationVariables.yy","name":"ainitiationVariables","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"bg objects","folderPath":"folders/Objects/bg objects.yy","name":"bg objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"blocks","folderPath":"folders/Objects/blocks.yy","name":"blocks","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"heatingrod","folderPath":"folders/Objects/blocks/heatingrod.yy","name":"heatingrod","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"oveb","folderPath":"folders/Objects/blocks/oveb.yy","name":"oveb","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"bg objects","folderPath":"folders/Objects/bg objects.yy","name":"bg objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"interactable","folderPath":"folders/Objects/interactable.yy","name":"interactable","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"aspargus","folderPath":"folders/Objects/interactable/aspargus.yy","name":"aspargus","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"button","folderPath":"folders/Objects/interactable/button.yy","name":"button","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -114,7 +114,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.6.0.157",
   },
   "name":"yallapeno",
   "resources":[
@@ -133,6 +133,7 @@
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_chickendrip","path":"objects/obj_chickendrip/obj_chickendrip.yy",},},
     {"id":{"name":"obj_coleslaw","path":"objects/obj_coleslaw/obj_coleslaw.yy",},},
+    {"id":{"name":"obj_cooldownMeter","path":"objects/obj_cooldownMeter/obj_cooldownMeter.yy",},},
     {"id":{"name":"obj_cuckoo_pendulum","path":"objects/obj_cuckoo_pendulum/obj_cuckoo_pendulum.yy",},},
     {"id":{"name":"obj_cuckoo","path":"objects/obj_cuckoo/obj_cuckoo.yy",},},
     {"id":{"name":"obj_cuckooparts","path":"objects/obj_cuckooparts/obj_cuckooparts.yy",},},
