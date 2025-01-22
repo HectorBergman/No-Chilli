@@ -6,6 +6,7 @@ if (isParent){
 		cooldownPercentage = (dashCooldownTime - dashCooldown)/dashCooldownTime
 		//sprite_index = 
 	}else if (cooldownType == "dive"){
+	}else if (cooldownType == "slide"){
 	}
 	meterStruct = {
 		isParent : false,
