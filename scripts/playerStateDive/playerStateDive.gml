@@ -38,7 +38,9 @@ function diveVerticalCollision(){
 		//dive spam nerf attempt
 		horizontalSpeed = clamp((abs(horizontalSpeed)-2)*0.9, 0, 9999)*_dir;
 		slideTimer = slideTime-20;
+		slideSetTime = slideTimer;
 		diveTimer = diveTime;
+		diveSetTime = diveTime
 		stepCollisionWhileWithFailCon(obj_trait_landable, _vStep, false)
 	}
 

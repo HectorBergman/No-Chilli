@@ -15,8 +15,10 @@ function initiateMachVariables(){
 	
 	diveTimer = 0;
 	diveTime = 20;
+	diveSetTime = 0;
 	slideTimer = 0;
 	slideTime = 15;
+	slideSetTime = 0;
 
 	cloudTimer = 0;
 }

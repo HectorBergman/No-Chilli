@@ -6,6 +6,7 @@ function levelstartStateActive(){
 		initiateRoomTransition(states.levelstart, 0, _id.to , noone)
 		startingRoom = _id.to;
 		diveTimer = 200;
+		diveSetTime = 200;
 		destinationNumber = _id.destinationNumber;
 		rightHeldTimer = 60;
 		levelStartTimer = levelStartTime;

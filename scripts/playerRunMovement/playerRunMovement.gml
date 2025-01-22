@@ -103,6 +103,7 @@ function checkForSlide(){
 
 function enterMach(resetTimer, newMachDirection){
 	diveTimer = diveTime;
+	diveSetTime = diveTime
 	downPressed = false;
 	state = states.mach;
 	machDirection = newMachDirection

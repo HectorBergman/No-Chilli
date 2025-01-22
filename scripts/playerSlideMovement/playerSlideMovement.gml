@@ -25,6 +25,7 @@ function slideHorizontalMovement(){
 
 function exitSlide(newState){
 	slideTimer = slideTime;
+	slideSetTime = slideTimer;
 	horizontalSpeed *= 0.875
 	slideWalking = false;
 	state = newState;

@@ -107,6 +107,7 @@
     {"$GMFolder":"","%Name":"playersprites","folderPath":"folders/Sprites/playersprites.yy","name":"playersprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"gips","folderPath":"folders/Sprites/playersprites/gips.yy","name":"gips","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI elements","folderPath":"folders/Sprites/UI elements.yy","name":"UI elements","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"cooldowns","folderPath":"folders/Sprites/UI elements/cooldowns.yy","name":"cooldowns","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -114,7 +115,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.0.157",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"yallapeno",
   "resources":[
@@ -519,6 +520,9 @@
     {"id":{"name":"spr_chickendrip","path":"sprites/spr_chickendrip/spr_chickendrip.yy",},},
     {"id":{"name":"spr_chilirelaxo","path":"sprites/spr_chilirelaxo/spr_chilirelaxo.yy",},},
     {"id":{"name":"spr_continue","path":"sprites/spr_continue/spr_continue.yy",},},
+    {"id":{"name":"spr_cooldown_dash","path":"sprites/spr_cooldown_dash/spr_cooldown_dash.yy",},},
+    {"id":{"name":"spr_cooldown_dive","path":"sprites/spr_cooldown_dive/spr_cooldown_dive.yy",},},
+    {"id":{"name":"spr_cooldown_slide","path":"sprites/spr_cooldown_slide/spr_cooldown_slide.yy",},},
     {"id":{"name":"spr_cuckoobody","path":"sprites/spr_cuckoobody/spr_cuckoobody.yy",},},
     {"id":{"name":"spr_cuckooclock","path":"sprites/spr_cuckooclock/spr_cuckooclock.yy",},},
     {"id":{"name":"spr_cuckoohead","path":"sprites/spr_cuckoohead/spr_cuckoohead.yy",},},
