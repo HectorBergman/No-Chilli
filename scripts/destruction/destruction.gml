@@ -26,7 +26,7 @@ function resetLevel(){
 	resetSpeed()
 	state = states.levelstart
 	chiliman.diveTimer = 200;
-	chiliman.diveSetTime = 200;
+	chiliman.diveSetTime = diveTimer;
 	chiliman.rightHeldTimer = 60;
 	chiliman.levelStartTimer = chiliman.levelStartTime;
 	chiliman.state = states.levelstart

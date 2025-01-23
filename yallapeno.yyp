@@ -115,7 +115,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.6.0.157",
   },
   "name":"yallapeno",
   "resources":[
@@ -456,7 +456,6 @@
     {"id":{"name":"__shd_scribble_bake_outline_8dir","path":"shaders/__shd_scribble_bake_outline_8dir/__shd_scribble_bake_outline_8dir.yy",},},
     {"id":{"name":"__shd_scribble_bake_shadow","path":"shaders/__shd_scribble_bake_shadow/__shd_scribble_bake_shadow.yy",},},
     {"id":{"name":"__shd_scribble","path":"shaders/__shd_scribble/__shd_scribble.yy",},},
-    {"id":{"name":"shWave","path":"shaders/shWave/shWave.yy",},},
     {"id":{"name":"_88_1_Skid__Cartoon_Short_Skid","path":"sounds/_88_1_Skid__Cartoon_Short_Skid/_88_1_Skid__Cartoon_Short_Skid.yy",},},
     {"id":{"name":"snd_brake1","path":"sounds/snd_brake1/snd_brake1.yy",},},
     {"id":{"name":"snd_brake2","path":"sounds/snd_brake2/snd_brake2.yy",},},
