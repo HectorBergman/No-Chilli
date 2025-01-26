@@ -62,7 +62,7 @@ if (dashCooldown < 1 && !undashable() && !dashDisabled){
 		state = states.dash;
 	}
 }
-if (reset && inLevel){
+if (reset && inLevel && global.pausable){
 	resetLevel();
 }
 /*try{

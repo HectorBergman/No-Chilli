@@ -49,7 +49,14 @@ function ringSpriteLogic(){
 }
 
 function dashSpriteLogic(){
-	sprite_index = spr_player_stand
+	if (horizontalSpeed != 0){
+		sprite_index = spr_player_dash_LR
+		image_xscale = -sign(horizontalSpeed);
+	}else if (verticalSpeed > 0){
+		sprite_index = spr_player_dash_U;
+	}else{
+		sprite_index = spr_player_dash_D;
+	}
 }
 
 function machSpriteLogic(){

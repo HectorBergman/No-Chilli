@@ -33,9 +33,13 @@ function countDownTime(){
 		}else{
 			displayedSecondsTotal = levelSecondsTotal
 		}
-		//TODO: add sound fx
-	}else{
+		if (!audio_is_playing(snd_drumroll)){
+			audio_play_sound(snd_drumroll,0,false);
+		}
+	}else if !countdownDone{
 		countdownDone = true;
+		audio_stop_sound(snd_drumroll);
+		audio_play_sound(snd_tada,0,false);
 	}
 }
 

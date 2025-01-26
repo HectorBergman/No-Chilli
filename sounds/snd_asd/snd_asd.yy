@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_asd",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":99.581726,
+  "name":"snd_asd",
+  "parent":{
+    "name":"menu",
+    "path":"folders/Sounds/menu.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_asd.ogg",
+  "type":0,
+  "volume":0.49,
+}

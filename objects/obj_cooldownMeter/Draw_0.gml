@@ -1,0 +1,1 @@
+draw_sprite(steam,0,-99,-99);

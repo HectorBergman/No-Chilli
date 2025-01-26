@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this edito
 PAUSE
+
 var _string = 0;
 if (levelStartTimer > 120){
 	_string = "Ready?";
@@ -10,7 +11,8 @@ if (levelStartTimer > 120){
 	_string = "Ready?";
 }
 if (levelStartTimer > 0){
-	draw_text_transformed(window_get_width()/2, window_get_height()/2, _string, 8, 8, 0);
+	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1000)
+		line.draw(window_get_width()/2-string_width_scribble(_string)*4, window_get_height()/2-string_height_scribble(_string)*4);
 	
 }else if (levelStartTimer == 0){
 	goTextLinger = goTextLingerTime;
@@ -18,7 +20,10 @@ if (levelStartTimer > 0){
 }
 
 if (goTextLinger > 0){
-	draw_text_transformed(window_get_width()/2, window_get_height()/2, "GO!", 8, 8, 0);
+	_string = "GO!"
+	
+	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1000)
+	line.draw(window_get_width()/2-string_width_scribble(_string)*4, window_get_height()/2-string_height_scribble(_string)*4);
 }
 
 if (state == states.roomtransition){ //roomtransition fade

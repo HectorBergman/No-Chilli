@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_applause",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":5.093878,
+  "name":"snd_applause",
+  "parent":{
+    "name":"menu",
+    "path":"folders/Sounds/menu.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_applause.mp3",
+  "type":0,
+  "volume":0.46,
+}

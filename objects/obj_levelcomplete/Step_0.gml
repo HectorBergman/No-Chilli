@@ -9,6 +9,7 @@ if (keyboard_check(vk_space)){ //skip everything if spacebar
 	displayedSecondsTotal = levelSecondsTotal
 	displayedMinutes = levelMinutes
 	displayedSeconds = levelSeconds;
+	audio_stop_all()
 }
 
 if (!is_undefined(_prevMinutes)){
@@ -51,7 +52,9 @@ if (countdownDone){
 		afterDoneTimer++
 		if (afterDoneTimer mod afterDoneSpacing == 0){
 			afterDoneIncrement++
-			//TODO: add sound fx
+			if (afterDoneIncrement < 4){
+				audio_play_sound(snd_result,0,false);
+			}
 		}
 	}
 }
