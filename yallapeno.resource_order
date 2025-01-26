@@ -503,6 +503,7 @@
     {"name":"spr_player_dash_U","order":27,"path":"sprites/spr_player_dash_U/spr_player_dash_U.yy",},
     {"name":"spr_player_dive","order":23,"path":"sprites/spr_player_dive/spr_player_dive.yy",},
     {"name":"spr_player_fall","order":3,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
+    {"name":"spr_player_hotass","order":29,"path":"sprites/spr_player_hotass/spr_player_hotass.yy",},
     {"name":"spr_player_hurt","order":24,"path":"sprites/spr_player_hurt/spr_player_hurt.yy",},
     {"name":"spr_player_jump_mach1","order":18,"path":"sprites/spr_player_jump_mach1/spr_player_jump_mach1.yy",},
     {"name":"spr_player_jump","order":4,"path":"sprites/spr_player_jump/spr_player_jump.yy",},

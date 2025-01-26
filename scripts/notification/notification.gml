@@ -243,41 +243,41 @@ function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 
 	
 	var min_dist = min(dist_top_left, dist_top_right, dist_bottom_left, dist_bottom_right);
-	show_debug_message("notifX: " + string(notifX) + "notifY: " + string(notifY));
+	//show_debug_message("notifX: " + string(notifX) + "notifY: " + string(notifY));
 	if (min_dist == dist_top_left) {
-		show_debug_message("top left 1/3");
+		//show_debug_message("top left 1/3");
 		if (notifX <= padding) {
-			show_debug_message("top left 2/3");
+			//show_debug_message("top left 2/3");
 			if (notifY <= padding) {
 				return 225;
-				show_debug_message("top left 3/3");
+				//show_debug_message("top left 3/3");
 			}
 		}
 	} else if (min_dist == dist_top_right) {
-		show_debug_message("top right 1/3");
+		//show_debug_message("top right 1/3");
 		if (notifX >= view_width - padding) {
-			show_debug_message("top right 2/3");
+			//show_debug_message("top right 2/3");
 			if (notifY <= padding) {
 				return 135;
-				show_debug_message("top right 3/3");
+				//show_debug_message("top right 3/3");
 			}
 		}
 	} else if (min_dist == dist_bottom_left) {
-		show_debug_message("bottom left 1/3");
+		//show_debug_message("bottom left 1/3");
 		if (notifX <= padding) {
-			show_debug_message("bottom left 2/3");
+			//show_debug_message("bottom left 2/3");
 			if (notifY >= view_height - padding) {
 				return 315;
-				show_debug_message("bottom left 3/3");
+				//show_debug_message("bottom left 3/3");
 			}
 		}
 	} else if (min_dist == dist_bottom_right) {
-		show_debug_message("bottom right 1/3");
+		//show_debug_message("bottom right 1/3");
 		if (notifX >= view_width - padding) {
-			show_debug_message("bottom right 2/3");
+			//show_debug_message("bottom right 2/3");
 			if (notifY >= view_height - padding) {
 				return 45;
-				show_debug_message("bottom right 3/3");
+				//show_debug_message("bottom right 3/3");
 			}
 		}
 	}

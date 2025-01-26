@@ -14,6 +14,7 @@ function playerSpriteLogic(_player){
 		case states.dive: diveSpriteLogic(); break;
 		case states.onball: ballSpriteLogic(); break;
 		case states.levelstart: levelstartSpriteLogic(); break;
+		case states.hotass: hotassSpriteLogic(); break;
 	}
 }
 function normalSpriteLogic(){
@@ -169,6 +170,15 @@ function mirrorSpriteAccordingToDirection(){
 	}else{
 		image_xscale = 1
 	}
+}
+
+function hotassSpriteLogic(){
+	if (moveRight-moveLeft != 0){
+		image_xscale = (moveRight-moveLeft);
+	}else{
+		image_xscale = 1
+	}
+	sprite_index = spr_player_hotass;
 }
 
 function levelstartSpriteLogic(){

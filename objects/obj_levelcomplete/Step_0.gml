@@ -26,7 +26,7 @@ displayedMinutes = displayedMinutesAndSeconds[0];
 displayedSeconds = displayedMinutesAndSeconds[1];
 
 if (afterDoneIncrement == afterDoneIncrementFinish && afterDoneTimer == afterDoneTimerFinish){
-	show_debug_message("hi")
+
 	buttonStruct = {
 		toRoom: -73, // to lobby
 		spriteName: spr_quit,

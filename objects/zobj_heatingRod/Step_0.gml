@@ -5,7 +5,7 @@ PAUSE
 if (image_angle == 0 && heat.on && (place_meeting(x,y-chiliman.verticalSpeed, chiliman) || place_meeting(x,y-1, chiliman))  && chiliman.state != states.onball ){
 	chiliman.hotassMax = 7;
 	
-	chiliman.verticalSpeed -= 12;
+	chiliman.verticalSpeed = -14;
 	if (chiliman.state != states.hotass){
 		audio_play_sound(snd_hotass, 1, false);
 	}
@@ -21,7 +21,7 @@ if (image_angle == 0 && heat.on && (place_meeting(x,y-chiliman.verticalSpeed, ch
 	}
 	chiliman.hotassMax = 15;
 
-	chiliman.verticalSpeed -= 4;
+	chiliman.verticalSpeed = -4;
 	chiliman.horizontalSpeed += -hotassDirection*12;
 	chiliman.state = states.hotass
 }
