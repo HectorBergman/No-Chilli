@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":52.79347,
+  "duration":52.129818,
   "name":"snd_drumroll",
   "parent":{
     "name":"menu",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_drumroll.mp3",
+  "soundFile":"snd_drumroll.ogg",
   "type":0,
-  "volume":0.2,
+  "volume":0.41,
 }

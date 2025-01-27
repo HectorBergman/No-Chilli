@@ -29,15 +29,15 @@ if (afterDoneIncrement == afterDoneIncrementFinish && afterDoneTimer == afterDon
 
 	buttonStruct = {
 		toRoom: -73, // to lobby
-		spriteName: spr_quit,
+		spriteName: spr_continue_red,
 		image_xscale: 3,
 		image_yscale: 3,
 		
 	}
-	instance_create_depth(3*50+960, 3*50+35*6, -99, obj_button, buttonStruct)
+	instance_create_depth(3*35+960, 3*50+35*6, -99, obj_button, buttonStruct)
 	buttonStruct = {
 		toRoom: -71, //to title
-		spriteName: spr_quit,
+		spriteName: spr_mainmenu_red,
 		image_xscale: 3,
 		image_yscale: 3,
 		

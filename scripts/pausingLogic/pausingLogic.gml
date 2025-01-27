@@ -24,10 +24,10 @@ function createSettings(){
 function createQuit(){
 
 	var relativeX = cam.x-359*(cam.camWidth/640/2)
-	var relativeY = cam.y+175*(cam.camHeight/360/2)
+	var relativeY = cam.y+185*(cam.camHeight/360/2)
 	var quitStruct =
 	{
-		spriteName : spr_quit_pause,
+		spriteName : spr_mainmenu,
 		toRoom : rm_title,
 	}
 	instance_create_layer(relativeX, relativeY, "pauseUI", obj_button, quitStruct);
