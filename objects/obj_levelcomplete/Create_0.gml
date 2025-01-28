@@ -45,8 +45,6 @@ function countDownTime(){
 
 function getMedal(){
 	 for (var i = 0; i < 4; ++i;){
-		 show_debug_message(global.medalRequirements[i][0]);
-		 show_debug_message(levelSecondsTotal);
 		 if (global.medalRequirements[i][0] >= levelSecondsTotal){
 			 return i;
 		 }

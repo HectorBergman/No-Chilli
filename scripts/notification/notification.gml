@@ -213,8 +213,6 @@ function getNotificationCoords(target){
 
 function isNotificationInCorner(target, xCoord, yCoord, padding = 64) {
 	// Get view boundaries
-	show_debug_message(x);
-	show_debug_message(y);
 	var notifCoords = getNotificationCoords(target);
 	var notifX = xCoord - camera_get_view_x(view_camera[0])
 	var notifY = yCoord - camera_get_view_y(view_camera[0])

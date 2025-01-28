@@ -4,7 +4,6 @@ try{
 	if (isParent){
 		if (cooldownType == "dash"){
 			cooldownPercentage = (chiliman.dashCooldownTime - chiliman.dashCooldown)/chiliman.dashCooldownTime
-			show_debug_message(cooldownPercentage);
 			x = (150+45+150+45)
 		}else if (cooldownType == "dive"){
 			cooldownPercentage = (chiliman.diveSetTime - chiliman.diveTimer)/chiliman.diveSetTime

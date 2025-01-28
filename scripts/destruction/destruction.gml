@@ -25,6 +25,7 @@ function destroyMenu(){
 }
 
 function resetLevel(){
+	global.speedrun_timer = 0;
 	resetSpeed()
 	state = states.levelstart
 	chiliman.diveTimer = 200;

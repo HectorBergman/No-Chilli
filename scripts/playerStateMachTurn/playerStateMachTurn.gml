@@ -80,9 +80,6 @@ function turningLogic(){
 		
 		horizontalSpeed = 0;
 	}else if (moveRight-moveLeft == turnDirection){ //running again
-		show_debug_message("____________")
-		show_debug_message(moveRight-moveLeft)
-		show_debug_message(turnDirection)
 		if (!place_meeting(x, y + 0.1, object_wall)){
 			if (!downPressed){
 				airTime = givenAirTime; //atm 20 but doublecheck lol
