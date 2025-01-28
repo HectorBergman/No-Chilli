@@ -214,6 +214,7 @@
     {"id":{"name":"object_whiteGuy","path":"objects/object_whiteGuy/object_whiteGuy.yy",},},
     {"id":{"name":"object_zcamera","path":"objects/object_zcamera/object_zcamera.yy",},},
     {"id":{"name":"z_obj_stateresetter","path":"objects/z_obj_stateresetter/z_obj_stateresetter.yy",},},
+    {"id":{"name":"zobj_bg_1","path":"objects/zobj_bg_1/zobj_bg_1.yy",},},
     {"id":{"name":"zobj_bg_object_grayscale","path":"objects/zobj_bg_object_grayscale/zobj_bg_object_grayscale.yy",},},
     {"id":{"name":"zobj_bg_object_spawner","path":"objects/zobj_bg_object_spawner/zobj_bg_object_spawner.yy",},},
     {"id":{"name":"zobj_bg_object","path":"objects/zobj_bg_object/zobj_bg_object.yy",},},

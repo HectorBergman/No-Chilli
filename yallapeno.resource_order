@@ -176,6 +176,7 @@
     {"name":"object_whiteGuy_collision","order":2,"path":"objects/object_whiteGuy_collision/object_whiteGuy_collision.yy",},
     {"name":"object_zcamera","order":2,"path":"objects/object_zcamera/object_zcamera.yy",},
     {"name":"z_obj_stateresetter","order":8,"path":"objects/z_obj_stateresetter/z_obj_stateresetter.yy",},
+    {"name":"zobj_bg_1","order":4,"path":"objects/zobj_bg_1/zobj_bg_1.yy",},
     {"name":"zobj_bg_object_grayscale","order":2,"path":"objects/zobj_bg_object_grayscale/zobj_bg_object_grayscale.yy",},
     {"name":"zobj_bg_object_spawner","order":3,"path":"objects/zobj_bg_object_spawner/zobj_bg_object_spawner.yy",},
     {"name":"zobj_bg_object","order":1,"path":"objects/zobj_bg_object/zobj_bg_object.yy",},
