@@ -13,7 +13,3 @@ yPercentage = camY/room_height;
 
 x = room_width*xPercentage + 960/2;
 y = room_height*(yPercentage) - 540/2;
-
-show_debug_message(camX);
-show_debug_message(xPercentage);
-show_debug_message(image_xscale);

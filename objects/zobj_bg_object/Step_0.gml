@@ -1,6 +1,5 @@
 var parallaxX = (cam.x - camPrevPosition[0])*parallax;
 var parallaxY = (cam.y - camPrevPosition[1])*parallax;
-show_debug_message(parallaxX);
 x += parallaxX
 y += parallaxY
 

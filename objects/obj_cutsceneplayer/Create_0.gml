@@ -17,6 +17,8 @@ littlechiliText = scribble_typist();
 littlechiliText.in(0.5, 0);
 cloudsSummoned = false;
 
+wrapWidth = 1200;
+
 
 
 
@@ -39,40 +41,55 @@ function goNextFrame(){
 }
 
 function textLogic(){ //yup, this is how we're doing it. We're doing it like undertale because i cant code
-	if framesSeen == 1{
-		var line = scribble("[scale,4][$ad0000]And then, that one white guy you know that won't stop bragging about how well he tolerates spicy food devoured all the chilis in one fell swoop. The end.").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen == 2{
-		var line = scribble("[scale,4][$eece5d]Did that really happen, uncle Chiliman?").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen == 3{
-		var line = scribble("[scale,4][$ad0000][shake]HA HA HA![/shake] Of course not, everyone knows white people can't eat spicy food!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen == 5{
-		var line = scribble("[scale,4][$ad0000]OH SHI-").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliTextFast);
-	}else if framesSeen == 6{
-		var line = scribble("[scale,5][$eec39a][shake]NEED. CHILI.").outline($000023)
-		line.draw(10, 10, whiteGuyText);
-	}else if framesSeen == 7{
-		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOO![/wave] I JUST BOUGHT THOSE!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	} else if framesSeen >= 8 && framesSeen <= 20{
-		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOOOOOO![/wave] SHE HADN'T PUT ME IN THE WILL YET!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen >= 21 && framesSeen <= 35{
-		var line = scribble("[scale,4][$ad0000][wave]NOOOOOOOOOOOOOOO![/wave] I JUST CUT THEIR HAIR! WHAT A WASTE OF [shake]MONEY[/shake]!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen == 36{
-		var line = scribble("[scale,5][$eec39a][shake]NEED. HOTTER. CHILI.").outline($000023)
-		line.draw(10, 10, whiteGuyText);
-	}else if ((framesSeen >= 36 && framesSeen <= 54)){
-		var line = scribble("[scale,4][$ad0000][shake]AAAAAAAAAAAAAAAAAAAAAAAAAAH[/shake]!!!!!!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
-	}else if framesSeen == 55{
-		var line = scribble("[scale,4][$ad0000]I'M OUTTA HERE!").outline($000023).wrap(1000)
-		line.draw(10, 10, chiliText);
+	var text = ""
+	var line = 0
+	
+	if (framesSeen == 1) {
+	    text = "[scale,4][$ad0000]And then, that one guy you know that won't stop bragging about how well he tolerates spicy food devoured all the chilis in one fell swoop. The end.";
+	    line = scribble(text).wrap(wrapWidth).outline($000023).align(fa_center);
+	    line.draw(window_get_width() / 2, 750, chiliText);
+	} else if (framesSeen == 2) {
+	    text = "[scale,4][$eece5d]Did that really happen, uncle Chiliman?";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen == 3) {
+	    text = "[scale,4][$ad0000][shake]HA HA HA![/shake] Of course not, everyone knows that's just a fairy tale!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen == 5) {
+	    text = "[scale,4][$ad0000]OH SHI-";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliTextFast);
+	} else if (framesSeen == 6) {
+	    text = "[scale,5][$eec39a][shake]NEED. CHILI.";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, whiteGuyText);
+	} else if (framesSeen == 7) {
+	    text = "[scale,4][$ad0000][wave]NOOOOOOOOO![/wave] I JUST BOUGHT THOSE!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen >= 8 && framesSeen <= 20) {
+	    text = "[scale,4][$ad0000][wave]NOOOOOOOOOOOOO![/wave] SHE HADN'T PUT ME IN THE WILL YET!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen >= 21 && framesSeen <= 35) {
+	    text = "[scale,4][$ad0000][wave]NOOOOOOOOOOOOOOO![/wave] I JUST CUT THEIR HAIR! WHAT A WASTE OF [shake]MONEY[/shake]!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen == 36) {
+	    text = "[scale,5][$eec39a][shake]NEED. HOTTER. CHILI.";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, whiteGuyText);
+	} else if (framesSeen >= 36 && framesSeen <= 54) {
+	    text = "[scale,4][$ad0000][shake]AAAAAAAAAAAAAAAAAAAAAAAAAAH[/shake]!!!!!!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
+	} else if (framesSeen == 55) {
+	    text = "[scale,4][$ad0000]I'M OUTTA HERE!";
+	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
+	    line.draw(window_get_width() / 2, 850, chiliText);
 	}
+
 	
 }
 

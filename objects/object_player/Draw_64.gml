@@ -11,7 +11,7 @@ if (levelStartTimer > 120){
 	_string = "Ready?";
 }
 if (levelStartTimer > 0){
-	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1000)
+	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1200)
 		line.draw(window_get_width()/2-string_width_scribble(_string)*4, window_get_height()/2-string_height_scribble(_string)*4);
 	
 }else if (levelStartTimer == 0){
@@ -22,7 +22,7 @@ if (levelStartTimer > 0){
 if (goTextLinger > 0){
 	_string = "GO!"
 	
-	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1000)
+	var line = scribble("[scale,8][$eee7e7]" + _string).outline($000023).wrap(1200)
 	line.draw(window_get_width()/2-string_width_scribble(_string)*4, window_get_height()/2-string_height_scribble(_string)*4);
 }
 
