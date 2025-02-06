@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this edito
-pause_check()
+PAUSE
 
 var _string = 0;
 if (levelStartTimer > 120){

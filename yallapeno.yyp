@@ -509,6 +509,7 @@
     {"id":{"name":"bg_oven","path":"sprites/bg_oven/bg_oven.yy",},},
     {"id":{"name":"bg_oventemp","path":"sprites/bg_oventemp/bg_oventemp.yy",},},
     {"id":{"name":"bg_picnic_1","path":"sprites/bg_picnic_1/bg_picnic_1.yy",},},
+    {"id":{"name":"bg_picnic_1big","path":"sprites/bg_picnic_1big/bg_picnic_1big.yy",},},
     {"id":{"name":"bg_picnic","path":"sprites/bg_picnic/bg_picnic.yy",},},
     {"id":{"name":"bg_purpletemp","path":"sprites/bg_purpletemp/bg_purpletemp.yy",},},
     {"id":{"name":"bg_realGs","path":"sprites/bg_realGs/bg_realGs.yy",},},

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-pause_check()
+PAUSE
 if (chiliman.state == states.levelcomplete){ exit;}
 if (chiliman.state == states.hax){ camState = camStates.hax;}
 

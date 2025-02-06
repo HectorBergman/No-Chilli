@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-pause_check()
+PAUSE
 timer--
 if (sign(timer) == 1){
 	image_alpha = (intervall - timer)/intervall;

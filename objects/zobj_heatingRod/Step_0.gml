@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-pause_check()
+PAUSE
 
 if (image_angle == 0 && heat.on && (place_meeting(x,y-chiliman.verticalSpeed, chiliman) || place_meeting(x,y-1, chiliman))  && chiliman.state != states.onball ){
 	chiliman.hotassMax = 7;

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 #macro PAUSEVARS prePauseSpeed = 0
+#macro PAUSE if (global.pause) exit 
 global.pause = false;
 global.destroy = false;
 tempWidth = 0

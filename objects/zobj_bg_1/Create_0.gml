@@ -8,8 +8,10 @@ camX = cam.x
 camY = cam.y
 
 image_xscale = 0.0015625*cam.camWidth 
-image_xscale = image_yscale;
+image_yscale = image_xscale;
 
+image_xscale = 1
+image_yscale = image_xscale;
 
 surfW = 1920
 surfH = 1080
