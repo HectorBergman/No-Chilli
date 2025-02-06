@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-PAUSE
+pause_check()
 depth = -99
 verticalSpeed = -0.1 + random(0.3)
 verticalSpeedCap = 5

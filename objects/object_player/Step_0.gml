@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-PAUSE
+pause_check()
 inputReset();
 _keyRight = keyboard_check(vk_right);
 _keyLeft = keyboard_check(vk_left);

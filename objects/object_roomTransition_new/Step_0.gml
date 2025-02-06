@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-PAUSE
+pause_check()
 if (place_meeting(x, y, chiliman)){
 	var roomTransID = id;
 	with(chiliman){

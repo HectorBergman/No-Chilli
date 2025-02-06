@@ -1,5 +1,5 @@
 
-PAUSE
+pause_check()
 lifeTimeLeft--;
 
 switch(state){

@@ -1,6 +1,6 @@
 
 
-PAUSE
+pause_check()
 if (chiliman.state == states.levelcomplete){ exit;}
 
 

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-PAUSE
+pause_check()
 if (!instance_exists(parent)){
 	fading = true;
 }

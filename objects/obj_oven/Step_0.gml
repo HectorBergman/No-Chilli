@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-PAUSE
+pause_check()
 
 if (chiliman.ovenEntered && !closing){
 	depth = -99
