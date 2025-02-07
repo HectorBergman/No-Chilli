@@ -12,5 +12,5 @@ xPercentage = (camX)/(room_width-cam.camWidth);
 yPercentage = camY/room_height;
 show_debug_message(camX)
 show_debug_message(xPercentage)
-x = (sprite_width-cam.camWidth)*xPercentage//room_width*xPercentage + 960/2;
-y = room_height*(yPercentage) - 540/2;
+//x = (sprite_width-cam.camWidth)*xPercentage + 99999//room_width*xPercentage + 960/2;
+//y = room_height*(yPercentage) - 540/2;
