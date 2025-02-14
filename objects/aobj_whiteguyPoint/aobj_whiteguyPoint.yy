@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"whiteGuy",
-    "path":"folders/Objects/whiteGuy.yy",
+    "path":"folders/Objects/npc/whiteGuy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

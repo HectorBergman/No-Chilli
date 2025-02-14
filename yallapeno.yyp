@@ -37,7 +37,7 @@
     {"$GMFolder":"","%Name":"cutscene","folderPath":"folders/Objects/UI_elements/cutscene.yy","name":"cutscene","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"startup","folderPath":"folders/Objects/UI_elements/cutscene/startup.yy","name":"startup","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu","folderPath":"folders/Objects/UI_elements/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"whiteGuy","folderPath":"folders/Objects/whiteGuy.yy","name":"whiteGuy","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"whiteGuy","folderPath":"folders/Objects/npc/whiteGuy.yy","name":"whiteGuy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"oScripts","folderPath":"folders/oScripts.yy","name":"oScripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"cameraStates","folderPath":"folders/oScripts/cameraStates.yy","name":"cameraStates","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"levelstart","folderPath":"folders/oScripts/levelstart.yy","name":"levelstart","resourceType":"GMFolder","resourceVersion":"2.0",},

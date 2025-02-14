@@ -27,7 +27,7 @@
     {"name":"cutscene","order":3,"path":"folders/Objects/UI_elements/cutscene.yy",},
     {"name":"startup","order":1,"path":"folders/Objects/UI_elements/cutscene/startup.yy",},
     {"name":"menu","order":1,"path":"folders/Objects/UI_elements/menu.yy",},
-    {"name":"whiteGuy","order":20,"path":"folders/Objects/whiteGuy.yy",},
+    {"name":"whiteGuy","order":3,"path":"folders/Objects/npc/whiteGuy.yy",},
     {"name":"oScripts","order":4,"path":"folders/oScripts.yy",},
     {"name":"cameraStates","order":21,"path":"folders/oScripts/cameraStates.yy",},
     {"name":"levelstart","order":23,"path":"folders/oScripts/levelstart.yy",},
