@@ -114,4 +114,5 @@ if (abs(horizontalSpeed) > topSpeed){
 	topSpeed = abs(horizontalSpeed);
 }
 
+cloneSaver();
 

@@ -45,6 +45,8 @@
     {"name":"inst_6AB8A969","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},
     {"name":"inst_18ECAAA4","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},
     {"name":"inst_72F10299","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},
+    {"name":"inst_3A6C826A","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},
+    {"name":"inst_7DEC2624","path":"rooms/rm_3tutorial_3/rm_3tutorial_3.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -98,6 +100,10 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"zobj_bg_1","path":"objects/zobj_bg_1/zobj_bg_1.yy",},"propertyId":{"name":"bgImage","path":"objects/zobj_bg_1/zobj_bg_1.yy",},"resource":{"name":"bg_picnic_1","path":"sprites/bg_picnic_1/bg_picnic_1.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"bg_picnic_1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":-192.0,},
         {"$GMRInstance":"v1","%Name":"inst_72F10299","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72F10299","objectId":{"name":"zobj_bg_filter","path":"objects/zobj_bg_filter/zobj_bg_filter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":-448.0,},
+        {"$GMRInstance":"v1","%Name":"inst_3A6C826A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A6C826A","objectId":{"name":"obj_clone","path":"objects/obj_clone/obj_clone.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_clone","path":"objects/obj_clone/obj_clone.yy",},"propertyId":{"name":"cloneName","path":"objects/obj_clone/obj_clone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"wallDash",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":832.0,"y":-320.0,},
+        {"$GMRInstance":"v1","%Name":"inst_7DEC2624","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DEC2624","objectId":{"name":"obj_cosmicCloneFactory","path":"objects/obj_cosmicCloneFactory/obj_cosmicCloneFactory.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":-32.0,"y":832.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":1000,"effectEnabled":true,"effectType":null,"gridX":64,"gridY":64,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

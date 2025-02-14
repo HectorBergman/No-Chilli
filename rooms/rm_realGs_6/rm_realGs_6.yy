@@ -41,6 +41,7 @@
     {"name":"inst_4AA908BC","path":"rooms/rm_realGs_6/rm_realGs_6.yy",},
     {"name":"inst_2EDD1D87","path":"rooms/rm_realGs_6/rm_realGs_6.yy",},
     {"name":"inst_7187F1D9","path":"rooms/rm_realGs_6/rm_realGs_6.yy",},
+    {"name":"inst_30B31654","path":"rooms/rm_realGs_6/rm_realGs_6.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -113,6 +114,7 @@
         {"$GMRInstance":"v1","%Name":"inst_7187F1D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7187F1D9","objectId":{"name":"zobj_bg_object_spawner","path":"objects/zobj_bg_object_spawner/zobj_bg_object_spawner.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"zobj_bg_object_spawner","path":"objects/zobj_bg_object_spawner/zobj_bg_object_spawner.yy",},"propertyId":{"name":"frequency","path":"objects/zobj_bg_object_spawner/zobj_bg_object_spawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.03",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":7.0,"x":480.0,"y":-352.0,},
+        {"$GMRInstance":"v1","%Name":"inst_30B31654","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30B31654","objectId":{"name":"obj_cosmicCloneFactory","path":"objects/obj_cosmicCloneFactory/obj_cosmicCloneFactory.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":3.0,"x":-176.0,"y":544.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_temp","path":"sprites/bg_temp/bg_temp.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],

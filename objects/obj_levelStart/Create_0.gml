@@ -8,4 +8,4 @@ enum levelstartstates{
 levelstartstate = levelstartstates.normal
 
 
-
+_time = variable_struct_get(global.game_data, levelname)

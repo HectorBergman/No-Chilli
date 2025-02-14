@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"clones",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"clones",
+  "parent":{
+    "name":"oScripts",
+    "path":"folders/oScripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

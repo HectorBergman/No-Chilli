@@ -107,3 +107,7 @@ ovenState = 0;
 initiateRingVariables()
 
 initiateControlsVariables()
+
+initiateCloneVariables();
+
+global.chillicClones = true;

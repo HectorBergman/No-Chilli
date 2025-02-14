@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"initiateCloneVariables",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"initiateCloneVariables",
+  "parent":{
+    "name":"ainitiationVariables",
+    "path":"folders/Objects/ainitiationVariables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -75,6 +75,7 @@
     {"name":"inst_392FED1B","path":"rooms/rm_oven_2/rm_oven_2.yy",},
     {"name":"inst_1D9AB2DA","path":"rooms/rm_oven_2/rm_oven_2.yy",},
     {"name":"inst_70FAF2C8","path":"rooms/rm_oven_2/rm_oven_2.yy",},
+    {"name":"inst_71445633","path":"rooms/rm_oven_2/rm_oven_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -157,6 +158,7 @@
         {"$GMRInstance":"v1","%Name":"inst_70FAF2C8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70FAF2C8","objectId":{"name":"zobj_bg_1","path":"objects/zobj_bg_1/zobj_bg_1.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"zobj_bg_1","path":"objects/zobj_bg_1/zobj_bg_1.yy",},"propertyId":{"name":"bgImage","path":"objects/zobj_bg_1/zobj_bg_1.yy",},"resource":{"name":"bg_oven","path":"sprites/bg_oven/bg_oven.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"bg_oven",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-128.0,"y":1152.0,},
+        {"$GMRInstance":"v1","%Name":"inst_71445633","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_71445633","objectId":{"name":"obj_cosmicCloneFactory","path":"objects/obj_cosmicCloneFactory/obj_cosmicCloneFactory.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":-144.0,"y":2048.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_oventemp","path":"sprites/bg_oventemp/bg_oventemp.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
