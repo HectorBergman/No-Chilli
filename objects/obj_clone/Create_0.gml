@@ -1,3 +1,5 @@
+PAUSEVARS
+
 cloneData = variable_struct_get(global.cloneData, cloneName);
 index = 0;
 image_yscale = 1;

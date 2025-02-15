@@ -1,3 +1,4 @@
+PAUSE
 if !freeze{
 	index++
 

@@ -1,3 +1,5 @@
+PAUSEVARS
+
 timer = 0;
 interval = 120;
 array = [];

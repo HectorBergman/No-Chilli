@@ -1,3 +1,4 @@
+PAUSEVARS
 cloneData = [];
 index = 0;
 image_yscale = 1;

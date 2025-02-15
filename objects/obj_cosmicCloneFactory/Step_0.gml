@@ -1,3 +1,5 @@
+PAUSE
+
 array[index] = getPosData();
 index++;
 if (timer % 5 == 0){
