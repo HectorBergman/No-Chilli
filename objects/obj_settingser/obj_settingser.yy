@@ -1,18 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_windowcorrecter",
+  "%Name":"obj_settingser",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_windowcorrecter",
+  "name":"obj_settingser",
   "overriddenProperties":[],
   "parent":{
-    "name":"startup",
-    "path":"folders/Objects/UI_elements/startup.yy",
+    "name":"menu",
+    "path":"folders/Objects/UI_elements/menu.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -29,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_gradient",
+    "path":"sprites/spr_gradient/spr_gradient.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

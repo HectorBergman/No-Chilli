@@ -34,12 +34,12 @@ function countDownTime(){
 			displayedSecondsTotal = levelSecondsTotal
 		}
 		if (!audio_is_playing(snd_drumroll)){
-			audio_play_sound(snd_drumroll,0,false);
+			audio_play_sound(snd_drumroll,0,false, global.soundfx*global.volume);
 		}
 	}else if !countdownDone{
 		countdownDone = true;
 		audio_stop_sound(snd_drumroll);
-		audio_play_sound(snd_tada,0,false);
+		audio_play_sound(snd_tada,0,false,global.soundfx*global.volume);
 	}
 }
 

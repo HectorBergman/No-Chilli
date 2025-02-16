@@ -7,7 +7,7 @@ if (image_angle == 0 && heat.on && (place_meeting(x,y-chiliman.verticalSpeed, ch
 	
 	chiliman.verticalSpeed = -14;
 	if (chiliman.state != states.hotass){
-		audio_play_sound(snd_hotass, 1, false);
+		audio_play_sound(snd_hotass, 1, false, global.soundfx*global.volume);
 	}
 	chiliman.state = states.hotass
 	

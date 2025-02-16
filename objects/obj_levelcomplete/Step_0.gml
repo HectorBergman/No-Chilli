@@ -53,7 +53,7 @@ if (countdownDone){
 		if (afterDoneTimer mod afterDoneSpacing == 0){
 			afterDoneIncrement++
 			if (afterDoneIncrement < 4){
-				audio_play_sound(snd_result,0,false);
+				audio_play_sound(snd_result,0,false, global.musicvolume*global.volume);
 			}
 		}
 	}

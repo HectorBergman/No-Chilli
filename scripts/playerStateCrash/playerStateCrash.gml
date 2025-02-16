@@ -6,12 +6,12 @@ function playerStateCrash(){
 		verticalSpeed = crashHeight;
 		if (!specialCrash){
 			if (crashLoop == noone){
-				crashLoop = audio_play_sound(snd_dizzy, 1, true)
+				crashLoop = audio_play_sound(snd_dizzy, 1, true, global.soundfx*global.volume)
 			}
 	
 			
 			if (crashTimer > 65){
-				audio_play_sound(snd_crash_mega1, 1, false);
+				audio_play_sound(snd_crash_mega1, 1, false, global.soundfx*global.volume);
 			}else if (crashTimer > 48){
 				playOneOfSeveral("snd_crash_big", 3)
 			}else{

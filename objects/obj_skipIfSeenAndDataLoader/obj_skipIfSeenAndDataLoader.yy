@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"startup",
-    "path":"folders/Objects/UI_elements/cutscene/startup.yy",
+    "path":"folders/Objects/UI_elements/startup.yy",
   },
   "parentObjectId":null,
   "persistent":false,

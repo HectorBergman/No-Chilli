@@ -17,7 +17,7 @@ function playerStateMach(){
 		runClouds();
 
 		if (!audio_is_playing(snd_trainRun) && onGround > 9){
-			audio_play_sound(snd_trainRun,1 ,1, 0.5, 0, 1.5)
+			audio_play_sound(snd_trainRun,1 ,1, global.soundfx*global.volume*0.5, 0, 1.5)
 		}else if (audio_is_playing(snd_trainRun) && onGround < 10){
 			audio_stop_sound(snd_trainRun)
 		}

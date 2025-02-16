@@ -6,7 +6,7 @@ function playerStateNormal(){
 	if (onGround > 9 && (moveLeft xor moveRight) && horizontalSpeed != 0){ //TODO: add buffer for switching directions
 		walkSoundBufferTimer = walkSoundBufferTime
 		if (!audio_is_playing(snd_walk)){
-			audio_play_sound(snd_walk, 1, true);
+			audio_play_sound(snd_walk, 1, true, global.soundfx*global.volume);
 		}
 	}else {
 		if (walkSoundBufferTimer < 1){

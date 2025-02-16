@@ -1,4 +1,8 @@
-
+if (instance_find(obj_settingser, 0)){
+	global.settingser = true;
+}else{
+	global.settingser = false;
+}
 
 cam = instance_find(object_zcamera, 0);// {if (sprite_get_speed(sprite_index) != 0){prePauseSpeed = sprite_get_speed(sprite_index);} sprite_set_speed(sprite_index, 0, spritespeed_framespersecond); exit; }else{ if (sprite_get_speed(sprite_index) == 0){sprite_set_speed(sprite_index, prePauseSpeed, spritespeed_framespersecond);}}
 //x = cam.x
