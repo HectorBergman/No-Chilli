@@ -57,6 +57,7 @@ if (!global.settingser){
 		image_index = 1;
 		if (mouse_check_button_pressed(mb_left)){
 			if (toRoom == -10){
+				show_debug_message("MONEY!");
 				instance_create_depth(0,0,1, obj_settingser);
 				/*
 				if(window_get_fullscreen()){

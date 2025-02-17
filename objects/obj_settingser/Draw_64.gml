@@ -1,5 +1,28 @@
 draw_sprite_ext(sprite_index, 0, 0, 0, 3, 3, 0, c_white, 1);
-draw_sprite_ext(backButton.sprite_index, backButton.image_index, backButton.x, backButton.y, 3, 3, 0, c_white, 1);
-draw_sprite_ext(volumePlusButton.sprite_index, volumePlusButton.image_index, volumePlusButton.x, volumePlusButton.y, 3, 3, 0, c_white, 1);
-draw_sprite_ext(volumeMinusButton.sprite_index, volumeMinusButton.image_index, volumeMinusButton.x, volumeMinusButton.y, 3, 3, 0, c_white, 1);
-draw_sprite_ext(fScreenButton.sprite_index, fScreenButton.image_index, fScreenButton.x, fScreenButton.y, 3, 3, 0, c_white, 1);
+draw_sprite_tiled_ext(spr_jalapeno, 0, jalapeno.x, jalapeno.y, 3, 3, c_white, 1);
+
+drawButton(backButton);
+
+drawButton(volumeMinusButton);
+drawButton(volumePlusButton);
+
+drawButton(musicPlusButton);
+drawButton(musicMinusButton);
+
+drawButton(sfxMinusButton);
+drawButton(sfxPlusButton);
+
+drawButton(masterTextButton, 2);
+drawButton(musicTextButton, 2);
+drawButton(sfxTextButton, 2);
+
+volumeBarDrawer(masterBarButton)
+volumeBarDrawer(musicBarButton)
+volumeBarDrawer(sfxBarButton)
+
+volumeBarDrawer(masterBarButton.child)
+volumeBarDrawer(musicBarButton.child)
+volumeBarDrawer(sfxBarButton.child)
+
+drawButton(fScreenButton);
+

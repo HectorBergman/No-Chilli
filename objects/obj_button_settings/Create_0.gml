@@ -9,3 +9,9 @@ depth = -9999
 click_x = 0
 click_y = 0
 
+function isClickable(){
+	if (toRoom != -14 && toRoom != -15 && toRoom != -16){
+		return true
+	}
+	return false
+}

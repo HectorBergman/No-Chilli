@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (_depth == 99){
+	if (!instance_exists(parent)){
+		instance_destroy(self);
+	}
+}
 x += 0.1
 y -= 0.05
 try{
