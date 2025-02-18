@@ -1,7 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (_depth == 99){
-	if (!instance_exists(parent)){
+	try{
+		if (!instance_exists(parent)){
+			instance_destroy(self);
+		}
+	}catch(e){
+		show_debug_message("fail asf");
 		instance_destroy(self);
 	}
 }

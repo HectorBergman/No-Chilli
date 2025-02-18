@@ -110,4 +110,4 @@ initiateControlsVariables()
 
 initiateCloneVariables();
 
-global.chillicClones = true;
+global.chillicClones = false;

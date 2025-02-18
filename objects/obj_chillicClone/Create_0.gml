@@ -13,5 +13,5 @@ function updatePosition(){
 	image_xscale = cloneData[index][4];
 	
 }
-image_alpha = 0.8;
+image_alpha = 0.9;
 

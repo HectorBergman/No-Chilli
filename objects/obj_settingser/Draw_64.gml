@@ -1,5 +1,5 @@
 draw_sprite_ext(sprite_index, 0, 0, 0, 3, 3, 0, c_white, 1);
-draw_sprite_tiled_ext(spr_jalapeno, 0, jalapeno.x, jalapeno.y, 3, 3, c_white, 1);
+draw_sprite_tiled_ext(spr_jalapeno, 0, global.activeJalapeno.x, global.activeJalapeno.y, 3, 3, c_white, 1);
 
 drawButton(backButton);
 

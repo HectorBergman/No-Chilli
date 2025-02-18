@@ -154,13 +154,13 @@ var fScreenStruct =
 fScreenButton = instance_create_depth(960-255*3/2, 9, 1, obj_button_settings, fScreenStruct);
 
 
-var jalapenoStruct =
+/*var jalapenoStruct =
 {
 	_depth : 99,
 	parent : id,
 }
-jalapeno = instance_create_depth(global.activeJalapeno.x, global.activeJalapeno.y, 99, obj_jalapeno, jalapenoStruct);
-
+jalapeno = instance_create_depth(x, y, 99, obj_jalapeno, jalapenoStruct);
+*/
 function drawButton(button, size = 3){
 	draw_sprite_ext(button.sprite_index, button.image_index, button.x, button.y, size, size, 0, c_white, 1);
 }
