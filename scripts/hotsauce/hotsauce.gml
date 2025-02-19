@@ -10,7 +10,7 @@ function hotsauce(){
 			if (currentHotsauce.state != hotsauceStates.collected){
 				var	cam = instance_find(object_zcamera, 0);
 				var camScale = 0.0015625*cam.camWidth
-				audio_play_sound(currentHotsauce.sound, 0, 0, global.soundfx*global.volume, 0, calculatePickupPitch());
+				audio_play_sound(currentHotsauce.sound, 0, 0, 0.5*global.soundfx*global.volume, 0, calculatePickupPitch());
 				lastPickupTimer += 15;
 				decreaseTimer = decreaseTime;
 				currentHotsauce.state = hotsauceStates.collected;

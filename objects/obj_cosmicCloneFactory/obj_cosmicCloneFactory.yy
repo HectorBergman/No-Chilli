@@ -10,8 +10,8 @@
   "name":"obj_cosmicCloneFactory",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"clomes",
+    "path":"folders/Objects/clomes.yy",
   },
   "parentObjectId":null,
   "persistent":false,
