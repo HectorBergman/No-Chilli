@@ -8,6 +8,7 @@ holdTimer = -10;
 skippable = false;
 tipText = scribble_typist();
 tipText.in(6, 999);
+show_debug_message(variable_struct_get(global.game_data, "sfxVolume"))
 
 if (variable_instance_exists(global.game_data, "cutscene1Seen")){
 	skippable = true;

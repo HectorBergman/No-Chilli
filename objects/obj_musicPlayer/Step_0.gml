@@ -12,5 +12,6 @@ try{
 	instance_destroy();
 }
 if (room == rm_title || room == rm_lobby_room1 || room == rm_deathscreen){
+	audio_stop_sound(songPlaying);
 	instance_destroy();
 }

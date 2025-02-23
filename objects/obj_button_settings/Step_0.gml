@@ -42,7 +42,8 @@ if (isClickable() && position_meeting(mouseX, mouseY, id)){
 			}else{
 				window_set_fullscreen(true)
 			}
-		}	
+		}
+		saveVolume();
 	}
 }else{
 	image_index = 0;

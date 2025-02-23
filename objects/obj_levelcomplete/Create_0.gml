@@ -80,12 +80,18 @@ function saveTime(minutes, seconds){
 				saveData(levelname, timeString);
 				saveData(levelname + "Minutes", minutes)
 				saveData(levelname + "Seconds", seconds);
+				variable_struct_set(global.game_data, levelname, timeString)
+				variable_struct_set(global.game_data, levelname + "Minutes", minutes)
+				variable_struct_set(global.game_data, levelname + "Seconds", seconds)
 			}
 		}
 	}else{
 		saveData(levelname, timeString);
 		saveData(levelname + "Minutes", minutes)
 		saveData(levelname + "Seconds", seconds);
+		variable_struct_set(global.game_data, levelname, timeString)
+		variable_struct_set(global.game_data, levelname + "Minutes", minutes)
+		variable_struct_set(global.game_data, levelname + "Seconds", seconds)
 	}
 }
 

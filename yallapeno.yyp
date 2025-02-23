@@ -114,7 +114,10 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"clones.json","CopyToMask":-1,"filePath":"datafiles","name":"clones.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"save.json","CopyToMask":-1,"filePath":"datafiles","name":"save.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -163,6 +166,7 @@
     {"id":{"name":"obj_lasagna","path":"objects/obj_lasagna/obj_lasagna.yy",},},
     {"id":{"name":"obj_levelcomplete","path":"objects/obj_levelcomplete/obj_levelcomplete.yy",},},
     {"id":{"name":"obj_levelStart","path":"objects/obj_levelStart/obj_levelStart.yy",},},
+    {"id":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},},
     {"id":{"name":"obj_milk_back","path":"objects/obj_milk_back/obj_milk_back.yy",},},
     {"id":{"name":"obj_milk_wall_left","path":"objects/obj_milk_wall_left/obj_milk_wall_left.yy",},},
     {"id":{"name":"obj_milk_wall_right","path":"objects/obj_milk_wall_right/obj_milk_wall_right.yy",},},
@@ -515,6 +519,7 @@
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},},
     {"id":{"name":"snd_silver","path":"sounds/snd_silver/snd_silver.yy",},},
     {"id":{"name":"snd_tada","path":"sounds/snd_tada/snd_tada.yy",},},
+    {"id":{"name":"snd_the_button","path":"sounds/snd_the_button/snd_the_button.yy",},},
     {"id":{"name":"snd_trainRun","path":"sounds/snd_trainRun/snd_trainRun.yy",},},
     {"id":{"name":"snd_voice1","path":"sounds/snd_voice1/snd_voice1.yy",},},
     {"id":{"name":"snd_voice2","path":"sounds/snd_voice2/snd_voice2.yy",},},

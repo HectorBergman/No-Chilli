@@ -15,3 +15,13 @@ function isClickable(){
 	}
 	return false
 }
+
+function saveVolume(){
+	show_debug_message(global.volume);
+	show_debug_message(global.musicvolume);
+	show_debug_message(global.soundfx);
+	saveData("masterVolume", global.volume);
+	saveData("musicVolume", global.musicvolume);
+	saveData("sfxVolume", global.soundfx);
+	show_debug_message("saved!");
+}

@@ -45,7 +45,7 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	var line = 0
 	
 	if (framesSeen == 1) {
-	    text = "[scale,4][$ad0000]And then, that one guy you know that won't stop bragging about how well he tolerates spicy food devoured all the chilis in one fell swoop. The end.";
+	    text = "[scale,4][$c20000]And then, that one guy you know that won't stop bragging about how well he tolerates spicy food devoured all the chilis in one fell swoop. The end.";
 	    line = scribble(text).wrap(wrapWidth).outline($000023).align(fa_center);
 	    line.draw(window_get_width() / 2, 750, chiliText);
 	} else if (framesSeen == 2) {
@@ -53,11 +53,11 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen == 3) {
-	    text = "[scale,4][$ad0000][shake]HA HA HA![/shake] Of course not, everyone knows that's just a fairy tale!";
+	    text = "[scale,4][$c20000][shake]HA HA HA![/shake] Of course not, everyone knows that's just a fairy tale!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen == 5) {
-	    text = "[scale,4][$ad0000]OH SHI-";
+	    text = "[scale,4][$c20000]OH SHI-";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliTextFast);
 	} else if (framesSeen == 6) {
@@ -65,15 +65,15 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, whiteGuyText);
 	} else if (framesSeen == 7) {
-	    text = "[scale,4][$ad0000][wave]NOOOOOOOOO![/wave] I JUST BOUGHT THOSE!";
+	    text = "[scale,4][$c20000][wave]NOOOOOOOOO![/wave] I JUST BOUGHT THOSE!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen >= 8 && framesSeen <= 20) {
-	    text = "[scale,4][$ad0000][wave]NOOOOOOOOOOOOO![/wave] SHE HADN'T PUT ME IN THE WILL YET!";
+	    text = "[scale,4][$c20000][wave]NOOOOOOOOOOOOO![/wave] SHE HADN'T PUT ME IN THE WILL YET!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen >= 21 && framesSeen <= 35) {
-	    text = "[scale,4][$ad0000][wave]NOOOOOOOOOOOOOOO![/wave] I JUST CUT THEIR HAIR! WHAT A WASTE OF [shake]MONEY[/shake]!";
+	    text = "[scale,4][$c20000][wave]NOOOOOOOOOOOOOOO![/wave] I JUST CUT THEIR HAIR! WHAT A WASTE OF [shake]MONEY[/shake]!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen == 36) {
@@ -81,11 +81,11 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, whiteGuyText);
 	} else if (framesSeen >= 36 && framesSeen <= 54) {
-	    text = "[scale,4][$ad0000][shake]AAAAAAAAAAAAAAAAAAAAAAAAAAH[/shake]!!!!!!";
+	    text = "[scale,4][$c20000][shake]AAAAAAAAAAAAAAAAAAAAAAAAAAH[/shake]!!!!!!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	} else if (framesSeen == 55) {
-	    text = "[scale,4][$ad0000]I'M OUTTA HERE!";
+	    text = "[scale,4][$c20000]I'M OUTTA HERE!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
 	    line.draw(window_get_width() / 2, 850, chiliText);
 	}

@@ -7,10 +7,12 @@ if (place_meeting(x, y, chiliman) && !pressed){
 		}
 	if (global.chillicClones){
 		global.chillicClones = false;
-		buttontext = "Chilic Clones deactivated..."
+		saveData("chillicClones", "false")
+		buttontext = "[$ad0000]Chilic Clones deactivated..."
 	}else{
 		global.chillicClones = true;
-		buttontext = "Chilic Clones activated..."
+		saveData("chillicClones", "true")
+		buttontext = "[$50008f]Chilic Clones activated..."
 	}
 	var textStruct = {
 			text : buttontext,

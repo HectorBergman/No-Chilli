@@ -4,7 +4,20 @@ function playerStateRoomTransition(){
 
 	roomTransitionTimer--
 	if (roomTransitionTimer == 0){
-		room_goto(roomTransNextRoom);
+		if (!isTeleporter){
+			room_goto(roomTransNextRoom);
+		}else{
+	
+			for (var i = 0; i < instance_number(object_roomTransition_destination); ++i;)
+			{
+				var roomTrans = instance_find(object_roomTransition_destination,i)
+			    if (roomTrans.number == destinationNumber){
+					x = roomTrans.x
+					y = y-destinationY
+					destinationY = 0;
+				}
+			}
+		}
 	}
 	if (roomTransitionTimer == -roomTransitionTime){
 		state = roomTransOldState;
@@ -12,7 +25,7 @@ function playerStateRoomTransition(){
 	
 }
 
-function initiateRoomTransition(oldState, newDestinationNumber, nextRoom, roomTransitionID){
+function initiateRoomTransition(oldState, newDestinationNumber, nextRoom, roomTransitionID, teleporter = false){
 	//roomTransitionID = noone if not from a roomTransition obj
 	destinationNumber = newDestinationNumber;
 	try{
@@ -21,6 +34,7 @@ function initiateRoomTransition(oldState, newDestinationNumber, nextRoom, roomTr
 		destinationY = 0;
 	}
 	roomTransNextRoom = nextRoom
+	isTeleporter = teleporter
 	state = states.roomtransition
 	layer_create(-999, "pauseUI");
 	roomTransOldState = oldState;

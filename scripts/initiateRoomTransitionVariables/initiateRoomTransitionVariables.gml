@@ -6,4 +6,5 @@ function initiateRoomTransitionVariables(){
 	roomTransOldState = 0;
 	
 	roomTransNextRoom = noone;
+	isTeleporter = false;
 }

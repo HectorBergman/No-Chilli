@@ -166,7 +166,6 @@ function drawButton(button, size = 3){
 }
 
 function volumeBarDrawer(bar){
-	show_debug_message(bar.sprite_width);
 	if (bar.child != noone){
 		if (bar.type == "master"){
 			draw_sprite_part_ext(bar.sprite_index, bar.image_index, 0, 0, floor(bar.sprite_width/3*global.volume), bar.sprite_height,

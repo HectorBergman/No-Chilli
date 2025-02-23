@@ -15,7 +15,6 @@ dashLeftReqInput = ord("A");
 dashDownReqInput = ord("S");
 dashRightReqInput = ord("D");
 
-show_debug_message(global.musicvolume);
 cheats();
 
 inputCalculator()
