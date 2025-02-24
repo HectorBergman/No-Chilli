@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_portal",
   "bboxMode":2,
-  "bbox_bottom":40,
+  "bbox_bottom":41,
   "bbox_left":8,
   "bbox_right":40,
   "bbox_top":8,

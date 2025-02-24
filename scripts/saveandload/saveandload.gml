@@ -85,6 +85,5 @@ function loadAllData(){
 		var _json = file_text_read_string(_file);
 		global.cloneData = json_parse(_json);
 		file_text_close(_file);
-		show_debug_message(global.cloneData);
 	}
 }
