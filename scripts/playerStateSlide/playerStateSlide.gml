@@ -1,6 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function playerStateSlide(){
+	if (!audio_is_playing(snd_glide_1) && !slideWalking && onGround > 9){
+		audio_play_sound(snd_glide_1, 0 ,1, global.soundfx*global.volume);
+	}
 	playerCheckForOnGround();
 	var currentMask = mask_index;
 	mask_index = spr_player_mach1;

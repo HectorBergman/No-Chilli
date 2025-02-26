@@ -52,8 +52,17 @@ if (countdownDone){
 		afterDoneTimer++
 		if (afterDoneTimer mod afterDoneSpacing == 0){
 			afterDoneIncrement++
-			if (afterDoneIncrement < 4){
-				audio_play_sound(snd_result,0,false, global.musicvolume*global.volume);
+			if (afterDoneIncrement < 5 && afterDoneIncrement > 1){
+				audio_play_sound(snd_result,0,false, global.soundfx*global.volume);
+			}
+			if (afterDoneIncrement == 5){
+				try{
+					audio_play_sound(asset_get_index("snd_" + global.medalRequirements[medal][1]),0,false, global.soundfx*global.volume);
+				}catch(e){
+					audio_play_sound(snd_bowomp,0,false, global.soundfx*global.volume);
+				}
+			}else if (afterDoneIncrement == 6){
+				audio_play_sound(snd_applause, 0, false, global.soundfx*global.volume);
 			}
 		}
 	}

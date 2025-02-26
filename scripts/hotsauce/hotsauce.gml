@@ -15,7 +15,7 @@ function hotsauce(){
 				decreaseTimer = decreaseTime;
 				currentHotsauce.state = hotsauceStates.collected;
 				currentHotsauce.uiCoord = [(chiliman.x - camera_get_view_x(view_camera[0]))*2, (chiliman.y+30 - camera_get_view_y(view_camera[0]))*2]
-				show_debug_message(camera_get_view_x(view_camera[0]));
+				
 			}
 		}
 	}

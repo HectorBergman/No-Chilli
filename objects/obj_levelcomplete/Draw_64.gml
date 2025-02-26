@@ -19,27 +19,30 @@ if (!is_undefined(_prevMinutes)){
 	secondLine.draw(60, 192+downShift);
 }
 
-if (afterDoneIncrement > 0){
+if (afterDoneIncrement > 1){
 	var scovilleString = "[scale,6][$eee7e7]Scoville: " + string(global.scoville);
 	var scovilleLine = scribble(scovilleString).outline($000023);
 	scovilleLine.draw(60, 264+downShift);
 }
-if (afterDoneIncrement > 1){
+if (afterDoneIncrement > 2){
 	var speedString = "[scale,6][$eee7e7]Top Speed: " + string(global.topSpeed);
 	var speedLine = scribble(speedString).outline($000023);
 	speedLine.draw(60, 372+downShift);
 }
-if (afterDoneIncrement > 2){
+if (afterDoneIncrement > 3){
 	var crashString = "[scale,6][$eee7e7]Crashes: " + string(global.crashCount);
 	var crashLine = scribble(crashString).outline($000023);
 	crashLine.draw(60, 480+downShift);
 }
 
-if (afterDoneIncrement > 3){
+if (afterDoneIncrement > 4){
 	if (medal < 4){
 		var sprite = asset_get_index("spr_" + global.medalRequirements[medal][1]);
 		draw_sprite_ext(sprite, 0, 690, 222+downShift, 6, 6, 0, c_white, 1)
 	}else{
+		var speedString = "[scale,3][$d6cfcf][fa_center]no medal 4 u :( "
+		var speedLine = scribble(speedString).outline($000023).wrap(250);
+		speedLine.draw(690+258-45, 372+downShift);
 		//play womp womp sfx
 	}
 }

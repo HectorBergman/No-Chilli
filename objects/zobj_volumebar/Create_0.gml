@@ -1,5 +1,5 @@
 
-show_debug_message(id);
+
 
 
 if (type != "ahh"){

@@ -36,6 +36,7 @@ if (!global.settingser){
 				instance_destroy(obj_button);
 				toRoom = rm_lobby_room1
 				global.pausable = true;
+				chiliman.destinationNumber = 0;
 				chiliman.state = states.normal;
 			}
 			if (toRoom == rm_title){

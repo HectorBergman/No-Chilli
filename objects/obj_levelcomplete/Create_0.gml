@@ -1,6 +1,6 @@
+afterDoneIncrementFinish = 6;
+afterDoneTimerFinish = 60*afterDoneIncrementFinish;
 
-afterDoneTimerFinish = 300;
-afterDoneIncrementFinish = 5;
 
 downShift = 180; // to make space for lvl title
 
@@ -39,7 +39,7 @@ function countDownTime(){
 	}else if !countdownDone{
 		countdownDone = true;
 		audio_stop_sound(snd_drumroll);
-		audio_play_sound(snd_tada,0,false,global.soundfx*global.volume);
+		audio_play_sound(snd_tada,1,false,global.soundfx*global.volume);
 	}
 }
 
@@ -49,9 +49,13 @@ function getMedal(){
 			 return i;
 		 }
 	 }
+	 return 4;
 }
 medal = getMedal();
-
+if (medal < 2){
+	global.goldGot = true;
+	saveData("goldGot", true);
+}
 
 _prevMinutes = variable_struct_get(global.game_data, global.currentLevel + "Minutes")
 _prevSeconds = variable_struct_get(global.game_data, global.currentLevel + "Seconds")

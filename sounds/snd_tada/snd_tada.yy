@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":5.459592,
+  "duration":1.290771,
   "name":"snd_tada",
   "parent":{
     "name":"menu",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_tada.mp3",
+  "soundFile":"snd_tada.ogg",
   "type":0,
-  "volume":1.0,
+  "volume":0.5,
 }

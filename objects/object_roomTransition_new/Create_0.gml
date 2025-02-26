@@ -3,3 +3,5 @@
 PAUSEVARS
 sprite_index = spr_portal
 deactive = false;
+deactiveTime = 30;
+deactiveTimer = 0;

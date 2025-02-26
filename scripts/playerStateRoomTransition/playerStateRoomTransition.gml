@@ -4,16 +4,17 @@ function playerStateRoomTransition(){
 	roomTransitionTimer--
 	if (roomTransitionTimer == 0){
 		if (!isTeleporter){
-			show_debug_message("nice");
+			
 			room_goto(roomTransNextRoom);
 		}else{
-			show_debug_message("boo");
+			
 			for (var i = 0; i < instance_number(object_roomTransition_destination); ++i;)
 			{
 				var roomTrans = instance_find(object_roomTransition_destination,i)
 			    if (roomTrans.number == destinationNumber){
+					show_debug_message("we doin it!");
 					x = roomTrans.x
-					y = y-destinationY
+					y = roomTrans.y-destinationY
 					destinationY = 0;
 				}
 			}
@@ -37,10 +38,10 @@ function initiateRoomTransition(oldState, newDestinationNumber, nextRoom, roomTr
 		show_debug_message(y)
 		show_debug_message(roomTransitionID.y-y)
 		destinationY = roomTransitionID.y-y //destinationY =	roomTransitionID.y+roomTransitionID.image_yscale*32-y
-		show_debug_message("try succeed");
+		
 	}catch(e){
 		destinationY = 0;
-		show_debug_message("try fail");
+		
 	}
 	roomTransNextRoom = nextRoom
 	isTeleporter = teleporter

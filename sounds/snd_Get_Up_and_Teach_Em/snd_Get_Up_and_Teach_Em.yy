@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":70.01041,
+  "duration":94.51041,
   "name":"snd_Get_Up_and_Teach_Em",
   "parent":{
     "name":"music",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_Get_Up_and_Teach_Em.ogg",
   "type":0,
-  "volume":0.55,
+  "volume":0.6,
 }

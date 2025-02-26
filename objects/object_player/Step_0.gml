@@ -60,10 +60,15 @@ if (dashCooldown < 1 && !undashable() && !dashDisabled){
 		oldState = state;
 		timeInDash = timeLimitInDash
 		state = states.dash;
+		audio_play_sound(snd_dash, 0, 0, global.soundfx*global.volume);
 	}
+	
 }
-if (reset && inLevel && global.pausable){
+if (reset && inLevel && global.pausable && state != states.dead){
 	resetLevel();
+}
+if (state != states.slide || slideWalking ||onGround < 10){
+	audio_stop_sound(snd_glide_1);
 }
 /*try{
 	show_debug_message(standingOn.id)

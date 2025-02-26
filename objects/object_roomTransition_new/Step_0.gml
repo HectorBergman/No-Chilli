@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
-if (!deactive &&place_meeting(x, y, chiliman) && chiliman.state != states.roomtransition){
+deactiveTimer--
+if (!deactive && deactiveTimer < 0 && place_meeting(x, y, chiliman) && chiliman.state != states.roomtransition){
 	var roomTransID = id;
 	var isTeleporter = false;
 	if (nextRoom == room){
@@ -10,5 +11,9 @@ if (!deactive &&place_meeting(x, y, chiliman) && chiliman.state != states.roomtr
 	with(chiliman){
 		initiateRoomTransition(chiliman.state, roomTransID.destinationNumber, roomTransID.nextRoom, roomTransID, isTeleporter)
 	}
-	deactive = true;
+	if (!isTeleporter){
+		deactive = true;
+	}else{
+		deactiveTimer = deactiveTime
+	}
 } 

@@ -67,6 +67,7 @@ function loadAllData(){
 		global.volume = variable_struct_get(global.game_data, "masterVolume")
 		global.musicvolume = variable_struct_get(global.game_data, "musicVolume")
 		global.soundfx = variable_struct_get(global.game_data, "sfxVolume")
+		global.goldGot = variable_struct_get(global.game_data, "goldGot");
 		if (is_undefined(global.volume)){
 			global.volume = 1
 			global.musicvolume = 1

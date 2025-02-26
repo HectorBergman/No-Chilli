@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":5.093878,
+  "duration":5.06195,
   "name":"snd_applause",
   "parent":{
     "name":"menu",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_applause.mp3",
+  "soundFile":"snd_applause.ogg",
   "type":0,
-  "volume":0.46,
+  "volume":1.0,
 }
