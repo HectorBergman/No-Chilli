@@ -70,6 +70,9 @@ if (reset && inLevel && global.pausable && state != states.dead){
 if (state != states.slide || slideWalking ||onGround < 10){
 	audio_stop_sound(snd_glide_1);
 }
+if (state != states.machTurn){
+	audio_stop_sound(brakeSound);
+}
 /*try{
 	show_debug_message(standingOn.id)
 }catch(e){

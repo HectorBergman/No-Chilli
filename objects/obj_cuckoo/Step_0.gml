@@ -26,6 +26,8 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 	}
 }else if (timer <= 0){ //timer finished
 	if (!doorLowered){
+		audio_play_sound(snd_tok, 0, 0, global.volume*global.soundfx);
+		audio_play_sound(snd_cuckoo_pop, 0, 0, global.volume*global.soundfx);
 		theDoor.startLowering = true;
 		doorLowered = true;
 	}
@@ -36,14 +38,25 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 		image_index = 7;
 	}
 }else if (timer < starttime/4){ //timer 3/4 done
+	if progress == 2{
+			audio_play_sound(snd_tik, 0, 0, global.volume*global.soundfx);
+			progress++
+	}
 	animationTimer--
 	if (animationTimer < 0 || image_index == 6){
+		
 		animationTimer = animationTime
 		image_index = 6;
+		
 	}else{
+
 		image_index = 5;
 	}
 }else if (timer < starttime/2){ //timer half done
+	if progress == 1{
+			audio_play_sound(snd_tok, 0, 0, global.volume*global.soundfx);
+			progress++
+	}
 	animationTimer--
 	if (animationTimer < 0 || image_index == 4){
 		animationTimer = animationTime
@@ -52,11 +65,16 @@ if (animationTimer < -10){ //animations for the cuckoo bird + unaliving itself
 		image_index = 3;
 	}
 }else if (timer < (starttime/4)*3){ //timer 1/4 done
+	if progress == 0{
+			audio_play_sound(snd_tik, 0, 0, global.volume*global.soundfx);
+			progress++
+	}
 	animationTimer--
 	if (animationTimer < 0 || image_index == 2){
 		animationTimer = animationTime
 		image_index = 2;
 	}else{
+		
 		image_index = 1;
 	}
 }else{ //timer less than 1/4 done

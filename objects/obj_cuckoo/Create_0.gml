@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSEVARS
+progress = 0;
 pendulumStruct = {
 	parent : self
 }

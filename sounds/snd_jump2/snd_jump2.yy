@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_jump2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.766259,
+  "name":"snd_jump2",
+  "parent":{
+    "name":"jump",
+    "path":"folders/Sounds/jump.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_jump2.ogg",
+  "type":0,
+  "volume":1.0,
+}

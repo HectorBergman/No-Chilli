@@ -5,7 +5,8 @@ function levelstartStateActive(){
 	with (chiliman){
 		initiateRoomTransition(states.levelstart, 0, _id.to , noone)
 		startingRoom = _id.to;
-		diveTimer = 200;
+		diveTimer = 20;
+		dashCooldown = 0;
 		diveSetTime = diveTimer;
 		destinationNumber = _id.destinationNumber;
 		rightHeldTimer = 60;

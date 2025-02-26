@@ -32,9 +32,9 @@ function offLikeAShotClouds(theMove){
 		instance_create_depth(x, y+32, i, object_OLSClouds, cloudsStruct);
 	}
 	if (leftHeldTimer > mach2Start-1){
-		playOneOfSeveral("snd_OLS_strong", 3)
+		playOneOfSeveral("snd_OLS_strong", 3, 0.8)
 	}else{
-		playOneOfSeveral("snd_OLS", 4)
+		playOneOfSeveral("snd_OLS", 4, 0.8)
 	}
 }
 
@@ -56,7 +56,7 @@ function startTurn(newTurnDirection, half){
 
 function turningLogic(){
 	if (turnTimer == turnTime-1){
-		playOneOfSeveral("snd_brake", 3)
+		brakeSound = playOneOfSeveral("snd_brake", 3, 0.6)
 	}
 	if (turnTimer == turnTime-turnTimerBrakeStop){
 		audio_stop_sound(snd_brake1) 

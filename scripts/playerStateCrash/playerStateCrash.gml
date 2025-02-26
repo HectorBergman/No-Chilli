@@ -13,7 +13,7 @@ function playerStateCrash(){
 			if (crashTimer > 65){
 				audio_play_sound(snd_crash_mega1, 1, false, global.soundfx*global.volume);
 			}else if (crashTimer > 48){
-				playOneOfSeveral("snd_crash_big", 3)
+				playOneOfSeveral("snd_crash_big", 3, 0.8)
 			}else{
 				playOneOfSeveral("snd_crash", 2)
 			}

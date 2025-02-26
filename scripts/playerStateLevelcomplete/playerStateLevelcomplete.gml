@@ -6,6 +6,9 @@ function playerStateLevelcomplete(){
 
 function completeFall(){
 	completeFallTimer--;
+	if (completeFallTimer == 8){
+		audio_play_sound(snd_plop, 0, 0, global.volume*global.soundfx);
+	}
 	if (completeFallTimer > 0){
 		playerFall(self);
 		playerVerticalCollision(self);

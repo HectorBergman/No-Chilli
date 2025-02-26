@@ -1,5 +1,5 @@
-function playOneOfSeveral(soundString, amount){
+function playOneOfSeveral(soundString, amount, gain = 1){
 	var soundVariant = irandom(amount-1)+1
 	var newString = soundString + string(soundVariant);
-	audio_play_sound(asset_get_index(newString), 1, false, global.soundfx*global.volume);
+	return audio_play_sound(asset_get_index(newString), 1, false, gain*global.soundfx*global.volume);
 }

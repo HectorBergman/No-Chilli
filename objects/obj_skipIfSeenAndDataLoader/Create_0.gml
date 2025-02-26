@@ -10,7 +10,11 @@ tipText = scribble_typist();
 tipText.in(6, 999);
 show_debug_message(variable_struct_get(global.game_data, "sfxVolume"))
 global.playingSong = noone;
-
+if (variable_struct_get(global.game_data, "fullscreen") == true || variable_struct_get(global.game_data, "fullscreen") == undefined ){
+	window_set_fullscreen(true);
+}else{
+	window_set_fullscreen(false);
+}
 if (variable_instance_exists(global.game_data, "cutscene1Seen")){
 	skippable = true;
 }

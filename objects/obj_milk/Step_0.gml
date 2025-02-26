@@ -18,7 +18,8 @@ if place_meeting(x, y, chiliman) && !touched{
 	}
 
 	var timeString = string(minutes) + ":" + string(seconds)
-
+	
+	
 	touched = true;
 	timer = time;
 	image_index = 1;

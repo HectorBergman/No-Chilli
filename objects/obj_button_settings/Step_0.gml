@@ -39,9 +39,12 @@ if (isClickable() && position_meeting(mouseX, mouseY, id)){
 		}else if toRoom == -9{
 			if(window_get_fullscreen()){
 				window_set_fullscreen(false)
+				saveData("fullscreen", false);
 			}else{
 				window_set_fullscreen(true)
+				saveData("fullscreen", true);
 			}
+			
 		}
 		saveVolume();
 	}

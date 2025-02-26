@@ -5,8 +5,11 @@
 PAUSEVARS
 image_speed = 0;
 sprite_index = sprite
-
+big = true;
 horizontalSpeed += chiliman.horizontalSpeed/3
+
+currentAudio = noone;
+currentGain = 100/abs(max(point_distance(x, y, chiliman.x, chiliman.y),100));
 
 enum springStates{
 	normal,
@@ -90,11 +93,23 @@ function bounceState(){
 			if (abs(savedSpeed) < 4){
 				horizontalSpeed = -horizontalSpeed;
 			}
+			
 			verticalSpeed = -savedSpeed;
 			verticalSpeed *= 0.99
 			calculateTilGround();
 			state = springStates.normal
 			bounceTime = 5;
+			if (abs(horizontalSpeed) > 4){
+				big = true;
+			}else{
+				big = false;
+			}
+			audio_stop_sound(currentAudio);
+			if (big){
+				currentAudio = playOneOfSeveral("snd_spring_big", 2, )
+			}else{
+				currentAudio = playOneOfSeveral("snd_spring_small", 2)
+			}
 		}
 	}else if (bounceTime > 90000){
 		lifeTimeLeft -= 7

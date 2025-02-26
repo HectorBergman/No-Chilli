@@ -20,6 +20,7 @@ function playerJump(_player){
 		}else{
 			verticalSpeed = jumpSpeed*secondJump;
 		}
+		playOneOfSeveral("snd_jump",6,0.25)
 		jumpsLeft--;
 		onGround = 0;
 		lastMoveGround = move;
