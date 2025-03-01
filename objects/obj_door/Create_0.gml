@@ -73,17 +73,4 @@ for(var i = 0; i < 999; i += 1){
 
 
 
-/*___________________________________________
-############################################################################################
-ERROR in
-action number 1
-of  Step Event0
-for object obj_spring:
 
-Attempting to set Instance id 104171 with Object Index 21 (obj_spring) with invalid bound top -nan(ind) bottom -nan(ind) left -nan(ind) right -nan(ind)
- at gml_Script_springHorizontalCollision@gml_Object_obj_spring_Create_0 (line 32) -        if (place_meeting(x + horizontalSpeed, y , object_wall)){
-############################################################################################
-gml_Script_springHorizontalCollision@gml_Object_obj_spring_Create_0 (line 32)
-gml_Script_normalState@gml_Object_obj_spring_Create_0 (line 69) -        springHorizontalCollision();
-gml_Object_obj_spring_Step_0 (line 6) -        case springStates.normal: normalState(); break;
-*/

@@ -9,3 +9,4 @@ instance_create_depth(self.x, self.y, -30, obj_setFont, dataloaderStruct)
 
 global.settingser = false;
 //just realized i can just make functions for all this shit lol
+audio_falloff_set_model(audio_falloff_inverse_distance);

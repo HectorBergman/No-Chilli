@@ -2,6 +2,10 @@
 // You can write your code in this editor
 timer--;
 if place_meeting(x, y, chiliman) && !touched{
+
+	audio_stop_sound(global.playingSong);
+	
+	
 	global.crashCount = chiliman.crashCount;
 	global.topSpeed = chiliman.topSpeed;
 	chiliman.topSpeed = 0;

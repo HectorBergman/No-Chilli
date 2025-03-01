@@ -18,3 +18,4 @@ image_yscale = 1;
 
 cam = instance_find(object_zcamera, 0);
 
+pauseTheme = noone;

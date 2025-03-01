@@ -60,6 +60,7 @@ function playerStateMach(){
 			turn = -sign(horizontalSpeed)
 			startTurn(turn, true);	
 		}else if (onGround <= 9 && down && diveTimer < 1 && !diveDisabled){
+			diveSound = audio_play_sound(snd_dive, 0, 0, global.soundfx*global.volume);
 			state = states.dive
 			var totalSpeed = ((horizontalSpeed + sign(horizontalSpeed)*abs(verticalSpeed)));
 			horizontalSpeed = totalSpeed;

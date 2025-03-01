@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (place_meeting(x, y, chiliman) && !pressed){
+	audio_play_sound(snd_button_push, 0, 0, global.soundfx*global.volume);
 	image_index = 1;
 	cuckooStruct = {
 		timer : doorTime,

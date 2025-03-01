@@ -28,6 +28,9 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"song","filters":[],"listItems":[],"multiselect":false,"name":"song","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"snd_Peanuts_to_an_Elephant","path":"sounds/snd_Peanuts_to_an_Elephant/snd_Peanuts_to_an_Elephant.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"snd_Peanuts_to_an_Elephant","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"songLoop","filters":[],"listItems":[],"multiselect":false,"name":"songLoop","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"loop","filters":[],"listItems":[],"multiselect":false,"name":"loop","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"sideB","filters":[],"listItems":[],"multiselect":false,"name":"sideB","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

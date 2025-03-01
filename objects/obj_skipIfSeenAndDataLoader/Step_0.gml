@@ -14,5 +14,5 @@ if (timer < 0){
 }
 
 if keyboard_check(vk_space) && skippable {
-	room_goto(rm_title)
+	room_goto(rm_title_test)
 }

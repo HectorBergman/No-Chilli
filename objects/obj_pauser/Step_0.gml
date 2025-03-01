@@ -1,3 +1,7 @@
+if (pauseTheme != noone){
+	audio_sound_gain(pauseTheme, 1.4*global.volume*global.musicvolume, 0);
+}
+
 if (instance_find(obj_settingser, 0)){
 	global.settingser = true;
 }else{
@@ -47,8 +51,10 @@ if (global.destroy){
 	global.destroy = false;
 	destroyMenu()
 }
-if (global.pause){
+if (global.pause && !visible){
 	visible=true;
-}else{
+	pauseTheme = audio_play_sound(snd_this_is_the_song_they_have_in_the_elevators_at_Trump_Tower, 0, 1, 1.4*global.volume*global.musicvolume);
+}else if (!global.pause){
 	visible=false
+	audio_stop_sound(pauseTheme);
 }

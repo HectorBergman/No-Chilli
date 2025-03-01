@@ -52,7 +52,7 @@ if (!global.settingser){
 			}
 			global.pause = false;
 			instance_destroy(obj_button);
-		
+			audio_play_sound(snd_button_push, 0, 0, global.volume*global.soundfx);
 		}
 	}else if (position_meeting(mouse_x, mouse_y, id)){
 		image_index = 1;
@@ -66,6 +66,7 @@ if (!global.settingser){
 				}else{
 					window_set_fullscreen(true)
 				}*/
+				audio_play_sound(snd_button_push, 0, 0, global.volume*global.soundfx);
 			}
 		}
 	

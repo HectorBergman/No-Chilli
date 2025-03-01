@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_bite4",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.458798,
+  "name":"snd_bite4",
+  "parent":{
+    "name":"bite",
+    "path":"folders/Sounds/bite.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_bite4.ogg",
+  "type":0,
+  "volume":1.0,
+}

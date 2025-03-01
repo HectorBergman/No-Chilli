@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_this_is_the_song_they_have_in_the_elevators_at_Trump_Tower",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":10.105261,
+  "name":"snd_this_is_the_song_they_have_in_the_elevators_at_Trump_Tower",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_this_is_the_song_they_have_in_the_elevators_at_Trump_Tower.ogg",
+  "type":0,
+  "volume":1.0,
+}

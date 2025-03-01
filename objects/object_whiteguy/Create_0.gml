@@ -1,3 +1,5 @@
+biteAudio = noone;
+bit = false;
 //speed at which whiteguy will approach target point
 approachSpeed = 0;
 

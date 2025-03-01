@@ -21,8 +21,12 @@ if (place_meeting(x, y, chiliman) && !pressed){
 	text = instance_create_depth(0, 0, -40, obj_fading_text, textStruct)
 	pressed = true;
 	image_index = 1;
+	audio_play_sound(snd_button_push, 0, 0, global.soundfx*global.volume*2, 0, 0.3);
 	
 }else if (!place_meeting(x,y,chiliman)){
+	if (pressed){
+		audio_play_sound(snd_button_release, 0, 0, global.soundfx*global.volume*2, 0, 0.3);
+	}
 	pressed = false;
 	image_index = 0;
 }

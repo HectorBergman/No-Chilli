@@ -106,9 +106,9 @@ function bounceState(){
 			}
 			audio_stop_sound(currentAudio);
 			if (big){
-				currentAudio = playOneOfSeveral("snd_spring_big", 2, )
+				currentAudio = playOneOfSeveralLocation("snd_spring_big", 2, 1 , x, y)
 			}else{
-				currentAudio = playOneOfSeveral("snd_spring_small", 2)
+				currentAudio = playOneOfSeveralLocation("snd_spring_small", 2, 1, x, y)
 			}
 		}
 	}else if (bounceTime > 90000){

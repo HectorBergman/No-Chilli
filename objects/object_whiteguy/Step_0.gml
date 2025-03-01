@@ -1,7 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 PAUSE
-
+show_debug_message(image_index);
+if (floor(image_index) % 18 == 17 && !bit){
+	show_debug_message("hi");
+	biteAudio = playOneOfSeveralLocation("snd_bite", 5, 1, x, y);
+	bit = true;
+}
+if (floor(image_index) % 18 == 0){
+	bit = false;
+}
 facingLogic();
 
 truSpeed = approachSpeed*chiliman.scovilleSpeed

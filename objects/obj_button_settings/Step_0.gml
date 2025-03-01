@@ -47,6 +47,7 @@ if (isClickable() && position_meeting(mouseX, mouseY, id)){
 			
 		}
 		saveVolume();
+		audio_play_sound(snd_button_push, 0, 0, global.volume*global.soundfx);
 	}
 }else{
 	image_index = 0;

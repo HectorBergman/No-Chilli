@@ -26,7 +26,7 @@ function updateSpeed(){
 
 	
 	//normal vertical
-	playerGrav = baseGrav*sqrt(scovilleSpeed)
+	playerGrav = trueBaseGrav*sqrt(scovilleSpeed)
 	mediumFall = baseMediumFall*scovilleSpeed
 	maxFall = baseMaxFall*scovilleSpeed
 	jumpSpeed = baseJumpSpeed*sqrt(scovilleSpeed)

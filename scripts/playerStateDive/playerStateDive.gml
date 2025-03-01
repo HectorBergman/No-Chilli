@@ -11,6 +11,7 @@ function playerStateDive(){
 
 function diveHorizontalCollision(){
 	if (place_meeting(x + horizontalSpeed, y , object_wall)){
+		audio_stop_sound(diveSound);
 		var _hStep = sign(horizontalSpeed);
 		stepCollisionWhileWithFailCon(object_wall, _hStep, true)
 		initiateBounce();
@@ -27,6 +28,7 @@ function diveHorizontalCollision(){
 function diveVerticalCollision(){
 	fryingRailException();
 	if (place_meeting(x, y + verticalSpeed, obj_trait_landable)){
+		audio_stop_sound(diveSound);
 		if (verticalSpeed > 0){	
 			onGround = 10;
 

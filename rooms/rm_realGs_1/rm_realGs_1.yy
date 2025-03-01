@@ -34,7 +34,7 @@
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":1,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_1C4B2DE8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1C4B2DE8","objectId":{"name":"obj_blockspawner","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_blockspawner","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"propertyId":{"name":"object","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_lasagna",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_blockspawner","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"propertyId":{"name":"xOffset","path":"objects/obj_blockspawner/obj_blockspawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},

@@ -35,7 +35,7 @@ function goNextFrame(){
 	previousFrame = image_index;
 	image_index = nextFrameNumber;
 	if (framesSeen == lastFrameSeen){
-		room_goto(rm_title)
+		room_goto(rm_title_test)
 	}
 	framesSeen++;
 }
