@@ -7,17 +7,21 @@ defaultTime = 5;
 previousFrame = 0;
 lastFrameSeen = 56;
 lol = false
-whiteGuyText = scribble_typist();
+whiteGuyText = scribble_typist().sound(snd_whiteguy_speak_1, 0, 0.95, 1.05);
 whiteGuyText.in(0.1, 0);
-chiliText = scribble_typist();
+chiliText = scribble_typist().sound(snd_chiliman_speak_1, 0, 0.8, 1.2);
 chiliText.in(0.5, 0);
-chiliTextFast = scribble_typist();
+chiliTextSilent = scribble_typist()
+chiliTextSilent.in(0.5, 0);
+chiliTextFast = scribble_typist().sound(snd_chiliman_speak_1, 0, 0.8, 1.2)
 chiliTextFast.in(1, 0);
-littlechiliText = scribble_typist();
+littlechiliText = scribble_typist().sound(snd_chilikid_speak_1, 0, 0.8, 1.2);
 littlechiliText.in(0.5, 0);
 cloudsSummoned = false;
 
 wrapWidth = 1200;
+
+awoogaSeen = false;
 
 
 
@@ -37,6 +41,16 @@ function goNextFrame(){
 	if (framesSeen == lastFrameSeen){
 		room_goto(rm_title_test)
 	}
+	if (image_index == 14){
+		audio_play_sound(snd_OLS4, 0, 0, global.soundfx*global.volume);
+	}
+	if (image_index == 11 && !awoogaSeen){
+		audio_play_sound(snd_hotass, 0, 0, global.soundfx*global.volume);
+		awoogaSeen = true;
+	}
+	if (image_index == 8 || image_index == 10){
+		playOneOfSeveral("snd_bite", 5, 0.5);
+	}
 	framesSeen++;
 }
 
@@ -51,7 +65,7 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	} else if (framesSeen == 2) {
 	    text = "[scale,4][$eece5d]Did that really happen, uncle Chiliman?";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
-	    line.draw(window_get_width() / 2, 850, chiliText);
+	    line.draw(window_get_width() / 2, 850, littlechiliText);
 	} else if (framesSeen == 3) {
 	    text = "[scale,4][$c20000][shake]HA HA HA![/shake] Of course not, everyone knows that's just a fairy tale!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
@@ -83,7 +97,7 @@ function textLogic(){ //yup, this is how we're doing it. We're doing it like und
 	} else if (framesSeen >= 36 && framesSeen <= 54) {
 	    text = "[scale,4][$c20000][shake]AAAAAAAAAAAAAAAAAAAAAAAAAAH[/shake]!!!!!!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
-	    line.draw(window_get_width() / 2, 850, chiliText);
+	    line.draw(window_get_width() / 2, 850, chiliTextSilent);
 	} else if (framesSeen == 55) {
 	    text = "[scale,4][$c20000]I'M OUTTA HERE!";
 	    line = scribble(text).outline($000023).wrap(wrapWidth).align(fa_center);
