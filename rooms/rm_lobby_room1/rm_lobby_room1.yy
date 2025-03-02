@@ -43,6 +43,7 @@
     {"name":"inst_4F9D5952","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_45DE141B","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
     {"name":"inst_7854A6B6","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
+    {"name":"inst_687C9B84","path":"rooms/rm_lobby_room1/rm_lobby_room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -140,8 +141,11 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"propertyId":{"name":"textXoffset","path":"objects/obj_lock/obj_lock.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"120",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_lock","path":"objects/obj_lock/obj_lock.yy",},"propertyId":{"name":"textYoffset","path":"objects/obj_lock/obj_lock.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-75",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":288.0,},
+        {"$GMRInstance":"v1","%Name":"inst_687C9B84","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_687C9B84","objectId":{"name":"obj_musicPlayer","path":"objects/obj_musicPlayer/obj_musicPlayer.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_musicPlayer","path":"objects/obj_musicPlayer/obj_musicPlayer.yy",},"propertyId":{"name":"song","path":"objects/obj_musicPlayer/obj_musicPlayer.yy",},"resource":{"name":"snd_Up_in_da_Lobby","path":"sounds/snd_Up_in_da_Lobby/snd_Up_in_da_Lobby.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"snd_Up_in_da_Lobby",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.5,"x":288.0,"y":696.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4286743170,"depth":100,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"bg_van","path":"sprites/bg_van/bg_van.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_lobby_room1",
   "parent":{

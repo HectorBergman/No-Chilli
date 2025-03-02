@@ -35,7 +35,7 @@ function createQuit(){
 
 function summonSilly(){ //with this treasure i summon
 	var relativeX = cam.x+200*(cam.camWidth/640/2)
-	var relativeY = cam.y-55*(cam.camHeight/360/2)
+	var relativeY = cam.y-55*(cam.camHeight/360/2)+1
 	var sillyStruct =
 	{
 		spriteName : spr_sillyman,

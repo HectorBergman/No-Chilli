@@ -19,3 +19,7 @@ time2fade = 0.5
 time2die = 1;
 dieStartTime = 100;
 dieTimer = dieStartTime;
+spaceHeld = false;
+if keyboard_check(vk_space){
+	spaceHeld = true;
+}

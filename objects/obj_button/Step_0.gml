@@ -51,6 +51,7 @@ if (!global.settingser){
 				global.pause = false;
 			}
 			global.pause = false;
+			audio_resume_all();
 			instance_destroy(obj_button);
 			audio_play_sound(snd_button_push, 0, 0, global.volume*global.soundfx);
 		}

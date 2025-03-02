@@ -2,6 +2,13 @@
 elapsed_time_ms = current_time - start_time;
 elapsed_time = audio_sound_get_track_position(global.playingSong);
 elapsed_time_seconds = elapsed_time_ms / 1000;
+if (keyboard_check(vk_space) && !spaceHeld){
+	audio_stop_sound(global.playingSong)
+	room_goto(rm_title);
+	instance_destroy();
+}else if (!keyboard_check(vk_space) && spaceHeld){
+	spaceHeld = false;
+}
 if (!switched){
 	
 
