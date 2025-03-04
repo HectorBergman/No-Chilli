@@ -8,6 +8,7 @@ timeadd = 0.01
 originalY = y;
 
 state = hotsauceStates.uncollected;
+startRoom = room;
 
 function uncollectedLogic_strong(){
 	
@@ -25,6 +26,9 @@ function uncollectedLogic_strong(){
 
 	sintimer += timeadd
 	y = originalY + sin(sintimer)*6
+	if (room != startRoom){
+		instance_destroy()
+	}
 }
 sound = snd_pickupSauce_strong
 pulseSize = 0.8

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.173084,
+  "duration":0.057687,
   "name":"snd_chilikid_speak_1",
   "parent":{
     "name":"talk",

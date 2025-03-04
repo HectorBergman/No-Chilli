@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":0.173084,
   "name":"snd_whiteguy_speak_1",
   "parent":{
     "name":"talk",

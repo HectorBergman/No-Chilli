@@ -19,7 +19,7 @@
     "name":"object_hotsauce",
     "path":"objects/object_hotsauce/object_hotsauce.yy",
   },
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

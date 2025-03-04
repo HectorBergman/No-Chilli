@@ -4,6 +4,9 @@ image_index = random_range(1,30);
 timer = 0
 timeadd = 0.05;
 originalY = y
+
+startRoom = room;
+
 auraStruct = {
 	parent: id,
 	
@@ -15,6 +18,9 @@ state = hotsauceStates.uncollected;
 function uncollectedLogic_super(){
 	timer += timeadd
 	y = originalY + sin(timer)*4
+	if (room != startRoom){
+		instance_destroy()
+	}
 }
 sound = snd_pickupSauce_super
 pulseSize = 2;

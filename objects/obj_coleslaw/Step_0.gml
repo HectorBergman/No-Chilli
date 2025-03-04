@@ -4,7 +4,8 @@ if (abs(x-chiliman.x) > 16){
 	image_xscale = sign(x - chiliman.x);
 }
 found = collision_rectangle(x-40, y+20, x+40, y-10, object_player, false, true);
-if (found != noone && !instance_exists(obj_textboxl) && (!(chiliman.state == states.mach)  || !funnymode) && !global.pause){
+if (abs(chiliman.horizontalSpeed) > 6 && !funnymode){
+}else if (found != noone && !instance_exists(obj_textboxl) && (!(chiliman.state == states.mach)  || !funnymode) && !global.pause){
 	var textstruct = {
 		boxText : text
 	}

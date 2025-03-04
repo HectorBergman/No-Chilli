@@ -14,5 +14,5 @@ function playerDeath(){
 	deadTimer = deadTime
 	dead = 1;
 	state = states.dead;
-
+	resetSpeed();
 }

@@ -13,6 +13,7 @@ if (!ds_list_empty(list)){
 			objectEaten(destroy);
 			instance_destroy(destroy);
 		}
+	}catch(e){
 	}
 	ds_list_delete(list, 0);
 		
