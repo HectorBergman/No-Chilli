@@ -84,6 +84,11 @@ function saveTime(minutes, seconds){
 				saveData(levelname, timeString);
 				saveData(levelname + "Minutes", minutes)
 				saveData(levelname + "Seconds", seconds);
+				if (!global.chillicClones){
+					saveData(levelname + "Medal", medal);
+				}else{
+					saveData(levelname + "chilicMedal", medal);
+				}
 				variable_struct_set(global.game_data, levelname, timeString)
 				variable_struct_set(global.game_data, levelname + "Minutes", minutes)
 				variable_struct_set(global.game_data, levelname + "Seconds", seconds)
@@ -93,6 +98,11 @@ function saveTime(minutes, seconds){
 		saveData(levelname, timeString);
 		saveData(levelname + "Minutes", minutes)
 		saveData(levelname + "Seconds", seconds);
+		if (!global.chillicClones){
+			saveData(levelname + "Medal", medal);
+		}else{
+			saveData(levelname + "chilicMedal", medal);
+		}
 		variable_struct_set(global.game_data, levelname, timeString)
 		variable_struct_set(global.game_data, levelname + "Minutes", minutes)
 		variable_struct_set(global.game_data, levelname + "Seconds", seconds)

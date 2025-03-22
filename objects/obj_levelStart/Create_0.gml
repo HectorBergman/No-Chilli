@@ -8,5 +8,6 @@ enum levelstartstates{
 }
 levelstartstate = levelstartstates.normal
 
+medalRequirements = [[platinumRequirement, "platinum"], [goldRequirement, "gold"], [silverRequirement, "silver"], [bronzeRequirement, "bronze"]];
 
 _time = variable_struct_get(global.game_data, levelname)

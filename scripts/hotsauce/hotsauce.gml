@@ -26,6 +26,9 @@ function calculatePickupPitch(){
 }
 
 function hotsauceCollectedLogic(){
+	if (chiliman.state == states.dead){
+		instance_destroy();
+	}
 	collectionScale *= 0.995;
 	if (uiCoord[0] != goalCoord[0]){
 		if abs(uiCoord[0]-goalCoord[0]) > 10{

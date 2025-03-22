@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"medals",
-    "path":"folders/Sprites/medals.yy",
+    "name":"medal",
+    "path":"folders/Sprites/medals/medal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

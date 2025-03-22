@@ -26,3 +26,18 @@ if (!is_undefined(_time)){
 	//draw_text_transformed(1920/2-width/2*size, 1080-200, _string, size, size, 0);
 
 }
+var stringLength = string_length_scribble(usedName)*4;
+var medal = variable_struct_get(global.game_data, levelname + "Medal")
+
+if (medal < 4){
+	var sprite = asset_get_index("spr_" + medalRequirements[medal][1]);
+	draw_sprite_ext(sprite, 0, x+32+stringLength, y-100, 0.5, 0.5, 0, c_white, 1)
+}
+
+stringLength = string_length_scribble(usedName)*4;
+medal = variable_struct_get(global.game_data, levelname + "chilicMedal")
+
+if (medal < 4){
+	var sprite = asset_get_index("spr_" + medalRequirements[medal][1] + "_chili");
+	draw_sprite_ext(sprite, 0, x+32+stringLength+32, y-100, 0.5, 0.5, 0, c_white, 1)
+}

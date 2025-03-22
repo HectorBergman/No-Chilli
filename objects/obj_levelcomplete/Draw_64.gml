@@ -37,8 +37,13 @@ if (afterDoneIncrement > 3){
 
 if (afterDoneIncrement > 4){
 	if (medal < 4){
-		var sprite = asset_get_index("spr_" + global.medalRequirements[medal][1]);
-		draw_sprite_ext(sprite, 0, 690, 222+downShift, 6, 6, 0, c_white, 1)
+		if (!global.chillicClones){
+			var sprite = asset_get_index("spr_" + global.medalRequirements[medal][1]);
+			draw_sprite_ext(sprite, 0, 690, 222+downShift, 6, 6, 0, c_white, 1)
+		}else{
+			var sprite = asset_get_index("spr_" + global.medalRequirements[medal][1] + "_chili");
+			draw_sprite_ext(sprite, 0, 690, 222+downShift, 6, 6, 0, c_white, 1)
+		}
 	}else{
 		var speedString = "[scale,3][$d6cfcf][fa_center]no medal 4 u :( "
 		var speedLine = scribble(speedString).outline($000023).wrap(250);
