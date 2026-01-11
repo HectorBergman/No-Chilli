@@ -26,8 +26,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"order","filters":[],"listItems":[],"multiselect":false,"name":"order","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"approachSpeed","filters":[],"listItems":[],"multiselect":false,"name":"approachSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"6","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"order","filters":[],"listItems":[],"multiselect":false,"name":"order","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"approachSpeed","filters":[],"listItems":[],"multiselect":false,"name":"approachSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"6","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

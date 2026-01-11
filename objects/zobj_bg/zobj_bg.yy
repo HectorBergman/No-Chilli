@@ -29,8 +29,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"scrollSpeed","filters":[],"listItems":[],"multiselect":false,"name":"scrollSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"bgImage","filters":[],"listItems":[],"multiselect":false,"name":"bgImage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"bg_purpletemp","path":"sprites/bg_purpletemp/bg_purpletemp.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"bg_purpletemp","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"scrollSpeed","filters":[],"listItems":[],"multiselect":false,"name":"scrollSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"bgImage","filters":[],"listItems":[],"multiselect":false,"name":"bgImage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"bg_purpletemp","path":"sprites/bg_purpletemp/bg_purpletemp.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"bg_purpletemp","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

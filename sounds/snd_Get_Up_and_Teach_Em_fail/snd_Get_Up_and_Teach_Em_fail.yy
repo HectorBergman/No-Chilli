@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_Get_Up_and_Teach_Em_fail",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":6.005215,
+  "exportDir":"",
   "name":"snd_Get_Up_and_Teach_Em_fail",
   "parent":{
     "name":"music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_Get_Up_and_Teach_Em_fail.ogg",
-  "type":0,
   "volume":0.75,
 }

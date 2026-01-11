@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_Peanuts_to_an_Elephant",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":0,
   "compression":0,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":118.80417,
+  "exportDir":"",
   "name":"snd_Peanuts_to_an_Elephant",
   "parent":{
     "name":"music",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"snd_Peanuts_to_an_Elephant.ogg",
-  "type":0,
   "volume":1.0,
 }

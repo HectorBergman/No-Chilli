@@ -29,8 +29,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"cooldownType","filters":[],"listItems":[],"multiselect":false,"name":"cooldownType","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"dash","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"isParent","filters":[],"listItems":[],"multiselect":false,"name":"isParent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"cooldownType","filters":[],"listItems":[],"multiselect":false,"name":"cooldownType","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"dash","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"isParent","filters":[],"listItems":[],"multiselect":false,"name":"isParent","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
