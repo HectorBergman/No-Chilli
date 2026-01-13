@@ -1,12 +1,11 @@
-# No Chilli (formerly, Yallapeño)
+# No Chilli
 
-No Chilli (formerly Yallapeño) is a fast-paced platformer. You play as Chiliman, who is being chased by a giant determined to eat him. Run fast, bounce off walls, and perform expert turns to evade him and reach the glass of milk! 
+No Chilli is a fast-paced platformer. You play as Chiliman, who is being chased by a giant determined to eat him. Run fast, bounce off walls, and perform expert turns to evade him and reach the glass of milk! 
 
 The game is intended to be simply a side-project and meant to be a fun tool to sharpen my development skills.
 
 ---
 
-## Features
 ## Features
 - Tutorial level included
 - One playable level
