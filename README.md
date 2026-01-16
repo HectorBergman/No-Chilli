@@ -10,7 +10,7 @@ The game is intended to be simply a side-project and meant to be a fun tool to s
 - Tutorial level included
 - One playable level
 - Earn medals based on completion time
-- A pretty damn fun moveset
+- A pretty fun moveset
 
 
 ---
